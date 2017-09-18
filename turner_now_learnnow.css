@@ -1,0 +1,1257 @@
+@media (min-width: 35em) {
+  [class*=grid] > [class*=col-].ln--podcast-item {
+    width: 100% !important;
+    max-width: 100% !important; } }
+@media (min-width: 768px) {
+  [class*=grid] > [class*=col-].ln--podcast-item {
+    width: 20% !important;
+    max-width: 20% !important; } }
+@media (min-width: 992px) {
+  [class*=grid] > [class*=col-].ln--podcast-item {
+    width: 20% !important;
+    max-width: 20% !important; } }
+@media (min-width: 1200px) {
+  [class*=grid] > [class*=col-].ln--podcast-item {
+    width: 20% !important;
+    max-width: 20% !important; } }
+/* top menu learnnow */
+/* index page */
+.ln--main-menu-wrapper {
+  margin-bottom: 2rem;
+  border-bottom: solid 1px #777; }
+  .ln--main-menu-wrapper > div {
+    /*width: 20%!important;
+    float: left;
+    display: block;
+    flex-basis: 20%!important;
+    max-width: 20%!important;*/
+    margin-right: 4%; }
+    .ln--main-menu-wrapper > div:last-child {
+      margin-right: 0; }
+  .ln--main-menu-wrapper a {
+    font-size: 0.9rem !important;
+    color: #333; }
+    .ln--main-menu-wrapper a:hover {
+      color: #0052E7; }
+
+.lnow-menu-sec-header {
+  font-weight: bold; }
+
+@media (max-width: 35em) {
+  [class*=grid].ln--main-menu-wrapper > [class*=col-] .lnow-menu-sec-header {
+    margin-top: 1rem;
+    border-bottom: solid 1px #eee; } }
+.ln--bradcrumb-wrapper {
+  display: block;
+  float: left;
+  clear: both;
+  padding: 0;
+  margin: 0 0 2rem 0; }
+  .ln--bradcrumb-wrapper ul {
+    padding: 0 !important;
+    margin: 0; }
+    .ln--bradcrumb-wrapper ul li {
+      padding-left: 0;
+      margin-left: 0;
+      list-style: none;
+      display: block;
+      float: left;
+      padding-right: 5px; }
+      .ln--bradcrumb-wrapper ul li:not(:last-child):after {
+        content: " > "; }
+      .ln--bradcrumb-wrapper ul li:before {
+        background: none !important; }
+
+a.ln--blue-button {
+  background: #0052e7;
+  width: 100%;
+  display: block;
+  padding: 1rem .5rem;
+  text-align: left;
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: .5rem;
+  box-shadow: 3px 3px 3px #ccc;
+  border-radius: 3px; }
+  a.ln--blue-button span {
+    clear: both;
+    display: block;
+    line-height: 1em;
+    margin-top: 0em;
+    text-align: left;
+    font-size: 1rem; }
+  a.ln--blue-button p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 1rem; }
+
+div.ln--grey-button {
+  background: #555;
+  font-size: 2em;
+  padding: 1em .25em;
+  color: #fff;
+  clear: both;
+  display: block;
+  line-height: 1em;
+  margin-top: 1em;
+  text-align: left;
+  border-radius: 3px;
+  box-shadow: 3px 3px 4px #999; }
+
+.ln--button-group-2 {
+  width: 45%;
+  margin-right: .5rem;
+  float: left;
+  font-size: 1rem; }
+
+#learnnow-page .ln--button-group-2 .ln--blue-button p {
+  font-size: 1rem;
+  padding: .25rem; }
+
+.ln--fright {
+  float: right; }
+
+.ln--bg-gray {
+  margin: .25rem;
+  border-bottom: solid 1px #ccc;
+  color: #111; }
+  .ln--bg-gray:nth-child(2n) {
+    background: #f7f7f7; }
+  .ln--bg-gray a {
+    color: #333;
+    padding: .5rem;
+    display: block; }
+  .ln--bg-gray:hover a {
+    color: #0052e7; }
+
+.ln--test-class {
+  display: none; }
+
+@media only screen and (min-width: 768px) {
+  .now-content #learnnow-page div,
+  .now-content #learnnow-page span,
+  .now-content #learnnow-page p,
+  .now-content #learnnow-page a,
+  .now-content #learnnow-page ul li,
+  .now-content #learnnow-page ol li {
+    font-size: 1rem; } }
+@media (max-width: 35em) {
+  [class*=col].ln--sidebar {
+    margin-top: 2rem; }
+    [class*=col].ln--sidebar > div {
+      margin-left: 0px; } }
+/* classes and offering */
+#learnnow-page .nonblock p, #learnnow-page .nonblock a, #learnnow-page .nonblock span, #learnnow-page .nonblock ul, #learnnow-page .nonblock li, #learnnow-page .nonblock div {
+  font-size: 1rem;
+  line-height: 1rem; }
+#learnnow-page [class*=col-] > div {
+  padding-right: 10px; }
+#learnnow-page .col-7_md-7_sm-7_xs-12 > div {
+  margin-top: 1em; }
+#learnnow-page .ContainerGroup {
+  width: 100%;
+  float: left; }
+  #learnnow-page .ContainerGroup .Container.grpelem {
+    width: 100%;
+    float: left; }
+    #learnnow-page .ContainerGroup .Container.grpelem div.colelem:nth-of-type(1) p:nth-of-type(1) {
+      font-weight: bold;
+      color: #000; }
+#learnnow-page .More-Info-Link-Box {
+  width: 100%; }
+
+#class-resource-dialog-content {
+  display: none; }
+  #class-resource-dialog-content p {
+    color: #000; }
+  #class-resource-dialog-content .Container {
+    width: 80%;
+    padding: 1em; }
+    #class-resource-dialog-content .Container a {
+      color: #0052E7; }
+    #class-resource-dialog-content .Container .grpelem.clearfix {
+      width: 26%;
+      float: left;
+      display: block;
+      clear: none; }
+    #class-resource-dialog-content .Container .colelem .grpelem p {
+      font-weight: bold;
+      border-bottom: solid 2px #000; }
+    #class-resource-dialog-content .Container .grpelem .colelem .grpelem, #class-resource-dialog-content .Container .colelem .grpelem .colelem {
+      width: 100%; }
+
+.ln--ncont-links a {
+  font-weight: bold; }
+  .ln--ncont-links a p {
+    font-weight: bold; }
+
+.ln--text-center {
+  text-align: center; }
+
+.ln--li-boxes li {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  padding: .5em .5em;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: .5em;
+  float: left; }
+
+.ln--bg-black {
+  background: #000;
+  color: #fff; }
+
+.ln--fg-white {
+  color: #fff; }
+
+.ln--top-pad-5em {
+  padding-top: 5em; }
+
+.ln--link-wrap {
+  margin: 1em 0; }
+  .ln--link-wrap a p {
+    font-weight: bold; }
+
+.ln--box-header-bg-black {
+  background: #000; }
+
+.ln--box-header {
+  margin: 0;
+  width: 100%;
+  padding: .5rem; }
+
+.ln--no-pad {
+  padding: 0; }
+
+.ln--pad-standard {
+  padding: 1rem; }
+
+.ln--pad-min {
+  padding: .5rem; }
+
+.ln--font-2x {
+  font-size: 1.3rem;
+  line-height: 2rem; }
+
+.ln--div-link-style {
+  color: #888;
+  border-bottom: solid 1px #ccc; }
+  .ln--div-link-style .ln--bold {
+    font-size: 1.2rem; }
+  .ln--div-link-style .ln--coming-soon {
+    font-size: .75rem; }
+
+.ln--main-content {
+  margin-right: 1rem; }
+
+.ln--image-text-container {
+  margin-right: 3%; }
+  .ln--image-text-container > div:first-child {
+    border-bottom: solid 3px #000;
+    margin-bottom: 1rem; }
+  .ln--image-text-container.ln--index-leadership > div:first-child div p {
+    font-size: 1rem;
+    color: #000; }
+
+.ln--mc-signup .mce_inline_error {
+  margin: 0 !important; }
+.ln--mc-signup .mc-field-group {
+  padding-bottom: 10px !important;
+  min-height: auto !important; }
+.ln--mc-signup select {
+  height: 2.5rem; }
+.ln--mc-signup input#mc-embedded-subscribe {
+  background: #0052E7;
+  box-shadow: 2px 2px 3px #ccc;
+  color: #fff; }
+  .ln--mc-signup input#mc-embedded-subscribe:hover {
+    background: black; }
+
+.col-7_md-7_sm-7_xs-12 > div > strong {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+  font-family: TurnerLight;
+  line-height: 2.5rem;
+  display: block; }
+
+.ln--onboarding-form-wrapper form .fld-grp {
+  margin: .5rem 0; }
+  .ln--onboarding-form-wrapper form .fld-grp .fld-label {
+    font-size: 1rem; }
+.ln--onboarding-form-wrapper form span, .ln--onboarding-form-wrapper form input, .ln--onboarding-form-wrapper form textarea {
+  color: #000;
+  width: 90%; }
+.ln--onboarding-form-wrapper form input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-style: italic; }
+.ln--onboarding-form-wrapper form input::-moz-placeholder {
+  /* Firefox 19+ */
+  font-style: italic; }
+.ln--onboarding-form-wrapper form input:-ms-input-placeholder {
+  /* IE 10+ */
+  font-style: italic; }
+.ln--onboarding-form-wrapper form input:-moz-placeholder {
+  /* Firefox 18- */
+  font-style: italic; }
+.ln--onboarding-form-wrapper form .form-error span, .ln--onboarding-form-wrapper form .form-error input {
+  color: red; }
+.ln--onboarding-form-wrapper form .form-error input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: red; }
+.ln--onboarding-form-wrapper form .form-error input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: red; }
+.ln--onboarding-form-wrapper form .form-error input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: red; }
+.ln--onboarding-form-wrapper form .form-error input:-moz-placeholder {
+  /* Firefox 18- */
+  color: red; }
+.ln--onboarding-form-wrapper form button {
+  border: solid 1px #ccc;
+  padding: .5rem 1rem;
+  outline: none; }
+  .ln--onboarding-form-wrapper form button:hover {
+    background: #0052E7;
+    color: #fff;
+    outline: none; }
+
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front {
+  background: #fff;
+  z-index: 999999;
+  border: solid 2px #000; }
+
+div.ui-dialog-titlebar {
+  text-align: right; }
+
+button.dialog-titlebar-close {
+  float: right; }
+
+.ln--text-right {
+  text-align: right; }
+
+.ui-widget-content p {
+  color: #000; }
+
+.ui-widget-header {
+  border: none !important;
+  background: none !important; }
+
+.ui-widget-overlay {
+  background: #000;
+  opacity: .4; }
+
+.ln--sidebar > div {
+  margin-left: 5%;
+  margin-bottom: 1rem;
+  padding: .5rem;
+  border: solid 1px #777; }
+.ln--sidebar > div.ln--button-blue {
+  padding: 0;
+  border: none; }
+.ln--sidebar > div.ln--upcomming {
+  border-color: #0052e7;
+  border-width: 3px; }
+  .ln--sidebar > div.ln--upcomming a {
+    font-size: 1rem; }
+.ln--sidebar .ln--no-pad {
+  padding: 0; }
+.ln--sidebar > .ln--v2 div {
+  margin: 0; }
+
+.ln--slider-style-item {
+  padding: .5rem;
+  margin-bottom: 1rem; }
+  .ln--slider-style-item .ln--title {
+    font-weight: bold;
+    margin-bottom: .5rem; }
+  .ln--slider-style-item .ln--content {
+    min-height: 100px; }
+  .ln--slider-style-item .ln--button a {
+    padding: .25rem;
+    margin-top: 10px;
+    background: #0052e7;
+    color: #fff;
+    display: block;
+    box-shadow: 2px 2px 3px #ccc;
+    border-radius: 2px; }
+    .ln--slider-style-item .ln--button a:empty {
+      display: none; }
+    .ln--slider-style-item .ln--button a p {
+      padding: 0;
+      display: block;
+      margin: 0;
+      color: #fff !important; }
+      .ln--slider-style-item .ln--button a p:empty {
+        display: none; }
+      .ln--slider-style-item .ln--button a p::after {
+        content: ">";
+        float: right; }
+  .ln--slider-style-item .ln--show-bg-image a {
+    width: 100%;
+    height: 8em;
+    top: 0;
+    left: 0;
+    display: block;
+    border-bottom: solid 3px #333; }
+  .ln--slider-style-item .ln--show-bg-image:hover a {
+    border-color: #0052e7; }
+  .ln--slider-style-item.ln--tile-simple .ln--show-bg-image a {
+    width: 100%;
+    height: 8em;
+    top: 0;
+    left: 0;
+    display: block;
+    border-bottom: none; }
+
+.lSAction a.lSPrev, .lSAction a.lSNext {
+  bottom: 0px !important;
+  width: auto !important;
+  top: auto !important; }
+.lSAction a.lSPrev {
+  right: 80px !important;
+  left: auto; }
+  .lSAction a.lSPrev:after {
+    content: " / "; }
+
+.ln--light-slider-wrapper .lSAction {
+  display: none; }
+.ln--light-slider-wrapper ul#ln--light-slider li:before {
+  background: none; }
+.ln--light-slider-wrapper .ln--button.comming-soon {
+  padding: .25rem;
+  margin-top: 10px;
+  background: #777;
+  color: #fff;
+  display: block;
+  box-shadow: 2px 2px 3px #ccc;
+  border-radius: 2px;
+  font-size: .75rem; }
+.ln--light-slider-wrapper .ln--button a {
+  font-size: 0.75rem !important; }
+  .ln--light-slider-wrapper .ln--button a p {
+    font-size: .75rem; }
+.ln--light-slider-wrapper .ln--slider-style-item .ln--title {
+  min-height: 40px;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  margin-top: .5rem; }
+.ln--light-slider-wrapper .ln--slider-style-item .ln--content {
+  font-size: .8rem;
+  line-height: 1.2rem;
+  margin-bottom: 10px; }
+  .ln--light-slider-wrapper .ln--slider-style-item .ln--content.desc {
+    font-size: .75rem;
+    line-height: 1rem; }
+
+#learnnow-page a p {
+  color: #0052e7;
+  cursor: pointer; }
+#learnnow-page .spaceAround {
+  margin: 1em .5em; }
+#learnnow-page #ln--tabs ul.ui-tabs-nav {
+  clear: both; }
+  #learnnow-page #ln--tabs ul.ui-tabs-nav li {
+    width: 50%;
+    float: left;
+    background: #fff;
+    color: #ooo;
+    padding: 0;
+    border: solid 1px #000;
+    text-align: center; }
+    #learnnow-page #ln--tabs ul.ui-tabs-nav li a {
+      padding: .5em;
+      display: block;
+      font-weight: bold;
+      text-align: center;
+      display: block;
+      color: #000; }
+  #learnnow-page #ln--tabs ul.ui-tabs-nav li.ui-state-active {
+    background: #000;
+    color: #fff; }
+    #learnnow-page #ln--tabs ul.ui-tabs-nav li.ui-state-active a {
+      color: #fff; }
+#learnnow-page #ln--tabs ul.ln--tab-group-1 li {
+  width: 100%; }
+  #learnnow-page #ln--tabs ul.ln--tab-group-1 li a {
+    width: 100%; }
+#learnnow-page #ln--tabs ul.ln--tab-group-4 li {
+  width: 25%; }
+  #learnnow-page #ln--tabs ul.ln--tab-group-4 li a {
+    width: 100%; }
+#learnnow-page #ln--tabs ul.ln--tab-group-3 li {
+  width: 32%; }
+  #learnnow-page #ln--tabs ul.ln--tab-group-3 li a {
+    width: 100%; }
+#learnnow-page .ln--bb {
+  border-bottom: solid 2px #000;
+  margin: 1em  0;
+  font-weight: bold;
+  width: 100%;
+  display: block; }
+#learnnow-page .ln--nb {
+  border-color: #FFF; }
+#learnnow-page .ln--spaceAround {
+  font: inherit;
+  display: inline-block;
+  overflow: visible;
+  margin: 0;
+  padding: 15px; }
+#learnnow-page .ln--faq-container .ln--faq-item {
+  margin-bottom: 2rem; }
+#learnnow-page .ln--faq-container .ln--faq-question {
+  font-size: 1.5rem;
+  font-weight: bold; }
+#learnnow-page .ln--faq-container .ln--faq-answer {
+  margin-top: .5rem; }
+#learnnow-page .ln--bold {
+  font-weight: bold; }
+#learnnow-page .ln--sec-title {
+  font-weight: bold;
+  margin-bottom: .5em;
+  min-height: 80px; }
+#learnnow-page .ln--sec-description {
+  margin-bottom: .5em;
+  min-height: 250px; }
+#learnnow-page .ln--sec-read-more-link a {
+  width: 100%;
+  display: block;
+  background: #0052e7;
+  padding: .2em;
+  color: #fff; }
+  #learnnow-page .ln--sec-read-more-link a p {
+    color: #fff;
+    margin: 3px; }
+#learnnow-page div.Class-List-Box.clearfix {
+  margin-bottom: 1rem; }
+#learnnow-page .Class-List-Box.clearfix {
+  border-bottom: solid 1px #ccc;
+  display: block; }
+  #learnnow-page .Class-List-Box.clearfix:empty {
+    border: none;
+    display: none; }
+  #learnnow-page .Class-List-Box.clearfix p {
+    margin: 0px; }
+    #learnnow-page .Class-List-Box.clearfix p span:not(:first-child) {
+      font-size: .75rem;
+      font-style: italic; }
+
+.ln--show-bg-image {
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  display: block; }
+
+.ln--big-bg {
+  height: 18EM; }
+
+.ln--self-directed .img-udemy {
+  background: url(../learnnow-images/udemy_logo_green.svg?crc=3773511635) no-repeat;
+  background-size: contain;
+  background-position: left;
+  height: 5em;
+  display: block; }
+.ln--self-directed .img-lynda {
+  background: url(../learnnow-images/lynda_logo2k-d_144x.jpg) no-repeat;
+  background-size: contain;
+  background-position: left;
+  height: 5em;
+  display: block; }
+.ln--self-directed .img-coursera {
+  background: url(../learnnow-images/logo.png) no-repeat;
+  background-size: contain;
+  background-position: left;
+  height: 5em;
+  display: block; }
+.ln--self-directed .img-degreed {
+  background: url(../learnnow-images/degreed-logo-hr_horizontal.jpg) no-repeat;
+  background-size: contain;
+  background-position: left;
+  height: 5em;
+  display: block; }
+
+.learnnow-page--index #u469 {
+  z-index: 89;
+  height: 141px;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  position: relative;
+  background: transparent url(../learnnow-images/performance-header-alt-2.png) no-repeat center center;
+  background-size: contain; }
+.learnnow-page--index #u495 {
+  height: 141px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  background: transparent url(../learnnow-images/subscribe-minifeat.png) no-repeat center center;
+  background-size: contain;
+  background-position: center; }
+.learnnow-page--index #u15229 {
+  display: block;
+  z-index: 113;
+  width: 100%;
+  height: 345px;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  margin-top: 12px;
+  background: transparent url(../learnnow-images/mym-archives.jpg) no-repeat center center;
+  background-size: contain;
+  background-position: center; }
+.learnnow-page--index #u15722-5 {
+  z-index: 114;
+  min-height: 141px;
+  background-color: transparent;
+  text-align: center;
+  font-size: 19px;
+  line-height: 23px;
+  font-family: '__Turner_5';
+  font-weight: 700;
+  margin-bottom: -2px; }
+.learnnow-page--index #u15722-3 {
+  padding-top: 65px; }
+.learnnow-page--index #u15722-2 {
+  color: #0052E7; }
+.learnnow-page--index #u518 {
+  height: 141px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  background: transparent url(../learnnow-images/assessments-minifeat.png) no-repeat center center;
+  background-size: contain;
+  background-position: center; }
+
+#u1625 {
+  background: transparent url("../learnnow-images/pahtbuilders-logo2.jpg?crc=448065767") no-repeat center top;
+  background-size: contain;
+  background-position: left; }
+
+.learnnow-page--wict-executive-development-series #u1724 {
+  background: transparent url("../learnnow-images/wict-dsc_6934small.jpg") no-repeat center top;
+  background-size: contain;
+  background-position: left;
+  height: 30em; }
+
+.time-warner-breakthrough-leadership #u1763 {
+  background: transparent url("../learnnow-images/tw_k.gif") no-repeat center top;
+  background-size: contain;
+  background-position: left;
+  height: 15em; }
+
+#u1823 {
+  background: transparent url("../learnnow-images/ctam-exmgmt228.jpg") no-repeat center top;
+  background-size: contain;
+  background-position: left;
+  height: 10em; }
+
+#u1686 {
+  background: transparent url("../learnnow-images/namic-ls-2016-den-slider.jpg") no-repeat center top;
+  background-size: contain;
+  background-position: left;
+  height: 20em; }
+
+#u1861 {
+  background: transparent url("../learnnow-images/namic-eldp-logo.jpg") no-repeat center top;
+  background-size: contain;
+  background-position: left;
+  height: 10em; }
+
+#u1896 {
+  background: transparent url("../learnnow-images/thrive_title-card.jpg") no-repeat center top;
+  background-position: center;
+  height: 10em; }
+
+#u1931 {
+  background: transparent url("../learnnow-images/wict-jgcphoto-web.jpg") no-repeat center top;
+  background-size: contain;
+  background-position: left;
+  height: 30em; }
+
+#u1969 {
+  background: transparent url("../learnnow-images/wict-bmlilogo.jpg") no-repeat center top;
+  background-size: contain;
+  background-position: left;
+  height: 25em; }
+
+.image-bg-auto-height {
+  height: 18em;
+  display: block;
+  background: transparent url(../learnnow-images/mym-archives.jpg) no-repeat center center;
+  background-size: contain;
+  background-position: left; }
+
+#u521 {
+  height: 141px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  background: transparent url(../learnnow-images/jumpstart-minifeat.png?crc=4006551815) no-repeat; }
+
+#u11297 {
+  background: url(../learnnow-images/management-essentials_lifecycle_v3.svg?crc=388519366) no-repeat;
+  background-size: contain;
+  background-position: left;
+  height: 30em;
+  display: block; }
+
+.ln--bg-img-make-money-revenue {
+  height: 15empx;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  background: transparent url(../learnnow-images/dual-revenue-streams.svg?crc=385902576) no-repeat; }
+
+.ln--bg-img-turner-logo {
+  height: 15empx;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  background: transparent url(../learnnow-images/turner_logo_rgb_overlightbg.png) no-repeat; }
+
+.ln--image-namic-leadership {
+  background: url(../learnnow-images/namic-logo.jpg) no-repeat;
+  background-size: contain;
+  background-position: left;
+  height: 10em;
+  display: block; }
+
+.ln--image-promaxbda {
+  background: url(../learnnow-images/promaxbda_logo_black__twocolumncontent.jpg) no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 19em;
+  display: block; }
+
+.ln--image-wict-leadership-conf {
+  background: url(../learnnow-images/wict-lc-581094961_lb_7432_609d2e470de20387382860811e0193c1.jpg) no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 24em;
+  display: block; }
+
+.ln--learning-conf--wict a {
+  background: url(../learnnow-images/wict.jpg) no-repeat; }
+
+.ln--learning-conf--namic a {
+  background: url(../learnnow-images/namic-logo-u2164-fr.jpg) no-repeat; }
+
+.ln--learning-conf--promaxbda a {
+  background: url(../learnnow-images/promaxbda_logo_black__twocolumncontent-u2160-fr.jpg) no-repeat; }
+
+.ln--show-bg-image {
+  background-size: contain;
+  background-position: center; }
+  .ln--show-bg-image.ln--image-self-led--udemy {
+    background: url(../learnnow-images/udemy_logo_green.svg) no-repeat center; }
+  .ln--show-bg-image.ln--image-self-led--lynda {
+    background: url(../learnnow-images/lynda_logo2k-d_144x.jpg) no-repeat center; }
+  .ln--show-bg-image.ln--image-self-led--coursera {
+    background: url(../learnnow-images/logo.png) no-repeat center; }
+  .ln--show-bg-image.ln--image-self-led--degreed {
+    background: url(../learnnow-images/degreed-logo-hr_horizontal.jpg) no-repeat center; }
+
+div {
+  background-size: contain !important;
+  background-position: center !important; }
+  div .ln--learning-class--besty-magness {
+    background: url(../learnnow-images/wict.jpg) no-repeat center; }
+  div .ln--learning-class--wict-rising-leader {
+    background: url(../learnnow-images/wict.jpg) no-repeat center; }
+  div .ln--learning-class--promax-bda {
+    background: url(../learnnow-images/thrive_title-card-u1389-fr.jpg) no-repeat center; }
+  div .ln--learning-class--namic-leadership {
+    background: url(../learnnow-images/namic-eldp-logo-u1297-fr.jpg) no-repeat center; }
+  div .ln--learning-class--namic {
+    background: url(../learnnow-images/namic-leadership-seminar.png) no-repeat center; }
+  div .ln--learning-class--ctam {
+    background: url(../learnnow-images/ctam-logo-dark-blue-png.png) no-repeat center; }
+  div .ln--learning-class--tw-business {
+    background: url(../learnnow-images/tw_k.gif) no-repeat center;
+    background-size: contain; }
+  div .ln--learning-class--tw-leadership {
+    background: url(../learnnow-images/tw_k.gif) no-repeat center;
+    background-size: contain; }
+  div .ln--learning-class--turner-non {
+    background: url(../learnnow-images/turner_logo_icon_black_80x80.jpg) no-repeat center; }
+  div .ln--learning-class--make-you-matter {
+    background: url(../learnnow-images/make%20you%20matter%20logo-01.jpg) no-repeat center; }
+  div .ln--learning-class--wict-eecutive {
+    background: url(../learnnow-images/wict.jpg) no-repeat center; }
+  div .ln--learning-class--pathbuilder-per {
+    background: url(../learnnow-images/pathbuilders-logo.jpg) no-repeat center; }
+  div .ln--learning-class--pathbuilder-ach {
+    background: url(../learnnow-images/pathbuilders-logo.jpg) no-repeat center; }
+  div .ln--image-wict-executive-dev {
+    background: url(../learnnow-images/wict-dsc_6934small.jpg) no-repeat center; }
+
+#ln--timeline-embed .tl-slide-content {
+  font-size: 2rem; }
+  #ln--timeline-embed .tl-slide-content .tl-headline-date {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff; }
+  #ln--timeline-embed .tl-slide-content .tl-text-content {
+    font-size: 2rem;
+    color: #fff; }
+    #ln--timeline-embed .tl-slide-content .tl-text-content p {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: bold;
+      color: #fff; }
+#ln--timeline-embed .tl-timenav .tl-attribution {
+  display: none; }
+#ln--timeline-embed .tl-timemarker-active .tl-timemarker-content-container {
+  background: #000; }
+  #ln--timeline-embed .tl-timemarker-active .tl-timemarker-content-container h2.tl-headline {
+    color: #fff; }
+
+.ln--image-podcast-header-image {
+  height: 15em;
+  background: url(../learnnow-images/960x300-happy-hour.gif) no-repeat;
+  background-size: contain; }
+
+.ln--podcast-wrapper {
+  margin-top: 1rem; }
+  .ln--podcast-wrapper .ln--podcast-item {
+    margin: 0 .5rem 1rem 0; }
+    .ln--podcast-wrapper .ln--podcast-item > div {
+      margin: 0 .5rem; }
+    .ln--podcast-wrapper .ln--podcast-item .ln--audio {
+      padding-bottom: 5px;
+      border-bottom: solid 2px #000;
+      margin-bottom: .25rem; }
+    .ln--podcast-wrapper .ln--podcast-item .ln--title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: .25rem 0; }
+    .ln--podcast-wrapper .ln--podcast-item .ln--content {
+      padding: .5rem 0; }
+    .ln--podcast-wrapper .ln--podcast-item .ln--show-big-image {
+      height: 12em;
+      background-position: center !important; }
+      .ln--podcast-wrapper .ln--podcast-item .ln--show-big-image.ln--image-podcast--silas-hickey {
+        background: url(../learnnow-images/silas_hickey_-_cn_border_webjpg.jpg) no-repeat; }
+      .ln--podcast-wrapper .ln--podcast-item .ln--show-big-image.ln--image-podcast--malgosia_chapman {
+        background: url(../learnnow-images/aj5k3006.jpg) no-repeat; }
+      .ln--podcast-wrapper .ln--podcast-item .ln--show-big-image.ln--image-podcast--hania_poole {
+        background: url(../learnnow-images/320x320-hania-poole.jpg) no-repeat; }
+      .ln--podcast-wrapper .ln--podcast-item .ln--show-big-image.ln--image-podcast--pascal_desroches {
+        background: url(../learnnow-images/pascal_300x300.jpg) no-repeat; }
+
+.now-content #learnnow-page p {
+  font-size: 1rem; }
+  .now-content #learnnow-page p a {
+    font-size: 1rem; }
+
+.ln--gutter {
+  padding: 0 10px; }
+
+.ln--cohort-content-title {
+  padding-right: 10px; }
+
+.ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon-closethick {
+  background: url("../learnnow-images/ic-close.png") no-repeat left top !important;
+  background-position: -8px -8px !important; }
+
+.ln--cohort-facilitation-wrapper .ThumbGroup .popup_anchor {
+  height: 100px;
+  width: 100px;
+  float: left; }
+  .ln--cohort-facilitation-wrapper .ThumbGroup .popup_anchor .popup_element {
+    height: 100px;
+    width: 100px;
+    border: solid 4px #fff;
+    background-position: center;
+    background-size: cover; }
+    .ln--cohort-facilitation-wrapper .ThumbGroup .popup_anchor .popup_element:focus {
+      outline: none !important; }
+    .ln--cohort-facilitation-wrapper .ThumbGroup .popup_anchor .popup_element#u8976 {
+      background: transparent url("../learnnow-images/140915-pd-16a-1-e1412707509880-u8976-fr.jpg?crc=82355156") no-repeat left top;
+      background-size: cover; }
+    .ln--cohort-facilitation-wrapper .ThumbGroup .popup_anchor .popup_element#u8977 {
+      background: transparent url(../learnnow-images/gager-u8977-fr.jpg?crc=4046761452) no-repeat left top; }
+    .ln--cohort-facilitation-wrapper .ThumbGroup .popup_anchor .popup_element#u8975 {
+      background: transparent url(../learnnow-images/gruffie-clough_change-facilitator-300x300-u8975-fr.jpg?crc=3841630274) no-repeat left top; }
+
+.ln--cohort-thumb-wrapper {
+  padding-right: 10px; }
+  .ln--cohort-thumb-wrapper > .popup_anchor {
+    height: 64px;
+    width: 64px;
+    border: solid 2px #fff;
+    float: left; }
+    .ln--cohort-thumb-wrapper > .popup_anchor .popup_element {
+      background-position: center !important;
+      background-size: cover !important;
+      height: 100%; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7964 {
+        background: transparent url("../learnnow-images/robert%20bradley-u7964-fr.jpg?crc=3878301127") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7933 {
+        background: transparent url("../learnnow-images/brown%2c%20chris-u7933-fr.jpg?crc=47918533") no-repeat right center; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7944 {
+        background: transparent url("../learnnow-images/paul%20byk%20selfie-u7944-fr.jpg?crc=4023771470") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7940 {
+        background: transparent url("../learnnow-images/cantrell%2c%20lisa_selfie-u7940-fr.jpg?crc=4062427292") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7956 {
+        background: transparent url("../learnnow-images/pola%20changnon-u7956-fr.jpg?crc=64036527") no-repeat center bottom; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7950 {
+        background: transparent url("../learnnow-images/malgosia%20chapman-u7950-fr.jpg?crc=4148871339") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7951 {
+        background: transparent url("../learnnow-images/seth%20cole%20-%202-u7951-fr.jpg?crc=341994158") no-repeat right center; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7963 {
+        background: transparent url("../learnnow-images/dembla%2c%20vishal-u7963-fr.jpg?crc=3825371890") no-repeat center bottom; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7939 {
+        background: transparent url("../learnnow-images/scott%20doyne-u7939-fr.jpg?crc=3903812333") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7962 {
+        background: transparent url("../learnnow-images/guillermo%20farre%20pic%20-%20selfie-u7962-fr.jpg?crc=344592529") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7953 {
+        background: transparent url("../learnnow-images/steve%20fiorello-u7953-fr.jpg?crc=91389651") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7952 {
+        background: transparent url("../learnnow-images/g-fisher-u7952-fr.jpg?crc=4079337637") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7934 {
+        background: transparent url("../learnnow-images/s%20flowers-selfie-u7934-fr.jpg?crc=4100619377") no-repeat center center; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7943 {
+        background: transparent url("../learnnow-images/harold%20goings%20selfie-u7943-fr.jpg?crc=4212034158") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7947 {
+        background: transparent url("../learnnow-images/ramonica_harton_01a-u7947-fr.jpg?crc=3932893677") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7932 {
+        background: transparent url("../learnnow-images/penny%20alley-u7932-fr.jpg?crc=169767143") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7937 {
+        background: transparent url("../learnnow-images/immele.jpg?crc=413621651") no-repeat center bottom; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7954 {
+        background: transparent url("../learnnow-images/brad%20ingram-u7954-fr.jpg?crc=3829597966") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7941 {
+        background: transparent url("../learnnow-images/d-iwanski-u7941-fr.jpg?crc=121479691") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7957 {
+        background: transparent url("../learnnow-images/stephanie%20miles-u7957-fr.jpg?crc=161773704") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7960 {
+        background: transparent url("../learnnow-images/mazur%2c%20kim_selfie-u7960-fr.jpg?crc=4287716441") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7961 {
+        background: transparent url("../learnnow-images/bill%20mcloughlin-u7961-fr.jpg?crc=243414311") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7966 {
+        background: transparent url("../learnnow-images/minaker%2c%20gustavo_selfie-u7966-fr.jpg?crc=4190805068") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7942 {
+        background: transparent url("../learnnow-images/george%20monas%20--%20selfie-u7942-fr.jpg?crc=9925491") no-repeat center bottom; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7946 {
+        background: transparent url("../learnnow-images/brian%20parker%20selfie-u7946-fr.jpg?crc=3920159598") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7949 {
+        background: transparent url("../learnnow-images/ravindranath%2c%20juhi-u7949-fr.jpg?crc=4067250409") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7967 {
+        background: transparent url("../learnnow-images/linkedin-u7967-fr.jpg?crc=3768616845") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7955 {
+        background: transparent url("../learnnow-images/erik%20resnik%20selfie-u7955-fr.jpg?crc=336567067") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7968 {
+        background: transparent url("../learnnow-images/tauber%2c%20matt-u7968-fr.jpg?crc=4170120505") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7959 {
+        background: transparent url("../learnnow-images/toh%2c%20nicholas-u7959-fr.jpg?crc=4179219433") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7948 {
+        background: transparent url("../learnnow-images/waldron%2c%20chris_blank-u7948-fr.png?crc=413095392") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7938 {
+        background: transparent url("../learnnow-images/tramm%20wigzell%20selfie-u7938-fr.jpg?crc=286639800") no-repeat center center; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7965 {
+        background: transparent url("../learnnow-images/zuccarino%2c%20pablo-u7965-fr.jpg?crc=4161264877") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7936 {
+        background: transparent url("../learnnow-images/dan%20manu2-u7936-fr.jpg?crc=3808565548") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7958 {
+        background: transparent url("../learnnow-images/whit%20friese%20selfie-u7958-fr.jpg?crc=303013732") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7945 {
+        background: transparent url("../learnnow-images/michael%20hauser%20-%20selfie-u7945-fr.jpg?crc=143284433") no-repeat right center; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u7935 {
+        background: transparent url("../learnnow-images/sarquis-u7935-fr.jpg?crc=170497887") no-repeat left center; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u8975 {
+        background: transparent url("../learnnow-images/gruffie-clough_change-facilitator-300x300-u8975-fr.jpg?crc=3841630274") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u8977 {
+        background: transparent url("../learnnow-images/gager-u8977-fr.jpg?crc=4046761452") no-repeat left top; }
+      .ln--cohort-thumb-wrapper > .popup_anchor .popup_element#u8976 {
+        background: transparent url("../learnnow-images/140915-pd-16a-1-e1412707509880-u8976-fr.jpg?crc=82355156") no-repeat left top; }
+
+.ln--page-cohort5 #u12161 {
+  background: transparent url("../learnnow-images/august%2c%20tara-u12161-fr.jpg?crc=3968088684") no-repeat center center; }
+.ln--page-cohort5 #u12255 {
+  background: transparent url("../learnnow-images/bailey%2c%20lesley-u12255-fr.jpg?crc=4195480072") no-repeat center center; }
+.ln--page-cohort5 #u12272 {
+  background: transparent url("../learnnow-images/basabe%2c%20gabriel-u12272-fr.jpg?crc=4154144606") no-repeat center center; }
+.ln--page-cohort5 #u12286 {
+  background: transparent url("../learnnow-images/bernstein%2c%20doug-u12286-fr.jpg?crc=3854389605") no-repeat center center; }
+.ln--page-cohort5 #u12300 {
+  background: transparent url("../learnnow-images/brundige%2c%20wendy-u12300-fr.jpg?crc=333954993") no-repeat center center; }
+.ln--page-cohort5 #u12314 {
+  background: transparent url("../learnnow-images/burgess%2c%20jeff-u12314-fr.jpg?crc=4276645251") no-repeat center center; }
+.ln--page-cohort5 #u12328 {
+  background: transparent url("../learnnow-images/calendar%2c%20tom-u12328-fr.jpg?crc=4269492822") no-repeat center center; }
+.ln--page-cohort5 #u12342 {
+  background: transparent url("../learnnow-images/carroll%2c%20john-u12342-fr.jpg?crc=323638682") no-repeat center center; }
+.ln--page-cohort5 #u12356 {
+  background: transparent url("../learnnow-images/crawford%2c%20heather-u12356-fr.jpg?crc=194901050") no-repeat center center; }
+.ln--page-cohort5 #u12370 {
+  background: transparent url("../learnnow-images/crossland%2c%20james-u12370-fr.jpg?crc=4249191420") no-repeat center center; }
+.ln--page-cohort5 #u12384 {
+  background: transparent url("../learnnow-images/ferrari%2c%20gabriela-u12384-fr.jpg?crc=4275337386") no-repeat center center; }
+.ln--page-cohort5 #u12398 {
+  background: transparent url("../learnnow-images/friend%2c%20jamie-u12398-fr.jpg?crc=4236559138") no-repeat center center; }
+.ln--page-cohort5 #u12412 {
+  background: transparent url("../learnnow-images/goulding%2c%20nicola-u12412-fr.jpg?crc=4050160988") no-repeat center center; }
+.ln--page-cohort5 #u12426 {
+  background: transparent url("../learnnow-images/green%2c%20ollie-u12426-fr.jpg?crc=3831137131") no-repeat center center; }
+.ln--page-cohort5 #u12440 {
+  background: transparent url("../learnnow-images/hashimoto%2c%20allison-u12440-fr.jpg?crc=4071354984") no-repeat center center; }
+.ln--page-cohort5 #u12454 {
+  background: transparent url("../learnnow-images/holcombe%2c%20matt-u12454-fr.jpg?crc=4100375732") no-repeat center center; }
+.ln--page-cohort5 #u12468 {
+  background: transparent url("../learnnow-images/hoyal%2c%20henry-u12468-fr.jpg?crc=200685643") no-repeat center center; }
+.ln--page-cohort5 #u12482 {
+  background: transparent url("../learnnow-images/ibal%2c%20cathy-u12482-fr.jpg?crc=490634815") no-repeat center center; }
+.ln--page-cohort5 #u12496 {
+  background: transparent url("../learnnow-images/irvine%2c%20audrey-u12496-fr.jpg?crc=378276865") no-repeat center center; }
+.ln--page-cohort5 #u12510 {
+  background: transparent url("../learnnow-images/kahne%2c%20kimberly-u12510-fr.jpg?crc=342825886") no-repeat center center; }
+.ln--page-cohort5 #u12524 {
+  background: transparent url("../learnnow-images/koehler%2c%20melissa-u12524-fr.jpg?crc=4011768608") no-repeat center center; }
+.ln--page-cohort5 #u12538 {
+  background: transparent url("../learnnow-images/lelash%2c%20curtis-u12538-fr.jpg?crc=4189741851") no-repeat center center; }
+.ln--page-cohort5 #u12552 {
+  background: transparent url("../learnnow-images/lowy%2c%20lisa-u12552-fr.jpg?crc=3948456471") no-repeat center center; }
+.ln--page-cohort5 #u12566 {
+  background: transparent url("../learnnow-images/markowski%2c%20paul-u12566-fr.jpg?crc=3922568927") no-repeat center center; }
+.ln--page-cohort5 #u12594 {
+  background: transparent url("../learnnow-images/mosley%2c%20shariff-u12594-fr.jpg?crc=3878724639") no-repeat center center; }
+.ln--page-cohort5 #u12608 {
+  background: transparent url("../learnnow-images/plesha%2c%20david-u12608-fr.jpg?crc=344400751") no-repeat center center; }
+.ln--page-cohort5 #u12622 {
+  background: transparent url("../learnnow-images/schepis%2c%20brian-u12622-fr.jpg?crc=3820398395") no-repeat center center; }
+.ln--page-cohort5 #u12636 {
+  background: transparent url("../learnnow-images/shipsky%2c%20susan-u12636-fr.jpg?crc=373400369") no-repeat center center; }
+.ln--page-cohort5 #u12650 {
+  background: transparent url("../learnnow-images/todd%2c%20stephanie-u12650-fr.jpg?crc=4175813136") no-repeat center center; }
+.ln--page-cohort5 #u12664 {
+  background: transparent url("../learnnow-images/vollrath%2c%20ben-u12664-fr.jpg?crc=274508434") no-repeat center center; }
+.ln--page-cohort5 #u12678 {
+  background: transparent url("../learnnow-images/watkins%2c%20drew-u12678-fr.jpg?crc=4065379827") no-repeat center center; }
+.ln--page-cohort5 #u12692 {
+  background: transparent url("../learnnow-images/yates%2c%20kim-u12692-fr.jpg?crc=4203598735") no-repeat center center; }
+.ln--page-cohort5 #u12706 {
+  background: transparent url("../learnnow-images/yeldell%2c%20robert-u12706-fr.jpg?crc=4222135058") no-repeat center center; }
+.ln--page-cohort5 #u12720 {
+  background: transparent url("../learnnow-images/zyman%2c%20sharon-u12720-fr.jpg?crc=181130001") no-repeat center center; }
+.ln--page-cohort5 #u13640 {
+  background: transparent url("../learnnow-images/jason%20farkas-u13640-fr.jpg?crc=10442095") no-repeat center center; }
+.ln--page-cohort5 #u13679 {
+  background: transparent url("../learnnow-images/alex%20vargas-u13679-fr.jpg?crc=4188155747") no-repeat center top; }
+.ln--page-cohort5 #u13693 {
+  background: transparent url("../learnnow-images/renee%20white-u13693-fr.jpg?crc=125077883") no-repeat center top; }
+.ln--page-cohort5 #u13922 {
+  background: transparent url("../learnnow-images/gary-finnegan-u13922-fr.jpg?crc=180652752") no-repeat center top; }
+.ln--page-cohort5 #u12747 {
+  background: transparent url("../learnnow-images/august%2c%20tara.jpg?crc=446320627") no-repeat center center; }
+.ln--page-cohort5 #u12752 {
+  background: transparent url("../learnnow-images/bailey%2c%20lesley.jpg?crc=3979634764") no-repeat center center; }
+.ln--page-cohort5 #u12758 {
+  background: transparent url("../learnnow-images/basabe%2c%20gabriel.jpg?crc=4287031338") no-repeat center center; }
+.ln--page-cohort5 #u12764 {
+  background: transparent url("../learnnow-images/bernstein%2c%20doug.jpg?crc=3836523766") no-repeat center center; }
+.ln--page-cohort5 #u12770 {
+  background: transparent url("../learnnow-images/brundige%2c%20wendy.jpg?crc=3931518178") no-repeat center center; }
+.ln--page-cohort5 #u12776 {
+  background: transparent url("../learnnow-images/burgess%2c%20jeff.jpg?crc=8819245") no-repeat center center; }
+.ln--page-cohort5 #u12782 {
+  background: transparent url("../learnnow-images/calendar%2c%20tom.jpg?crc=356082850") no-repeat center center; }
+.ln--page-cohort5 #u12788 {
+  background: transparent url("../learnnow-images/carroll%2c%20john.jpg?crc=360906815") no-repeat center center; }
+.ln--page-cohort5 #u12794 {
+  background: transparent url("../learnnow-images/crawford%2c%20heather.jpg?crc=4259197992") no-repeat center center; }
+.ln--page-cohort5 #u12800 {
+  background: transparent url("../learnnow-images/crossland%2c%20james.jpg?crc=219388178") no-repeat center center; }
+.ln--page-cohort5 #u12806 {
+  background: transparent url("../learnnow-images/ferrari%2c%20gabriela.jpg?crc=3913747458") no-repeat center center; }
+.ln--page-cohort5 #u12812 {
+  background: transparent url("../learnnow-images/friend%2c%20jamie.jpg?crc=481173562") no-repeat center center; }
+.ln--page-cohort5 #u12818 {
+  background: transparent url("../learnnow-images/goulding%2c%20nicola.jpg?crc=169495579") no-repeat center center; }
+.ln--page-cohort5 #u12824 {
+  background: transparent url("../learnnow-images/green%2c%20ollie.jpg?crc=3824888064") no-repeat center center; }
+.ln--page-cohort5 #u12830 {
+  background: transparent url("../learnnow-images/hashimoto%2c%20allison.jpg?crc=360522236") no-repeat center center; }
+.ln--page-cohort5 #u12836 {
+  background: transparent url("../learnnow-images/holcombe%2c%20matt.jpg?crc=220847390") no-repeat center center; }
+.ln--page-cohort5 #u12842 {
+  background: transparent url("../learnnow-images/hoyal%2c%20henry.jpg?crc=4221274734") no-repeat center center; }
+.ln--page-cohort5 #u12848 {
+  background: transparent url("../learnnow-images/ibal%2c%20cathy.jpg?crc=171325758") no-repeat center center; }
+.ln--page-cohort5 #u12854 {
+  background: transparent url("../learnnow-images/irvine%2c%20audrey.jpg?crc=4113090710") no-repeat center center; }
+.ln--page-cohort5 #u12860 {
+  background: transparent url("../learnnow-images/kahne%2c%20kimberly.jpg?crc=3803482946") no-repeat center center; }
+.ln--page-cohort5 #u12866 {
+  background: transparent url("../learnnow-images/koehler%2c%20melissa.jpg?crc=4064007434") no-repeat center center; }
+.ln--page-cohort5 #u12872 {
+  background: transparent url("../learnnow-images/lelash%2c%20curtis.jpg?crc=4136704150") no-repeat center center; }
+.ln--page-cohort5 #u12878 {
+  background: transparent url("../learnnow-images/lowy%2c%20lisa.jpg?crc=3795014263") no-repeat center center; }
+.ln--page-cohort5 #u12884 {
+  background: transparent url("../learnnow-images/markowski%2c%20paul.jpg?crc=3796132752") no-repeat center center; }
+.ln--page-cohort5 #u12896 {
+  background: transparent url("../learnnow-images/mosley%2c%20shariff.jpg?crc=78409125") no-repeat center center; }
+.ln--page-cohort5 #u12902 {
+  background: transparent url("../learnnow-images/plesha%2c%20david.jpg?crc=511357569") no-repeat center center; }
+.ln--page-cohort5 #u12908 {
+  background: transparent url("../learnnow-images/schepis%2c%20brian.jpg?crc=392196398") no-repeat center center; }
+.ln--page-cohort5 #u12914 {
+  background: transparent url("../learnnow-images/shipsky%2c%20susan.jpg?crc=433376681") no-repeat center center; }
+.ln--page-cohort5 #u12920 {
+  background: transparent url("../learnnow-images/todd%2c%20stephanie.jpg?crc=96105747") no-repeat center center; }
+.ln--page-cohort5 #u12926 {
+  background: transparent url("../learnnow-images/vollrath%2c%20ben.jpg?crc=3916232214") no-repeat center center; }
+.ln--page-cohort5 #u12932 {
+  background: transparent url("../learnnow-images/watkins%2c%20drew.jpg?crc=525029240") no-repeat center center; }
+.ln--page-cohort5 #u12938 {
+  background: transparent url("../learnnow-images/yates%2c%20kim.jpg?crc=523300763") no-repeat center center; }
+.ln--page-cohort5 #u12944 {
+  background: transparent url("../learnnow-images/yeldell%2c%20robert.jpg?crc=328325274") no-repeat center center; }
+.ln--page-cohort5 #u12950 {
+  background: transparent url("../learnnow-images/zyman%2c%20sharon.jpg?crc=319134175") no-repeat center center; }
+.ln--page-cohort5 #u13791 {
+  background: transparent url("../learnnow-images/jason%20farkas-u13791-fr.jpg?crc=3862491864") no-repeat center center; }
+.ln--page-cohort5 #u13794 {
+  background: transparent url("../learnnow-images/alex%20vargas-u13794-fr.jpg?crc=3800157557") no-repeat center top; }
+.ln--page-cohort5 #u13797 {
+  background: transparent url("../learnnow-images/renee%20white-u13797-fr.jpg?crc=4261094946") no-repeat center top; }
+.ln--page-cohort5 #u13941 {
+  background: transparent url("../learnnow-images/gary-finnegan.jpg?crc=427094337") no-repeat center center; }
+.ln--page-cohort5 #u9713 {
+  background: transparent url("../learnnow-images/gruffie-clough_change-facilitator-300x300-u8975-fr.jpg?crc=3841630274") no-repeat left top; }
+.ln--page-cohort5 #u9714 {
+  background: transparent url("../learnnow-images/amy_humble.jpg?crc=4045003661") no-repeat center center; }
+.ln--page-cohort5 #u9715 {
+  background: transparent url("../learnnow-images/gager-u8977-fr.jpg?crc=4046761452") no-repeat left top; }
+
+.ln--cohort-hidden-popup-items .ContainerGroup .Container.rounded-corners {
+  position: absolute;
+  background: #fff;
+  z-index: 999999;
+  border: solid 2px #777;
+  border-radius: 8px;
+  box-shadow: 4px 4px 6px #ccc;
+  padding: .5rem 1rem;
+  width: 440px !important; }
+  .ln--cohort-hidden-popup-items .ContainerGroup .Container.rounded-corners .clip_frame {
+    width: 150px;
+    clear: none !important;
+    float: left;
+    margin-right: 10px; }
+  .ln--cohort-hidden-popup-items .ContainerGroup .Container.rounded-corners > .clearfix.grpelem {
+    width: 180px;
+    float: left;
+    clear: none !important; }
+    .ln--cohort-hidden-popup-items .ContainerGroup .Container.rounded-corners > .clearfix.grpelem p {
+      font-size: 1rem;
+      margin-bottom: 0px; }
+
+.ln--cohort-tab-container ul.ln--cohort-tabs {
+  padding: 0 10px; }
+  .ln--cohort-tab-container ul.ln--cohort-tabs li {
+    list-style: none;
+    float: left;
+    margin-right: 2px; }
+    .ln--cohort-tab-container ul.ln--cohort-tabs li:before {
+      background: none; }
+    .ln--cohort-tab-container ul.ln--cohort-tabs li a {
+      padding: 5px 5px;
+      background: #0052E7;
+      color: #fff;
+      box-shadow: 1px 1px 2px #ccc;
+      border-radius: 0px;
+      font-size: 1rem; }
+      .ln--cohort-tab-container ul.ln--cohort-tabs li a:hover, .ln--cohort-tab-container ul.ln--cohort-tabs li a.active {
+        background: #000; }
+
+.ln--cohort-content .ln--gutter {
+  padding: 0 5px; }
+.ln--cohort-content a.nonblock {
+  font-size: 1rem; }
+.ln--cohort-content ul li {
+  font-size: 1rem !important; }
+  .ln--cohort-content ul li p {
+    font-size: 1rem !important; }
+.ln--cohort-content p {
+  margin-bottom: 0px !important;
+  font-size: 1rem !important; }
+  .ln--cohort-content p span {
+    font-weight: bold;
+    display: block;
+    border-bottom: solid 2px #000; }
+.ln--cohort-content .clearfix.colelem .clearfix.grpelem p:first-child {
+  font-weight: bold;
+  color: #444;
+  margin: 5px 0; }
+.ln--cohort-content .clearfix.grpelem .clearfix.colelem p:first-child {
+  font-weight: bold;
+  color: #444;
+  margin: 5px 0; }
+.ln--cohort-content .More-Info-Link-Box {
+  background: #0052E7 !important;
+  padding: 8px 5px;
+  margin: 4px 0;
+  border-radius: 3px;
+  box-shadow: 3px 3px 4px #ccc;
+  display: block; }
+  .ln--cohort-content .More-Info-Link-Box p {
+    color: #fff !important;
+    font-size: 1.2rem !important;
+    line-height: 1.2rem !important;
+    font-weight: bold; }
+    .ln--cohort-content .More-Info-Link-Box p a {
+      color: #fff !important; }
+      .ln--cohort-content .More-Info-Link-Box p a.nonblock span {
+        display: auto;
+        float: left;
+        font-size: .8rem; }
+    .ln--cohort-content .More-Info-Link-Box p span {
+      border: none; }
+  .ln--cohort-content .More-Info-Link-Box p:not(:first-child) {
+    font-size: 0.8rem !important; }
+    .ln--cohort-content .More-Info-Link-Box p:not(:first-child) span {
+      font-size: 0.8rem !important; }
+
+.ln--cohort-facilitation-wrapper .ln--cohort-hidden-popup-box {
+  display: none; }
+
+.ln--cohort-hidden-popup-box {
+  display: none; }
+  .ln--cohort-hidden-popup-box .Container.Modal-Window a {
+    color: #0052E7; }
+  .ln--cohort-hidden-popup-box .Container.Modal-Window div:focus, .ln--cohort-hidden-popup-box .Container.Modal-Window span:focus, .ln--cohort-hidden-popup-box .Container.Modal-Window p:focus, .ln--cohort-hidden-popup-box .Container.Modal-Window a:focus {
+    outline: none !important; }
+  .ln--cohort-hidden-popup-box .Container.Modal-Window div p {
+    margin: 0px; }
+    .ln--cohort-hidden-popup-box .Container.Modal-Window div p:first-child {
+      font-size: 4rem;
+      font-weight: bold; }
+
+.ln--page-cohort5 .ln--cohort-hidden-popup-items .ContainerGroup .Container.toolTip {
+  position: absolute;
+  background: #fff;
+  z-index: 999999;
+  border: solid 2px #777;
+  border-radius: 8px;
+  box-shadow: 4px 4px 6px #ccc;
+  padding: .5rem 1rem;
+  width: 440px !important; }
+  .ln--page-cohort5 .ln--cohort-hidden-popup-items .ContainerGroup .Container.toolTip .clip_frame, .ln--page-cohort5 .ln--cohort-hidden-popup-items .ContainerGroup .Container.toolTip .museBGSize {
+    width: 150px;
+    height: 130px;
+    clear: none !important;
+    float: left;
+    margin-right: 10px; }
+  .ln--page-cohort5 .ln--cohort-hidden-popup-items .ContainerGroup .Container.toolTip > .clearfix.grpelem {
+    width: 180px;
+    float: left;
+    clear: none !important; }
+    .ln--page-cohort5 .ln--cohort-hidden-popup-items .ContainerGroup .Container.toolTip > .clearfix.grpelem p {
+      margin-bottom: 0px;
+      font-size: 1rem; }
+      .ln--page-cohort5 .ln--cohort-hidden-popup-items .ContainerGroup .Container.toolTip > .clearfix.grpelem p:first-child {
+        font-weight: bold;
+        color: #000; }
+
+/*# sourceMappingURL=turner_now_learnnow.css.map */
