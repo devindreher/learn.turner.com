@@ -1,384 +1,265 @@
-<!DOCTYPE html>
-<html class="nojs html" lang="en-US">
-<head>
+<style>
+    
+    .video-player {
+        width: 100%
+    }
+    
+    .video-player__container {
+        width: 100% !important;
+        height: auto !important;
+    }
+    
+    .background-video {
+        background-color: lightgray;
+        padding: 20px;
+    }
+    
+    
+    .card {
+        width: 300px;
+        border: 1px solid gray;
+        box-shadow: 1px 1px 3px #888;
+        border-top: 10px solid black;
+        min-height: 250px;
+        padding: 10px;
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+/*        margin: 20px;*/
+    }    
 
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-<meta name="generator" content="2017.0.4.363" />
+/*
+    .card:first-child {
+        margin-left: 0;    
+    }
+*/
 
-<script type="text/javascript">
-   // Update the 'nojs'/'js' class on the html node
-document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
+    .card:hover {
+        box-shadow: 3px 3px 5px #888;
+        transition: 0.3s;
+        }
 
-// Check that all required assets are uploaded and up-to-date
-if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "jquery.musepolyfill.bgsize.js", "require.js", "pathbuilders-achieva.css"], "outOfDate":[]};
-</script>
+    .card h1 {
+        font-family: TurnerBold;
+        margin-top: -40px;
+        font-size: 24px;
+        margin-left: 55px;
+    }
+    
+    .card img {
+        border-radius: 50%;
+        width: 50px;
+    }
 
-<title>REVIEWS & CONVERSATIONS</title>
-<!-- CSS -->
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/ajax-progress.module.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/align.module.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/autocomplete-loading.module.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/clearfix.module.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/container-inline.module.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/contextual.icons.theme.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/contextual.module.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/contextual.theme.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/details.module.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/fieldgroup.module.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/hidden.module.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/item-list.module.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/js.module.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/nowrap.module.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/position-container.module.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/progress.module.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/reset-appearance.module.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/resize.module.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/sticky-header.module.css" />
+    .card p {
+      margin: 10px;
+      font-family: TurnerRegular;
+      font-size: 16px !important;
+    }
 
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/styles.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/tabledrag.module.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/tablesort.module.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/tree-child.module.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/vendors.css" />
-<link rel="stylesheet" type="text/css"
-	href="css/turner-default/views.module.css" />
+    .card a {
+        font-size: 16px;
+    }
 
-<link rel="stylesheet" type="text/css" href="css/styles-learnnow.css" />
-</head>
-<body>
+    #mainbox {
+        box-sizing: border-box;
+        justify-content: left;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .card-article {
+        width: 350px;
+        border: 1px solid gray;
+        box-shadow: 1px 1px 3px #888;
+        border-top: 10px solid black;
+        min-height: 325px;
+        padding: 10px;
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }    
 
-	<div class="clearfix time-warner-breakthrough-leadership"
-		id="learnnow-page">
-		<!-- column -->
-		<!-- Starting new markup -->
-		<div class="col-12_md-12_sm-12_xs-12 grid-top ln--main-menu-wrapper">
+    .card-article:hover {
+        box-shadow: 3px 3px 5px #888;
+        transition: 0.3s;
+        border: 1px solid #0052e7;
+        border-top: 10px solid black;
+        }
 
-			<div class="col-2_md-2_sm-2_xs-12">
-				<div class="lnow-menu-sec-header">Learning</div>
-				<div>
-					<a href="/learnnow/learning---classes---offerings">Classes &amp;
-						Offerings</a>
-				</div>
-				<div>
-					<a href="/learnnow/learning---conferences">Conferences</a>
-				</div>
-				<div>
-					<a class="nonblock" href="/learnnow/learning---self-directed">Self-Directed</a>
-				</div>
-			</div>
+    .card-article h1 {
+        font-family: TurnerBold;
+        margin-top: -40px;
+        font-size: 24px;
+        margin-left: 55px;
+    }
+    
+    .card-article img {
+        border-radius: 50%;
+        width: 50px;
+    }
 
-			<div class="col-2_md-2_sm-2_xs-12">
-				<div class="lnow-menu-sec-header">Leadership</div>
+    .card-article p {
+      margin: 10px;
+      font-family: TurnerRegular;
+      font-size: 16px !important;
+    }
 
-				<div>
-					<a href="/learnnow/leadership---leadershipnow">LeadershipNow</a>
-				</div>
-				<div>
-					<a href="/learnnow/leadership---management-essentials">Management
-						Essentials</a>
-				</div>
-				<div>
-					<a href="/learnnow/leadership---tlx">Turner Leadership Experience</a>
-				</div>
-			</div>
+    .card-article a {
+        color: #000 !important;
+        text-decoration: none !important;
+    }
 
-			<div class="col-2_md-2_sm-2_xs-12">
-				<div class="lnow-menu-sec-header">OD</div>
-				<div>
-					<a href="/learnnow/od---assessments">Assessments</a>
-				</div>
-				<div>
-					<a href="/learnnow/learning---coaching">Coaches</a>
-				</div>
-				<div>
-					<a href="/learnnow/od---team-effectiveness">Team Effectiveness</a>
-				</div>
-			</div>
+    
+</style>
 
-			<div class="col-2_md-2_sm-2_xs-12">
-				<div class="lnow-menu-sec-header">Performance</div>
-				<div>
-					<a href="/learnnow/performance---approach">Turner's Approach</a>
-				</div>
-				<div>
-					<a href="/learnnow/performance---goals">Goals</a>
-				</div>
-				<div>
-					<a href="/learnnow/performance---reviews-and-conversations">Reviews
-						&amp; Conversations</a>
-				</div>
-			</div>
+<div class="clearfix time-warner-breakthrough-leadership" id="learnnow-page"><!-- column -->
+  <!-- Starting new markup -->
+    <div class="col-12_md-12_sm-12_xs-12 grid-top ln--main-menu-wrapper">
 
-			<div class="col-2_md-2_sm-2_xs-12">
-				<div class="lnow-menu-sec-header">New to Turner?</div>
-				<div>
-					<a class="nonblock" href="/learnnow/new-hires---30-day-guide">30-Day
-						Guide</a>
-				</div>
-				<div>
-					<a class="nonblock" href="/learnnow/new-hires---about-turner">About
-						Turner</a>
-				</div>
-				<div>
-					<a class="nonblock"
-						href="https://eahapspor.turner.com:7111/ps/forwarddl.jsp?aut=N&amp;forwardURL=https%3a%2f%2feahapspor.turner.com%3a7111%2fpsc%2fps%2fEMPLOYEE%2fEMPL%2fs%2fWEBLIB_T_DLINK.ISCRIPT1.FieldFormula.IScript_GetLink%3fDEEPLINK%3d248"
-						target="_blank">Benefits</a>
-				</div>
-				<div>
-					<a class="nonblock" href="/learnnow/new-hires---how-we-make-money">How
-						We Make Money</a>
-				</div>
-				<div>
-					<a class="nonblock" href="/learnnow/new-hires---your-technology">Your
-						Technology</a>
-				</div>
-				<div><a class="nonblock" target="_blank" href="/security">Security</a></div>
-			</div>
-
-		</div>
-
-
-
-
-		<div
-			class="col-12_md-12_sm-12_xs-12 grid-top index-page content-grid-items">
-
-
-			<div class="col-12_md-12_sm-12_xs-12">
-				<h2>REVIEWS & CONVERSATIONS</h2>
-
-			</div>
-			<!-- main-content -->
-
-
-
-			<div
-				class="col-12_md-12_sm-12_xs-12 grid-top index-page content-grid-items">
-
-				<div class="col-6_md-6_sm-6_xs-12 ln--spaceAround">
-					<iframe
-						src="https://player.vimeo.com/video/173059438?title=0&amp;byline=0&amp;portrait=0"
-						width="100%" height="auto" frameborder="0"
-						webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-				</div>
-
-				<div class="col-6_md-6_sm-6_xs-12 grid">
-					<div class="col-5_md-5_sm-5_xs-12">
-						<div class="ln--bb">FOR EMPLOYEES</div>
-						<div class="ln--bold">Preparing Your Self-Recap</div>
-						<div class="ln--links">
-							<p id="u9268-25">
-								<a class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/2016+Employee+Guide+for+Preparing+a+Self+Recap+%26+Setting+Goals.pdf"
-									target="_blank"><span id="u9268-5">English</span></a><span
-									id="u9268-7"> | </span><a class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Chinese/Chinese+-+2016_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals+(6).pdf"
-									target="_blank"><span id="u9268-8">Chinese</span></a><span
-									id="u9268-10"> | </span><a class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Korean/Korean+-+2016_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals+(8).pdf"
-									target="_blank"><span id="u9268-11">Korean</span></a><span
-									id="u9268-14"><br></span><a class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Japanese/Japanese+-+2016_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals+(7).pdf"
-									target="_blank"><span id="u9268-15">Japanese</span></a><span
-									id="u9268-17"> | </span><a class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Portuguese/Portuguese+-+2016_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals+(9).pdf"
-									target="_blank"><span id="u9268-18">Portuguese</span></a><span
-									id="u9268-20"> </span><span id="u9268-22"><br></span><a
-									class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Spanish/Spanish+-+2016_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals+(10).pdf"
-									target="_blank"><span id="u9268-23">Spanish</span></a>
-							</p>
-						</div>
-
-						<div class="ln--bold">Having a Successful Recap Conversation
-							With Your Manager</div>
-						<div class="ln--links">
-							<p id="u9271-5">
-								<a class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/2016+Employee+Guide+to+Successful+Performance+Recap+Conversations.pdf"
-									target="_blank"><span id="u9271-3">English</span></a>
-							</p>
-						</div>
-
-						<div class="ln--bold">Guide to Ongoing Performance Check-ins</div>
-						<div class="ln--links">
-							<p id="u9283-5">
-								<a class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2017/Guide-to-Performance-Check-Ins.pdf"
-									target="_blank"><span id="u9283-3">English</span></a>
-							</p>
-						</div>
-					</div>
-
-					<div class="col-5_md-5_sm-5_xs-12">
-						<div class="ln--bb">FOR MANAGERS</div>
-						<div class="ln--bold">Preparing a Manager Recap</div>
-						<div class="ln--links">
-							<p id="u9274-23">
-								<a class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/2016+Manager+Guide+for+Preparing+a+Performance+Recap.pdf"
-									target="_blank"><span id="u9274-3">English</span></a><span
-									id="u9274-5"> | </span><a class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Chinese/Chinese+-+2016_Manager_Guide_for_Preparing_a_Performance_Recap+(5).pdf"
-									target="_blank"><span id="u9274-6">Chinese</span></a><span
-									id="u9274-8"> | </span><a class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Korean/Korean+-+2016_Manager_Guide_for_Preparing_a_Performance_Recap+(7).pdf"
-									target="_blank"><span id="u9274-9">Korean</span></a><span
-									id="u9274-12"><br></span><a class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Japanese/Japanese+-+2016_Manager_Guide_for_Preparing_a_Performance_Recap+(6).pdf"
-									target="_blank"><span id="u9274-13">Japanese</span></a><span
-									id="u9274-15"> | </span><a class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Portuguese/Portuguese+-+2016_Manager_Guide_for_Preparing_a_Performance_Recap+(8).pdf"
-									target="_blank"><span id="u9274-16">Portuguese</span></a><span
-									id="u9274-18"> </span><span id="u9274-20"><br></span><a
-									class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Spanish/Spanish+-+2016_Manager_Guide_for_Preparing_a_Performance_Recap+(9).pdf"
-									target="_blank"><span id="u9274-21">Spanish</span></a>
-							</p>
-						</div>
-
-						<div class="ln--bold">Having a Successful Recap Conversation
-							With Your Employee</div>
-						<div class="ln--links">
-							<p id="u9277-23">
-								<a class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/2016+Manager+Guide+to+Successful+Performance+Recap+Conversations.pdf"
-									target="_blank"><span id="u9277-3">English</span></a><span
-									id="u9277-5"> | </span><a class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Chinese/Chinese+-+2016_Manager_Guide_to_Successful_Performance_Recap_Conversations+(5).pdf"
-									target="_blank"><span id="u9277-6">Chinese</span></a><span
-									id="u9277-8"> | </span><a class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Korean/Korean+-+2016_Manager_Guide_to_Successful_Performance_Recap_Conversations+(7).pdf"
-									target="_blank"><span id="u9277-9">Korean</span></a><span
-									id="u9277-12"><br></span><a class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Japanese/Japanese+-+2016_Manager_Guide_to_Successful_Performance_Recap_Conversations+(6).pdf"
-									target="_blank"><span id="u9277-13">Japanese</span></a><span
-									id="u9277-15"> | </span><a class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Portuguese/Portuguese+-+2016_Manager_Guide_to_Successful_Performance_Recap_Conversations+(8).pdf"
-									target="_blank"><span id="u9277-16">Portuguese</span></a><span
-									id="u9277-18"> </span><span id="u9277-20"><br></span><a
-									class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Spanish/Spanish+-+2016_Manager_Guide_to_Successful_Performance_Recap_Conversations+(9).pdf"
-									target="_blank"><span id="u9277-21">Spanish</span></a>
-							</p>
-						</div>
-
-						<div class="ln--bold">How to Talk about Total Rewards</div>
-						<div class="ln--links">
-							<p id="u9280-7">
-								<a class="nonblock"
-									href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/2016+Manager+Guide+for+Discussing+Total+Rewards.pdf"
-									target="_blank"><span id="u9280-5">English</span></a>
-							</p>
-						</div>
-					</div>
-
-				</div>
-
-
-			</div>
-
-			<div class="col-12_md-12_sm-12_xs-12 grid-top content-grid-items">
-        <div class="ln--bb">ARTICLES AND INSPIRATION</div>
-				<div class="col-3_md-3_sm-3_xs-12 ln--spaceAround">
-				    <div class="ln--sec-title">10 Keys to Delivering Performance Reviews</div>
-				    <div class="ln--sec-description">The Corporate Executive Board gives us some more tips.</div>
-				    <div class="ln--sec-read-more-link"><a class="nonblock nontext shadow More-Info-Link-Box clearfix grpelem" id="u4803-4" href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/CEB_Manager_Guide_10_Keys_to_Improve_Employee_Performance_through_Formal_Performance_Reviews.pdf" target="_blank"><!-- content --><p id="u4803-2">READ</p></a></div>
-				</div>
-				
-				<div class="col-3_md-3_sm-3_xs-12 ln--spaceAround">
-            <div class="ln--sec-title">Your Complete Guide to Acing This Year's Performance Review.</div>
-            <div class="ln--sec-description">Why is it so hard to have useful year-end reviews? Quartz gives us some steps for getting better feedback.</div>
-            <div class="ln--sec-read-more-link"><a class="nonblock nontext More-Info-Link-Box shadow clearfix grpelem" id="u4813-4" href="http://qz.com/562880/your-complete-guide-to-acing-this-years-performance-review/?utm_source=facebook&amp;utm_campaign=HBR&amp;utm_medium=social" target="_blank"><!-- content --><p id="u4813-2">READ</p></a></div>
+        <div class="col-2_md-2_sm-2_xs-12">
+          <div class="lnow-menu-sec-header">Learning</div>
+          <div><a href="/learnnow/learning---classes---offerings">Classes &amp; Offerings</a></div>
+          <div><a href="/learnnow/learning---conferences">Conferences</a></div>
+          <div><a class="nonblock" href="/learnnow/learning---self-directed">Self-Directed</a></div>
         </div>
-        
-        <div class="col-3_md-3_sm-3_xs-12 ln--spaceAround">
-            <div class="ln--sec-title">The Fatal Career Mistake You Won't Realize You're Making.</div>
-            <div class="ln--sec-description">"The worst thing you can do with respect to your job is to believe that if you get up and go to work every day, somehow you're also managing your career."
-Liz Ryan, CEO of Human Workplace, tells us more.</div>
-            <div class="ln--sec-read-more-link"><a class="nonblock nontext More-Info-Link-Box shadow clearfix grpelem" id="u4822-4" href="https://www.linkedin.com/pulse/fatal-career-mistake-you-wont-realize-youre-making-liz-ryan" target="_blank"><!-- content --><p id="u4822-2">READ</p></a></div>
+
+        <div class="col-2_md-2_sm-2_xs-12">
+          <div class="lnow-menu-sec-header">Leadership</div>
+
+          <div><a href="/learnnow/leadership---leadershipnow">LeadershipNow</a></div>
+          <div><a href="/learnnow/leadership---management-essentials">Management Essentials</a></div>
+          <div><a href="/learnnow/leadership---tlx">Turner Leadership Experience</a></div>
         </div>
-        
-        <div class="col-3_md-3_sm-3_xs-12 ln--spaceAround">
-            <div class="ln--sec-title">The Key to Performance Reviews is Preparation.</div>
-            <div class="ln--sec-description">"It's difficult to give a review that successfully navigates the emotional and interpersonal dynamics while also balancing the complex, competing goals in most performance reviews."
-Ben Dattner, HBR contributor, gives us his 5 questions he asks while giving feedback.</div>
-            <div class="ln--sec-read-more-link"><a class="nonblock nontext More-Info-Link-Box shadow clearfix grpelem" id="u9288-4" href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/HBR+-+The+Key+to+Performance+Reviews+is+Preparation.PDF" target="_blank"><!-- content --><p id="u9288-2">READ</p></a></div>
+
+        <div class="col-2_md-2_sm-2_xs-12">
+          <div class="lnow-menu-sec-header">OD</div>
+          <div><a href="/learnnow/od---assessments">Assessments</a></div>
+          <div><a href="/learnnow/learning---coaching">Coaches</a></div>
+          <div><a href="/learnnow/od---team-effectiveness">Team Effectiveness</a></div>
         </div>
-				
-			</div>
 
-			<!-- #main-content -->
+        <div class="col-2_md-2_sm-2_xs-12">
+          <div class="lnow-menu-sec-header">Performance</div>
+          <div><a href="/learnnow/performance---approach">Turner's Approach</a></div>
+          <div><a href="/learnnow/performance---goals">Goals</a></div>
+          <div><a href="/learnnow/performance---reviews-and-conversations">Reviews &amp; Conversations</a></div>
+        </div>
 
-			<!-- sidebar -->
+        <div class="col-2_md-2_sm-2_xs-12">
+          <div class="lnow-menu-sec-header">New to Turner?</div>
+          <div><a class="nonblock" href="/learnnow/new-hires---30-day-guide">30-Day Guide</a></div>
+          <div><a class="nonblock" href="/learnnow/new-hires---about-turner">About Turner</a></div>
+          <div><a class="nonblock" href="https://eahapspor.turner.com:7111/ps/forwarddl.jsp?aut=N&amp;forwardURL=https%3a%2f%2feahapspor.turner.com%3a7111%2fpsc%2fps%2fEMPLOYEE%2fEMPL%2fs%2fWEBLIB_T_DLINK.ISCRIPT1.FieldFormula.IScript_GetLink%3fDEEPLINK%3d248" target="_blank">Benefits</a></div>
+          <div><a class="nonblock" href="/learnnow/new-hires---how-we-make-money">How We Make Money</a></div>
+          <div><a class="nonblock" href="/learnnow/new-hires---your-technology">Your Technology</a></div>
+        </div>
 
-			<!-- #sidebar -->
-		</div>
+    </div>
+</div>
 
-	</div>
+<div class="col-12_md-12_sm-12_xs-12"><h2>Goals</h2></div>
 
-	<!-- JS includes -->
-	<script type="text/javascript">
-   if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
-</script>
-	<script type="text/javascript">
-   window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js?crc=209076791" type="text/javascript">\x3C/script>');
-</script>
-	<!-- Other scripts -->
-	<script type="text/javascript">
-   // Decide weather to suppress missing file error or not based on preference setting
-var suppressMissingFileError = false
-</script>
-	<script type="text/javascript">
-   window.Muse.assets.check=function(d){if(!window.Muse.assets.checked){window.Muse.assets.checked=!0;var b={},c=function(a,b){if(window.getComputedStyle){var c=window.getComputedStyle(a,null);return c&&c.getPropertyValue(b)||c&&c[b]||""}if(document.documentElement.currentStyle)return(c=a.currentStyle)&&c[b]||a.style&&a.style[b]||"";return""},a=function(a){if(a.match(/^rgb/))return a=a.replace(/\s+/g,"").match(/([\d\,]+)/gi)[0].split(","),(parseInt(a[0])<<16)+(parseInt(a[1])<<8)+parseInt(a[2]);if(a.match(/^\#/))return parseInt(a.substr(1),
-16);return 0},g=function(g){for(var f=document.getElementsByTagName("link"),h=0;h<f.length;h++)if("text/css"==f[h].type){var i=(f[h].href||"").match(/\/?css\/([\w\-]+\.css)\?crc=(\d+)/);if(!i||!i[1]||!i[2])break;b[i[1]]=i[2]}f=document.createElement("div");f.className="version";f.style.cssText="display:none; width:1px; height:1px;";document.getElementsByTagName("body")[0].appendChild(f);for(h=0;h<Muse.assets.required.length;){var i=Muse.assets.required[h],l=i.match(/([\w\-\.]+)\.(\w+)$/),k=l&&l[1]?
-l[1]:null,l=l&&l[2]?l[2]:null;switch(l.toLowerCase()){case "css":k=k.replace(/\W/gi,"_").replace(/^([^a-z])/gi,"_$1");f.className+=" "+k;k=a(c(f,"color"));l=a(c(f,"backgroundColor"));k!=0||l!=0?(Muse.assets.required.splice(h,1),"undefined"!=typeof b[i]&&(k!=b[i]>>>24||l!=(b[i]&16777215))&&Muse.assets.outOfDate.push(i)):h++;f.className="version";break;case "js":h++;break;default:throw Error("Unsupported file type: "+l);}}d?d().jquery!="1.8.3"&&Muse.assets.outOfDate.push("jquery-1.8.3.min.js"):Muse.assets.required.push("jquery-1.8.3.min.js");
-f.parentNode.removeChild(f);if(Muse.assets.outOfDate.length||Muse.assets.required.length)f="Some files on the server may be missing or incorrect. Clear browser cache and try again. If the problem persists please contact website author.",g&&Muse.assets.outOfDate.length&&(f+="\nOut of date: "+Muse.assets.outOfDate.join(",")),g&&Muse.assets.required.length&&(f+="\nMissing: "+Muse.assets.required.join(",")),suppressMissingFileError?(f+="\nUse SuppressMissingFileError key in AppPrefs.xml to show missing file error pop up.",console.log(f)):alert(f)};location&&location.search&&location.search.match&&location.search.match(/muse_debug/gi)?
-setTimeout(function(){g(!0)},5E3):g()}};
-var muse_init=function(){require.config({baseUrl:""});require(["jquery","museutils","whatinput","jquery.musepolyfill.bgsize"],function(d){var $ = d;$(document).ready(function(){try{
-window.Muse.assets.check($);/* body */
-Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
-Muse.Utils.prepHyperlinks(true);/* body */
-Muse.Utils.showWidgetsWhenReady();/* body */
-Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
-}catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};
+<br>
 
-</script>
-	<!-- RequireJS script -->
-	<script src="scripts/require.js?crc=3951022091" type="text/javascript"
-		async data-main="scripts/museconfig.js?crc=474374037"
-		onload="if (requirejs) requirejs.onError = function(requireType, requireModule) { if (requireType && requireType.toString && requireType.toString().indexOf && 0 <= requireType.toString().indexOf('#scripterror')) window.Muse.assets.check(); }"
-		onerror="window.Muse.assets.check();"></script>
+<div class="background-video">
+<div class="video-player__container">[trn_video_1]</div>
+</div>
 
-	<!--HTML Widget code-->
+<br>
 
-	<script>
-        console.log("Google Analytics - Version 1.0 - MuseThemes.com");
-      </script>
+<p><b>Resources for Employees:</b></p>
 
-</body>
-</html>
+<div id="mainbox">
+    
+<div class="card">
+  <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+  <h1>Preparing Your Self-Recaps</h1>
+  <p><a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/2016+Employee+Guide+for+Preparing+a+Self+Recap+%26+Setting+Goals.pdf" target="_blank">English</a> | 
+  <a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Chinese/Chinese+-+2016_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals+(6).pdf" target="_blank">Chinese</a> | <a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Korean/Korean+-+2016_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals+(8).pdf" target="_blank">Korean</a> | <a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Japanese/Japanese+-+2016_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals+(7).pdf" target="_blank">Japanese</a> | <a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Portuguese/Portuguese+-+2016_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals+(9).pdf" target="_blank">Portuguese</a> | <a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Spanish/Spanish+-+2016_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals+(10).pdf" target="_blank">Spanish</a></p>
+</div>
+      
+<div class="card">
+  <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+  <h1>Having a Successful Recap Conversation With Your Manager</h1>
+    <p><a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/2016+Employee+Guide+to+Successful+Performance+Recap+Conversations.pdf" target="_blank">English</a></p>
+</div>
+         
+<div class="card">
+  <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+  <h1>Guide to Ongoing Performance Check-Ins</h1>
+  <p><a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2017/Guide-to-Performance-Check-Ins.pdf" target="_blank">English</a></p>
+</div>
+             
+</div>
+
+<br>
+
+<p><b>Resources for Managers</b></p>
+
+<div id="mainbox">
+
+    <div class="card">
+        <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+        <h1>Preparing a Manager Recap</h1>
+        <p><a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/2016+Manager+Guide+for+Preparing+a+Performance+Recap.pdf" target="_blank">English</a> | <a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Chinese/Chinese+-+2016_Manager_Guide_for_Preparing_a_Performance_Recap+(5).pdf" target="_blank">Chinese</a> | <a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Korean/Korean+-+2016_Manager_Guide_for_Preparing_a_Performance_Recap+(7).pdf" target="_blank">Korean</a> | <a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Japanese/Japanese+-+2016_Manager_Guide_for_Preparing_a_Performance_Recap+(6).pdf" target="_blank">Japanese</a> | <a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Portuguese/Portuguese+-+2016_Manager_Guide_for_Preparing_a_Performance_Recap+(8).pdf" target="_blank">Portuguese</a> | <a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Spanish/Spanish+-+2016_Manager_Guide_for_Preparing_a_Performance_Recap+(9).pdf" target="_blank">Spanish</a> 
+        </p>
+    </div>
+    
+    <div class="card">
+        <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+        <h1>Having a Successful Recap Conversation With Your Employee</h1>
+        <p>
+        <a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/2016+Manager+Guide+to+Successful+Performance+Recap+Conversations.pdf" target="_blank">English</a> | <a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Chinese/Chinese+-+2016_Manager_Guide_to_Successful_Performance_Recap_Conversations+(5).pdf" target="_blank">Chinese</a> | <a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Korean/Korean+-+2016_Manager_Guide_to_Successful_Performance_Recap_Conversations+(7).pdf" target="_blank">Korean</a> | <a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Japanese/Japanese+-+2016_Manager_Guide_to_Successful_Performance_Recap_Conversations+(6).pdf" target="_blank">Japanese</a> | <a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Portuguese/Portuguese+-+2016_Manager_Guide_to_Successful_Performance_Recap_Conversations+(8).pdf" target="_blank">Portuguese</a> | <a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Spanish/Spanish+-+2016_Manager_Guide_to_Successful_Performance_Recap_Conversations+(9).pdf" target="_blank">Spanish</a>
+        </p>
+    </div>
+    
+    <div class="card">
+        <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+        <h1>How to Talk About Total Rewards</h1>
+        <p>
+        <a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/2016+Manager+Guide+for+Discussing+Total+Rewards.pdf">English</a>
+        </p>
+    </div>
+
+</div>
+
+<br>
+
+<p><b>Articles &amp; Inspiration</b></p>
+
+<div id="mainbox">
+    
+    <a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/CEB_Manager_Guide_10_Keys_to_Improve_Employee_Performance_through_Formal_Performance_Reviews.pdf" target="_blank">
+        <div class="card-article">
+            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            <h1>10 Keys to Delivering Performance Reviews</h1>
+            <p>The Corporate Executive Board gives us some more tips.</p>
+        </div>
+    </a>
+    
+    <a href="http://qz.com/562880/your-complete-guide-to-acing-this-years-performance-review/?utm_source=facebook&utm_campaign=HBR&utm_medium=social" target="_blank">
+        <div class="card-article">
+            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            <h1>Your Complete Guide to Acing This Year's Performance Review</h1>
+            <p>Why is it so hard to have useful year-end reviews? Quartz gives us some steps for getting better feedback.</p>
+        </div>
+    </a>
+    
+    <a href="https://www.linkedin.com/pulse/fatal-career-mistake-you-wont-realize-youre-making-liz-ryan" target="_blank">
+        <div class="card-article">
+            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            <h1>The Fatal Career Mistake You Won't Realize You're Making</h1>
+            <p>"The worst thing you can do with respect to your job is to believe that if you get up and go to work every day, somehow you're also managing your career." Liz Ryan, CEO of Human Workplace, tells us more.</p>
+        </div>
+    </a>
+    
+    <a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/HBR+-+The+Key+to+Performance+Reviews+is+Preparation.PDF" target="_blank">
+        <div class="card-article">
+            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            <h1>The Key to Performance Reviews is Preparation</h1>
+            <p>Ben Dattner, HBR contributor, gives us his 5 questions he asks while giving feedback.</p>
+        </div>
+    </a>
+
+</div>

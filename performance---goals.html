@@ -1,208 +1,137 @@
-<!DOCTYPE html>
-<html class="nojs html" lang="en-US">
-<head>
+<style>
+    
+    .card {
+        width: 350px;
+        border: 1px solid gray;
+        box-shadow: 1px 1px 3px #888;
+        border-top: 10px solid black;
+        min-height: 275px;
+        padding: 10px;
+        margin: 20px;
+    }
 
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-<meta name="generator" content="2017.0.4.363" />
+    .card:first-child {
+        margin-left: 0;    
+    }
 
-<script type="text/javascript">
-  // Update the 'nojs'/'js' class on the html node
-  document.documentElement.className = document.documentElement.className
-      .replace(/\bnojs\b/g, 'js');
+    .card:hover {
+        box-shadow: 3px 3px 5px #888;
+        transition: 0.3s;
+        border: 1px solid #0052e7;
+        border-top: 10px solid black;
+        }
 
-  // Check that all required assets are uploaded and up-to-date
-  if (typeof Muse == "undefined")
-    window.Muse = {};
-  window.Muse.assets = {
-    "required" : [ "museutils.js", "museconfig.js",
-        "jquery.musepolyfill.bgsize.js", "require.js",
-        "pathbuilders-achieva.css" ],
-    "outOfDate" : []
-  };
-</script>
+    .card h1 {
+        font-family: TurnerBold;
+        margin-top: -40px;
+        font-size: 24px;
+        margin-left: 55px;
+    }
+    
+    .card img {
+        border-radius: 50%;
+        width: 50px;
+    }
 
-<title>GOALS</title>
+    .card p {
+      margin: 10px;
+      font-family: TurnerRegular;
+      font-size: 16px !important;
+    }
 
-<script src="css/jquery-1.12.4.js"></script>
-<script src="css/jquery-ui.js"></script>
-<script src="css/js-learnnow.js"></script>
+    .card a {
+        color: #000 !important;
+        text-decoration: none !important;
+    }
 
+    #mainbox {
+        box-sizing: border-box;
+        justify-content: left;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+</style>
 
-<!-- CSS -->
-<link rel="stylesheet" type="text/css" href="css/turner-default/ajax-progress.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/align.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/autocomplete-loading.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/clearfix.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/container-inline.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/contextual.icons.theme.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/contextual.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/contextual.theme.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/details.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/fieldgroup.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/hidden.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/item-list.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/js.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/nowrap.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/position-container.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/progress.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/reset-appearance.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/resize.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/sticky-header.module.css" />
-
-<link rel="stylesheet" type="text/css" href="css/turner-default/styles.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/tabledrag.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/tablesort.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/tree-child.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/vendors.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/views.module.css" />
-
-<link rel="stylesheet" type="text/css" href="css/styles-learnnow.css" />
-</head>
-<body>
-
-  <div class="clearfix time-warner-breakthrough-leadership" id="learnnow-page">
-    <!-- column -->
-    <!-- Starting new markup -->
+<div class="clearfix time-warner-breakthrough-leadership" id="learnnow-page"><!-- column -->
+  <!-- Starting new markup -->
     <div class="col-12_md-12_sm-12_xs-12 grid-top ln--main-menu-wrapper">
 
-      <div class="col-2_md-2_sm-2_xs-12">
-        <div class="lnow-menu-sec-header">Learning</div>
-        <div>
-          <a href="/learnnow/learning---classes---offerings">Classes &amp; Offerings</a>
+        <div class="col-2_md-2_sm-2_xs-12">
+          <div class="lnow-menu-sec-header">Learning</div>
+          <div><a href="/learnnow/learning---classes---offerings">Classes &amp; Offerings</a></div>
+          <div><a href="/learnnow/learning---conferences">Conferences</a></div>
+          <div><a class="nonblock" href="/learnnow/learning---self-directed">Self-Directed</a></div>
         </div>
-        <div>
-          <a href="/learnnow/learning---conferences">Conferences</a>
-        </div>
-        <div>
-          <a class="nonblock" href="/learnnow/learning---self-directed">Self-Directed</a>
-        </div>
-      </div>
 
-      <div class="col-2_md-2_sm-2_xs-12">
-        <div class="lnow-menu-sec-header">Leadership</div>
+        <div class="col-2_md-2_sm-2_xs-12">
+          <div class="lnow-menu-sec-header">Leadership</div>
 
-        <div>
-          <a href="/learnnow/leadership---leadershipnow">LeadershipNow</a>
+          <div><a href="/learnnow/leadership---leadershipnow">LeadershipNow</a></div>
+          <div><a href="/learnnow/leadership---management-essentials">Management Essentials</a></div>
+          <div><a href="/learnnow/leadership---tlx">Turner Leadership Experience</a></div>
         </div>
-        <div>
-          <a href="/learnnow/leadership---management-essentials">Management Essentials</a>
-        </div>
-        <div>
-          <a href="/learnnow/leadership---tlx">Turner Leadership Experience</a>
-        </div>
-      </div>
 
-      <div class="col-2_md-2_sm-2_xs-12">
-        <div class="lnow-menu-sec-header">OD</div>
-        <div>
-          <a href="/learnnow/od---assessments">Assessments</a>
+        <div class="col-2_md-2_sm-2_xs-12">
+          <div class="lnow-menu-sec-header">OD</div>
+          <div><a href="/learnnow/od---assessments">Assessments</a></div>
+          <div><a href="/learnnow/learning---coaching">Coaches</a></div>
+          <div><a href="/learnnow/od---team-effectiveness">Team Effectiveness</a></div>
         </div>
-        <div>
-          <a href="/learnnow/learning---coaching">Coaches</a>
-        </div>
-        <div>
-          <a href="/learnnow/od---team-effectiveness">Team Effectiveness</a>
-        </div>
-      </div>
 
-      <div class="col-2_md-2_sm-2_xs-12">
-        <div class="lnow-menu-sec-header">Performance</div>
-        <div>
-          <a href="/learnnow/performance---approach">Turner's Approach</a>
+        <div class="col-2_md-2_sm-2_xs-12">
+          <div class="lnow-menu-sec-header">Performance</div>
+          <div><a href="/learnnow/performance---approach">Turner's Approach</a></div>
+          <div><a href="/learnnow/performance---goals">Goals</a></div>
+          <div><a href="/learnnow/performance---reviews-and-conversations">Reviews &amp; Conversations</a></div>
         </div>
-        <div>
-          <a href="/learnnow/performance---goals">Goals</a>
-        </div>
-        <div>
-          <a href="/learnnow/performance---reviews-and-conversations">Reviews &amp; Conversations</a>
-        </div>
-      </div>
 
-      <div class="col-2_md-2_sm-2_xs-12">
-        <div class="lnow-menu-sec-header">New to Turner?</div>
-        <div>
-          <a class="nonblock" href="/learnnow/new-hires---30-day-guide">30-Day Guide</a>
+        <div class="col-2_md-2_sm-2_xs-12">
+          <div class="lnow-menu-sec-header">New to Turner?</div>
+          <div><a class="nonblock" href="/learnnow/new-hires---30-day-guide">30-Day Guide</a></div>
+          <div><a class="nonblock" href="/learnnow/new-hires---about-turner">About Turner</a></div>
+          <div><a class="nonblock" href="https://eahapspor.turner.com:7111/ps/forwarddl.jsp?aut=N&amp;forwardURL=https%3a%2f%2feahapspor.turner.com%3a7111%2fpsc%2fps%2fEMPLOYEE%2fEMPL%2fs%2fWEBLIB_T_DLINK.ISCRIPT1.FieldFormula.IScript_GetLink%3fDEEPLINK%3d248" target="_blank">Benefits</a></div>
+          <div><a class="nonblock" href="/learnnow/new-hires---how-we-make-money">How We Make Money</a></div>
+          <div><a class="nonblock" href="/learnnow/new-hires---your-technology">Your Technology</a></div>
         </div>
-        <div>
-          <a class="nonblock" href="/learnnow/new-hires---about-turner">About Turner</a>
-        </div>
-        <div>
-          <a class="nonblock"
-            href="https://eahapspor.turner.com:7111/ps/forwarddl.jsp?aut=N&amp;forwardURL=https%3a%2f%2feahapspor.turner.com%3a7111%2fpsc%2fps%2fEMPLOYEE%2fEMPL%2fs%2fWEBLIB_T_DLINK.ISCRIPT1.FieldFormula.IScript_GetLink%3fDEEPLINK%3d248"
-            target="_blank">Benefits</a>
-        </div>
-        <div>
-          <a class="nonblock" href="/learnnow/new-hires---how-we-make-money">How We Make Money</a>
-        </div>
-        <div>
-          <a class="nonblock" href="/learnnow/new-hires---your-technology">Your Technology</a>
-        </div>
-      </div>
 
     </div>
+</div>
 
+<div class="col-12_md-12_sm-12_xs-12"><h2>Goals</h2></div>
 
-
-
-    <div class="col-12_md-12_sm-12_xs-12 grid-top index-page content-grid-items">
-
-
-      <div class="col-12_md-12_sm-12_xs-12">
-        <h2>GOALS</h2>
-      </div>
+<div id="mainbox">
+    
+<a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Guide+to+Creating+Individual+Performance+Goals.pdf" target="_blank">
+<div class="card">
+  <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+  <h1>Creating Individual Goals</h1>
+  <p>If all you can think of are vuvuzelas when creating goals, look no further. We have some things for you to think about.</p>
+</div>
+</a>
       
-      <!-- main-content -->
-      <div class="col-12_md-12_sm-12_xs-12 grid">
-        
-        <div class="col-4_md-4_sm-4_xs-12 fa-border ln--nb">
-          <div class="ln--bb">CREATING INDIVIDUAL GOALS</div>
-          <div class="ln--content">If all you can think of are vuvuzelas when creating goals, look no further. We have some things for you to think about.</div>
-          <div class="ln--link-wrap">
-            <a class="nonblock nontext rounded-corners Class-List-Box clearfix grpelem" id="u12109-5" href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Guide+to+Creating+Individual+Performance+Goals.pdf" target="_blank"><!-- content --><p id="u12109-3"><span id="u12109">Creating Goals Guide </span><span id="u12109-2">&gt;</span></p></a>
-          </div>
-        </div>
-        
-        <div class="col-4_md-4_sm-4_xs-12 fa-border ln--nb">
-          <div class="ln--bb">ENTERING YOUR GOALS IN MYCAREER</div>
-          <div class="ln--content">Every now and then we ask you to document something - this includes your goals. <a class="nonblock" href="http://elitedaily.com/money/writing-down-your-goals/1068863/" target="_blank">It's good for you, actually.</a></div>
-          <div class="ln--link-wrap">
-            <a class="nonblock nontext Class-List-Box clearfix grpelem" id="u12112-5" href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/NEW+INTERFACE+-+Setting+Editing+%26+Approving+Goals+Quick+Sheet.pdf" target="_blank"><!-- content --><p id="u12112-3"><span id="u12112">How to Enter Your Goals </span><span id="u12112-2">&gt;</span></p></a>
-          </div>
-        </div>
-        
-        <div class="col-4_md-4_sm-4_xs-12 fa-border ln--nb">
-          <div class="ln--bb">DEVELOPMENT PLAN TOOLKIT</div>
-          <div class="ln--content">Let us help you get started if you need some structure around how you're going to make now happen.</div>
-          <div class="ln--link-wrap">
-            <a class="nonblock nontext Class-List-Box clearfix grpelem" id="u12115-5" href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/IDP+Tool+new+skin.pdf" target="_blank"><!-- content --><p id="u12115-3"><span id="u12115">Download the Toolkit </span><span id="u12115-2">&gt;</span></p></a>
-          </div>
-        </div>
-        
-      </div>
-      
-      <div class="col-12_md-12_sm-12_xs-12 grid">
-        <div class="ln--bb">ARTICLES AND INSPIRATION</div>
-        <div class="col-2_md-3_sm-4_xs-12">
-          <div class="ln--slider-style-item">
-            <div class="ln--title">Think Strategically About Your Career Development</div>
-            <div class="ln--content">"In a world where the average employee sends and received 122 emails per day and attends an average of 62 meetings per month...we have to take control of our career planning."<br>
-Dorie Clark, HBR contributor, shares 4 ways to be strategic about career development.</div>
-            <div class="ln--button"><a class="nonblock nontext shadow More-Info-Link-Box clearfix grpelem" id="u12961-4" href="https://hbr.org/2016/12/think-strategically-about-your-career-development" target="_blank"><!-- content --><p id="u12961-2">READ</p></a></div>
-          </div>
-        </div>
-        
-        
-      </div>
-
-      <!-- #main-content -->
-
-      <!-- sidebar -->
-      
-      <!-- #sidebar -->
-    </div>
-
-  </div>
-
-
-</body>
-</html>
+<a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/NEW+INTERFACE+-+Setting+Editing+%26+Approving+Goals+Quick+Sheet.pdf" target="_blank">
+<div class="card">
+  <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+  <h1>Entering Your Goals Into MyCareer</h1>
+    <p>Every now and then we ask you to document something - this includes your goals.</p>
+</div>
+</a>
+         
+<a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/IDP+Tool+new+skin.pdf" target="_blank">
+<div class="card">
+  <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+  <h1>Developing Plan Toolkit</h1>
+  <p>Let us help you get started if you need some structure around how you're going to make now happen.</p>
+</div>
+</a>
+             
+<a href="https://hbr.org/2016/12/think-strategically-about-your-career-development" target="_blank">
+<div class="card">
+  <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+  <h1>Think Strategically About Your Career Development</h1>
+  <p>Dorie Clark, HBR contributor, shares 4 ways to be strategic about career development.</p>
+</div>
+</a>
+                
+</div>
