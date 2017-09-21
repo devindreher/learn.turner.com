@@ -1,52 +1,93 @@
-<!DOCTYPE html>
-<html class="nojs html" lang="en-US">
- <head>
+<style>
+    
+/*Layout*/
+    
+    .class-container {
+        margin: 0;
+        padding: 0;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    ul.descr li:before {
+        background-image: none !important;
+    }
+    
+    ul.descr li {
+        margin-bottom: 10px;
+        list-style-type: disc;
+        font-size: 14px;
+    }
+    
+    .class-container:after {
+        clear: both;
+    }
+    
+    .class-container > div {
+        min-height: 200px;
+        float: left;
+    }
+    
+    .class-left {
+        width: 65%;
+        padding: 10px 20px 10px 5px;
+    }
+    
+    .class-right {
+        width: 35%;
+        background: #f8f8f8;
+        padding: 10px 10px 10px 10px;
+    }
+    
+    @media only screen and (max-width: 760px), (min-device-width: 763px) and (max-device-width: 1024px) {
+        .class-container > div {
+            float: none;
+            width: 100%;
+        }
+    }
+    
+    .class-logistics {
+        width: 100%;
+        border-bottom: 1px solid #c8c8c8;
+        margin: 2px 2px 2px 2px;
+        padding: 5px 5px 5px 5px;
+    }
+    
+    .class-logistics p {
+        font-size: 14px !important;
+        line-height: 125% !important;
+        color: black !important;
+    }
+    
+    .class-logistics .fine-print {
+        font-size: 12px !important;
+        color: black !important;
+    }
+    
+/*Buttons*/
+    
+    .learnButton {
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        border-radius: 9px;
+        font-family: TurnerBold;
+        color: #fff;
+        font-size: 14px;
+        background: #0052e7;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        line-height: 120%;
+    }
+    
+    .learnButton:hover {
+        background: #3cb0fd;
+        text-decoration: none;
+    }
+    
+</style>
 
-  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
-  <meta name="generator" content="2017.0.4.363"/>
-  
-  <script type="text/javascript">
-   // Update the 'nojs'/'js' class on the html node
-document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
-
-// Check that all required assets are uploaded and up-to-date
-if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "jquery.musepolyfill.bgsize.js", "require.js", "pathbuilders-achieva.css"], "outOfDate":[]};
-</script>
-  
-  <title>WICT Executive Development Series</title>
-  <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="css/turner-default/ajax-progress.module.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/align.module.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/autocomplete-loading.module.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/clearfix.module.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/container-inline.module.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/contextual.icons.theme.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/contextual.module.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/contextual.theme.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/details.module.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/fieldgroup.module.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/hidden.module.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/item-list.module.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/js.module.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/nowrap.module.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/position-container.module.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/progress.module.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/reset-appearance.module.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/resize.module.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/sticky-header.module.css"/>
-  
-  <link rel="stylesheet" type="text/css" href="css/turner-default/styles.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/tabledrag.module.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/tablesort.module.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/tree-child.module.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/vendors.css"/>
-  <link rel="stylesheet" type="text/css" href="css/turner-default/views.module.css"/>
-
-  <link rel="stylesheet" type="text/css" href="css/styles-learnnow.css"/>
- </head>
- <body>
-
-<div class="clearfix learnnow-page--wict-executive-development-series" id="learnnow-page"><!-- column -->
+<div class="clearfix time-warner-breakthrough-leadership" id="learnnow-page"><!-- column -->
   <!-- Starting new markup -->
     <div class="col-12_md-12_sm-12_xs-12 grid-top ln--main-menu-wrapper">
 
@@ -86,100 +127,44 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
           <div><a class="nonblock" href="https://eahapspor.turner.com:7111/ps/forwarddl.jsp?aut=N&amp;forwardURL=https%3a%2f%2feahapspor.turner.com%3a7111%2fpsc%2fps%2fEMPLOYEE%2fEMPL%2fs%2fWEBLIB_T_DLINK.ISCRIPT1.FieldFormula.IScript_GetLink%3fDEEPLINK%3d248" target="_blank">Benefits</a></div>
           <div><a class="nonblock" href="/learnnow/new-hires---how-we-make-money">How We Make Money</a></div>
           <div><a class="nonblock" href="/learnnow/new-hires---your-technology">Your Technology</a></div>
-          <div><a class="nonblock" target="_blank" href="/security">Security</a></div>
         </div>
 
     </div>
+</div>
 
-   
+<br>
 
+<div class="col-12_md-12_sm-12_xs-12"><h2>WICT Executive Development Series</h2></div>
 
-    <div class="col-12_md-12_sm-12_xs-12 grid-top index-page content-grid-items">
-
-
-        <div class="col-12_md-12_sm-12_xs-12"><h2>WICT Executive Development Series</h2></div>
-        <!-- main-content -->
-        <div class="col-7_md-7_sm-7_xs-12">
-          
-          <div>
-          <div class="ln--show-bg-image  ln--big-bg ln--image-wict-executive-dev"><!-- content --></div></div>
-          <div>The Executive Development Series (EDS) is designed to help mid-career professionals build skills that are critical to effectively delivering results within their organization with a focus on mastering competencies vital to success. The two seminars of the series, Leading with Power and Authority and Authenticity and Executive Leadership Presence, focus on mastering key competencies and may be taken in any order.</div>
-        </div>
-        <!-- #main-content -->
-
-        <!-- sidebar -->
-        <div class="col-4_md-4_sm-4_xs-12 ln--sidebar">
-          <div class="ln--upcomming ln--border border-blue">
-            <strong>UPCOMING SESSIONS:</strong>
-            <div>
-            <strong>Leading with Power & Authority</strong><br>
-- Mar. 28 - 30, 2017 (registration open now)<br>
-Cary, NC<br>
-- Oct. 25 - 27, 2017 (registration opens Mar. 31, 2017)
- Rancho Santa Fe, NM<br>
- 
-<strong>Executive Leadership Presence</strong>
-<br>- Oct. 25 - 27 (registration opens Mar. 31, 2017)<br>
- Rancho Santa Fe, NM</div>
-          </div>
-          <div class="ln--whoisthis ln--border">
-            <strong>WHO IS THIS FOR?</strong>
-            <div>Female directors and above.</div>
-          </div>
-          <div class="ln--logistic ln--border">
-            <strong>LOGISTICS:</strong>
-            <div>
-              
-              - Location varies across the U.S.<br>
-- $1,750 - $2,050
-            </div>
-
-            <p>Program costs are subject to change and do not include travel/expenses unless otherwise noted. Additional application fees may apply. Be sure to understand the cancellation policy of any external program before enrolling.</p>
-          </div>
-          <div class="ln--register ln--button-blue">
-            <a class="ln--blue-button" id="u1729-4" href="https://www.wict.org/programs/eds/pages/default.aspx#.WBj6oeErIUE" target="_blank">REGISTER</a>
-          </div>
-        </div>
-        <!-- #sidebar -->
-    </div> 
-
-  </div>
-
-  <!-- JS includes -->
-  <script type="text/javascript">
-   if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
-</script>
-  <script type="text/javascript">
-   window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js?crc=209076791" type="text/javascript">\x3C/script>');
-</script>
-  <!-- Other scripts -->
-  <script type="text/javascript">
-   // Decide weather to suppress missing file error or not based on preference setting
-var suppressMissingFileError = false
-</script>
-  <script type="text/javascript">
-   window.Muse.assets.check=function(d){if(!window.Muse.assets.checked){window.Muse.assets.checked=!0;var b={},c=function(a,b){if(window.getComputedStyle){var c=window.getComputedStyle(a,null);return c&&c.getPropertyValue(b)||c&&c[b]||""}if(document.documentElement.currentStyle)return(c=a.currentStyle)&&c[b]||a.style&&a.style[b]||"";return""},a=function(a){if(a.match(/^rgb/))return a=a.replace(/\s+/g,"").match(/([\d\,]+)/gi)[0].split(","),(parseInt(a[0])<<16)+(parseInt(a[1])<<8)+parseInt(a[2]);if(a.match(/^\#/))return parseInt(a.substr(1),
-16);return 0},g=function(g){for(var f=document.getElementsByTagName("link"),h=0;h<f.length;h++)if("text/css"==f[h].type){var i=(f[h].href||"").match(/\/?css\/([\w\-]+\.css)\?crc=(\d+)/);if(!i||!i[1]||!i[2])break;b[i[1]]=i[2]}f=document.createElement("div");f.className="version";f.style.cssText="display:none; width:1px; height:1px;";document.getElementsByTagName("body")[0].appendChild(f);for(h=0;h<Muse.assets.required.length;){var i=Muse.assets.required[h],l=i.match(/([\w\-\.]+)\.(\w+)$/),k=l&&l[1]?
-l[1]:null,l=l&&l[2]?l[2]:null;switch(l.toLowerCase()){case "css":k=k.replace(/\W/gi,"_").replace(/^([^a-z])/gi,"_$1");f.className+=" "+k;k=a(c(f,"color"));l=a(c(f,"backgroundColor"));k!=0||l!=0?(Muse.assets.required.splice(h,1),"undefined"!=typeof b[i]&&(k!=b[i]>>>24||l!=(b[i]&16777215))&&Muse.assets.outOfDate.push(i)):h++;f.className="version";break;case "js":h++;break;default:throw Error("Unsupported file type: "+l);}}d?d().jquery!="1.8.3"&&Muse.assets.outOfDate.push("jquery-1.8.3.min.js"):Muse.assets.required.push("jquery-1.8.3.min.js");
-f.parentNode.removeChild(f);if(Muse.assets.outOfDate.length||Muse.assets.required.length)f="Some files on the server may be missing or incorrect. Clear browser cache and try again. If the problem persists please contact website author.",g&&Muse.assets.outOfDate.length&&(f+="\nOut of date: "+Muse.assets.outOfDate.join(",")),g&&Muse.assets.required.length&&(f+="\nMissing: "+Muse.assets.required.join(",")),suppressMissingFileError?(f+="\nUse SuppressMissingFileError key in AppPrefs.xml to show missing file error pop up.",console.log(f)):alert(f)};location&&location.search&&location.search.match&&location.search.match(/muse_debug/gi)?
-setTimeout(function(){g(!0)},5E3):g()}};
-var muse_init=function(){require.config({baseUrl:""});require(["jquery","museutils","whatinput","jquery.musepolyfill.bgsize"],function(d){var $ = d;$(document).ready(function(){try{
-window.Muse.assets.check($);/* body */
-Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
-Muse.Utils.prepHyperlinks(true);/* body */
-Muse.Utils.showWidgetsWhenReady();/* body */
-Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
-}catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};
-
-</script>
-  <!-- RequireJS script -->
-  <script src="scripts/require.js?crc=3951022091" type="text/javascript" async data-main="scripts/museconfig.js?crc=474374037" onload="if (requirejs) requirejs.onError = function(requireType, requireModule) { if (requireType && requireType.toString && requireType.toString().indexOf && 0 <= requireType.toString().indexOf('#scripterror')) window.Muse.assets.check(); }" onerror="window.Muse.assets.check();"></script>
-  
-  <!--HTML Widget code-->
-  
-      <script>
-        console.log("Google Analytics - Version 1.0 - MuseThemes.com");
-      </script>
+<div class="class-container">
+    <div class="class-left">
+            
+        <p>The Executive Development Series (EDS) is designed to help mid-career professionals build skills that are critical to effectively delivering results within their organization with a focus on mastering competencies vital to success. The two seminars of the series, Leading with Power and Authority and Authenticity and Executive Leadership Presence, focus on mastering key competencies and may be taken in any order.</p>
+        
+    </div>
     
-   </body>
-</html>
+    <div class="class-right">
+        <div class="class-logistics">
+        <p><b>Upcoming Sessions:</b></p>
+        <p>Visit the WICT site for the most current calendar.</p>
+        </div>
+        <div class="class-logistics">
+            <p><b>Logistics:</b></p>
+            <p>Locations throughout the U.S.</p>
+            <p>$1,750 - $2,050</p>
+            <p class="fine-print">Program costs are subject to change and do not include travel/expenses unless otherwise noted. Additional application fees may apply. Be sure to understand the cancellation policy of any external program before enrolling.</p>
+        </div>
+        &nbsp;        
+        <div class="class-logistics">
+            <p><b>Who Is This For?</b></p>
+            <p>Female directors and above.</p>
+        </div>
+        &nbsp;
+        <a href="https://www.wict.org/programs/eds/pages/default.aspx#.WBj6oeErIUE" target="_blank">
+        <div class="learnButton">
+            Register
+        </div>
+        </a>
+    </div>
+</div>
+
