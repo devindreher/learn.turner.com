@@ -1,0 +1,379 @@
+<style type="text/css">
+    
+    h2 {
+        font-family: TurnerBold;
+        font-size: 3rem;
+        margin-top: 30px;
+    }
+
+/*Class Table*/
+    
+    table {
+        width: 100%; 
+        border-collapse: collapse !important
+    }
+    
+    tr:nth-of-type(odd) {
+        background: #eee;
+    }
+    
+    th {
+        background: #333; 
+        color: white; 
+        font-family: TurnerBold;
+    }
+    
+    td {
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-align: left; 
+        font-family: TurnerRegular !important;
+        color: black !important;
+        font-size: 14px !important;
+        vertical-align: text-top;
+    }
+    
+    td ul {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    td ul li:before {
+        background-image: none !important;
+    }
+    
+    td ul li {
+        margin-bottom: 10px;
+        list-style-type: none;
+        font-family: TurnerRegular;
+        font-size: 13px !important;
+        color: black;
+        line-height: 100% !important;
+    }
+    
+    td a {
+        font-size: 14px !important;
+    }
+    
+    th {
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-align: left;
+        font-family: TurnerBold !important;
+        color: white !important;
+        font-size: 14px !important;
+    }
+    
+/*NAVIGATION*/
+
+    .learnNow a {
+        font-size: 15px;
+        font-family: TurnerBold;
+        color: #000;
+    }
+    
+    .learnNow a:hover {
+        color: #0052e7;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 15px !important;
+      font-family: TurnerBold;
+    }
+
+    .topnav a:hover {
+      background-color: #0052e7;
+      color: #fff;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+    
+/*MEDIA QUERIES*/
+    
+    @media only screen and (max-width: 760px), (min-device-width: 763px) and (max-device-width: 1024px) {
+        
+        .classList table, thead, tbody, th, td, tr {
+            display: block;
+            font-family: TurnerRegular !important;
+            color: black !important;
+        }
+        
+        .classList thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        
+        .classList tr {
+            border: 1px solid #ccc;
+        }
+        
+        .classList td {
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+        }
+        
+        .classList td:before {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+        
+        .classList td:nth-of-type(1):before {content: "Class"; font-weight: bold;}
+        .classList td:nth-of-type(2):before {content: "Description"; font-weight: bold;}
+        .classList td:nth-of-type(3):before {content: "Criteria"; font-weight: bold;}
+    }
+    
+    @media screen and (max-width: 1152px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {float: right; display: block;}
+        .learn-main h3 a {font-size: 2rem;}
+        .learn-card {width: 100%;}
+        .learn-card h5 a {font-size: 2rem;}
+        .learn-card p {font-size: 1.5rem; line-height: inherit;}
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+    
+    @media screen and (min-width: 40em) {
+        .list-item { width: 50%; }
+    }
+    
+    @media screen and (min-width: 60em) {
+        .list-item { width: 33.33%; }
+    }
+
+</style>
+
+<!--TOP NAVIGATION-->
+
+<span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
+<div class="topnav" id="myTopnav">
+  <a href="http://learn.turner.com">Home</a>    
+  <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+  <a href="/learnnow/org-development">Org. Development</a>
+  <a href="/learnnow/performance">Performance</a>
+  <a href="/learnnow/new-to-turner">New Hires</a>
+  <a href="/learnnow/subscribe">Subscribe</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+</div>
+
+<script>
+function shrinkNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+    
+
+<h2>External Programs</h2>
+</div>
+
+<!-- main-content -->
+
+<table class="classList">
+    <thead>
+        <tr>
+            <th>Class</th>
+            <th>Description</th>
+            <th>Criteria</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <b>Pathbuilders Achieva</b>
+            </td>
+            <td>
+                Get insights to navigate organizational politics, build executive presence, and move initiatives forward.<br>
+                <a href="/learnnow/pathbuilders-achieva">More Info.</a>
+            </td>
+            <td>
+                <ul>
+                    <li>Females</li>
+                    <li>Senior Managers - Directors</li>
+                    <li>Open Enrollment</li>
+                    <li>U.S.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Pathbuilders Percepta</b>
+            </td>
+            <td>
+                Strengthen your ability to think broadly, manage others, and make conscious decisions.<br>
+                <a href="/learnnow/pathbuilders-percepta">More Info.</a>
+            </td>
+            <td>
+                <ul>
+                    <li>Females</li>
+                    <li>Managers &amp; Individual Contributors</li>
+                    <li>Open Enrollment</li>
+                    <li>U.S.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>WICT Executive Development Series</b>
+            </td>
+            <td>
+                Learn the knowledge, competencies, and diverse perspectives necessary for maximum performance and career enrichment.<br>
+                <a href="/learnnow/wict-executive-development-series">More Info.</a>
+            </td>
+            <td>
+                <ul>
+                    <li>Females</li>
+                    <li>Early Leaders</li>
+                    <li>Open Enrollment</li>
+                    <li>U.S.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Turner Non-Profit Board Training</b>
+            </td>
+            <td>
+                Coming soon.
+            </td>
+            <td>
+                <ul>
+                    <li>Individuals serving on non-profit boards</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Time Warner Breakthrough Leadership</b>
+            </td>
+            <td>
+                Build your knowledge, capabilities, and confidence to re-imagine TV and build a culture of more fun, less fear, and all-in.<br>
+                <a href="/learnnow/time-warner-breakthrough-leadership">More Info.</a>
+            </td>
+            <td>
+                <ul>
+                    <li>Females</li>
+                    <li>VP &amp; Above</li>
+                    <li>By Nomination</li>
+                    <li>Various Locations</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>The Business of Time Warner</b>
+            </td>
+            <td>
+                Strengthen your knowledge of Time Warner's strategic and competitive position and more.<br>
+                <a href="/learnnow/the-business-of-time-warner">More Info.</a>
+            </td>
+            <td>
+                <ul>
+                    <li>VPs &amp; Above</li>
+                    <li>By Nomination</li>
+                    <li>Various Locations</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>CTAM Cable Management Executive Program</b>
+            </td>
+            <td>
+                Learn strategy, marketing, and management principles led by Harvard Business School professors.<br>
+                <a href="/learnnow/ctam-cable-executive-management-program">More Info.</a>
+            </td>
+            <td>
+                <ul>
+                    <li>Sr. Directors, VPS, &amp; SVPs</li>
+                    <li>By Nomination</li>
+                    <li>U.S.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>NAMIC Executive Leadership Development Program</b>
+            </td>
+            <td>
+                Deepen your understanding of the changing media landscape, strategy execution, and more.<br>
+                <a href="/learnnow/namic-executive-leadership-development">More Info.</a>
+            </td>
+            <td>
+                <ul>
+                    <li>Minorities</li>
+                    <li>Sr. Directors, VPs, &amp; SVPs</li>
+                    <li>By Nomination</li>
+                    <li>U.S.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>WICT Rising Leaders</b>
+            </td>
+            <td>
+                Gain insight on how to build high performing teams and assess diverse leadership styles.<br>
+                <a href="/learnnow/wict-rising-leaders">More Info.</a>
+            </td>
+            <td>
+                <ul>
+                    <li>Females</li>
+                    <li>Managers &amp; Directors</li>
+                    <li>By Nomination</li>
+                    <li>U.S.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>WICT Betsy Magness Leadership Institute</b>
+            </td>
+            <td>
+                Develop your core leadership competencies, including communication, influence, driving engagement, and more.<br>
+                <a href="/learnnow/wict-betsy-magness-leadership-institute">More Info.</a>
+            </td>
+            <td>
+                <ul>
+                    <li>Females</li>
+                    <li>VPs &amp; Above</li>
+                    <li>By Nomination</li>
+                    <li>U.S.</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>

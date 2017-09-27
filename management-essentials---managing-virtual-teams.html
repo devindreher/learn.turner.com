@@ -1,138 +1,389 @@
 <style>
     
-    .card {
-        width: 350px;
-        border: 1px solid gray;
-        box-shadow: 1px 1px 3px #888;
-        border-top: 10px solid black;
-        min-height: 250px;
-        padding: 10px;
-        margin: 20px;
-    }
-
-    .card:first-child {
-        margin-left: 0;    
-    }
-
-    .card:hover {
-        box-shadow: 3px 3px 5px #888;
-        transition: 0.3s;
-        }
-
-    .card h1 {
+    h2 {
         font-family: TurnerBold;
-        margin-top: 0;
-        font-size: 24px;
+        font-size: 3rem;
+        margin-top: 30px;
     }
-
-    .card p {
-      margin: 10px;
-      font-family: TurnerRegular;
-      font-size: 14px !important;
-    }
-
-    .card a {
-        color: #000 !important;
-        text-decoration: none !important;
-    }
-
-    #mainbox {
-        box-sizing: border-box;
-        justify-content: left;
+    
+/*FLEX BOXES*/
+    
+    .list {
         display: flex;
         flex-wrap: wrap;
+        margin-left: -40px;
+        padding: 0;
+    }
+    
+    ul.list li:before {
+        background-image: none !important;
+    }
+    
+    .list-item {
+        display: flex;
+        padding: 0.5em;
+        width: 100%;
+    }
+    
+    .list-content {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        width: 100%;
+        border: 1px solid grey;
+        border-top: 10px solid #000;
+        box-shadow: 1px 1px 3px #888;
+    }
+    
+    .list-content:hover {
+        box-shadow: 3px 3px 5px #888;
+        transition: .3s;
+    }
+    
+    .list-content h2 {
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        color: #282828;
+        margin-top: -40px;
+        margin-left: 55px;
+    }
+    
+    .list-content img {
+        max-width: 50px;
+        height: auto;
+    }
+    
+    .list-content p {
+        flex: 1 0 auto;
+        font-family: TurnerRegular, Arial, Helvetica, sans-serif;
+        font-size: 1.1rem;
+        margin: .5rem 0 0 0;
+        padding: 0;
+        line-height: 150%;
+    }
+    
+    .list-content p a {
+        padding: 2px 5px;
+        border: 1px solid #0052e7;
+        border-radius: 3px;
+        
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+    }
+    
+    .list-content p a:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+/*NAVIGATION*/
+
+    .learnNow a {
+        font-size: 15px;
+        font-family: TurnerBold;
+        color: #000;
+    }
+    
+    .learnNow a:hover {
+        color: #0052e7;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 15px !important;
+      font-family: TurnerBold;
+    }
+
+    .topnav a:hover {
+      background-color: #0052e7;
+      color: #fff;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+    
+/*BREADCRUMBS*/
+    
+    #breadcrumb { float: left; display: block; }
+    #breadcrumb ul { list-style: none; }
+
+    .crumbs { display: block; margin-left: -27px;}
+    .crumbs li {  display: inline; }
+    .crumbs li.first { padding-left: 8px; }
+    .crumbs li a, .crumbs li a:link, .crumbs li a:visited { color: #666; display: block; float: left; font-size: 12px; margin-left: -13px; padding: 3px 17px 11px 20px; position: relative; text-decoration: none; }
+
+    .crumbs li a { background-image: url('https://s3.amazonaws.com/tpd-files/images/bg-crumbs.png');  background-repeat: no-repeat; background-position: 100% 0; position: relative; }
+    .crumbs li a:hover { color: #333; background-position: 100% -48px; cursor: pointer; }
+    .crumbs li a:active { color: #333; background-position: 100% -96px; }
+    .crumbs li.first a span { height: 29px; width: 3px; border-left: 1px solid #d9d9d9; position: absolute; top: 0px; left: 0px; }
+    
+    .space { display: block; height: 5px; clear: both; }
+    
+    ul.crumbs li:before {
+        background-image: none !important;
+    }
+    
+/*MEDIA QUERIES*/
+
+    @media screen and (max-width: 1152px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {float: right; display: block;}
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+    
+    @media screen and (min-width: 40em) {
+        .list-item { width: 50%; }
+    }
+    
+    @media screen and (min-width: 60em) {
+        .list-item { width: 33.33%; }
     }
     
 </style>
 
-<div class="clearfix time-warner-breakthrough-leadership" id="learnnow-page"><!-- column -->
-  <!-- Starting new markup -->
-    <div class="col-12_md-12_sm-12_xs-12 grid-top ln--main-menu-wrapper">
+<!--TOP NAVIGATION-->
 
-        <div class="col-2_md-2_sm-2_xs-12">
-          <div class="lnow-menu-sec-header">Learning</div>
-          <div><a href="/learnnow/learning---classes---offerings">Classes &amp; Offerings</a></div>
-          <div><a href="/learnnow/learning---conferences">Conferences</a></div>
-          <div><a class="nonblock" href="/learnnow/learning---self-directed">Self-Directed</a></div>
+<span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
+<div class="topnav" id="myTopnav">
+  <a href="http://learn.turner.com">Home</a>    
+  <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+  <a href="/learnnow/org-development">Org. Development</a>
+  <a href="/learnnow/performance">Performance</a>
+  <a href="/learnnow/new-to-turner">New Hires</a>
+  <a href="/learnnow/subscribe">Subscribe</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+</div>
+
+<script>
+function shrinkNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+<!--BREADCRUMBS-->
+
+<div id="breadcrumb">
+    <ul class="crumbs">
+        <li class="first"><a href="/learnnow/leadership---management-essentials" style="z-index:9;"><span></span>Management Essentials</a></li>
+        <li><a href="#" style="z-index:8;">Managing Virtual Teams</a></li>
+    </ul>
+</div>
+
+<div class="space"></div>
+
+<!--MAIN CONTENT-->
+
+<h2>Managing Virtual Teams</h2>
+
+<ul class="list">
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            <h2>Lead a Session on Managing Virtual Teams</h2>
+            <p>Spread the wealth! This toolkit is for those who'd like to lead an informal training on virtual teams.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Managing-Virtual-Teams/Tool_Managing-Virtual-Teams.pptx" target="_blank">Go</a></p>
         </div>
-
-        <div class="col-2_md-2_sm-2_xs-12">
-          <div class="lnow-menu-sec-header">Leadership</div>
-
-          <div><a href="/learnnow/leadership---leadershipnow">LeadershipNow</a></div>
-          <div><a href="/learnnow/leadership---management-essentials">Management Essentials</a></div>
-          <div><a href="/learnnow/leadership---tlx">Turner Leadership Experience</a></div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            <h2>Managing Virtual Teams Toolkit</h2>
+            <p>This kit has everything you need to get your started to lead virtually &ndash; from creating norms to establishing a vision statement.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Managing-Virtual-Teams/Tool_Managing-Virtual-Teams_Toolkit.pptx" target="_blank">Go</a></p>
         </div>
-
-        <div class="col-2_md-2_sm-2_xs-12">
-          <div class="lnow-menu-sec-header">OD</div>
-          <div><a href="/learnnow/od---assessments">Assessments</a></div>
-          <div><a href="/learnnow/learning---coaching">Coaches</a></div>
-          <div><a href="/learnnow/od---team-effectiveness">Team Effectiveness</a></div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/class-ico.png">
+            <h2>Virtual Teams</h2>
+            <p>In this course, organizational "alchemist" Izzy Gesell explains how to build an efficient, high-performing team from the ground up.</p>
+            <p>(Course available for purchase.)</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://www.lynda.com/Business-Skills-tutorials/Virtual-teams/427474/593636-4.html" target="_blank">Go</a></p>
         </div>
-
-        <div class="col-2_md-2_sm-2_xs-12">
-          <div class="lnow-menu-sec-header">Performance</div>
-          <div><a href="/learnnow/performance---approach">Turner's Approach</a></div>
-          <div><a href="/learnnow/performance---goals">Goals</a></div>
-          <div><a href="/learnnow/performance---reviews-and-conversations">Reviews &amp; Conversations</a></div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/class-ico.png">
+            <h2>Keeping a Virtual Team Connected</h2>
+            <p>Todd Dewett, PhD, discusses how to keep a virtual team connected.</p>
+            <p>(Course available for purchase.)</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://www.lynda.com/Business-Skills-tutorials/Keeping-virtual-team-connected/126132/161873-4.html" target="_blank">Go</a></p>
         </div>
-
-        <div class="col-2_md-2_sm-2_xs-12">
-          <div class="lnow-menu-sec-header">New to Turner?</div>
-          <div><a class="nonblock" href="/learnnow/new-hires---30-day-guide">30-Day Guide</a></div>
-          <div><a class="nonblock" href="/learnnow/new-hires---about-turner">About Turner</a></div>
-          <div><a class="nonblock" href="https://eahapspor.turner.com:7111/ps/forwarddl.jsp?aut=N&amp;forwardURL=https%3a%2f%2feahapspor.turner.com%3a7111%2fpsc%2fps%2fEMPLOYEE%2fEMPL%2fs%2fWEBLIB_T_DLINK.ISCRIPT1.FieldFormula.IScript_GetLink%3fDEEPLINK%3d248" target="_blank">Benefits</a></div>
-          <div><a class="nonblock" href="/learnnow/new-hires---how-we-make-money">How We Make Money</a></div>
-          <div><a class="nonblock" href="/learnnow/new-hires---your-technology">Your Technology</a></div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/class-ico.png">
+            <h2>Tools for Virtual Teams</h2>
+            <p>Join communications experts Tatiana Kolovou and Brenda Bailey-Hughes for an in-depth discussion on tolls for virtual teams.</p>
+            <p>(Course available for purchase.)</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://www.lynda.com/Business-Skills-tutorials/Tools-virtual-teams/170778/430667-4.html" target="_blank">Go</a></p>
         </div>
-
-    </div>
-</div>
-
-<div class="col-12_md-12_sm-12_xs-12"><h2>MANAGEMENT ESSENTIALS</h2></div>
-
-<p>Great people leaders bring out the very best in their people. They maximize their potential and create a thriving team environment focused on common objectives.</p>
-    
-<p>As a people leader, your key responsibilities are to motivate, develop, and mentor your team. How you accomplish this can show up in different ways.</p>
-    
-<p>Pick a topic to get started.</p>
-    
-<div id="mainbox">
-    
-<a href="/learnnow/management-essentials---onboarding">
-<div class="card">
-  <h1>Onboarding</h1>
-  <p>Onboarding at Turner is a process that happens over an extended period of time. It lays the groundwork for new employees to become productive and successful.</p>
-</div>
-</a>
-      
-<a href="/learnnow/me-transitioning-into-management">
-<div class="card">
-  <h1>Transitioning Into Management</h1>
-  <p>Are you (or someone you know) a first-time manager? This section has all you need to step into the wonderful world of management.</p>
-</div>
-</a>
-    
-<a href="/learnnow/management-essentials---performance-management">
-<div class="card">
-  <h1>Performance Management</h1>
-  <p>Performance management is an approach for architecting success through people.</p>
-</div>
-</a>
-    
-<a href="http://recruiting.turner.com" target="_blank">
-<div class="card">
-  <h1>Recruiting &amp; Selection</h1>
-  <p>Learn about Turner's recruiting process and get tools to think differently when finding the next person for your team.</p>
-</div>
-</a>
-       
-<a href="/learnnow/me-managing-virtual-teams" target="_blank">
-<div class="card">
-  <h1>Managing Virtual Teams</h1>
-  <p>Learn about Turner's recruiting process and get tools to think differently when finding the next person for your team.</p>
-</div>
-</a>
-   
-</div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/class-ico.png">
+            <h2>Trust with Virtual Teams</h2>
+            <p>Communication expert Brenda Bailey-Hughes shows how to strengthen relationships within virtual teams, repair lost or broken trust, and how to deliver apologies to speed the rebuilding process.</p>
+            <p>(Course available for purchase.)</p>
+            <p>&nbsp;</p>
+            <p><a href="https://www.lynda.com/Business-Skills-tutorials/Trust-virtual-teams/156547/172754-4.html" target="_blank">Go</a></p>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/video-ico.png">
+            <h2>The Long Distance Relationship</h2>
+            <p>Kyra Cavanaugh, President of Life Meets Work, gives us the deets on managing people you can't see.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Managing-Virtual-Teams/LongDistanceRelationship_zoomrecording.mp4" target="_blank">Go</a></p>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            <h2>Trends in Virtual Teams</h2>
+            <p>Take a dive into survey findings by RW<sup>3</sup> CultureWizard.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Managing-Virtual-Teams/Article_Trends-in-Virtual-Teams.pdf" target="_blank">Go</a></p>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            <h2>5 Mistakes to Avoid When Managing Remote Teams</h2>
+            <p><i>Forbes</i> reviews 3 remote working mistakes companies make and the 5 tips for avoiding them.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://www.forbes.com/sites/yec/2017/07/06/five-mistakes-to-avoid-when-managing-remote-teams/#3dc591f79d43" target="_blank">Go</a></p>
+        </div>
+    </li>    
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            <h2>Developing Real Skills for Virtual Teams</h2>
+            <p>UNC Kenan-Flagler Business School provides its take on building the skills you need to manage a virtual team.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="http://www.kenan-flagler.unc.edu/executive-development/custom-programs/~/media/Files/documents/executive-development/developing-real-skills.ashx" target="_blank">Go</a></p>
+        </div>
+    </li>    
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            <h2>How to Manage Conflict in Virtual Teams</h2>
+            <p>How do you keep task-related conflicts from getting personal? <i>Harvard Business Review</i> tells us how.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://hbr.org/2012/11/how-to-manage-conflict-in-virt" target="_blank">Go</a></p>
+        </div>
+    </li>    
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            <h2>How Successful Virtual Teams Collaborate</h2>
+            <p>Lessons learned from studying dozens of virtual teams.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://hbr.org/2012/10/how-to-collaborate-in-a-virtua" target="_blank">Go</a></p>
+        </div>
+    </li>    
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            <h2>Do You Know How Each Person on Your Team Likes to Work?</h2>
+            <p>When you first become a manager, it's helpful to spend time connecting and creating a common language with your team. Here are some suggestions.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://hbr.org/2017/05/do-you-know-how-each-person-on-your-team-likes-to-work" target="_blank">Go</a></p>
+        </div>
+    </li>    
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            <h2>How to Run a Great Virtual Meeting</h2>
+            <p>Keith Ferrazzi, CEO of Ferrazzi Greenlight, a research-based consulting firm, has a comprehensive list of simple do's and don'ts to help you get the most out of your next virtual meeting.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://hbr.org/2015/03/how-to-run-a-great-virtual-meeting" target="_blank">Go</a></p>
+        </div>
+    </li>    
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            <h2>Leading Virtual Teams</h2>
+            <p>Leading any team involves managing people, technical oversight, and project administration, but leaders of virtual teams perform these functions from afar. This book walks you through the basics.</p>
+            <p>(Available for purchase.)</p>
+            <p>&nbsp;</p>
+            <p><a href="https://www.amazon.com/Leading-Virtual-Teams-20-Minute-Manager/dp/1633691454/ref=sr_1_1?ie=UTF8&qid=1505831763&sr=8-1&keywords=-+leading+virtual+teams" target="_blank">Go</a></p>
+        </div>
+    </li>    
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            <h2>The 7 Habits of Highly Effective Virtual Teams</h2>
+            <p>Discover the best-kept secrets that enable ordinary people run highly successful virtual teams like a pro.</p>
+            <p>(Available for purchase.)</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://www.amazon.com/Habits-Highly-Effective-Virtual-Teams/dp/0993076246/ref=sr_1_1?ie=UTF8&qid=1505831797&sr=8-1&keywords=the+7+habits+of+highly+effective+virtual+teams" target="_blank">Go</a></p>
+        </div>
+    </li>    
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/video-ico.png">
+            <h2>5 Essential Questions in Life</h2>
+            <p>Former Harvard Graduate School of Education Dean, James Ryan, explains the heart of meaningful dialog in his 2016 address.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://www.youtube.com/watch?time_continue=5&v=bW0NguMGIbE" target="_blank">Go</a></p>
+        </div>
+    </li>
+</ul>

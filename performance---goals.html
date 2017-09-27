@@ -1,137 +1,205 @@
 <style>
     
-    .card {
-        width: 350px;
-        border: 1px solid gray;
-        box-shadow: 1px 1px 3px #888;
-        border-top: 10px solid black;
-        min-height: 275px;
-        padding: 10px;
-        margin: 20px;
-    }
-
-    .card:first-child {
-        margin-left: 0;    
-    }
-
-    .card:hover {
-        box-shadow: 3px 3px 5px #888;
-        transition: 0.3s;
-        border: 1px solid #0052e7;
-        border-top: 10px solid black;
-        }
-
-    .card h1 {
+    h2 {
         font-family: TurnerBold;
+        font-size: 3rem;
+        margin-top: 30px;
+    }
+    
+/*FLEX BOXES*/
+    
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -40px;
+        padding: 0;
+    }
+    
+    ul.list li:before {
+        background-image: none !important;
+    }
+    
+    .list-item {
+        display: flex;
+        padding: 0.5em;
+        width: 100%;
+    }
+    
+    .list-content {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        width: 100%;
+        border: 1px solid grey;
+        border-top: 10px solid #000;
+        box-shadow: 1px 1px 3px #888;
+    }
+    
+    .list-content:hover {
+        box-shadow: 3px 3px 5px #888;
+        transition: .3s;
+    }
+    
+    .list-content h2 {
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        color: #282828;
         margin-top: -40px;
-        font-size: 24px;
         margin-left: 55px;
     }
     
-    .card img {
-        border-radius: 50%;
-        width: 50px;
+    .list-content img {
+        max-width: 50px;
+        height: auto;
+    }
+    
+    .list-content p {
+        flex: 1 0 auto;
+        font-family: TurnerRegular, Arial, Helvetica, sans-serif;
+        font-size: 1.1rem;
+        margin: .5rem 0 0 0;
+        padding: 0;
+        line-height: 150%;
+    }
+    
+    .list-content p a {
+        padding: 2px 5px;
+        border: 1px solid #0052e7;
+        border-radius: 3px;
+        
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+    }
+    
+    .list-content p a:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+    
+/*NAVIGATION*/
+
+    .learnNow a {
+        font-size: 15px;
+        font-family: TurnerBold;
+        color: #000;
+    }
+    
+    .learnNow a:hover {
+        color: #0052e7;
     }
 
-    .card p {
-      margin: 10px;
-      font-family: TurnerRegular;
-      font-size: 16px !important;
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
     }
 
-    .card a {
-        color: #000 !important;
-        text-decoration: none !important;
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 15px !important;
+      font-family: TurnerBold;
     }
 
-    #mainbox {
-        box-sizing: border-box;
-        justify-content: left;
-        display: flex;
-        flex-wrap: wrap;
+    .topnav a:hover {
+      background-color: #0052e7;
+      color: #fff;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+    
+/*MEDIA QUERIES*/
+
+    @media screen and (max-width: 1152px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {float: right; display: block;}
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+    
+    @media screen and (min-width: 40em) {
+        .list-item { width: 50%; }
+    }
+    
+    @media screen and (min-width: 60em) {
+        .list-item { width: 33.33%; }
     }
     
 </style>
 
-<div class="clearfix time-warner-breakthrough-leadership" id="learnnow-page"><!-- column -->
-  <!-- Starting new markup -->
-    <div class="col-12_md-12_sm-12_xs-12 grid-top ln--main-menu-wrapper">
+<!--TOP NAVIGATION-->
 
-        <div class="col-2_md-2_sm-2_xs-12">
-          <div class="lnow-menu-sec-header">Learning</div>
-          <div><a href="/learnnow/learning---classes---offerings">Classes &amp; Offerings</a></div>
-          <div><a href="/learnnow/learning---conferences">Conferences</a></div>
-          <div><a class="nonblock" href="/learnnow/learning---self-directed">Self-Directed</a></div>
-        </div>
-
-        <div class="col-2_md-2_sm-2_xs-12">
-          <div class="lnow-menu-sec-header">Leadership</div>
-
-          <div><a href="/learnnow/leadership---leadershipnow">LeadershipNow</a></div>
-          <div><a href="/learnnow/leadership---management-essentials">Management Essentials</a></div>
-          <div><a href="/learnnow/leadership---tlx">Turner Leadership Experience</a></div>
-        </div>
-
-        <div class="col-2_md-2_sm-2_xs-12">
-          <div class="lnow-menu-sec-header">OD</div>
-          <div><a href="/learnnow/od---assessments">Assessments</a></div>
-          <div><a href="/learnnow/learning---coaching">Coaches</a></div>
-          <div><a href="/learnnow/od---team-effectiveness">Team Effectiveness</a></div>
-        </div>
-
-        <div class="col-2_md-2_sm-2_xs-12">
-          <div class="lnow-menu-sec-header">Performance</div>
-          <div><a href="/learnnow/performance---approach">Turner's Approach</a></div>
-          <div><a href="/learnnow/performance---goals">Goals</a></div>
-          <div><a href="/learnnow/performance---reviews-and-conversations">Reviews &amp; Conversations</a></div>
-        </div>
-
-        <div class="col-2_md-2_sm-2_xs-12">
-          <div class="lnow-menu-sec-header">New to Turner?</div>
-          <div><a class="nonblock" href="/learnnow/new-hires---30-day-guide">30-Day Guide</a></div>
-          <div><a class="nonblock" href="/learnnow/new-hires---about-turner">About Turner</a></div>
-          <div><a class="nonblock" href="https://eahapspor.turner.com:7111/ps/forwarddl.jsp?aut=N&amp;forwardURL=https%3a%2f%2feahapspor.turner.com%3a7111%2fpsc%2fps%2fEMPLOYEE%2fEMPL%2fs%2fWEBLIB_T_DLINK.ISCRIPT1.FieldFormula.IScript_GetLink%3fDEEPLINK%3d248" target="_blank">Benefits</a></div>
-          <div><a class="nonblock" href="/learnnow/new-hires---how-we-make-money">How We Make Money</a></div>
-          <div><a class="nonblock" href="/learnnow/new-hires---your-technology">Your Technology</a></div>
-        </div>
-
-    </div>
+<span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
+<div class="topnav" id="myTopnav">
+  <a href="http://learn.turner.com">Home</a>    
+  <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+  <a href="/learnnow/org-development">Org. Development</a>
+  <a href="/learnnow/performance">Performance</a>
+  <a href="/learnnow/new-to-turner">New Hires</a>
+  <a href="/learnnow/subscribe">Subscribe</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
 </div>
 
-<div class="col-12_md-12_sm-12_xs-12"><h2>Goals</h2></div>
-
-<div id="mainbox">
+<script>
+function shrinkNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
     
-<a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Guide+to+Creating+Individual+Performance+Goals.pdf" target="_blank">
-<div class="card">
-  <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-  <h1>Creating Individual Goals</h1>
-  <p>If all you can think of are vuvuzelas when creating goals, look no further. We have some things for you to think about.</p>
-</div>
-</a>
-      
-<a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/NEW+INTERFACE+-+Setting+Editing+%26+Approving+Goals+Quick+Sheet.pdf" target="_blank">
-<div class="card">
-  <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-  <h1>Entering Your Goals Into MyCareer</h1>
-    <p>Every now and then we ask you to document something - this includes your goals.</p>
-</div>
-</a>
-         
-<a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/IDP+Tool+new+skin.pdf" target="_blank">
-<div class="card">
-  <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
-  <h1>Developing Plan Toolkit</h1>
-  <p>Let us help you get started if you need some structure around how you're going to make now happen.</p>
-</div>
-</a>
-             
-<a href="https://hbr.org/2016/12/think-strategically-about-your-career-development" target="_blank">
-<div class="card">
-  <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
-  <h1>Think Strategically About Your Career Development</h1>
-  <p>Dorie Clark, HBR contributor, shares 4 ways to be strategic about career development.</p>
-</div>
-</a>
-                
-</div>
+<h2>Goals</h2></div>
+
+<ul class="list">
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            <h2>Creating Individual Goals</h2>
+            <p>If all you can think of are vuvuzelas when creating goals, look no further. We have some things for you to think about.</p>
+            <p><a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Guide+to+Creating+Individual+Performance+Goals.pdf" target="_blank">Go</a></p>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            <h2>Entering Your Goals Into MyCareer</h2>
+            <p>Every now and then we ask you to document something &mdash; this includes your goals.</p>
+            <p><a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/NEW+INTERFACE+-+Setting+Editing+%26+Approving+Goals+Quick+Sheet.pdf" target="_blank">Go</a></p>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            <h2>Development Plan Toolkit</h2>
+            <p>Let us help you get started if you need some structure around how you're going to make now happen.</p>
+            <p><a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/IDP+Tool+new+skin.pdf" target="_blank">Go</a></p>
+        </div>
+    </li>
+        <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            <h2>Thinking Strategically About Your Career Development</h2>
+            <p>Dorie Clark, <i>HBR</i> contributor, shares 4 ways to be strategic about career development.</p>
+            <p><a href="https://hbr.org/2016/12/think-strategically-about-your-career-development" target="_blank">Go</a></p>
+        </div>
+    </li>
+</ul>

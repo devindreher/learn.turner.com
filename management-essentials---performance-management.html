@@ -1,166 +1,281 @@
 <style>
     
-    .card {
-        width: 350px;
-        border: 1px solid gray;
-        box-shadow: 1px 1px 3px #888;
-        border-top: 10px solid black;
-        min-height: 300px;
-        padding: 10px;
-        margin: 20px;
-    }
-
-    .card:first-child {
-        margin-left: 0;    
-    }
-
-    .card:hover {
-        box-shadow: 3px 3px 5px #888;
-        transition: 0.3s;
-        border: 1px solid #0052e7;
-        border-top: 10px solid black;
-        }
-
-    .card h1 {
+    h2 {
         font-family: TurnerBold;
+        font-size: 3rem;
+        margin-top: 30px;
+    }
+    
+/*FLEX BOXES*/
+    
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -40px;
+        padding: 0;
+    }
+    
+    ul.list li:before {
+        background-image: none !important;
+    }
+    
+    .list-item {
+        display: flex;
+        padding: 0.5em;
+        width: 100%;
+    }
+    
+    .list-content {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        width: 100%;
+        border: 1px solid grey;
+        border-top: 10px solid #000;
+        box-shadow: 1px 1px 3px #888;
+    }
+    
+    .list-content:hover {
+        box-shadow: 3px 3px 5px #888;
+        transition: .3s;
+    }
+    
+    .list-content h2 {
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        color: #282828;
         margin-top: -40px;
-        font-size: 24px;
         margin-left: 55px;
     }
     
-    .card img {
-        border-radius: 50%;
-        width: 50px;
+    .list-content img {
+        max-width: 50px;
+        height: auto;
+    }
+    
+    .list-content p {
+        flex: 1 0 auto;
+        font-family: TurnerRegular, Arial, Helvetica, sans-serif;
+        font-size: 1.1rem;
+        margin: .5rem 0 0 0;
+        padding: 0;
+        line-height: 150%;
+    }
+    
+    .list-content p a {
+        padding: 2px 5px;
+        border: 1px solid #0052e7;
+        border-radius: 3px;
+        
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+    }
+    
+    .list-content p a:hover {
+        background-color: #0052e7;
+        color: #fff;
     }
 
-    .card p {
-      margin: 10px;
-      font-family: TurnerRegular;
-      font-size: 16px !important;
+/*NAVIGATION*/
+
+    .learnNow a {
+        font-size: 15px;
+        font-family: TurnerBold;
+        color: #000;
+    }
+    
+    .learnNow a:hover {
+        color: #0052e7;
     }
 
-    .card a {
-        color: #000 !important;
-        text-decoration: none !important;
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
     }
 
-    #mainbox {
-        box-sizing: border-box;
-        justify-content: left;
-        display: flex;
-        flex-wrap: wrap;
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 15px !important;
+      font-family: TurnerBold;
+    }
+
+    .topnav a:hover {
+      background-color: #0052e7;
+      color: #fff;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+    
+/*BREADCRUMBS*/
+    
+    #breadcrumb { float: left; display: block; }
+    #breadcrumb ul { list-style: none; }
+
+    .crumbs { display: block; margin-left: -27px;}
+    .crumbs li {  display: inline; }
+    .crumbs li.first { padding-left: 8px; }
+    .crumbs li a, .crumbs li a:link, .crumbs li a:visited { color: #666; display: block; float: left; font-size: 12px; margin-left: -13px; padding: 3px 17px 11px 20px; position: relative; text-decoration: none; }
+
+    .crumbs li a { background-image: url('https://s3.amazonaws.com/tpd-files/images/bg-crumbs.png');  background-repeat: no-repeat; background-position: 100% 0; position: relative; }
+    .crumbs li a:hover { color: #333; background-position: 100% -48px; cursor: pointer; }
+    .crumbs li a:active { color: #333; background-position: 100% -96px; }
+    .crumbs li.first a span { height: 29px; width: 3px; border-left: 1px solid #d9d9d9; position: absolute; top: 0px; left: 0px; }
+    
+    .space { display: block; height: 5px; clear: both; }
+    
+    ul.crumbs li:before {
+        background-image: none !important;
+    }
+    
+/*MEDIA QUERIES*/
+
+    @media screen and (max-width: 1152px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {float: right; display: block;}
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+    
+    @media screen and (min-width: 40em) {
+        .list-item { width: 50%; }
+    }
+    
+    @media screen and (min-width: 60em) {
+        .list-item { width: 33.33%; }
     }
     
 </style>
 
-<div class="clearfix time-warner-breakthrough-leadership" id="learnnow-page"><!-- column -->
-  <!-- Starting new markup -->
-    <div class="col-12_md-12_sm-12_xs-12 grid-top ln--main-menu-wrapper">
+<!--TOP NAVIGATION-->
 
-        <div class="col-2_md-2_sm-2_xs-12">
-          <div class="lnow-menu-sec-header">Learning</div>
-          <div><a href="/learnnow/learning---classes---offerings">Classes &amp; Offerings</a></div>
-          <div><a href="/learnnow/learning---conferences">Conferences</a></div>
-          <div><a class="nonblock" href="/learnnow/learning---self-directed">Self-Directed</a></div>
-        </div>
-
-        <div class="col-2_md-2_sm-2_xs-12">
-          <div class="lnow-menu-sec-header">Leadership</div>
-
-          <div><a href="/learnnow/leadership---leadershipnow">LeadershipNow</a></div>
-          <div><a href="/learnnow/leadership---management-essentials">Management Essentials</a></div>
-          <div><a href="/learnnow/leadership---tlx">Turner Leadership Experience</a></div>
-        </div>
-
-        <div class="col-2_md-2_sm-2_xs-12">
-          <div class="lnow-menu-sec-header">OD</div>
-          <div><a href="/learnnow/od---assessments">Assessments</a></div>
-          <div><a href="/learnnow/learning---coaching">Coaches</a></div>
-          <div><a href="/learnnow/od---team-effectiveness">Team Effectiveness</a></div>
-        </div>
-
-        <div class="col-2_md-2_sm-2_xs-12">
-          <div class="lnow-menu-sec-header">Performance</div>
-          <div><a href="/learnnow/performance---approach">Turner's Approach</a></div>
-          <div><a href="/learnnow/performance---goals">Goals</a></div>
-          <div><a href="/learnnow/performance---reviews-and-conversations">Reviews &amp; Conversations</a></div>
-        </div>
-
-        <div class="col-2_md-2_sm-2_xs-12">
-          <div class="lnow-menu-sec-header">New to Turner?</div>
-          <div><a class="nonblock" href="/learnnow/new-hires---30-day-guide">30-Day Guide</a></div>
-          <div><a class="nonblock" href="/learnnow/new-hires---about-turner">About Turner</a></div>
-          <div><a class="nonblock" href="https://eahapspor.turner.com:7111/ps/forwarddl.jsp?aut=N&amp;forwardURL=https%3a%2f%2feahapspor.turner.com%3a7111%2fpsc%2fps%2fEMPLOYEE%2fEMPL%2fs%2fWEBLIB_T_DLINK.ISCRIPT1.FieldFormula.IScript_GetLink%3fDEEPLINK%3d248" target="_blank">Benefits</a></div>
-          <div><a class="nonblock" href="/learnnow/new-hires---how-we-make-money">How We Make Money</a></div>
-          <div><a class="nonblock" href="/learnnow/new-hires---your-technology">Your Technology</a></div>
-        </div>
-
-    </div>
+<span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
+<div class="topnav" id="myTopnav">
+  <a href="http://learn.turner.com">Home</a>    
+  <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+  <a href="/learnnow/org-development">Org. Development</a>
+  <a href="/learnnow/performance">Performance</a>
+  <a href="/learnnow/new-to-turner">New Hires</a>
+  <a href="/learnnow/subscribe">Subscribe</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
 </div>
 
-<div class="col-12_md-12_sm-12_xs-12"><h2>PERFORMANCE MANAGEMENT</h2></div>
+<script>
+function shrinkNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
 
-<p>Performance Management is an approach for architecting success through people.</p>
+<!--BREADCRUMBS-->
+
+<div id="breadcrumb">
+    <ul class="crumbs">
+        <li class="first"><a href="/learnnow/leadership---management-essentials" style="z-index:9;"><span></span>Management Essentials</a></li>
+        <li><a href="#" style="z-index:8;">Performance Management</a></li>
+    </ul>
+</div>
+
+<div class="space"></div>
+
+<!--MAIN CONTENT-->
+
+<h2>Performance Management</h2>
+
+<p>Performance management is an approach for architecting success through people.</p>
 <p>For managers, a performance management "system" provides: an accurate representation of your team's performance level, a framework for documenting, discussing, and rewarding performance, and the ability to identify future career development needs.</p>
-<p>Also be sure to visit <a href="learnnow/performance---approach">our section on performance</a> to learn more.</p>
+<p>Also be sure to visit <a href="/learnnow/performance">our section</a> on performance to learn more.</p>
 
-<div id="mainbox">
-    
-<a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Performance-Management/Tool_Performance-Management.pptx" target="_blank">
-<div class="card">
-  <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-  <h1>Performance Management for Leaders</h1>
-  <p>This deck is for everyone who needs to know more about Turner's approach to managing individual performance.</p>
-</div>
-</a>
-      
-<a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Management-Essentials/Individual-Development-Conversation-Guide-for-Managers.pdf" target="_blank">
-<div class="card">
-  <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-  <h1>Individual Development Plan Conversation Guide for Managers</h1>
-  <p>By showing your team that you support and care about their development, you create a positive, productive environment. This guide gives you some pointers.</p>
-</div>
-</a>
-         
-<a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/IDP+Tool+new+skin.pdf" target="_blank">
-<div class="card">
-  <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-  <h1>Development Plan Toolkit</h1>
-  <p>Let us help you get started if you need some structure around you or your team's development.</p>
-</div>
-</a>
-                          
-<a href="https://lifehacker.com/three-passive-aggressive-phrases-to-avoid-when-giving-f-1729965729" target="_blank">
-<div class="card">
-  <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
-  <h1>3 Phrases to Avoid When Giving Feedback</h1>
-  <p>Here are 3 phrases you should avoid, courtesy of Lifehacker.com.</p>
-</div>
-</a>
-                   
-<a href="https://www.fastcompany.com/3067738/this-seven-step-guide-for-dishing-out-feedback-is-totally-idiot-proof" target="_blank">
-<div class="card">
-  <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
-  <h1>7-Step Guide to Feedback</h1>
-  <p>Giving critical feedback isn't easy, but it doesn't need to be as hard as you may think. These 7 steps (courtesy of Fast Company) can help you map out a script, no matter how "sticky" the situation.</p>
-</div>
-</a>
-                      
-<a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Performance-Management/Article_When-Giving-Critical-Feedback-Focus-On-Nonverbal-Cues.pdf" target="_blank">
-<div class="card">
-  <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
-  <h1>When Giving Critical Feedback, Focus on Your Nonverbal Cues</h1>
-  <p>Whether we realize it or not, we're constantly reading each others' facial expressions and body language. Here are the nonverbal cues to which we pay the most attention.</p>
-</div>
-</a>
-                    
-                      
-<a href="https://www.radicalcandor.com/blog/" target="_blank">
-<div class="card">
-  <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
-  <h1>Radical Candor</h1>
-  <p>The folks behind the book <i>Radical Candor: Be a Kickass Boss Without Losing Your Humanity</i> also have a blog with advice, quick tips, stories, and more.</p>
-</div>
-</a>
-                    
-</div>
+<ul class="list">
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            <h2>Performance Management for Leaders</h2>
+            <p>This deck if for anyone who needs to know more about Turner's approach to managing individual performance.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Performance-Management/Tool_Performance-Management.pptx" target="_blank">Go</a></p>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            <h2>Individual Development Plan Conversation Guide for Managers</h2>
+            <p>By showing your team that you support and care about their development, you create a positive, productive environment. This guide gives you some pointers.</p>
+            <p>&nbsp;</p>
+            <p><a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Management-Essentials/Individual-Development-Conversation-Guide-for-Managers.pdf" target="_blank">Go</a></p>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            <h2>Development Plan Toolkit</h2>
+            <p>Let us help you get started if you need some structure around you or your team's development.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/IDP+Tool+new+skin.pdf" target="_blank">Go</a></p>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            <h2>3 Phrases to Avoid When Giving Feedback</h2>
+            <p>Here are 3 phrases you should avoid, courtesy of Lifehacker.com</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://lifehacker.com/three-passive-aggressive-phrases-to-avoid-when-giving-f-1729965729" target="_blank">Go</a></p>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            <h2>7-Step Guide to Feedback</h2>
+            <p>Giving critical feedback isn't easy, but it doesn't need to be as hard as you may think. These 7 steps, courtesy of <i>Fast Company</i>, can help you map out a script &mdash; no matter how "sticky" the situation.</p>
+            <p>&nbsp;</p>
+            <p><a href="https://www.fastcompany.com/3067738/this-seven-step-guide-for-dishing-out-feedback-is-totally-idiot-proof" target="_blank">Go</a></p>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            <h2>When Giving Critical Feedback, Focus on Your Nonverbal Cues</h2>
+            <p>Whether we realize it or not, we're constantly reading each others' facial expressions and body language. Here are the nonverbal cues to which we pay the most attention.</p>
+            <p>&nbsp;</p>
+            <p><a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Performance-Management/Article_When-Giving-Critical-Feedback-Focus-On-Nonverbal-Cues.pdf" target="_blank">Go</a></p>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            <h2>Radical Candor</h2>
+            <p>The folks behind the book <i>Radical Candor: Be a Kickass Boss Without Losing Your Humanity</i> also have a blog with advice, quick tips, stories, and more.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://www.radicalcandor.com/blog/" target="_blank">Go</a></p>
+        </div>
+    </li>
+</ul>

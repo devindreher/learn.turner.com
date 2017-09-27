@@ -1,172 +1,282 @@
 <style>
     
-    .card {
-        width: 350px;
-        border: 1px solid gray;
-        box-shadow: 1px 1px 3px #888;
-        border-top: 10px solid black;
-        min-height: 300px;
-        padding: 10px;
-        margin: 20px;
-    }
-
-    .card:first-child {
-        margin-left: 0;    
-    }
-
-    .card:hover {
-        box-shadow: 3px 3px 5px #888;
-        transition: 0.3s;
-        border: 1px solid #0052e7;
-        border-top: 10px solid black;
-        }
-
-    .card h1 {
+    h2 {
         font-family: TurnerBold;
+        font-size: 3rem;
+        margin-top: 30px;
+    }
+    
+/*FLEX BOXES*/
+    
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -40px;
+        padding: 0;
+    }
+    
+    ul.list li:before {
+        background-image: none !important;
+    }
+    
+    .list-item {
+        display: flex;
+        padding: 0.5em;
+        width: 100%;
+    }
+    
+    .list-content {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        width: 100%;
+        border: 1px solid grey;
+        border-top: 10px solid #000;
+        box-shadow: 1px 1px 3px #888;
+    }
+    
+    .list-content:hover {
+        box-shadow: 3px 3px 5px #888;
+        transition: .3s;
+    }
+    
+    .list-content h2 {
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        color: #282828;
         margin-top: -40px;
-        font-size: 24px;
         margin-left: 55px;
     }
     
-    .card img {
-        border-radius: 50%;
-        width: 50px;
+    .list-content img {
+        max-width: 50px;
+        height: auto;
+    }
+    
+    .list-content p {
+        flex: 1 0 auto;
+        font-family: TurnerRegular, Arial, Helvetica, sans-serif;
+        font-size: 1.1rem;
+        margin: .5rem 0 0 0;
+        padding: 0;
+        line-height: 150%;
+    }
+    
+    .list-content p a {
+        padding: 2px 5px;
+        border: 1px solid #0052e7;
+        border-radius: 3px;
+        
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+    }
+    
+    .list-content p a:hover {
+        background-color: #0052e7;
+        color: #fff;
     }
 
-    .card p {
-      margin: 10px;
-      font-family: TurnerRegular;
-      font-size: 16px !important;
+/*NAVIGATION*/
+
+    .learnNow a {
+        font-size: 15px;
+        font-family: TurnerBold;
+        color: #000;
+    }
+    
+    .learnNow a:hover {
+        color: #0052e7;
     }
 
-    .card a {
-        color: #000 !important;
-        text-decoration: none !important;
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
     }
 
-    #mainbox {
-        box-sizing: border-box;
-        justify-content: left;
-        display: flex;
-        flex-wrap: wrap;
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 15px !important;
+      font-family: TurnerBold;
+    }
+
+    .topnav a:hover {
+      background-color: #0052e7;
+      color: #fff;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+    
+/*BREADCRUMBS*/
+    
+    #breadcrumb { float: left; display: block; }
+    #breadcrumb ul { list-style: none; }
+
+    .crumbs { display: block; margin-left: -27px;}
+    .crumbs li {  display: inline; }
+    .crumbs li.first { padding-left: 8px; }
+    .crumbs li a, .crumbs li a:link, .crumbs li a:visited { color: #666; display: block; float: left; font-size: 12px; margin-left: -13px; padding: 3px 17px 11px 20px; position: relative; text-decoration: none; }
+
+    .crumbs li a { background-image: url('https://s3.amazonaws.com/tpd-files/images/bg-crumbs.png');  background-repeat: no-repeat; background-position: 100% 0; position: relative; }
+    .crumbs li a:hover { color: #333; background-position: 100% -48px; cursor: pointer; }
+    .crumbs li a:active { color: #333; background-position: 100% -96px; }
+    .crumbs li.first a span { height: 29px; width: 3px; border-left: 1px solid #d9d9d9; position: absolute; top: 0px; left: 0px; }
+    
+    .space { display: block; height: 5px; clear: both; }
+    
+    ul.crumbs li:before {
+        background-image: none !important;
+    }
+    
+/*MEDIA QUERIES*/
+
+    @media screen and (max-width: 1152px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {float: right; display: block;}
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+    
+    @media screen and (min-width: 40em) {
+        .list-item { width: 50%; }
+    }
+    
+    @media screen and (min-width: 60em) {
+        .list-item { width: 33.33%; }
     }
     
 </style>
 
-<div class="clearfix time-warner-breakthrough-leadership" id="learnnow-page"><!-- column -->
-  <!-- Starting new markup -->
-    <div class="col-12_md-12_sm-12_xs-12 grid-top ln--main-menu-wrapper">
+<!--TOP NAVIGATION-->
 
-        <div class="col-2_md-2_sm-2_xs-12">
-          <div class="lnow-menu-sec-header">Learning</div>
-          <div><a href="/learnnow/learning---classes---offerings">Classes &amp; Offerings</a></div>
-          <div><a href="/learnnow/learning---conferences">Conferences</a></div>
-          <div><a class="nonblock" href="/learnnow/learning---self-directed">Self-Directed</a></div>
-        </div>
-
-        <div class="col-2_md-2_sm-2_xs-12">
-          <div class="lnow-menu-sec-header">Leadership</div>
-
-          <div><a href="/learnnow/leadership---leadershipnow">LeadershipNow</a></div>
-          <div><a href="/learnnow/leadership---management-essentials">Management Essentials</a></div>
-          <div><a href="/learnnow/leadership---tlx">Turner Leadership Experience</a></div>
-        </div>
-
-        <div class="col-2_md-2_sm-2_xs-12">
-          <div class="lnow-menu-sec-header">OD</div>
-          <div><a href="/learnnow/od---assessments">Assessments</a></div>
-          <div><a href="/learnnow/learning---coaching">Coaches</a></div>
-          <div><a href="/learnnow/od---team-effectiveness">Team Effectiveness</a></div>
-        </div>
-
-        <div class="col-2_md-2_sm-2_xs-12">
-          <div class="lnow-menu-sec-header">Performance</div>
-          <div><a href="/learnnow/performance---approach">Turner's Approach</a></div>
-          <div><a href="/learnnow/performance---goals">Goals</a></div>
-          <div><a href="/learnnow/performance---reviews-and-conversations">Reviews &amp; Conversations</a></div>
-        </div>
-
-        <div class="col-2_md-2_sm-2_xs-12">
-          <div class="lnow-menu-sec-header">New to Turner?</div>
-          <div><a class="nonblock" href="/learnnow/new-hires---30-day-guide">30-Day Guide</a></div>
-          <div><a class="nonblock" href="/learnnow/new-hires---about-turner">About Turner</a></div>
-          <div><a class="nonblock" href="https://eahapspor.turner.com:7111/ps/forwarddl.jsp?aut=N&amp;forwardURL=https%3a%2f%2feahapspor.turner.com%3a7111%2fpsc%2fps%2fEMPLOYEE%2fEMPL%2fs%2fWEBLIB_T_DLINK.ISCRIPT1.FieldFormula.IScript_GetLink%3fDEEPLINK%3d248" target="_blank">Benefits</a></div>
-          <div><a class="nonblock" href="/learnnow/new-hires---how-we-make-money">How We Make Money</a></div>
-          <div><a class="nonblock" href="/learnnow/new-hires---your-technology">Your Technology</a></div>
-        </div>
-
-    </div>
+<span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
+<div class="topnav" id="myTopnav">
+  <a href="http://learn.turner.com">Home</a>    
+  <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+  <a href="/learnnow/org-development">Org. Development</a>
+  <a href="/learnnow/performance">Performance</a>
+  <a href="/learnnow/new-to-turner">New Hires</a>
+  <a href="/learnnow/subscribe">Subscribe</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
 </div>
 
-<div class="col-12_md-12_sm-12_xs-12"><h2>ONBOARDING</h2></div>
+<script>
+function shrinkNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+<!--BREADCRUMBS-->
+
+<div id="breadcrumb">
+    <ul class="crumbs">
+        <li class="first"><a href="/learnnow/leadership---management-essentials" style="z-index:9;"><span></span>Management Essentials</a></li>
+        <li><a href="#" style="z-index:8;">Onboarding</a></li>
+    </ul>
+</div>
+
+<div class="space"></div>
+
+<!--MAIN CONTENT-->
+
+<h2>Onboarding</h2>
 
 <p>Onboarding at Turner is a process that happens over an extended period of time. It lays the groundwork for new employees to become productive and successful team members for the long haul.</p>
 <p>Employees who experience effective onboarding processes are 58% more likely to be with the organization after 3 years. Research suggests that managers have the number one impact on employees' overall onboarding experience.</p>
 
-<div id="mainbox">
-    
-<a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Onboarding/Onboarding+Checklist+for+Hiring+Managers.docx" target="_blank">
-<div class="card">
-  <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-  <h1>Onboarding Checklist</h1>
-  <p>Things you should do before your new employee's arrival, on their first day, after their first week, and beyond.</p>
-</div>
-</a>
-      
-<a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Onboarding/Welcome+Ideas.docx" target="_blank">
-<div class="card">
-  <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-  <h1>How to Welcome a New Hire</h1>
-  <p>Being the new kid can be rough, so here's how you can make someone's first few days easier.</p>
-</div>
-</a>
-         
-<a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Onboarding/New+Hire+Buddy+Overview.docx" target="_blank">
-<div class="card">
-  <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-  <h1>Selecting a New Hire Buddy</h1>
-  <p>A budy is someone who partners with a new employee during his/her first few weeks. They act as a guide to the culture and a knowledge resource. Here's how to select a buddy for your new hire.</p>
-</div>
-</a>
-                          
-<a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Onboarding/A+First+Day+Outline.docx" target="_blank">
-<div class="card">
-  <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-  <h1>What To Do On Day 1</h1>
-  <p>Here are some suggestions for planning a new hire's first day.</p>
-</div>
-</a>
-                   
-<a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Onboarding/Check-In+Questions.docx" target="_blank">
-<div class="card">
-  <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-  <h1>Check-In Questions</h1>
-  <p>Your early 1:1 sessions will set the stage for open communication going forward. Below are a few questions to help you get started.</p>
-</div>
-</a>
-                      
-<a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Onboarding/New+Hire+Planning+Guide.docx" target="_blank">
-<div class="card">
-  <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-  <h1>New Hire Planning Guide</h1>
-  <p>For those of you who like templates, this is for you. Upon completion, you'll have a nice outline of everything to be done both before, during, and immediately after a new hire's first day.</p>
-</div>
-</a>
-                                         
-<a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Onboarding/Sample+Goal+Setting+Guide.docx" target="_blank">
-<div class="card">
-  <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-  <h1>Sample Goal Setting Guide</h1>
-  <p>A template for you and you new hire to complete that outlines objectives and key results to achieve.</p>
-</div>
-</a>
-                        
-<a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Onboarding/ME+-+Onboarding.pptx" target="_blank">
-<div class="card">
-  <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-  <h1>New Hire Onboarding Facilitator Guide</h1>
-  <p>This deck is a resource for anyone who is responding to a need for educating people leaders on the ideal approach to onboarding a new employee, whether they're external or internal.</p>
-</div>
-</a>
-                    
-</div>
+<ul class="list">
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            <h2>Onboarding Checklist</h2>
+            <p>Things you should do before your new employee's arrival, on their first day, after their first week, and beyond.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Onboarding/Onboarding+Checklist+for+Hiring+Managers.docx" target="_blank">Go</a></p>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            <h2>How to Welcome a New Hire</h2>
+            <p>Being the new kid can be rough, so here's how you can make someone's first few days easier.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Onboarding/Welcome+Ideas.docx" target="_blank">Go</a></p>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            <h2>Selecting a New Hire Buddy</h2>
+            <p>A buddy is someone who partners with a new employee during his/her first few weeks. They act as a guide to the culture and a knowledge resource. Here's how to select a budy for your new hire.</p>
+            <p><a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Onboarding/New+Hire+Buddy+Overview.docx" target="_blank">Go</a></p>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            <h2>What To Do On Day One</h2>
+            <p>Here are some suggestions for planning a new hire's first day.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Onboarding/A+First+Day+Outline.docx" target="_blank">Go</a></p>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            <h2>Check-In Questions</h2>
+            <p>Your early 1:1 sessions will set the stage for open communication going forward. Here are a few questions to help you get started.</p>
+            <p>&nbsp;</p>
+            <p><a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Onboarding/Check-In+Questions.docx" target="_blank">Go</a></p>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            <h2>New Hire Planning Guide</h2>
+            <p>For those of you who like templates, this is for you. Upon completion, you'll have a nice outline of everything to be done before, during, and immediately after a new hire's first day.</p>
+            <p><a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Onboarding/New+Hire+Planning+Guide.docx" target="_blank">Go</a></p>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            <h2>Sample Goal Setting Guide</h2>
+            <p>A template for you and your new hire to complete that outlines objectives and key results to achieve.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Onboarding/Sample+Goal+Setting+Guide.docx" target="_blank">Go</a></p>
+        </div>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            <h2>New Hire Onboarding Facilitator Guide</h2>
+            <p>This deck is a resource for anyone who is responding to a need for educating people leaders on the ideal approach to onboarding a new employee, whether they're external or internal.</p>
+            <p><a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Onboarding/ME+-+Onboarding.pptx" target="_blank">Go</a></p>
+        </div>
+    </li>

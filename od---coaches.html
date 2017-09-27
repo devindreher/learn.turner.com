@@ -16,8 +16,14 @@
         box-sizing: border-box;
     }
     
-    ul.crumbs li:before {
+    ul.descr li:before {
         background-image: none !important;
+    }
+    
+    ul.descr li {
+        margin-bottom: 10px;
+        list-style-type: disc;
+        font-size: 14px;
     }
     
     .class-container:after {
@@ -47,9 +53,18 @@
         padding: 5px 5px 5px 5px;
     }
     
+    .class-logistics a {
+        font-size: 14px;
+    }
+    
     .class-logistics p {
         font-size: 14px !important;
-        line-height: 100% !important;
+        line-height: 125% !important;
+        color: black !important;
+    }
+    
+    .class-logistics .fine-print {
+        font-size: 12px !important;
         color: black !important;
     }
     
@@ -73,8 +88,8 @@
         text-decoration: none;
     }
     
-/*Navigation*/
-    
+/*NAVIGATION*/
+
     .learnNow a {
         font-size: 15px;
         font-family: TurnerBold;
@@ -110,25 +125,8 @@
       display: none;
     }
     
-/*BREADCRUMBS*/
-    
-    #breadcrumb { float: left; display: block; }
-    #breadcrumb ul { list-style: none; }
-
-    .crumbs { display: block; margin-left: -27px;}
-    .crumbs li {  display: inline; }
-    .crumbs li.first { padding-left: 8px; }
-    .crumbs li a, .crumbs li a:link, .crumbs li a:visited { color: #666; display: block; float: left; font-size: 12px; margin-left: -13px; padding: 3px 17px 11px 20px; position: relative; text-decoration: none; }
-
-    .crumbs li a { background-image: url('https://s3.amazonaws.com/tpd-files/images/bg-crumbs.png');  background-repeat: no-repeat; background-position: 100% 0; position: relative; }
-    .crumbs li a:hover { color: #333; background-position: 100% -48px; cursor: pointer; }
-    .crumbs li a:active { color: #333; background-position: 100% -96px; }
-    .crumbs li.first a span { height: 29px; width: 3px; border-left: 1px solid #d9d9d9; position: absolute; top: 0px; left: 0px; }
-    
-    .space { display: block; height: 5px; clear: both; }
-    
 /*MEDIA QUERIES*/
-    
+
     @media screen and (max-width: 1152px) {
         .topnav a:not(:first-child) {display: none;}
         .topnav a.icon {float: right; display: block;}
@@ -137,16 +135,16 @@
         .learn-card h5 a {font-size: 2rem;}
         .learn-card p {font-size: 1.5rem; line-height: inherit;}
         .topnav.responsive {position: relative;}
-        .topnav.responsive .icon {position: absolute; right: 0; top: 0;}
-        .topnav.responsive a {float: none; display: block; text-align: left;}
-    }
-    
-    @media screen and (min-width: 40em) {
-        .list-item { width: 50%; }
-    }
-    
-    @media screen and (min-width: 60em) {
-        .list-item { width: 33.33%; }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
     }
     
     @media only screen and (max-width: 760px), (min-device-width: 763px) and (max-device-width: 1024px) {
@@ -158,7 +156,7 @@
     
 </style>
 
-<!--NAVIGATION-->
+<!--TOP NAVIGATION-->
 
 <span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
 <div class="topnav" id="myTopnav">
@@ -182,58 +180,38 @@ function shrinkNav() {
 }
 </script>
 
-<!--BREADCRUMBS-->
-
-<div id="breadcrumb">
-    <ul class="crumbs">
-        <li class="first"><a href="/learnnow/leadership---leadershipnow" style="z-index:9;"><span></span>Leadership<i>Now</i></a></li>
-        <li><a href="#" style="z-index:8;">Candid Conversations</a></li>
-    </ul>
-</div>
-
-<div class="space"></div>
-
-<!--MAIN CONTENT-->
-
-<h2>Candid Conversations</h2>
+<h2>Coaches</h2>
 
 <div class="class-container">
     <div class="class-left">
-        <p><b>Just say it!<br>
-            Learn how to put this idea skillfully into practice for the benefit of others &mdash; without being a jerk.</b></p>
             
-        <p>Learn how to build a culture of candor through the many ways we interact with others. We're putting emphasis on frequent and meaningful conversations where everyone gets timely and candid feedback in order to do our best.</p>
+        <p><b>"Coaching is about performing at your best through the assistance of someone that will challenge, stimulate, and guide you to keep growing." - Gerard O'Donovan</b></p>
         
-        <p><b>You will:</b></p>
+        <p><b>What is coaching?</b></p>
         <ul class="descr">
-            <li>Learn ways to build a culture of candor through interacting with others</li>
-            <li>Learn a simple approach for giving feedback &mdash; for both praise and criticism</li>
-            <li>Apply feedback skills through practice with common scenarios</li>
-            <li>Contribute to Turner by building a culture of candor</li>
+            <li>A process of self-discovery</li>
+            <li>The continued development of people leaders</li>
+            <li>Forward-thinking, facilitated breakthroughs to prepare leaders for successful career transitions</li>
+            <li>A business investment with specific objectives for a limited time</li>
+            <li>An accountable partnership between the key individuals involved (coach, mentee, and manager)</li>
+        </ul>
+        
+        <p><b>What isn't coaching?</b></p>
+        <ul class="descr">
+            <li>Life coaching (not that we're against it, we just don't do it)</li>
+            <li>Conducted to address performance problems or to "coach someone out of the organization"</li>
+            <li>An ongoing arrangement for multiple years (this isn't therapy)</li>
+            <li>For all employees &mdash; we just don't have those sorts of resources</li>
         </ul>
         
     </div>
     
     <div class="class-right">
         <div class="class-logistics">
-            <p><b>Logistics:</b></p>
-            <p>&ndash; 2 Hours</p>
-            <p>&ndash; Interactive webinar</p>
+        <p><b>How Coaching Works</b></p>
+        <p><a href="/learnnow/coaching-sr.-managers---vps">Senior managers through VPs</a></p>
+        <p><a href="/learnnow/coaching-svps-and-above">SVPs and above</a></p>
         </div>
-        &nbsp;        
-        <div class="class-logistics">
-            <p><b>Use When:</b></p>
-            <p>You're unsure how to give tough feedback</p>
-            <p>You're building a culture of candor</p>
-            <p>You want to have regular check-ins with your team</p>
-        </div>
-        &nbsp;
-        <a href="https://lncandidconversations.eventbrite.com" target="_blank">
-        <div class="learnButton">
-            Check Times &amp; Register<br>
-            All Times Eastern
-        </div>
-        </a>
     </div>
 </div>
 
