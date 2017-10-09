@@ -1,241 +1,192 @@
-<!DOCTYPE html>
-<html class="nojs html" lang="en-US">
-<head>
+<style>
+    
+    h2 {
+        font-family: TurnerBold;
+        font-size: 3rem;
+        margin-top: 30px;
+    }
+    
+    .theme-content ul li:before {
+        background-image: none !important;
+    }
+    
+    ul, li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    
+    img {
+        width: 100%;
+    }
+    
+    .get-started {
+        border: 1px solid #0052e7;
+        border-radius: 20px;
+        padding: 15px;
+    }
+    
+    .logistics {
+        border: 1px solid #dedede;
+        border-radius: 20px;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+/*NAVIGATION*/
 
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-<meta name="generator" content="2017.0.4.363" />
+    .learnNow a {
+        font-size: 15px;
+        font-family: TurnerBold;
+        color: #000;
+    }
+    
+    .learnNow a:hover {
+        color: #0052e7;
+    }
 
-<script type="text/javascript">
-  // Update the 'nojs'/'js' class on the html node
-  document.documentElement.className = document.documentElement.className
-      .replace(/\bnojs\b/g, 'js');
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
 
-  // Check that all required assets are uploaded and up-to-date
-  if (typeof Muse == "undefined")
-    window.Muse = {};
-  window.Muse.assets = {
-    "required" : [ "museutils.js", "museconfig.js",
-        "jquery.musepolyfill.bgsize.js", "require.js",
-        "pathbuilders-achieva.css" ],
-    "outOfDate" : []
-  };
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 15px !important;
+      font-family: TurnerBold;
+    }
+
+    .topnav a:hover {
+      background-color: #0052e7;
+      color: #fff;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+    
+/*BREADCRUMBS*/
+    
+    #breadcrumb { float: left; display: block; }
+    #breadcrumb ul { list-style: none; }
+
+    .crumbs { display: block; margin-left: -27px;}
+    .crumbs li {  display: inline; }
+    .crumbs li.first { padding-left: 8px; }
+    .crumbs li a, .crumbs li a:link, .crumbs li a:visited { color: #666; display: block; float: left; font-size: 12px; margin-left: -13px; padding: 0 17px 11px 20px; position: relative; text-decoration: none; }
+
+    .crumbs li a { background-image: url('https://s3.amazonaws.com/tpd-files/images/bg-crumbs.png');  background-repeat: no-repeat; background-position: 100% 0; position: relative; }
+    .crumbs li a:hover { color: #333; background-position: 100% -48px; cursor: pointer; }
+    .crumbs li a:active { color: #333; background-position: 100% -96px; }
+    .crumbs li.first a span { height: 29px; width: 3px; border-left: 1px solid #d9d9d9; position: absolute; top: 0px; left: 0px; }
+    
+    .space { display: block; height: 5px; clear: both; }
+    
+    ul.crumbs li:before {
+        background-image: none !important;
+    }
+    
+/*MEDIA QUERIES*/
+
+    @media screen and (max-width: 1152px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {float: right; display: block;}
+        .learn-main h3 a {font-size: 2rem;}
+        .learn-card {width: 100%;}
+        .learn-card h5 a {font-size: 2rem;}
+        .learn-card p {font-size: 1.5rem; line-height: inherit;}
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+    
+    @media screen and (min-width: 40em) {
+        .list-item { width: 50%; }
+    }
+    
+    @media screen and (min-width: 60em) {
+        .list-item { width: 33.33%; }
+    }
+    
+</style>
+
+<!--TOP NAVIGATION-->
+
+<span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
+<div class="topnav" id="myTopnav">
+  <a href="http://learn.turner.com">Home</a>    
+  <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+  <a href="/learnnow/org-development">Org. Development</a>
+  <a href="/learnnow/performance">Performance</a>
+  <a href="/learnnow/new-to-turner">New Hires</a>
+  <a href="/learnnow/subscribe">Subscribe</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+</div>
+
+<script>
+function shrinkNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
 </script>
 
-<title>DiSC</title>
+<!--BREADCRUMBS-->
 
-<script src="css/jquery-1.12.4.js"></script>
-<script src="css/jquery-ui.js"></script>
-<script src="css/js-learnnow.js"></script>
-
-
-<!-- CSS -->
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/ajax-progress.module.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/align.module.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/autocomplete-loading.module.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/clearfix.module.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/container-inline.module.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/contextual.icons.theme.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/contextual.module.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/contextual.theme.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/details.module.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/fieldgroup.module.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/hidden.module.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/item-list.module.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/js.module.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/nowrap.module.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/position-container.module.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/progress.module.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/reset-appearance.module.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/resize.module.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/sticky-header.module.css" />
-
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/styles.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/tabledrag.module.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/tablesort.module.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/tree-child.module.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/vendors.css" />
-<link rel="stylesheet" type="text/css"
-  href="css/turner-default/views.module.css" />
-
-<link rel="stylesheet" type="text/css" href="css/styles-learnnow.css" />
-</head>
-<body>
-
-  <div class="clearfix time-warner-breakthrough-leadership"
-    id="learnnow-page">
-    <!-- column -->
-    <!-- Starting new markup -->
-    <div class="col-12_md-12_sm-12_xs-12 grid-top ln--main-menu-wrapper">
-
-      <div class="col-2_md-2_sm-2_xs-12">
-        <div class="lnow-menu-sec-header">Learning</div>
-        <div>
-          <a href="/learnnow/learning---classes---offerings">Classes &amp;
-            Offerings</a>
-        </div>
-        <div>
-          <a href="/learnnow/learning---conferences">Conferences</a>
-        </div>
-        <div>
-          <a class="nonblock" href="/learnnow/learning---self-directed">Self-Directed</a>
-        </div>
-      </div>
-
-      <div class="col-2_md-2_sm-2_xs-12">
-        <div class="lnow-menu-sec-header">Leadership</div>
-
-        <div>
-          <a href="/learnnow/leadership---leadershipnow">LeadershipNow</a>
-        </div>
-        <div>
-          <a href="/learnnow/leadership---management-essentials">Management
-            Essentials</a>
-        </div>
-        <div>
-          <a href="/learnnow/leadership---tlx">Turner Leadership Experience</a>
-        </div>
-      </div>
-
-      <div class="col-2_md-2_sm-2_xs-12">
-        <div class="lnow-menu-sec-header">OD</div>
-        <div>
-          <a href="/learnnow/od---assessments">Assessments</a>
-        </div>
-        <div>
-          <a href="/learnnow/learning---coaching">Coaches</a>
-        </div>
-        <div>
-          <a href="/learnnow/od---team-effectiveness">Team Effectiveness</a>
-        </div>
-      </div>
-
-      <div class="col-2_md-2_sm-2_xs-12">
-        <div class="lnow-menu-sec-header">Performance</div>
-        <div>
-          <a href="/learnnow/performance---approach">Turner's Approach</a>
-        </div>
-        <div>
-          <a href="/learnnow/performance---goals">Goals</a>
-        </div>
-        <div>
-          <a href="/learnnow/performance---reviews-and-conversations">Reviews
-            &amp; Conversations</a>
-        </div>
-      </div>
-
-      <div class="col-2_md-2_sm-2_xs-12">
-        <div class="lnow-menu-sec-header">New to Turner?</div>
-        <div>
-          <a class="nonblock" href="/learnnow/new-hires---30-day-guide">30-Day
-            Guide</a>
-        </div>
-        <div>
-          <a class="nonblock" href="/learnnow/new-hires---about-turner">About
-            Turner</a>
-        </div>
-        <div>
-          <a class="nonblock"
-            href="https://eahapspor.turner.com:7111/ps/forwarddl.jsp?aut=N&amp;forwardURL=https%3a%2f%2feahapspor.turner.com%3a7111%2fpsc%2fps%2fEMPLOYEE%2fEMPL%2fs%2fWEBLIB_T_DLINK.ISCRIPT1.FieldFormula.IScript_GetLink%3fDEEPLINK%3d248"
-            target="_blank">Benefits</a>
-        </div>
-        <div>
-          <a class="nonblock" href="/learnnow/new-hires---how-we-make-money">How
-            We Make Money</a>
-        </div>
-        <div>
-          <a class="nonblock" href="/learnnow/new-hires---your-technology">Your
-            Technology</a>
-        </div>
-      </div>
-
-    </div>
-
-
-
-
-    <div
-      class="col-12_md-12_sm-12_xs-12 grid-top index-page content-grid-items">
-
-
-      <div class="col-12_md-12_sm-12_xs-12">
-        <h2>DiSC</h2>
-      </div>
-      <!-- main-content -->
-      <div class="col-7_md-7_sm-7_xs-12">
-
-        <div class="ln--bold">DiSC is a personal assessment tool used to drive conversation and awareness around communication styles and workplace behaviors.</div>
-        <div>While there are several tools similar in nature, DiSC stands out from others because of its focus on workplace behaviors rather than personality. You'll receive a rich report with strategies for increased performance after taking the assessment.
-DiSC can be used in a team setting for discussion around strategies for effective communication, handling conflict, and problem-solving keeping in mind the differences in communication styles and behaviors.</div>
-      </div>
-      <!-- #main-content -->
-
-      <!-- sidebar -->
-      <div class="col-4_md-4_sm-4_xs-12 ln--sidebar">
-        <div class="ln--upcomming">
-          <div class="ln--bold">GET STARTED:</div>
-          <div>Access the <a class="nonblock" href="http://sherpa-coaching.myshopify.com/collections/support-and-assessments/products/disc-assessment" target="_blank"><span id="u5277-4">Sherpa Coaching site</span></a>.
-Add the DiSC assessment to your cart and proceed to checkout.
-Input your billing information.
-In the comments section during checkout, provide the participant's name and email. Also indicate that you want to "show" the profile results -- this ensures the participant has access to the results when they've completed.</div>
-  
-       </div>
-       
-       <div class="">
-          <div class="ln--bold">LOGISTICS:</div>
-          <div>
-            - 15-20 Minutes to complete<br>
-- $52.00<br>
-- View a sample <a class="nonblock" href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Assessments/DiSC/SAMPLE_DiSC+Report.pdf" target="_blank"><span id="u5276-9">individual</span></a>/<a class="nonblock" href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Assessments/DiSC/SAMPLE_TEAM+DiSC+Report.pdf" target="_blank"><span id="u5276-12">team</span></a> report
 <br>
-<br>
-* Requires audio. The question may present you with situations that you don't ordinarily face in your day-to-day work. For these, choose the answer that suits you best. Questions are timed so don't over-think them.<br>
-** Assessment only / book + assessment.
-          </div>
-       </div>
-       
-       <div class="">
-          <div class="ln--bold">FACILITATE A SESSION:</div>
-          <div>
-            You're welcome to facilitate your own DiSC session with an individual or team. Here are some tools to get you started:<br>
-- <a class="nonblock" href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Assessments/DiSC/DiSC+Facilitation+Guide.pdf" target="_blank"><span id="u5311-6">DiSC Facilitation Guide</span></a> (PDF)<br>
-- <a class="nonblock" href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Assessments/DiSC/DiSC_Revised__Jan+2016.pdf" target="_blank"><span id="u5311-11">On-Screen Presentation</span></a> (PDF)
-<br>
-<br>
-* Requires audio. The question may present you with situations that you don't ordinarily face in your day-to-day work. For these, choose the answer that suits you best. Questions are timed so don't over-think them.<br>
-** Assessment only / book + assessment.
-          </div>
-       </div>
-       
-      </div>
-      <!-- #sidebar -->
-    </div>
 
-  </div>
+<div id="breadcrumb">
+    <ul class="crumbs">
+        <li class="first"><a href="/learnnow/org-development" style="z-index:9;"><span></span>Organizational Development</a></li>
+        <li><a href="/learnnow/od---assessments" style="z-index:8;">Assessments</a></li>
+        <li><a href="#">DiSC</a></li>
+    </ul>
+</div>
 
+<div class="space"></div>
 
-</body>
-</html>
+<!--BODY-->
+
+<h2>DiSC</h2>
+
+<p><b>DiSC is a personal assessment tool used to drive conversation and awareness around communication styles and workplace behaviors.</b></p>
+
+<p>While there are several tools similar in nature, DiSC stands out from others because of its focus on workplace behaviors rather than personality. You'll receive a rich report with strategies for increased performance after taking the assessment. DiSC can be used in a team setting for discussion around strategies for effective communication, handling conflict, and problem-solving keeping in mind the differences in communication styles and behaviors.</p>
+
+<div class="logistics">
+    <p><b>Logistics</b></p>
+    <ul>
+        <li>15-20 minutes to complete</li>
+        <li>$52</li>
+        <li>View a sample <a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Assessments/DiSC/SAMPLE_DiSC+Report.pdf" target="_blank">individual</a>/<a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Assessments/DiSC/SAMPLE_TEAM+DiSC+Report.pdf" target="_blank">team</a> report</li>
+    </ul>
+    <p><b>Facilitate a Session</b></p>
+    <p>You're welcome to facilitate your own DiSC session with an individual or team. Here are some tools to get started.</p>
+    <ul>
+        <li><a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Assessments/DiSC/DiSC+Facilitation+Guide.pdf" target="_blank">DiSC Facilitation Guide (PDF)</a></li>
+        <li><a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Assessments/DiSC/DiSC_Revised__Jan+2016.pdf" target="_blank">On-Screen Presentation (PDF)</a></li>
+    </ul>
+</div>
+
+<div class="get-started">
+    <p><b>Getting Started</b></p>
+    <p>Access the <a href="http://sherpa-coaching.myshopify.com/collections/support-and-assessments/products/disc-assessment" target="_blank">Sherpa Coaching site.</a></p>
+    <p>Add the DiSC assessment to your cart and proceed to checkout. Input your billing information. </p>
+    <p>In the comments section during checkout, provide the participant's name and email. Also indicate that you want to "show" the profile results -- this ensures the participant has access to the results when they've completed.</p>
+</div>

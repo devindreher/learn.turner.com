@@ -1,332 +1,306 @@
-<!DOCTYPE html>
-<html class="nojs html" lang="en-US">
-<head>
+<style>
+    
+    h2 {
+        font-family: TurnerBold;
+        font-size: 3rem;
+        margin-top: 30px;
+    }
+    
+    .theme-content ul li:before {
+        background-image: none !important;
+    }
+    
+    ul, li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    
+    img {
+        width: 100%;
+    }
+    
+/*FLEX BOXES*/
+    
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -40px;
+        padding: 0;
+    }
+    
+    ul.list li:before {
+        background-image: none !important;
+    }
+    
+    .list-item {
+        display: flex;
+        padding: 0.5em;
+        width: 100%;
+    }
+    
+    .list-content {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        width: 100%;
+        border: 1px solid grey;
+        border-top: 10px solid #000;
+        box-shadow: 1px 1px 3px #888;
+    }
+    
+    .list-content:hover {
+        box-shadow: 3px 3px 5px #888;
+        transition: .3s;
+    }
+    
+    .list-content h2 {
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        color: #282828;
+        margin: 0;
+        line-height: 115% !important;
+    }
+    
+    .list-content p {
+        flex: 1 0 auto;
+        font-family: TurnerRegular, Arial, Helvetica, sans-serif;
+        font-size: 1.1rem;
+        margin: .5rem 0 0 0;
+        padding: 0;
+        line-height: 150%;
+    }
+    
+    .list-content p a {
+        padding: 2px 5px;
+        border: 1px solid #0052e7;
+        border-radius: 3px;
+        
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+    }
+    
+    .list-content p a:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
 
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-<meta name="generator" content="2017.0.4.363" />
 
-<script type="text/javascript">
-  // Update the 'nojs'/'js' class on the html node
-  document.documentElement.className = document.documentElement.className
-      .replace(/\bnojs\b/g, 'js');
+/*NAVIGATION*/
 
-  // Check that all required assets are uploaded and up-to-date
-  if (typeof Muse == "undefined")
-    window.Muse = {};
-  window.Muse.assets = {
-    "required" : [ "museutils.js", "museconfig.js",
-        "jquery.musepolyfill.bgsize.js", "require.js",
-        "pathbuilders-achieva.css" ],
-    "outOfDate" : []
-  };
+    .learnNow a {
+        font-size: 15px;
+        font-family: TurnerBold;
+        color: #000;
+    }
+    
+    .learnNow a:hover {
+        color: #0052e7;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 15px !important;
+      font-family: TurnerBold;
+    }
+
+    .topnav a:hover {
+      background-color: #0052e7;
+      color: #fff;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+    
+/*BREADCRUMBS*/
+    
+    #breadcrumb { float: left; display: block; }
+    #breadcrumb ul { list-style: none; }
+
+    .crumbs { display: block; margin-left: -27px;}
+    .crumbs li {  display: inline; }
+    .crumbs li.first { padding-left: 8px; }
+    .crumbs li a, .crumbs li a:link, .crumbs li a:visited { color: #666; display: block; float: left; font-size: 12px; margin-left: -13px; padding: 3px 17px 11px 20px; position: relative; text-decoration: none; }
+
+    .crumbs li a { background-image: url('https://s3.amazonaws.com/tpd-files/images/bg-crumbs.png');  background-repeat: no-repeat; background-position: 100% 0; position: relative; }
+    .crumbs li a:hover { color: #333; background-position: 100% -48px; cursor: pointer; }
+    .crumbs li a:active { color: #333; background-position: 100% -96px; }
+    .crumbs li.first a span { height: 29px; width: 3px; border-left: 1px solid #d9d9d9; position: absolute; top: 0px; left: 0px; }
+    
+    .space { display: block; height: 5px; clear: both; }
+    
+    ul.crumbs li:before {
+        background-image: none !important;
+    }
+    
+/*MEDIA QUERIES*/
+
+    @media screen and (max-width: 1152px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {float: right; display: block;}
+        .learn-main h3 a {font-size: 2rem;}
+        .learn-card {width: 100%;}
+        .learn-card h5 a {font-size: 2rem;}
+        .learn-card p {font-size: 1.5rem; line-height: inherit;}
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+    
+    @media screen and (min-width: 40em) {
+        .list-item { width: 50%; }
+    }
+    
+    @media screen and (min-width: 60em) {
+        .list-item { width: 33.33%; }
+    }
+    
+</style>
+
+<!--TOP NAVIGATION-->
+
+<span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
+<div class="topnav" id="myTopnav">
+  <a href="http://learn.turner.com">Home</a>    
+  <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+  <a href="/learnnow/org-development">Org. Development</a>
+  <a href="/learnnow/performance">Performance</a>
+  <a href="/learnnow/new-to-turner">New Hires</a>
+  <a href="/learnnow/subscribe">Subscribe</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+</div>
+
+<script>
+function shrinkNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
 </script>
 
-<title>ASSESSMENTS</title>
+<!--BREADCRUMBS-->
 
-<script src="css/jquery-1.12.4.js"></script>
-<script src="css/jquery-ui.js"></script>
-<script src="css/js-learnnow.js"></script>
+<br>
 
+<div id="breadcrumb">
+    <ul class="crumbs">
+        <li class="first"><a href="/learnnow/org-development" style="z-index:9;"><span></span>Organizational Development</a></li>
+        <li><a href="#" style="z-index:8;">Assessments</a></li>
+    </ul>
+</div>
 
-<!-- CSS -->
-<link rel="stylesheet" type="text/css" href="css/turner-default/ajax-progress.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/align.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/autocomplete-loading.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/clearfix.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/container-inline.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/contextual.icons.theme.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/contextual.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/contextual.theme.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/details.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/fieldgroup.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/hidden.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/item-list.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/js.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/nowrap.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/position-container.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/progress.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/reset-appearance.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/resize.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/sticky-header.module.css" />
+<div class="space"></div>
 
-<link rel="stylesheet" type="text/css" href="css/turner-default/styles.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/tabledrag.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/tablesort.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/tree-child.module.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/vendors.css" />
-<link rel="stylesheet" type="text/css" href="css/turner-default/views.module.css" />
-<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
-<link rel="stylesheet" type="text/css" href="css/styles-learnnow.css" />
-</head>
-<body>
+<!--BODY-->
 
-  <div class="clearfix time-warner-breakthrough-leadership" id="learnnow-page">
-    <!-- column -->
-    <!-- Starting new markup -->
-    <div class="col-12_md-12_sm-12_xs-12 grid-top ln--main-menu-wrapper">
+<h2>Assessments</h2>
 
-      <div class="col-2_md-2_sm-2_xs-12">
-        <div class="lnow-menu-sec-header">Learning</div>
-        <div>
-          <a href="/learnnow/learning---classes---offerings">Classes &amp; Offerings</a>
+<h3>Personality &amp; Perception</h3>
+
+<ul class="list">
+    <li class="list-item">
+        <div class="list-content">
+            <h2>StrengthsFinder 2.0</h2>
+            <p>This assessment is used to identify and give a name to your natural talents and strengths.</p>
+            <p>&nbsp;</p>
+            <p><a href="/learnnow/assessments---strengthsfinders-2.0">Go</a></p>
         </div>
-        <div>
-          <a href="/learnnow/learning---conferences">Conferences</a>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <h2>StandOut</h2>
+            <p>This assessment reveals your personal edge &mdash; your strengths &mdash; that will help you win at work. You'll be measured on 9 strength roles.</p>
+            <p><a href="/learnnow/assessments---standout">Go</a></p>
         </div>
-        <div>
-          <a class="nonblock" href="/learnnow/learning---self-directed">Self-Directed</a>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <h2>DiSC</h2>
+            <p>Increase your awareness and understanding of your communication style and preferences and also potential blind spots.</p>
+            <p><a href="/learnnow/assessments---disc">Go</a></p>
         </div>
-      </div>
+    </li>
+</ul>
 
-      <div class="col-2_md-2_sm-2_xs-12">
-        <div class="lnow-menu-sec-header">Leadership</div>
+<h3>Emotional Intelligence (EQ)</h3>
 
-        <div>
-          <a href="/learnnow/leadership---leadershipnow">LeadershipNow</a>
+<ul class="list">
+    <li class="list-item">
+        <div class="list-content">
+            <h2>EQ</h2>
+            <p>Increase your self-awareness in 4 key areas that make up EQ and learn a variety of ways to increase it.</p>
+            <p><a href="/learnnow/assessments---eq">Go</a></p>
         </div>
-        <div>
-          <a href="/learnnow/leadership---management-essentials">Management Essentials</a>
+    </li>
+</ul>
+
+<h3>Leadership Development</h3>
+
+<ul class="list">
+    <li class="list-item">
+        <div class="list-content">
+            <h2>Hogan</h2>
+            <p>A suite of 3 assessments &mdash; your values, potential, and derailers &mdash; that measure different aspects of your personality and the impact it has on others and your work.</p>
+            <p>&nbsp;</p>
+            <p><a href="/learnnow/assessments---hogan">Go</a></p>
         </div>
-        <div>
-          <a href="/learnnow/leadership---tlx">Turner Leadership Experience</a>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <h2>360 Agility Profile</h2>
+            <p>Get a full-circle view &mdash; feedback from people you work with &mdash; on how you're perceived in areas of leadership and change readiness, accountability, innovation, and agility.</p>
+            <p><a href="/learnnow/assessments---360-agility-profile">Go</a></p>
         </div>
-      </div>
-
-      <div class="col-2_md-2_sm-2_xs-12">
-        <div class="lnow-menu-sec-header">OD</div>
-        <div>
-          <a href="/learnnow/od---assessments">Assessments</a>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <h2>Verbal 360</h2>
+            <p>Similar to the 360 Agility Profile, we'll collect data from others in your sphere of work, but we'll hone in on where you may need to make any adjustments to your performance to be more effective.</p>
+            <p><a href="/learnnow/assessments---verbal-360-feedback">Go</a></p>
         </div>
-        <div>
-          <a href="/learnnow/learning---coaching">Coaches</a>
+    </li>
+</ul>
+
+<h3>Team Effectiveness</h3>
+
+<ul class="list">
+    <li class="list-item">
+        <div class="list-content">
+            <h2>Customized Team Climate Survey</h2>
+            <p>We'll develop a custom survey with you that assesses your team's culture and specific needs or gaps.</p>
+            <p>&nbsp;</p>
+            <p><a href="/learnnow/assessments---customized-team-climate-survey">Go</a></p>
         </div>
-        <div>
-          <a href="/learnnow/od---team-effectiveness">Team Effectiveness</a>
+    </li>
+    <li class="list-item">
+        <div class="list-content">
+            <h2>360 Organizational Agility Profile</h2>
+            <p>It's like the individual 360 &mdash; only at the team level. It assesses 5 key areas needed to propel a group forward: its ability to anticipate change, generate confidence, initiate action, and evaluate results.</p>
+            <p><a href="/learnnow/assessments---360-organizational-agility-profile">Go</a></p>
         </div>
-      </div>
-
-      <div class="col-2_md-2_sm-2_xs-12">
-        <div class="lnow-menu-sec-header">Performance</div>
-        <div>
-          <a href="/learnnow/performance---approach">Turner's Approach</a>
-        </div>
-        <div>
-          <a href="/learnnow/performance---goals">Goals</a>
-        </div>
-        <div>
-          <a href="/learnnow/performance---reviews-and-conversations">Reviews &amp; Conversations</a>
-        </div>
-      </div>
-
-      <div class="col-2_md-2_sm-2_xs-12">
-        <div class="lnow-menu-sec-header">New to Turner?</div>
-        <div>
-          <a class="nonblock" href="/learnnow/new-hires---30-day-guide">30-Day Guide</a>
-        </div>
-        <div>
-          <a class="nonblock" href="/learnnow/new-hires---about-turner">About Turner</a>
-        </div>
-        <div>
-          <a class="nonblock"
-            href="https://eahapspor.turner.com:7111/ps/forwarddl.jsp?aut=N&amp;forwardURL=https%3a%2f%2feahapspor.turner.com%3a7111%2fpsc%2fps%2fEMPLOYEE%2fEMPL%2fs%2fWEBLIB_T_DLINK.ISCRIPT1.FieldFormula.IScript_GetLink%3fDEEPLINK%3d248"
-            target="_blank">Benefits</a>
-        </div>
-        <div>
-          <a class="nonblock" href="/learnnow/new-hires---how-we-make-money">How We Make Money</a>
-        </div>
-        <div>
-          <a class="nonblock" href="/learnnow/new-hires---your-technology">Your Technology</a>
-        </div>
-      </div>
-
-    </div>
-
-
-
-
-    <div class="col-12_md-12_sm-12_xs-12 grid-top index-page content-grid-items">
-
-
-      <div class="col-12_md-12_sm-12_xs-12">
-        <h2>ASSESSMENTS</h2>
-        <div class="ln--bold">Assess yourself before you wreck yourself.</div>
-        <div>Sometimes it's a good idea to take stock of you and your team's traits and behaviors.
-          We offer a variety of assessments that'll do just that.</div>
-      </div>
-      <!-- main-content -->
-      <div class="col-12_md-12_sm-12_xs-12 grid">
-
-        <div class="col-3_md-3_sm-6_xs-12 fa-border ln--nb">
-        <div class="ln--gutter">
-          <div class="ln--bb ln-bold">PERSONALITY & PERCEPTION</div>
-          <div class="ln--ncont-links">
-            <a
-              title='<div class="clearfix grpelem" id="u6803-8"><!-- content -->
-          <p id="u6803-2"><strong>StrengthsFinders 2.0</strong></p>
-          <p id="u6803-4">This assessment is used to identify and give a name to your natural talents and strengths.</p>
-          <p id="u6803-6">Using the multitude of strategies provided, you&rsquo;ll find ways to apply your strengths and discover opportunities for doing what you do best every day.</p>
-         </div>'
-              class="nonblock nontext Thumb popup_element clearfix" id="u11623"
-              href="/learnnow/assessments---strengthsfinders-2.0" role="tab" tabindex="-1"
-              aria-controls="u11634" aria-selected="false"> <!-- group -->
-              <div class="clearfix grpelem" id="u6762-4">
-                <!-- content -->
-                <p id="u6762-2">StrengthsFinder 2.0 &gt;</p>
-              </div>
-
-            </a> <a
-              title='<div class="clearfix grpelem" id="u11746-6"><!-- content -->
-          <p id="u11746-2"><strong>StandOut</strong></p>
-          <p id="u11746-4">This assessment reveals your personal edge -- your strengths -- that will help you win at work. You&rsquo;ll be measured on 9 strength roles.</p>
-         </div>'
-              class="nonblock nontext Thumb popup_element clearfix wp-tab-active" id="u11720"
-              href="/learnnow/assessments---standout" role="tab" tabindex="0" aria-selected="true"
-              aria-controls="u11712"> <!-- group -->
-              <div class="clearfix grpelem" id="u11739-4">
-                <!-- content -->
-                <p id="u11739-2">StandOut &gt;</p>
-              </div>
-
-            </a> <a
-              title='<div class="clearfix grpelem" id="u11887-6"><!-- content -->
-          <p id="u11887-2"><strong>DiSC</strong></p>
-          <p id="u11887-4">Incrase your awareness and understanding of your communication style and preferences and also potential blind spots.</p>
-         </div>'
-              class="nonblock nontext Thumb popup_element clearfix" id="u11773"
-              href="/learnnow/assessments---disc" role="tab" tabindex="-1" aria-selected="false"
-              aria-controls="u11780"> <!-- group -->
-              <div class="clearfix grpelem" id="u11786-4">
-                <!-- content -->
-                <p id="u11786-2">DiSC &gt;</p>
-              </div>
-
-            </a>
-          </div>
-          </div>
-        </div>
-
-        <div class="col-3_md-3_sm-6_xs-12 fa-border ln--nb">
-        <div class="ln--gutter">
-          <div class="ln--bb ln-bold">EMOTIONAL INTELLIGENCE (EQ)</div>
-          <div class="ln--ncont-links">
-            <a
-              title='<div class="clearfix grpelem" id="u11890-6"><!-- content -->
-          <p id="u11890-2"><strong>Emotional Intelligence (EQ)</strong></p>
-          <p id="u11890-4">Increase your awareness in 4 key areas that make up EQ and learn a variety of ways to increase it.</p>
-         </div>'
-              class="nonblock nontext Thumb popup_element clearfix wp-tab-active" id="u11791"
-              href="/learnnow/assessments---eq" role="tab" tabindex="0" aria-selected="true"
-              aria-controls="u11798">
-              <!-- group -->
-              <div class="clearfix grpelem" id="u11802-4">
-                <!-- content -->
-                <p id="u11802-2">EQ &gt;</p>
-              </div>
-            </a>
-          </div>
-          </div>
-        </div>
-
-        <div class="col-3_md-3_sm-6_xs-12 fa-border ln--nb">
-        <div class="ln--gutter">
-          <div class="ln--bb ln-bold">LEADERSHIP DEVELOPMENT</div>
-          <div class="ln--ncont-links">
-            <a
-              title='<div class="clearfix grpelem" id="u11893-6"><!-- content -->
-          <p id="u11893-2"><strong>Hogan</strong></p>
-          <p id="u11893-4">A suite of 3 assessments -- your values, potential, and derailers -- that measure different aspects of your personality and the impact it has on others and your work.</p>
-         </div>'
-              class="nonblock nontext Thumb popup_element clearfix" id="u11807"
-              href="/learnnow/assessments---hogan" role="tab" tabindex="-1" aria-selected="false"
-              aria-controls="u11814">
-              <!-- group -->
-              <div class="clearfix grpelem" id="u11818-4">
-                <!-- content -->
-                <p id="u11818-2">Hogan &gt;</p>
-              </div>
-              
-            </a> <a
-              title='<div class="clearfix grpelem" id="u11896-6"><!-- content -->
-          <p id="u11896-2"><strong>360 Leadership Agility Profile</strong></p>
-          <p id="u11896-4">Get a full-circle view -- feedback from people you work with -- on how youre perceived in areas of leadership and change readiness, accountability, innovation, and agility.</p>
-         </div>'
-              class="nonblock nontext Thumb popup_element clearfix wp-tab-active" id="u11823"
-              href="/learnnow/assessments---360-leadership-agility-profile" role="tab" tabindex="0"
-              aria-selected="true" aria-controls="u11830">
-              <!-- group -->
-              <div class="clearfix grpelem" id="u11834-4">
-                <!-- content -->
-                <p id="u11834-2">360 Agility Profile &gt;</p>
-              </div>
-              
-            </a> <a
-              title='<div class="clearfix grpelem" id="u11899-6"><!-- content -->
-          <p id="u11899-2"><strong>Verbal 360 Feedback</strong></p>
-          <p id="u11899-4">Similar to the 360 Agility Profile, we&rsquo;ll collect data from others in your sphere of work, but well hone in on where you may need to make any adjustments to your performance to be more effective.</p>
-         </div>'
-              class="nonblock nontext Thumb popup_element clearfix" id="u11839"
-              href="/learnnow/assessments---verbal-360-feedback" role="tab" tabindex="-1" aria-selected="false"
-              aria-controls="u11846">
-              <!-- group -->
-              <div class="clearfix grpelem" id="u11850-4">
-                <!-- content -->
-                <p id="u11850-2">Verbal 360 &gt;</p>
-              </div>
-              
-            </a>
-          </div>
-          </div>
-        </div>
-
-        <div class="col-3_md-3_sm-6_xs-12 fa-border ln--nb">
-          <div class="ln--gutter">
-          <div class="ln--bb ln-bold">TEAM EFFECTIVENESS</div>
-          <div class="ln--ncont-links">
-            <a
-              title='<div class="clearfix grpelem" id="u11902-6"><!-- content -->
-          <p id="u11902-2"><strong>360 Organizational Agility Profile</strong></p>
-          <p id="u11902-4">It&rsquo;s like the individual 360 - only at the team level. It assesses 5 key areas needed to propel a group forward -- it&rsquo;s ability to anticipate change, generate confidence, initiate action, and evaluate results.</p>
-         </div>'
-              class="nonblock nontext Thumb popup_element clearfix wp-tab-active" id="u11855"
-              href="/learnnow/assessments---360-organizational-agility-profile" role="tab" tabindex="0"
-              aria-selected="true" aria-controls="u11862">
-              <!-- group -->
-              <div class="clearfix grpelem" id="u11866-4">
-                <!-- content -->
-                <p id="u11866-2">360 Org. Agility &gt;</p>
-              </div>
-              
-            </a> <a
-              title='<div class="clearfix grpelem" id="u11905-6"><!-- content -->
-          <p id="u11905-2"><strong>Customized Team Climate Survey</strong></p>
-          <p id="u11905-4">We&rsquo;ll develop a custom survey to assess your team&rsquo;s culture and specific needs or gaps.</p>
-         </div>'
-              class="nonblock nontext Thumb popup_element clearfix wp-tab-active" id="u11871"
-              href="/learnnow/assessments---customized-team-climate-survey" role="tab" tabindex="0"
-              aria-selected="true" aria-controls="u11878">
-              <!-- group -->
-              <div class="clearfix grpelem" id="u11882-4">
-                <!-- content -->
-                <p id="u11882-2">Team Climate &gt;</p>
-              </div>
-              
-            </a>
-          </div>
-          </div>
-        </div>
-
-
-
-      </div>
-      <!-- #main-content -->
-
-      <!-- sidebar -->
-
-      <!-- #sidebar -->
-    </div>
-
-  </div>
-
-
-</body>
-</html>
+    </li>
+</ul>
