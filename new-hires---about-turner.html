@@ -1,5 +1,11 @@
 <style type="text/css">
     
+    h2 {
+        font-family: TurnerBold;
+        font-size: 3rem;
+        margin-top: 30px;
+    }
+    
     .content-wrapper {
     width: 100%;
     }
@@ -22,66 +28,91 @@
         font-size: 16px;
     }
     
+/*NAVIGATION*/
+
+    .learnNow a {
+        font-size: 15px;
+        font-family: TurnerBold;
+        color: #000;
+    }
+    
+    .learnNow a:hover {
+        color: #0052e7;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 15px !important;
+      font-family: TurnerBold;
+    }
+
+    .topnav a:hover {
+      background-color: #0052e7;
+      color: #fff;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+    
+/*MEDIA QUERIES*/
+
+    @media screen and (max-width: 1152px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {float: right; display: block;}
+        .learn-main h3 a {font-size: 2rem;}
+        .learn-card {width: 100%;}
+        .learn-card h5 a {font-size: 2rem;}
+        .learn-card p {font-size: 1.5rem; line-height: inherit;}
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+    
 </style>
 
-<div class="clearfix time-warner-breakthrough-leadership" id="learnnow-page"><!-- column --><!-- Starting new markup -->
-<div class="col-12_md-12_sm-12_xs-12 grid-top ln--main-menu-wrapper">
-<div class="col-2_md-2_sm-2_xs-12">
-<div class="lnow-menu-sec-header">Learning</div>
+<!--TOP NAVIGATION-->
 
-<div><a href="/learnnow/learning---classes---offerings">Classes &amp; Offerings</a></div>
-
-<div><a href="/learnnow/learning---conferences">Conferences</a></div>
-
-<div><a class="nonblock" href="/learnnow/learning---self-directed">Self-Directed</a></div>
+<span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
+<div class="topnav" id="myTopnav">
+  <a href="http://learn.turner.com">Home</a>    
+  <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+  <a href="/learnnow/org-development">Org. Development</a>
+  <a href="/learnnow/performance">Performance</a>
+  <a href="/learnnow/new-to-turner">New Hires</a>
+  <a href="/learnnow/subscribe">Subscribe</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
 </div>
 
-<div class="col-2_md-2_sm-2_xs-12">
-<div class="lnow-menu-sec-header">Leadership</div>
+<script>
+function shrinkNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
 
-<div><a href="/learnnow/leadership---leadershipnow">LeadershipNow</a></div>
-
-<div><a href="/learnnow/leadership---management-essentials">Management Essentials</a></div>
-
-<div><a href="/learnnow/leadership---tlx">Turner Leadership Experience</a></div>
-</div>
-
-<div class="col-2_md-2_sm-2_xs-12">
-<div class="lnow-menu-sec-header">OD</div>
-
-<div><a href="/learnnow/od---assessments">Assessments</a></div>
-
-<div><a href="/learnnow/learning---coaching">Coaches</a></div>
-
-<div><a href="/learnnow/od---team-effectiveness">Team Effectiveness</a></div>
-</div>
-
-<div class="col-2_md-2_sm-2_xs-12">
-<div class="lnow-menu-sec-header">Performance</div>
-
-<div><a href="/learnnow/performance---approach">Turner's Approach</a></div>
-
-<div><a href="/learnnow/performance---goals">Goals</a></div>
-
-<div><a href="/learnnow/performance---reviews-and-conversations">Reviews &amp; Conversations</a></div>
-</div>
-
-<div class="col-2_md-2_sm-2_xs-12">
-<div class="lnow-menu-sec-header">New to Turner?</div>
-
-<div><a class="nonblock" href="/learnnow/new-hires---30-day-guide">30-Day Guide</a></div>
-
-<div><a class="nonblock" href="/learnnow/new-hires---about-turner">About Turner</a></div>
-
-<div><a class="nonblock" href="https://eahapspor.turner.com:7111/ps/forwarddl.jsp?aut=N&amp;forwardURL=https%3a%2f%2feahapspor.turner.com%3a7111%2fpsc%2fps%2fEMPLOYEE%2fEMPL%2fs%2fWEBLIB_T_DLINK.ISCRIPT1.FieldFormula.IScript_GetLink%3fDEEPLINK%3d248" target="_blank">Benefits</a></div>
-
-<div><a class="nonblock" href="/learnnow/new-hires---how-we-make-money">How We Make Money</a></div>
-
-<div><a class="nonblock" href="/learnnow/new-hires---your-technology">Your Technology</a></div>
-</div>
-</div>
-
-<div class="col-12_md-12_sm-12_xs-12">
 <h2>About Turner</i></h2>
 </div>
 </div>
@@ -96,8 +127,8 @@
     <br>
     <p><b>Fast Facts</b></p>
     <p class="faq"><b>100</b> branded channels in<br>
-    <b>30+ languages in</b><br>
-    <b>200+ countries and territories around the world.</b></p>
+    <b>30+</b> languages in<br>
+    <b>200+</b> countries and territories around the world.</p>
     <br>
     <hr>
     <br>
