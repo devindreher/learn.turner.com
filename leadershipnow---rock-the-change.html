@@ -8,12 +8,9 @@
         margin-top: 30px;
     }
     
-    .class-container {
-        margin: 0;
-        padding: 0;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
+    h3 {
+        font-family: TurnerBold;
+        font-size: 1.5rem;
     }
     
     ul.descr li:before {
@@ -26,57 +23,127 @@
         font-size: 14px;
     }
     
-    .class-container:after {
+    .info-column {
+        background: #f1f1f1;
+    }
+    
+    .info-column:after {
+        content: "";
+        display: table;
         clear: both;
     }
     
-    .class-container > div {
-        min-height: 200px;
+    .info-column-content {
+        padding: 10px;
         float: left;
+        width: 50%;
     }
     
-    .class-left {
-        width: 65%;
-        padding: 10px 20px 10px 5px;
-    }
-    
-    .class-right {
-        width: 35%;
-        background: #f8f8f8;
-        padding: 10px 10px 10px 10px;
-    }
-    
-    .class-logistics {
-        width: 100%;
-        border-bottom: 1px solid #c8c8c8;
-        margin: 2px 2px 2px 2px;
-        padding: 5px 5px 5px 5px;
-    }
-    
-    .class-logistics p {
-        font-size: 14px !important;
-        line-height: 100% !important;
-        color: black !important;
+    .info-column-content p {
+        color: #000;
+        font-size: .975rem;
     }
     
 /*Buttons*/
     
-    .learnButton {
-        -webkit-border-radius: 9px;
-        -moz-border-radius: 9px;
-        border-radius: 9px;
-        font-family: TurnerBold;
-        color: #fff;
-        font-size: 14px;
-        background: #0052e7;
-        padding: 10px 20px 10px 20px;
+    a.l-btn, .l-btn {
+        display: inline-block;
+        outline: none;
+        text-align: center;
         text-decoration: none;
+        letter-spacing: -1px;
+        vertical-align: middle;
+        transition: all .2s ease;
+        box-sizing: border-box;
+        background: #fff;
+    }
+    
+    .l-btn-large {
+        font-family: TurnerBold;
+        font-size: 1.0625rem;
+        line-height: 125%;
+        border-radius: 3px;
+        padding: .05625em 1.5em;
+    }
+    
+    .l-btn-blue {
+        border: 1px solid #0052e7;
+        color: #0052e7;
+    }
+    
+    .l-btn-blue:hover {
+        background: #0052e7;
+        color: #fff;
+        border-color: #0052e7;
+    }
+    
+/*CLASS RESOURCES*/
+    
+    .resource-cards {
+        width: 90%;
+        max-width: 1240px;
+        margin: 0;
+        
+        display: grid;
+        
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+        
+    }
+    
+    .card {
+        background: white;
+        text-decoration: none;
+        color: #444;
+        border: 1px solid dimgrey;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        position: relative;
+        top: 0;
+        transition: all .1s ease-in;
+    }
+    
+    .card:hover {
+        top: -2px;
+        box-shadow: 0 4px 5px rgba(0,0,0,0.2)
+    }
+    
+    .card .thumbnail {
+        margin: 5% 1% 0 5%;
+    }
+    
+    .card article {
+        padding: 20px;
+        flex: 1;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .card h1 {
+        font-size: 20px;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+        margin: 0;
+        color: #333;
         line-height: 120%;
     }
     
-    .learnButton:hover {
-        background: #3cb0fd;
-        text-decoration: none;
+    .card p {
+        line-height: 1.4;
+        flex: 1;
+        font-size: 1rem;
+    }
+    
+    .card span {
+        font-size: 12px;
+        font-weight: bold;
+        color: #999;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        margin: 2em 0 0 0;
     }
     
 /*NAVIGATION*/
@@ -139,11 +206,15 @@
     
 /*MEDIA QUERIES*/
     
-    @media only screen and (max-width: 760px), (min-device-width: 763px) and (max-device-width: 1024px) {
-        .class-container > div {
-            float: none;
-            width: 100%;
+    
+    @media only screen and (min-width: 850px) {
+        .resource-cards {
+            grid-template-columns: 1fr 1fr 1fr;
         }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .info-column-content {width: 100%;}
     }
     
     @media screen and (max-width: 1152px) {
@@ -195,41 +266,102 @@ function shrinkNav() {
 
 <h2>Rock the Change</h2>
 
-<div class="class-container">
-    <div class="class-left">
-        <p><b>There's one thing that's constant here &mdash; change.</b></p>
-            
-        <p>We'll explore how to ensure balance and focus during periods of change, learn to influence up, and how to provide support to your team.</p>
-        
-        <p><b>You will:</b></p>
-        <ul class="descr">
-            <li>Understand the implications of change initiatives on people and your role in guiding employees through change transitions</li>
-            <li>Identify what's in/out of control in change and how to influence up to support it</li>
-            <li>Apply change leadership tools and concepts in our environment</li>
-        </ul>
-        
+<div class="info-column">
+    <div class="info-column-content">
+        <p><b>Use When:</b></p>
+        <p>
+            There's too much change.
+            Your team is resistant to change.
+            You need to guide your team through change.           
+        </p>
     </div>
-    
-    <div class="class-right">
-        <div class="class-logistics">
-            <p><b>Logistics:</b></p>
-            <p>&ndash; 2 Hours</p>
-            <p>&ndash; Interactive webinar</p>
-        </div>
-        &nbsp;        
-        <div class="class-logistics">
-            <p><b>Use When:</b></p>
-            <p>There's too much change</p>
-            <p>Your team is resistant to change</p>
-            <p>You need to guide your team through change</p>
-        </div>
-        &nbsp;
-        <a href="https://rockthechange.eventbrite.com" target="_blank">
-        <div class="learnButton">
-            Check Times &amp; Register<br>
-            All Times Eastern
-        </div>
-        </a>
+    <div class="info-column-content">
+        <p><b>Logistics:</b></p>
+        <p>
+            &mdash; 2 Hours<br>
+            &mdash; Interactive Webinar
+        </p>
     </div>
 </div>
 
+<p>&nbsp;</p>
+
+<p><b>There's one thing that's constant &mdash; change.</b></p>
+
+<p>We'll explore how to ensure balance and focus during periods of change, learn to influence up, and how to provide support to your team.</p>
+
+<p><b>You will:</b></p>
+<ul class="descr">
+    <li>Understand the implications of change initiatives on people and your role in guiding employees through transitions</li>
+    <li>Identify what's in/out of control in change and how to influence up to support it</li>
+    <li>Apply change leadership tools and concepts in our environment</li>
+</ul>
+
+<br>
+
+<a href="https://rockthechange.eventbrite.com/" target="_blank" class="l-btn l-btn-large l-btn-blue">
+    Check Times &amp; Register<br>
+    All Times Eastern
+</a>
+
+<br>
+<br>
+
+<hr>
+
+<br>
+
+<h3>Class Resources</h3>
+
+<div class="resource-cards">
+    <div class="resource">
+        <a href="https://www.amazon.com/Managing-Transitions-25th-anniversary-Making/dp/0738219657/ref=pd_lpo_sbs_14_t_0?_encoding=UTF8&psc=1&refRID=4X9M89MZQDQTN5RPG0R3" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            </div>
+            <article>
+                <h1>Managing Transitions: Making the Most of Change</h1>
+                <br>
+                <p>This indispensible guide reflects the challenges of today's ever-changing, always-on, and globally connected workplaces.</p>
+                <span>William Bridges</span>
+            </article>
+        </a>
+    </div>
+    <div class="resource">
+        <a href="https://www.youtube.com/watch?v=qmmwWxVzSsw" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/video-ico.png">
+            </div>
+            <article>
+                <h1>How to Change When Change is Hard</h1>
+                <br>
+                <span>Callibrain</span>
+            </article>
+        </a>
+    </div>     
+    <div class="resource">
+        <a href="https://s3.amazonaws.com/tpd-files/LN+Participant+Materials/Rock-the-Change/LN_Rock-the-Change_5-Key-Questions.pdf" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            </div>
+            <article>
+                <h1>5 Key Questions &amp; The Circle of Influence</h1>
+                <br>
+                <p>What can you do to help your people accept and engage with a change?</p>
+            </article>
+        </a>
+    </div>     
+    <div class="resource">
+        <a href="https://s3.amazonaws.com/tpd-files/LN+Participant+Materials/Rock-the-Change/LN_Rock-the-Change_Bridges-Transition-Model.pdf" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            </div>
+            <article>
+                <h1>Managing Transitions</h1>
+                <br>
+                <p>William Bridges is a leader on the subject of change and transitions. Learn and apply his 3 stages of transition to your situations.</p>
+                <span>William Bridges</span>
+            </article>
+        </a>
+    </div>    
+</div>
