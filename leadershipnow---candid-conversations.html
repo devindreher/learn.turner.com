@@ -8,69 +8,132 @@
         margin-top: 30px;
     }
     
-    .class-container {
-        margin: 0;
-        padding: 0;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
+    h3 {
+        font-family: TurnerBold;
+        font-size: 1.5rem;
     }
     
-    ul.crumbs li:before {
-        background-image: none !important;
+    .info-column {
+        background: #f1f1f1;
     }
     
-    .class-container:after {
+    .info-column:after {
+        content: "";
+        display: table;
         clear: both;
     }
     
-    .class-container > div {
-        min-height: 200px;
+    .info-column-content {
+        padding: 10px;
         float: left;
+        width: 50%;
     }
     
-    .class-left {
-        width: 65%;
-        padding: 10px 20px 10px 5px;
+    .info-column-content p {
+        color: #000;
+        font-size: .975rem;
     }
     
-    .class-right {
-        width: 35%;
-        background: #f8f8f8;
-        padding: 10px 10px 10px 10px;
+/*TOOLS AND RESOURCES GRID*/
+    
+    .resource-cards {
+        width: 90%;
+        max-width: 1240px;
+        margin: 0;
+        
+        display: grid;
+        
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+        
     }
     
-    .class-logistics {
-        width: 100%;
-        border-bottom: 1px solid #c8c8c8;
-        margin: 2px 2px 2px 2px;
-        padding: 5px 5px 5px 5px;
+    .card {
+        background: white;
+        text-decoration: none;
+        color: #444;
+        border: 1px solid dimgrey;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        position: relative;
+        top: 0;
+        transition: all .1s ease-in;
     }
     
-    .class-logistics p {
-        font-size: 14px !important;
-        line-height: 100% !important;
-        color: black !important;
+    .card:hover {
+        top: -2px;
+        box-shadow: 0 4px 5px rgba(0,0,0,0.2)
+    }
+    
+    .card .thumbnail {
+        margin: 5% 1% 0 5%;
+    }
+    
+    .card article {
+        padding: 20px;
+        flex: 1;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .card h1 {
+        font-size: 20px;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+        margin: 0;
+        color: #333;
+        line-height: 120%;
+    }
+    
+    .card p {
+        line-height: 1.4;
+        flex: 1;
+        font-size: 1rem;
+    }
+    
+    .card span {
+        font-size: 12px;
+        font-weight: bold;
+        color: #999;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        margin: 2em 0 0 0;
     }
     
 /*Buttons*/
     
-    .learnButton {
-        -webkit-border-radius: 9px;
-        -moz-border-radius: 9px;
-        border-radius: 9px;
-        font-family: TurnerBold;
-        color: #fff;
-        font-size: 14px;
-        background: #0052e7;
-        padding: 10px 20px 10px 20px;
+    a.l-btn, .l-btn {
+        display: inline-block;
+        outline: none;
+        text-align: center;
         text-decoration: none;
-        line-height: 120%;
+        letter-spacing: -1px;
+        vertical-align: middle;
+        transition: all .2s ease;
+        box-sizing: border-box;
+        background: #fff;
     }
     
-    .learnButton:hover {
-        background: #3cb0fd;
-        text-decoration: none;
+    .l-btn-large {
+        font-family: TurnerBold;
+        font-size: 1.0625rem;
+        line-height: 125%;
+        border-radius: 3px;
+        padding: .05625em 1.5em;
+    }
+    
+    .l-btn-blue {
+        border: 1px solid #0052e7;
+        color: #0052e7;
+    }
+    
+    .l-btn-blue:hover {
+        background: #0052e7;
+        color: #fff;
+        border-color: #0052e7;
     }
     
 /*Navigation*/
@@ -127,32 +190,35 @@
     
     .space { display: block; height: 5px; clear: both; }
     
+    ul.crumbs li:before {
+        background-image: none !important;
+    }
+    
 /*MEDIA QUERIES*/
     
     @media screen and (max-width: 1152px) {
         .topnav a:not(:first-child) {display: none;}
         .topnav a.icon {float: right; display: block;}
-        .learn-main h3 a {font-size: 2rem;}
-        .learn-card {width: 100%;}
-        .learn-card h5 a {font-size: 2rem;}
-        .learn-card p {font-size: 1.5rem; line-height: inherit;}
         .topnav.responsive {position: relative;}
         .topnav.responsive .icon {position: absolute; right: 0; top: 0;}
         .topnav.responsive a {float: none; display: block; text-align: left;}
     }
     
-    @media screen and (min-width: 40em) {
-        .list-item { width: 50%; }
+    @media screen and (max-width: 600px) {
+        .info-column-content {width: 100%;}
     }
     
-    @media screen and (min-width: 60em) {
-        .list-item { width: 33.33%; }
+/*
+    @media only screen and (min-width: 500px) {
+        .resource-cards {
+            grid-template-columns: 1fr 1fr;
+        }
     }
+*/
     
-    @media only screen and (max-width: 760px), (min-device-width: 763px) and (max-device-width: 1024px) {
-        .class-container > div {
-            float: none;
-            width: 100%;
+    @media only screen and (min-width: 850px) {
+        .resource-cards {
+            grid-template-columns: 1fr 1fr 1fr;
         }
     }
     
@@ -197,43 +263,203 @@ function shrinkNav() {
 
 <h2>Candid Conversations</h2>
 
-<div class="class-container">
-    <div class="class-left">
-        <p><b>Just say it!<br>
-            Learn how to put this idea skillfully into practice for the benefit of others &mdash; without being a jerk.</b></p>
-            
-        <p>Learn how to build a culture of candor through the many ways we interact with others. We're putting emphasis on frequent and meaningful conversations where everyone gets timely and candid feedback in order to do our best.</p>
-        
-        <p><b>You will:</b></p>
-        <ul class="descr">
-            <li>Learn ways to build a culture of candor through interacting with others</li>
-            <li>Learn a simple approach for giving feedback &mdash; for both praise and criticism</li>
-            <li>Apply feedback skills through practice with common scenarios</li>
-            <li>Contribute to Turner by building a culture of candor</li>
-        </ul>
-        
+<div class="info-column">
+    <div class="info-column-content">
+        <p><b>Use When:</b></p>
+        <p>
+            You're unsure how to give tough feedback.<br>
+            You're building a culture of candor.<br>
+            You want to have regular check-ins with your team.
+        </p>
     </div>
-    
-    <div class="class-right">
-        <div class="class-logistics">
-            <p><b>Logistics:</b></p>
-            <p>&ndash; 2 Hours</p>
-            <p>&ndash; Interactive webinar</p>
-        </div>
-        &nbsp;        
-        <div class="class-logistics">
-            <p><b>Use When:</b></p>
-            <p>You're unsure how to give tough feedback</p>
-            <p>You're building a culture of candor</p>
-            <p>You want to have regular check-ins with your team</p>
-        </div>
-        &nbsp;
-        <a href="https://lncandidconversations.eventbrite.com" target="_blank">
-        <div class="learnButton">
-            Check Times &amp; Register<br>
-            All Times Eastern
-        </div>
+    <div class="info-column-content">
+        <p><b>Logistics:</b></p>
+        <p>
+            &mdash; 2 Hours<br>
+            &mdash; Interactive Webinar
+        </p>
+    </div>
+</div>
+
+<p>&nbsp;</p>
+
+<h3>Just say it!</h3>
+<p><b>Learn how to put this idea skillfully into practice for the benefit of others &mdash; without being a jerk.</b></p>
+<p>Also, learn how to build a culture of candor through the many ways we interact with outs. We're putting emphasis on frequent and meaningful conversations where everyone gets timely and candid feedback in order to do our best.</p>
+
+<p><b>You will:</b></p>
+<ul class="descr">
+    <li>Learn ways to build a culture of candor through interacting with others</li>
+    <li>Learn a simple approach for giving feedback &mdash; for both praise and criticism</li>
+    <li>Apply feedback skills through practice with common scenarios</li>
+    <li>Contribute to Turner by building a culture of candor</li>
+</ul>
+
+<br>
+
+<a href="https://lncandidconversations.eventbrite.com" target="_blank" class="l-btn l-btn-large l-btn-blue">
+    Check Times &amp; Register<br>
+    All Times Eastern
+</a>
+
+<br>
+<br>
+
+<hr>
+
+<br>
+
+<h3>Class Resources</h3>
+
+<p><b>Managing Up</b></p>
+
+<div class="resource-cards">
+    <div class="resource">
+        <a href="https://www.amazon.com/Lead-Your-Boss-Subtle-Managing/dp/0814415059" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            </div>
+            <article>
+                <h1>Lead Your Boss: The Subtle Art of Managing Up</h1>
+                <br>
+                <p>Recognized leadership guru John Baldoni gives methods for influencing bosses and their peers.</p>
+                <span>John Baldoni</span>
+            </article>
+        </a>
+    </div>    
+</div>
+
+<br>
+<br>
+
+<p><b>Candor</b></p>
+
+<div class="resource-cards">
+    <div class="resource">
+        <a href="https://www.helpscout.net/blog/candor-in-workplace/" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            </div>
+            <article>
+                <h1>The Lost Art of Candor in the Workplace</h1>
+                <br>
+                <p>Cultivating candor requires a difficult balance. Teams must carefully treat the line between "brutally honest" and "necessarily honest."</p>
+                <span>Gregory Ciotti</span>
+            </article>
+        </a>
+    </div>     
+    <div class="resource">
+        <a href="http://guides.wsj.com/management/building-a-workplace-culture/how-to-create-a-culture-of-candor/" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            </div>
+            <article>
+                <h1>How to Create a Culture of Candor</h1>
+                <br>
+                <p>A leadership guide by the Wall Street Journal.</p>
+                <span>The Wall Street Journal</span>
+            </article>
+        </a>
+    </div>     
+    <div class="resource">
+        <a href="https://www.radicalcandor.com/blog/tag/advice/" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            </div>
+            <article>
+                <h1>Radical Candor's Advice Column</h1>
+                <br>
+                <p>Blog posts from the folks at Radical Candor.</p>
+                <span>Radical Candor</span>
+            </article>
+        </a>
+    </div>     
+    <div class="resource">
+        <a href="https://usecandor.com/" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            </div>
+            <article>
+                <h1>Candor: A Better Way to Brainstorm</h1>
+                <br>
+                <p>In this case, Candor is a web tool that helps groups generate ideas and make difficult decisions.</p>
+            </article>
+        </a>
+    </div>    
+</div>
+
+<br>
+<br>
+
+<p><b>Giving Guidance</b></p>
+
+<div class="resource-cards">
+    <div class="resource">
+        <a href="https://www.fastcompany.com/3054668/lessons-learned/former-googler-lets-us-in-on-the-surprising-secret-to-being-a-good-boss" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            </div>
+            <article>
+                <h1>Former Googler Lets Us In on the Surprise Secret to Being a Good Boss</h1>
+                <br>
+                <p>Kim Scott, a long-time director at Google, studied how the company's leaders created an environment where the joy that people took in their work felt almost tangible.</p>
+                <span>First Round Review</span>
+            </article>
         </a>
     </div>
 </div>
 
+<br>
+<br>
+
+<p><b>Body Language</b></p>
+
+<div class="resource-cards">
+    <div class="resource">
+        <a href="http://www.amanet.org/training/articles/10-powerful-body-language-tips.aspx" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            </div>
+            <article>
+                <h1>10 Powerful Body Language Tips</h1>
+                <br>
+                <p>The effective use of body language plays a key role in communication. Here are 10 tips for powerful body language.</p>
+                <span>Carol Kinsey Goman, PhD</span>
+            </article>
+        </a>
+    </div>    
+    <div class="resource">
+        <a href="https://www.mindtools.com/pages/article/Body_Language.htm" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            </div>
+            <article>
+                <h1>Understanding Non-Verbal Communication</h1>
+                <br>
+                <p>Have you ever been in the situation when you really didn't believe what someone was saying?</p>
+                <span>Mind Tools</span>
+            </article>
+        </a>
+    </div>
+</div>
+
+<br>
+<br>
+
+<p><b>Other</b></p>
+
+<div class="resource-cards">
+    <div class="resource">
+        <a href="https://www.gse.harvard.edu/news/16/05/good-questions" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/video-ico.png">
+            </div>
+            <article>
+                <h1>5 Truly Essential Questions That You Should Regularly Ask Yourself &amp; Others</h1>
+                <br>
+                <p>Five truly essential questions, according to departing dean of Harvard Graduate School of Education.</p>
+                <span>James E. Ryan</span>
+            </article>
+        </a>
+    </div> 
+</div>
