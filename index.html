@@ -6,99 +6,50 @@
         margin-top: 0;
     }
     
-    .learn-hero {
-        width: 100%;
-        margin: 20px 0;
-        padding-bottom: 10px;
-        border-bottom: 2px solid #dedede;
+    .learn-main {
+        flex: 3;
+        margin: 0 20px 20px 0;
+        border-bottom: 2px dotted #dedede;
+        padding-bottom: 15px;
     }
     
-    .learn-hero h3 a {
-        text-decoration: none;
-        color: #000;
-        font-family: TurnerBold, Arial, Helvetica, sans-serif;
-        font-size: 3rem;
-        letter-spacing: -0.3px;
+    .learn-main h3 a {
+        font-family: TurnerBold, sans-serif;
+        font-size: 2rem;
     }
     
-    .learn-hero p {
-        color: #000;
-        font-size: 1.5rem;
-    }
-    
-    .learn-hero a {
-        font-size: 1.5rem;
-        line-height: 140%;
-        font-weight: bold;
-    }
-    
-/*FLEX BOXES*/
-    
-    .list {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: -40px;
-        padding: 0;
-    }
-    
-    ul.list li:before {
-        background-image: none !important;
-    }
-    
-    .list-item {
-        display: flex;
-        padding: 0.5em;
-        width: 100%;
-    }
-    
-    .list-content {
-        background-color: #fff;
-        display: flex;
-        flex-direction: column;
-        padding: 1em;
-        width: 100%;
-        border: 1px solid grey;
-        border-top: 10px solid #000;
-        box-shadow: 1px 1px 3px #888;
-    }
-    
-    .list-content:hover {
-        box-shadow: 3px 3px 5px #888;
-        transition: .3s;
-    }
-    
-    .list-content h2 {
-        font-family: TurnerBold, Arial, Helvetica, sans-serif;
-        font-size: 1.2rem;
-        color: #282828;
-        margin: 0;
-    }
-    
-    .list-content p {
-        flex: 1 0 auto;
-        font-family: TurnerRegular, Arial, Helvetica, sans-serif;
-        font-size: 1.1rem;
-        margin: .5rem 0 0 0;
-        padding: 0;
+    .learn-main p {
+        font-family: TurnerRegular, sans-serif;
+        font-size: 1.85rem;
         line-height: 150%;
     }
     
-    .list-content p a {
-        padding: 2px 5px;
-        border: 1px solid #0052e7;
-        border-radius: 3px;
-        
-        text-decoration: none;
-        font-size: 1rem;
-        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+    .learn-right {
+        flex: 1;
+        margin: 0 2px 2px 0;
     }
     
-    .list-content p a:hover {
-        background-color: #0052e7;
-        color: #fff;
+    .learn-right h3 a {
+        font-family: TurnerBold, sans-serif;
+        font-size: 2rem;
     }
-
-
+    
+    .learn-right p {
+        font-family: TurnerRegular;
+        font-size: 1.85rem;
+        line-height: 150%;
+    }
+    
+    .nugget {
+        margin-bottom: 80px;
+        border-bottom: 2px dotted #dedede;
+        padding-bottom: 10px;
+    }
+    
+    .nugget img, .learn-main img {
+        display: flex;
+        max-width: 100%;
+    }
     
 /*NAVIGATION*/
 
@@ -136,6 +87,8 @@
     .topnav .icon {
       display: none;
     }
+    
+/*MEDIA QUERIES*/
 
     @media screen and (max-width: 1152px) {
         .topnav a:not(:first-child) {display: none;}
@@ -156,16 +109,40 @@
         }
     }
     
-    @media screen and (max-width: 740px) {
-        .learn-hero h3 a {font-size: 2rem;} 
-    }
-    
-    @media screen and (min-width: 40em) {
-        .list-item { width: 50%; }
-    }
-    
-    @media screen and (min-width: 60em) {
-        .list-item { width: 33.33%; }
+    @media screen and (min-width: 1151px) {
+        .learn-layout {
+            display: flex;
+        }
+        .nugget {
+            border-top: 5px solid #000;
+            border-bottom: none;
+        }
+        
+        .learn-main {
+            border-bottom: none;
+        }
+        
+        .learn-main h3 a {
+            font-size: 3rem;
+            line-height: 150%;
+        }
+        
+        .learn-main p {
+            font-size: 1.4rem;
+            line-height: 150%;
+            letter-spacing: -1;
+        }
+        
+        .learn-right p {
+            font-size: 1rem;
+            line-height: 150%;
+            letter-spacing: -1;
+        }
+        
+        .learn-right h3 a {
+            font-size: 1.2rem;
+            line-height: 125%;
+        }
     }
     
 </style>
@@ -192,48 +169,32 @@ function shrinkNav() {
 }
 </script>
 
-<div class="learn-hero">
-    <a href="http://now.turner.com/change" target="_blank"><img src="https://s3.amazonaws.com/tpd-files/images/change-hero.png"></a>
-    <h3><a href="http://now.turner.com/change">now.turner.com/change</a></h3>
-    <p>Changes in our industry are shaping the way we think about content and the tempo of that change continues to speed up. Sometimes it can feel downright dizzying.</p>
-    <p>We built <a href="http://now.turner.com/change" target="_blank">now.turner.com/change</a> with that in mind. There you'll find tools and tips to support you and your teams in adapting, accepting, and committing to change.</p>
+<div>&nbsp;</div>
+
+<div class="learn-layout">
+
+    <div class="learn-main">
+        <a href="https://now.turner.com/learnnow/performance---reviews-and-conversations"><img src="https://s3.amazonaws.com/tpd-images/1920x1080_Post-it-TILEv2.jpg"></a>
+        <br>
+        <h3><a href="https://now.turner.com/learnnow/performance---reviews-and-conversations">Year-End Performance</a></h3>
+        <p>Performance self-recaps are available and due by December 18 (though watch for earlier dates from your unit's leadership or HR team).</p>
+        <p>The "creative" option is back. Make a video, act out a skit, draw a cartoon &mdash; whatever brings out your unique style and accomplishments.</p>
+        <p><a href="https://now.turner.com/learnnow/performance---reviews-and-conversations">Visit our performance section</a> for more details and instructions on each self-recap option as well as a guide to creating individual goals. Your manager can also answer any questions you may have.</p>
+    </div>
+    
+    <div class="learn-right">
+        <div class="nugget">
+            <a href="http://now.turner.com/change" target="_blank"><img src="https://s3.amazonaws.com/tpd-files/images/change-hero.png"></a>
+            <br>
+            <h3><a href="http://now.turner.com/change" target="_blank">now.turner.com/change</a></h3>
+            <p>Things are constantly changing. Get tools and support for you and your teams in adapting to change.</p>
+        </div>        
+        <div class="nugget">
+            <a href="https://now.turner.com/learnnow/subscribe"><img src="https://s3.amazonaws.com/tpd-images/WWL.png"></a>
+            <br>
+            <h3><a href="https://now.turner.com/learnnow/subscribe">What We Learned &mdash; Past Issues</a></h3>
+            <p><i>What We Learned</i> is our critically acclaimed weekly newsletter containing 3 things we learned (and more).</p>
+        </div>       
+    </div>
     
 </div>
-
-<br>
-
-<h4>More</h4>
-
-<ul class="list">
-    <li class="list-item">
-        <div class="list-content">
-            <h2>Performance</h2>
-            <p>Cat got your tongue? We have everything you need to have outstanding performance conversations.</p>
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            <p><a href="/learnnow/performance">Go</a></p>
-        </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
-            <h2>Make You Matter Week</h2>
-            <p>A week of global inspiration with classes, workshops, speakers, and special events. View archives of our past weeks.</p>
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            <p><a href="https://now.turner.com/make-you-matter-archive">Go</a></p>
-        </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
-            <h2>Subscribe</h2>
-            <p>Don't you wish you could just have learning delivered to you? Well, now you can.
-            <i>What We Learned This Week</i> is our weekly newsletter containing three things we learned (and more). Original, huh?</p>
-            <p><a href="/learnnow/subscribe">Go</a></p>
-        </div>
-    </li>
-</ul>
