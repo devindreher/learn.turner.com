@@ -20,6 +20,68 @@
         width: 100%;
     }
     
+/*FLOATING STICKY*/
+    
+    .sticky {
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 20px;
+        background: #000;
+        color: #fff;
+        overflow: visible;
+        box-shadow: 2px 2px 8px #888;
+        
+        width: 200px;
+        
+        position: fixed;
+        right: 0;
+        top: 300px;
+        
+        z-index: 1;
+    }
+    
+    .sticky p {
+        font-family: TurnerBold;
+        font-size: 1rem;
+        line-height: 115%;
+        color: #fff;
+    }
+    
+    #sticky-x {
+        
+        cursor: pointer;
+        
+        width: 30px;
+        height: 30px;
+        border: 1px solid #585858;
+        border-radius: 50%;
+        position: absolute;
+        background: #fff;
+        top: -10px;
+        right: -10px;
+        
+        font-family: TurnerBold;
+    }
+    
+    .sticky a {
+        padding: 2px 5px;
+        border: 2px solid #fff;
+        border-radius: 5px;
+
+        text-decoration: none;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    .sticky a:hover {
+        background-color: #0052e7;
+        color: #fff;
+        transition: .2s ease;
+    }    
+    
 /*FLEX BOXES*/
     
     .list {
@@ -165,7 +227,6 @@
   <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
   <a href="/learnnow/org-development">Org. Development</a>
   <a href="/learnnow/performance">Performance</a>
-  <a href="/learnnow/new-to-turner">New Hires</a>
   <a href="/learnnow/subscribe">Subscribe</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
 </div>
@@ -180,6 +241,29 @@ function shrinkNav() {
     }
 }
 </script>
+
+<script>
+
+window.onload = function(){
+    document.getElementById('sticky-x').onclick = function(){
+        this.parentNode.parentNode.parentNode
+        .removeChild(this.parentNode.parentNode);
+        return false;
+    };
+};
+    
+</script>
+
+<div>
+    <div class="sticky">
+        <button id="sticky-x">X</button>
+        <p>
+            Psst.<br>
+            Get learning goodies in your inbox!
+        </p>
+        <a href="http://eepurl.com/cWVxXz" target="_blank">Subscribe</a>
+    </div>
+</div>
 
 <!--BODY-->
 
