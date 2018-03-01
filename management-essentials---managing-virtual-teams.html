@@ -6,6 +6,32 @@
         margin-top: 30px;
     }
     
+    h3.sub {
+        position: relative;
+        text-align: left;
+        font-family: TurnerBold;
+        font-size: 2rem;
+    }
+    
+    h3.sub span {
+        background: #fff;
+        padding-left: 0;
+        padding-right: 15px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    h3.sub:before {
+        background: #696969;
+        content: "";
+        display: block;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        left: 0;
+    }
+    
 /*FLEX BOXES*/
     
     .list {
@@ -208,17 +234,6 @@ function shrinkNav() {
     <li class="list-item">
         <div class="list-content">
             <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-            <h2>Lead a Session on Managing Virtual Teams</h2>
-            <p>Spread the wealth! This toolkit is for those who'd like to lead an informal training on virtual teams.</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p><a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Managing-Virtual-Teams/Tool_Managing-Virtual-Teams.pptx" target="_blank">Go</a></p>
-        </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
-            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
             <h2>Managing Virtual Teams Toolkit</h2>
             <p>This kit has everything you need to get your started to lead virtually &ndash; from creating norms to establishing a vision statement.</p>
             <p>&nbsp;</p>
@@ -388,3 +403,11 @@ function shrinkNav() {
         </div>
     </li>
 </ul>
+
+<div>&nbsp;</div>
+
+<h3 class="sub"><span>Teach It</span></h3>
+    
+<p>At Turner, we believe in the whole concept of <i>leader as teacher</i>. So, should you feel so inclined, feel free to grab <a href="https://s3.amazonaws.com/tpd-files/Management-Essentials/Managing-Virtual-Teams/Tool_Managing-Virtual-Teams.pptx" target="_blank">this facilitator toolkit</a> on <i>Managing Virtual Teams</i> and help spread the knowledge amongst your colleagues.</p>
+
+<div>&nbsp;</div>
