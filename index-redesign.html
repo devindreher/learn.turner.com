@@ -14,8 +14,34 @@
         box-shadow: 3px 3px 5px #888;
         transition: .3s ease;
     }
+    
+    .video-container {
+        width: 100%;
+        border: 1px solid grey;
+        box-shadow: 1px 1px 3px #888;
+    }
+    
+    .video-container:hover {
+        box-shadow: 3px 3px 5px #888;
+        transition: .3s ease;
+    }
+    
+    video {
+        width: 100%;
+        height: auto;
+    }
+    
+    .video-fallback {
+        display: none;
+        width: 100%;
+    }
+    
+    .video-fallback img {
+        width: auto;
+        height: auto;
+    }
 
-    /*FLEX BOXES*/
+/*FLEX BOXES*/
 
     .learn-cards {
         display: flex;
@@ -212,6 +238,17 @@
             font-size: .9em;
         }
     }
+    
+    @media only screen and
+    (min-device-width: 320px)
+    and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (-webkit-min-device-pixel-ratio: 4)
+    {
+        .video-container, video {display: none;}
+        .video-fallback {display: block;}
+    }
 
 </style>
 
@@ -260,22 +297,28 @@
 
 <div>&nbsp;</div>
 
-<h2>Get Career Advice</h2>
+<div class="video-container">
+    <a href="http://turner.cooleaf.com" target="_blank">
+        <video no-controls autoplay src="https://s3.amazonaws.com/tpd-files/Videos/mym_day_one.mp4"></video>
+    </a>
+</div>
 
-<a href="https://now.turner.com/story/turner-people-development-ama"><img class="learn-image" src="https://s3.amazonaws.com/tpd-files/images/tpd-ama.jpg"></a> &nbsp; &nbsp;
-
-<p>The Jedi masters of career development, Turner People Development, are here. We have the answers and want your questions.</p>
+<div class="video-fallback">
+    <a href="http://turner.cooleaf.com" target="_blank">
+        <img src="https://s3.amazonaws.com/tpd-files/Videos/mym_day_one_poster.png">
+    </a>
+</div>
 
 <hr> &nbsp; &nbsp;
 
 <div style="margin: 0 auto;">
 
     <div class="learn-cards">
-        <a class="learn-card" href="/learnnow/performance---reviews-and-conversations">
-            <div class="learn-card-header" style="background-image: url(https://media.giphy.com/media/l2QEff4C8rhgdS6NG/giphy.gif)"></div>
+        <a class="learn-card" href="/learnnow/leadership---leadershipnow">
+            <div class="learn-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/images/calendar_gif.gif)"></div>
             <div class="learn-card-content">
-                <h3>Performance Conversations</h3>
-                <p>You did your review, so now what? Well it's time to start talking.</p>
+                <h3>Q2 LeadershipNow Classes</h3>
+                <p>Well, Q1 flew by. Check out what's on deck this quarter.</p>
             </div>
         </a>
         <a class="learn-card" href="/learnnow/learn-poll">
