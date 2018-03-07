@@ -1,0 +1,292 @@
+<style>
+    
+/*Layout and Formatting*/
+    
+    h2 {
+        font-family: TurnerBold;
+        font-size: 3rem;
+        margin-top: 30px;
+    }
+    
+    h3 {
+        font-family: TurnerBold;
+        font-size: 1.5rem;
+    }
+    
+    .info-column {
+        background: #f1f1f1;
+    }
+    
+    .info-column:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    .info-column-content {
+        padding: 10px;
+        float: left;
+        width: 50%;
+    }
+    
+    .info-column-content p {
+        color: #000;
+        font-size: .975rem;
+    }
+    
+/*TOOLS AND RESOURCES GRID*/
+    
+    .resource-cards {
+        width: 90%;
+        max-width: 1240px;
+        margin: 0;
+        
+        display: grid;
+        
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+        
+    }
+    
+    .card {
+        background: white;
+        text-decoration: none;
+        color: #444;
+        border: 1px solid dimgrey;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        position: relative;
+        top: 0;
+        transition: all .1s ease-in;
+    }
+    
+    .card:hover {
+        top: -2px;
+        box-shadow: 0 4px 5px rgba(0,0,0,0.2)
+    }
+    
+    .card .thumbnail {
+        margin: 5% 1% 0 5%;
+    }
+    
+    .card article {
+        padding: 20px;
+        flex: 1;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .card h1 {
+        font-size: 20px;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+        margin: 0;
+        color: #333;
+        line-height: 120%;
+    }
+    
+    .card p {
+        line-height: 1.4;
+        flex: 1;
+        font-size: 1rem;
+    }
+    
+    .card span {
+        font-size: 12px;
+        font-weight: bold;
+        color: #999;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        margin: 2em 0 0 0;
+    }
+    
+/*Buttons*/
+    
+    a.l-btn, .l-btn {
+        display: inline-block;
+        outline: none;
+        text-align: center;
+        text-decoration: none;
+        letter-spacing: -1px;
+        vertical-align: middle;
+        transition: all .2s ease;
+        box-sizing: border-box;
+        background: #fff;
+    }
+    
+    .l-btn-large {
+        font-family: TurnerBold;
+        font-size: 1.0625rem;
+        line-height: 125%;
+        border-radius: 3px;
+        padding: .05625em 1.5em;
+    }
+    
+    .l-btn-blue {
+        border: 1px solid #0052e7;
+        color: #0052e7;
+    }
+    
+    .l-btn-blue:hover {
+        background: #0052e7;
+        color: #fff;
+        border-color: #0052e7;
+    }
+    
+/*Navigation*/
+    
+    .learnNow a {
+        font-size: 15px;
+        font-family: TurnerBold;
+        color: #000;
+    }
+    
+    .learnNow a:hover {
+        color: #0052e7;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 15px !important;
+      font-family: TurnerBold;
+    }
+
+    .topnav a:hover {
+      background-color: #0052e7;
+      color: #fff;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+    
+/*BREADCRUMBS*/
+    
+    #breadcrumb { float: left; display: block; }
+    #breadcrumb ul { list-style: none; }
+
+    .crumbs { display: block; margin-left: -27px;}
+    .crumbs li {  display: inline; }
+    .crumbs li.first { padding-left: 8px; }
+    .crumbs li a, .crumbs li a:link, .crumbs li a:visited { color: #666; display: block; float: left; font-size: 12px; margin-left: -13px; padding: 3px 17px 11px 20px; position: relative; text-decoration: none; }
+
+    .crumbs li a { background-image: url('https://s3.amazonaws.com/tpd-files/images/bg-crumbs.png');  background-repeat: no-repeat; background-position: 100% 0; position: relative; }
+    .crumbs li a:hover { color: #333; background-position: 100% -48px; cursor: pointer; }
+    .crumbs li a:active { color: #333; background-position: 100% -96px; }
+    .crumbs li.first a span { height: 29px; width: 3px; border-left: 1px solid #d9d9d9; position: absolute; top: 0px; left: 0px; }
+    
+    .space { display: block; height: 5px; clear: both; }
+    
+    ul.crumbs li:before {
+        background-image: none !important;
+    }
+    
+/*MEDIA QUERIES*/
+    
+    @media screen and (max-width: 1152px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {float: right; display: block;}
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {position: absolute; right: 0; top: 0;}
+        .topnav.responsive a {float: none; display: block; text-align: left;}
+    }
+    
+    @media screen and (max-width: 600px) {
+        .info-column-content {width: 100%;}
+    }
+    
+    @media only screen and (min-width: 850px) {
+        .resource-cards {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    
+</style>
+
+<!--NAVIGATION-->
+
+<span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
+<div class="topnav" id="myTopnav">
+  <a href="http://learn.turner.com">Home</a>    
+  <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+  <a href="/learnnow/org-development">Org. Development</a>
+  <a href="/learnnow/performance">Performance</a>
+  <a href="/learnnow/subscribe">Subscribe</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+</div>
+
+<script>
+function shrinkNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+<!--BREADCRUMBS-->
+
+<div id="breadcrumb">
+    <ul class="crumbs">
+        <li class="first"><a href="/learnnow/leadership---leadershipnow" style="z-index:9;"><span></span>Leadership<i>Now</i></a></li>
+        <li><a href="#" style="z-index:8;">Candid Conversations</a></li>
+    </ul>
+</div>
+
+<div class="space"></div>
+
+<!--MAIN CONTENT-->
+
+<h2>Stop. Collaborate &amp; Listen</h2>
+
+<div class="info-column">
+    <div class="info-column-content">
+        <p><b>Use When:</b></p>
+        <p>
+            You need to better collaborate with other people within your team or with other teams.
+        </p>
+    </div>
+    <div class="info-column-content">
+        <p><b>Logistics:</b></p>
+        <p>
+            &mdash; 3 Hours<br>
+            &mdash; Face-to-Face
+        </p>
+    </div>
+</div>
+
+<p>&nbsp;</p>
+
+<p><b>Know when to elevate your relationship. Collaborate for maximum impact!</b></p>
+
+<p><b>You will:</b></p>
+<ul class="descr">
+    <li>Define &amp; clarify the term collaboration</li>
+    <li>Identify the most effective strategies for working in a collaborative manner &mdash; with both individuals and teams</li>
+    <li>Learn and practice skills and tools that will help you prioritize and enhance your collaborative relationships</li>
+</ul>
+
+<br>
+
+<a href="https://stopcollaborateandlisten.eventbrite.com/" target="_blank" class="l-btn l-btn-large l-btn-blue">
+    Check Times &amp; Register<br>
+    All Times Eastern
+</a>
+
+<br>
+<br>
