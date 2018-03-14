@@ -6,48 +6,41 @@
         margin-top: 30px;
     }
     
-    .card {
-        width: 350px;
-        border: 1px solid gray;
-        box-shadow: 1px 1px 3px #888;
-        border-top: 10px solid black;
-        min-height: 250px;
-        padding: 10px;
-        margin: 20px;
-    }
-
-    .card:first-child {
-        margin-left: 0;    
-    }
-
-    .card:hover {
-        box-shadow: 3px 3px 5px #888;
-        transition: 0.3s;
-        }
-
-    .card h2 {
-        font-family: TurnerBold;
-        margin-top: 0;
-        font-size: 24px;
-        line-height: 120% !important;
-    }
-
-    .card p {
-      margin: 10px;
-      font-family: TurnerRegular;
-      font-size: 14px !important;
-    }
-
-    .card a {
-        color: #000 !important;
-        text-decoration: none !important;
-    }
-
-    #mainbox {
-        box-sizing: border-box;
-        justify-content: left;
+/*FLEXBOXES*/
+    
+    .card-wrapper {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .card {
+        flex: 0 1 100%;
+        margin: 0 10px 10px 0;
+        border: 1px solid grey;
+        border-top: 10px solid black;
+        box-shadow: 1px 1px 3px #888;
+    }
+    
+    .card:hover {
+        box-shadow: 3px 3px 5px #888;
+        transition: .3s;
+    }
+    
+    .card-content {
+        padding: 10px;
+    }
+    
+    .card-content h2 {
+        font-family: TurnerBold;
+        font-size: 24px;
+        line-height: 120% !important;
+        margin-top: 0;
+    }
+    
+    .card-content p {
+        font-size: 14px !important;
+        line-height: 140%;
     }
     
 /*FLOATING STICKY*/
@@ -152,82 +145,11 @@
       display: none;
     }
     
-/*FLEXBOXES*/
-    
-    .list {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: -40px;
-        padding: 0;
-    }
-    
-    ul.list li:before {
-        background-image: none !important;
-    }
-    
-    .list-item {
-        display: flex;
-        padding: 0.5em;
-        width: 100%;
-    }
-    
-    .list-content {
-        background-color: #fff;
-        display: flex;
-        flex-direction: column;
-        padding: 1em;
-        width: 100%;
-        border: 1px solid grey;
-        border-top: 10px solid #000;
-        box-shadow: 1px 1px 3px #888;
-    }
-    
-    .list-content:hover {
-        box-shadow: 3px 3px 5px #888;
-        transition: .3s;
-    }
-    
-    .list-content h2 {
-        font-family: TurnerBold, Arial, Helvetica, sans-serif;
-        font-size: 1.2rem;
-        color: #282828;
-        margin: 0;
-        line-height: 120%;
-    }
-    
-    .list-content p {
-        flex: 1 0 auto;
-        font-family: TurnerRegular, Arial, Helvetica, sans-serif;
-        font-size: 1.1rem;
-        margin: .5rem 0 0 0;
-        padding: 0;
-        line-height: 150%;
-    }
-    
-    .list-content p a {
-        padding: 2px 5px;
-        border: 1px solid #0052e7;
-        border-radius: 3px;
-        
-        text-decoration: none;
-        font-size: 1rem;
-        font-family: TurnerBold, Arial, Helvetica, sans-serif;
-    }
-    
-    .list-content p a:hover {
-        background-color: #0052e7;
-        color: #fff;
-    }
-    
 /*MEDIA QUERIES*/
     
    @media screen and (max-width: 1152px) {
         .topnav a:not(:first-child) {display: none;}
         .topnav a.icon {float: right; display: block;}
-        .learn-main h3 a {font-size: 2rem;}
-        .learn-card {width: 100%;}
-        .learn-card h5 a {font-size: 2rem;}
-        .learn-card p {font-size: 1.5rem; line-height: inherit;}
         .topnav.responsive {position: relative;}
         .topnav.responsive .icon {
             position: absolute;
@@ -241,12 +163,9 @@
         }
     }
     
-    @media screen and (min-width: 40em) {
-        .list-item { width: 50%; }
-    }
-    
-    @media screen and (min-width: 60em) {
-        .list-item { width: 33.33%; }
+    @media all and (min-width: 30em) {
+        .card {flex: 0 1 30%};
+        .card-content p {font-size: .9em;}
     }
     
 </style>
@@ -304,41 +223,43 @@ window.onload = function(){
 <p>As a people leader, your key responsibilities are to motivate, develop, and mentor your team. How you accomplish this can show up in different ways.</p>
     
 <p>Pick a topic to get started.</p>
-    
-<ul class="list">
-    <li class="list-item">
-        <div class="list-content">
+
+<div class="card-wrapper">
+    <a href="/learnnow/management-essentials---bold-hiring" class="card">
+        <div class="card-content">
+            <h2>Bold Hiring</h2>
+            <p>Bold Hiring is the term we've been using to talk about a reinvigorated approach to hiring at Turner &mdash; one that includes a sharper focus on encouraging more diversity (in every sense) at our company.</p>
+        </div>
+    </a>
+    <a href="/learnnow/management-essentials---onboarding" class="card">
+        <div class="card-content">
             <h2>Onboarding</h2>
             <p>Onboarding at Turner is a process that happens over an extended period of time. It lays the groundwork for new employees to become productive and successful.</p>
-            <p><a href="/learnnow/management-essentials---onboarding">Go</a></p>
         </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
+    </a>
+    <a href="/learnnow/management-essentials---transitioning-into-management" class="card">
+        <div class="card-content">
             <h2>Transitioning Into Management</h2>
             <p>Are you (or someone you know) a first-time manager? This section has all you need to step into the wonderful world of management.</p>
-            <p><a href="/learnnow/management-essentials---transitioning-into-management">Go</a></p>
         </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
+    </a>
+    <a href="/learnnow/management-essentials---performance-management" class="card">
+        <div class="card-content">
             <h2>Performance Management</h2>
             <p>Performance management is an approach for architecting success through people. Learn more here.</p>
-            <p><a href="/learnnow/management-essentials---performance-management">Go</a></p>
         </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
+    </a>
+    <a href="http://now.turner.com/recruitingturnercom/home" target="_blank" class="card">
+        <div class="card-content">
             <h2>Recruiting &amp; Selection</h2>
             <p>Learn about Turner's recruiting process and get tools to think differently when finding the next person for your team.</p>
-            <p><a href="http://recruiting.turner.com" target="_blank">Go</a></p>
         </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
+    </a>
+    <a href="/learnnow/management-essentials---managing-virtual-teams" class="card">
+        <div class="card-content">
             <h2>Managing Virtual Teams</h2>
             <p>Managing a team that's spread out geographically can be challenging. We got you.</p>
-            <p><a href="/learnnow/management-essentials---managing-virtual-teams">Go</a></p>
         </div>
-    </li>
-</ul>
+    </a>
+</div>
+
