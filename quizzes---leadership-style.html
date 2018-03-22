@@ -1,0 +1,599 @@
+<style>
+    h4 {
+        font-family: TurnerBold;
+        font-size: 1.5em;
+        line-height: 150%;
+    }
+
+    .learnFooter p {
+        font-size: .7em;
+    }
+
+    /*NAVIGATION*/
+
+    .learnNow a {
+        font-size: 15px;
+        font-family: TurnerBold;
+        color: #000;
+    }
+
+    .learnNow a:hover {
+        color: #0052e7;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15px !important;
+        font-family: TurnerBold;
+    }
+
+    .topnav a:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .topnav .icon {
+        display: none;
+    }
+
+    /*QUIZ*/
+
+    #result_div {
+        font-family: TurnerRegular;
+        border: 3px solid #000;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    #result_div a {
+        font-family: TurnerBold;
+        font-size: 1rem;
+    }
+
+    #result_div span {
+        color: #000;
+    }
+    
+    #result_div h3 {
+        font-family: TurnerBold;
+        font-size: 2rem;
+    }
+
+    input[type=radio] {
+        display: none;
+    }
+
+    input:checked+.quiz-label p {
+        border: 2px solid #00f;
+        box-shadow: 3px 3px 5px #888;
+        transition: .1s;
+    }
+
+    .quiz-label:hover {
+        cursor: pointer;
+    }
+
+    .quiz-label {
+        border: 2px solid #dedede;
+    }
+
+    .quiz-label p {
+        font-family: TurnerBold;
+        color: #000;
+        padding: 10px;
+        font-size: .975rem;
+        line-height: 110%;
+    }
+
+    .quiz-submit {
+        font-family: TurnerBold;
+        color: #fff;
+        background-color: #000;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .quiz-submit:hover {
+        background-color: #0052e7;
+    }
+
+    /*ANSWER FLEX BOXES*/
+
+    .list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: #f8f8f8;
+    }
+
+    .list-item {
+        display: flex;
+        justify-content: center;
+        padding: 0.5em;
+        width: 100%;
+    }
+
+    .list-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /*MEDIA QUERIES*/
+
+    @media screen and (max-width: 1152px) {
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 1152px) {
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+
+</style>
+
+<!--NAVIGATION-->
+
+<span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
+<div class="topnav" id="myTopnav">
+    <a href="http://learn.turner.com">Home</a>
+    <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+    <a href="/learnnow/org-development">Org. Development</a>
+    <a href="/learnnow/performance">Performance</a>
+    <a href="/learnnow/subscribe">Subscribe</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+</div>
+
+
+<!--CONTENT-->
+
+<div>&nbsp;</div>
+
+<h2>What Kind of Leader Are you?</h2>
+
+<form name="quizform">
+
+    <h4>I can best motivate people by...</h4>
+
+    <div class="list">
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q1" value="F" id="q1-1"><label for="q1-1" class="quiz-label"><p>Making them feel like part of something bigger</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q1" value="C" id="q1-2"><label for="q1-2" class="quiz-label"><p>Teaching them new skills</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q1" value="D" id="q1-3"><label for="q1-3" class="quiz-label"><p>Challenging them</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q1" value="A" id="q1-4"><label for="q1-4" class="quiz-label"><p>Paying them more</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q1" value="B" id="q1-5"><label for="q1-5" class="quiz-label"><p>Leading by example</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q1" value="E" id="q1-6"><label for="q1-6" class="quiz-label"><p>Connecting them with a mentor</p></label>
+            </div>
+        </div>
+    </div>
+
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+
+    <h4>I like to relax by...</h4>
+
+    <div class="list">
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q2" value="A" id="q2-1"><label for="q2-1" class="quiz-label"><p>Playing first-person shooters</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q2" value="B" id="q2-2"><label for="q2-2" class="quiz-label"><p>Training for a marathon</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q2" value="F" id="q2-3"><label for="q2-3" class="quiz-label"><p>Who has time to relax?</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q2" value="C" id="q2-4"><label for="q2-4" class="quiz-label"><p>Spending time in nature</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q2" value="E" id="q2-5"><label for="q2-5" class="quiz-label"><p>Convening a book group</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q2" value="D" id="q2-6"><label for="q2-6" class="quiz-label"><p>Playing a game of soccer</p></label>
+            </div>
+        </div>
+    </div>
+
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+
+    <h4>Tension in the workplace is...</h4>
+
+    <div class="list">
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q3" value="E" id="q3-1"><label for="q3-1" class="quiz-label"><p>Something that should be fixed &mdash; harmony is key</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q3" value="B" id="q3-2"><label for="q3-2" class="quiz-label"><p>Good for keeping people on their toes</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q3" value="C" id="q3-3"><label for="q3-3" class="quiz-label"><p>OK if it leads to healthy debate</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q3" value="A" id="q3-4"><label for="q3-4" class="quiz-label"><p>Inevitable</p></label>
+            </div>
+        </div>
+    </div>
+
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+
+    <h4>Your function needs a fresh direction. You...</h4>
+
+    <div class="list">
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q4" value="F" id="q4-1"><label for="q4-1" class="quiz-label"><p>Lock your office door to focus alone</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q4" value="E" id="q4-2"><label for="q4-2" class="quiz-label"><p>Get the team's ideas and put them to a vote</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q4" value="C" id="q4-3"><label for="q4-3" class="quiz-label"><p>Brainstorm with trusted colleagues</p></label>
+            </div>
+        </div>
+    </div>
+
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+
+    <h4>Where are you most likely to interact with your employees?</h4>
+
+    <div class="list">
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q5" value="D" id="q5-1"><label for="q5-1" class="quiz-label"><p>In a regular one-on-one</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q5" value="C" id="q5-2"><label for="q5-2" class="quiz-label"><p>At lunch</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q5" value="A" id="q5-3"><label for="q5-3" class="quiz-label"><p>I don't even know who's on my team</p></label>
+            </div>
+        </div>
+    </div>
+
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+
+    <h4>Someone on your team messed up. You...</h4>
+
+    <div class="list">
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q6" value="A" id="q6-1"><label for="q6-1" class="quiz-label"><p>Give them a stern warning and one more chance</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q6" value="B" id="q6-2"><label for="q6-2" class="quiz-label"><p>Fix it yourself</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q6" value="D" id="q6-3"><label for="q6-3" class="quiz-label"><p>Help her or him make a plan to fix it</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q6" value="D" id="q6-4"><label for="q6-4" class="quiz-label"><p>Brush it off &mdash; mistakes are unavoidable in the grand scheme of things</p></label>
+            </div>
+        </div>
+    </div>
+
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+
+    <h4>What's your motto?</h4>
+
+    <div class="list">
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q7" value="D" id="q7-1"><label for="q7-1" class="quiz-label"><p>Employees first</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q7" value="B" id="q7-2"><label for="q7-2" class="quiz-label"><p>Customers/clients first</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q7" value="F" id="q7-3"><label for="q7-3" class="quiz-label"><p>Whoever drives the most value first</p></label>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-content">
+                <input type="radio" name="q7" value="E" id="q7-4"><label for="q7-4" class="quiz-label"><p>Fair and balanced</p></label>
+            </div>
+        </div>
+    </div>
+
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+
+    <button type="submit" class="quiz-submit">Submit</button>
+
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+
+    <div id="result_div" style="display:none;">
+        <b><h3 id="result_text"></h3></b>
+        <span id="result_descr"></span>
+        <br>
+        <br>
+        <b><span>Surround yourself with:</span></b>
+        <br>
+        <span id="result_friends"></span>
+        <br>
+        <br>
+        <b><span>Think twice before:</span></b>
+        <br>
+        <span id="result_think"></span>
+        <br>
+        <br>
+        <hr>
+        <span>Learn how to grow more as a leader.</span>
+        <a href="/learnnow/leadership---leadershipnow" id="result_moreinfo"></a>
+    </div>
+</form>
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<div class="learnFooter">
+    <p>Source: <i>What Kind of Leader Are You?</i> Inc.</p>
+</div>
+
+
+<script type="text/javascript">
+    (function() {
+
+        var QUIZ_URL = "";
+
+        var RESULTS_FOLDER_URL = "";
+
+        var RESULTS = {};
+
+        RESULTS["A"] = {
+            name: "A",
+            text: "The General",
+            descr: "You lead top-down and are rather inflexible. This kind of leader often thrives in a crisis but also struggles with morale problems.",
+            friends: "Team builders who can connect with employees.",
+            think: "Dismissing someone else's idea.",
+            moreinfo: "Enroll in a LeadershipNow offering today."
+        };
+
+        RESULTS["B"] = {
+            name: "B",
+            text: "The Paragon",
+            descr: "You're high-achieving and hardworking. You set high standards and lead by example, but can have trouble communicating and sharing credit.",
+            friends: "Coaches who can help employees understand and what it takes to meet standards and team builders who can boost morale.",
+            think: "Taking control of other people's projects.",
+            moreinfo: "Enroll in a LeadershipNow offering today."
+        };
+
+        RESULTS["C"] = {
+            name: "C",
+            text: "The Team Builder",
+            descr: "You forge strong relationships with your employees and give them lots of freedom. You encourage open communication and fierce loyalty, but may let poor performance go uncorrected.",
+            friends: "People who will enforce high standards and those who can focus on details.",
+            think: "Giving unqualified praise.",
+            moreinfo: "Enroll in a LeadershipNow offering today."
+        };
+
+        RESULTS["D"] = {
+            name: "D",
+            text: "The Coach",
+            descr: "You're a patient leader that encourages employees to develop long-term goals. You always offer plenty of mentoring to help them succeed, however, you may not focus enough on immediate work-related tasks.",
+            friends: "Self-motivated people who can deal efficiently with crises.",
+            think: "Devoting too much time to employees who resist mentoring.",
+            moreinfo: "Enroll in a LeadershipNow offering today."
+        };
+
+        RESULTS["E"] = {
+            name: "E",
+            text: "The Populist",
+            descr: "You're a consensus builder who values employee ideas and the democratic process, but can suffer from indecision.",
+            friends: "Visionaries with strong ideas of their own.",
+            think: "Calling another meeting.",
+            moreinfo: "Enroll in a LeadershipNow offering today."
+        };
+
+        RESULTS["F"] = {
+            name: "F",
+            text: "The Visionary",
+            descr: "You're a big-picture thinker who sets clear standards and inspires with a sense of shared mission. However, you can be seen as overbearing sometimes.",
+            friends: "Team builders who can make sure that the needs of individual employees do not get lost in pursuit of a grand vision.",
+            think: "Showing the smart people who work for you how much smarter you are.",
+            moreinfo: "Enroll in a LeadershipNow offering today."
+        };
+
+
+        var FORM_NAME = 'quizform';
+
+
+        var form = document.forms[FORM_NAME];
+        var form_elements = document.forms[FORM_NAME].elements;
+        var form_element;
+        var result_div = document.getElementById("result_div");
+        var result_text = document.getElementById("result_text");
+        var result_descr = document.getElementById("result_descr");
+        var result_friends = document.getElementById("result_friends");
+        var result_think = document.getElementById("result_think");
+        var result_moreinfo = document.getElementById("result_moreinfo");
+
+
+        // Validate the quiz form to prevent common issues
+        for (var i = 0; i < form_elements.length; i++) {
+            form_element = form_elements[i];
+            if (form_element.type === "radio") {
+                if (form_element.value.indexOf('&') !== -1) {
+                    alert("Quiz form has an answer with an ampersand in the value (" + form_element.value + ").");
+                } else if (!(form_element.value in RESULTS)) {
+                    alert("Quiz form has an answer with the value " + form_element.value + " but there is no result corresponding to this value.");
+                }
+            }
+        }
+
+        form.onsubmit = function() {
+            var answers = {};
+            var results = [];
+            var joined_results;
+            var result;
+            var form_element;
+
+            for (var value in RESULTS) {
+                if (value.indexOf('&') === -1) {
+                    // Not a joint result
+                    answers[value] = 0;
+                }
+            }
+
+            for (var i = 0; i < form_elements.length; i++) {
+                form_element = form_elements[i];
+                if ((form_element.type === "radio" || form_element.type === "checkbox") && form_element.checked) {
+                    answers[form_element.value]++;
+                }
+            }
+
+            for (var value in answers) {
+                if (results.length === 0 || answers[value] > answers[results[0]]) {
+                    results = [value];
+                } else if (answers[value] === answers[results[0]]) {
+                    results.push(value);
+                }
+            }
+
+            while (results.length > 0) {
+                joined_results = results.join('&');
+                if (joined_results in RESULTS) {
+                    result = RESULTS[joined_results];
+                    break;
+                } else {
+                    // No joint result - remove the last element and see if
+                    // there's a result for that.
+                    results.pop();
+                }
+            }
+            
+            if (result_text && result.text) {
+                result_text.innerHTML = result.text;
+            }
+            
+            if (result_descr && result.descr) {
+                result_descr.innerHTML = result.descr;
+            }
+            
+            if (result_friends && result.friends) {
+                result_friends.innerHTML = result.friends;
+            }
+            
+            if (result_think && result.think) {
+                result_think.innerHTML = result.think;
+            }
+            
+            if (result_moreinfo && result.moreinfo) {
+                result_moreinfo.innerHTML = result.moreinfo;
+            }
+
+//            if (result_text && result.text) {
+//                result_text.innerHTML = '<b>' + result.text + '</b>' + '<br>' + '<p>' + result.descr + '</p>' + '<br>' + '<a href="' + result.moreinfo + '" target=_blank">' + 'Learn more here.' + '</a>';
+//            }
+
+            result_div.style.display = 'block';
+            return false;
+        };
+    })();
+
+</script>
+
