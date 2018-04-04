@@ -1,22 +1,21 @@
 <style>
-    
     h2 {
         font-family: TurnerBold;
         font-size: 3rem;
         margin-top: 30px;
     }
-    
+
     h3 {
         font-family: TurnerBold;
     }
-    
+
     h3.sub {
         position: relative;
         text-align: left;
         font-family: TurnerBold;
         font-size: 2rem;
     }
-    
+
     h3.sub span {
         background: #fff;
         padding-left: 0;
@@ -24,7 +23,7 @@
         position: relative;
         z-index: 1;
     }
-    
+
     h3.sub:before {
         background: #696969;
         content: "";
@@ -35,81 +34,85 @@
         width: 100%;
         left: 0;
     }
-    
+
     h4 {
         font-family: TurnerBold;
         font-size: .975rem;
     }
-    
+
     .nav-button {
         padding: 2px 5px;
         border: 1px solid #0052e7;
         border-radius: 3px;
-        
+
         text-decoration: none;
         font-size: .975rem !important;
         font-family: TurnerBold, Arial, Helvetica, sans-serif;
     }
-    
+
     .nav-button:hover {
         background-color: #0052e7;
         color: #fff;
     }
-    
+
     ul li:before {
         filter: grayscale(100%) !important;
     }
-    
+
     ul {
         margin: 0 0 0 15px !important;
         padding: 0 !important;
     }
-    
+
     ul li {
         font-size: 1rem !important;
     }
-    
+
     .attention {
         background: #f8f8f8;
         padding: 10px;
         width: 85%;
         margin-bottom: 20px;
     }
-    
+
     .attention p {
         font-size: .9em;
         color: #888;
         font-family: TurnerBold;
         line-height: 120%;
     }
-    
+
     p {
         font-size: 1rem !important;
     }
     
-/*ROSTER FLEX BOXES*/
-    
+    #books iframe {
+        margin: 10px;
+    }
+
+    /*ROSTER FLEX BOXES*/
+
     .team-cards {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
     }
-    
+
     .team-card {
         flex: 0 1 100%;
         margin: 0 10px 10px 0;
         border: 1px solid grey;
         box-shadow: 1px 1px 3px #888;
     }
-    
+
     .team-card-content {
         padding: 10px;
     }
-    
+
     .team-card-content p {
         line-height: 120%;
     }
-    
+
     .team-card-header {
         position: relative;
         height: 200px;
@@ -120,16 +123,16 @@
         margin: 0;
         padding: 0;
     }
-    
-/*ITEM FLEX BOXES*/
-    
+
+    /*ITEM FLEX BOXES*/
+
     .list {
-      display: flex;
-      flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .list-item {
-        display: flex; 
+        display: flex;
         padding: 0.5em;
         width: 100%;
     }
@@ -139,60 +142,60 @@
         flex-direction: column;
         padding: 1em;
         width: 100%;
-        
+
         border: 1px solid grey;
         border-top: 10px solid #000;
         box-shadow: 1px 1px 3px #888;
     }
-    
+
     .list-content:hover {
         box-shadow: 3px 3px 5px #888;
         transition: .3s;
     }
-    
+
     .list-content h3 {
         font-family: TurnerBold, Arial, Helvetica, sans-serif;
         font-size: 1rem;
         color: #282828;
         line-height: 120%;
     }
-    
+
     .list-content p {
         font-family: Turner, Arial, Helvetica, sans-serif;
         font-size: 1rem;
         line-height: 120%;
     }
-    
+
     .list-content p a {
         font-size: 1rem;
         line-height: 120%;
     }
-    
-/*TIMELINE*/
-    
+
+    /*TIMELINE*/
+
     .timeline-container {
         max-width: 1024px;
         width: 90%;
         margin: 0 auto;
     }
-    
+
     .timeline-item {
         padding: 3em 2em 2em;
         position: relative;
-        color: rgba(0,0,0,0.7);
-        border-left: 2px solid rgba(0,0,0,0.3);
+        color: rgba(0, 0, 0, 0.7);
+        border-left: 2px solid rgba(0, 0, 0, 0.3);
     }
-    
+
     .timeline-item p {
         font-size: 1rem;
         color: #000;
     }
-    
+
     .timeline-item ul li {
-        margin-bottom: 0; 
+        margin-bottom: 0;
         color: #000;
     }
-    
+
     .timeline-item::before {
         content: attr(date-is);
         position: absolute;
@@ -202,7 +205,7 @@
         font-family: TurnerBold;
         font-size: 1.6rem;
     }
-    
+
     .timeline-item::after {
         width: 10px;
         height: 10px;
@@ -212,80 +215,140 @@
         left: -7px;
         border-radius: 10px;
         content: '';
-        border: 2px solid rgba(0,0,0,0.3);
+        border: 2px solid rgba(0, 0, 0, 0.3);
         background: white;
     }
-    
+
     .timeline-item:last-child {
-        -o-border-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 60%, transparent) 1 100%;
-        border-image: -webkit-linear-gradient(top rgba(0,0,0,0.3) 60%, transparent) 1 100%;
-        border-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 60%, transparent) 1 100%;
+        -o-border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+        border-image: -webkit-linear-gradient(top rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+        border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
     }
-    
-/*NAVIGATION*/
+
+    /*NAVIGATION*/
 
     .learnNow a {
         font-size: 15px;
         font-family: TurnerBold;
         color: #000;
     }
-    
+
     .learnNow a:hover {
         color: #0052e7;
     }
 
     .topnav {
-      overflow: hidden;
-      background-color: #333;
+        overflow: hidden;
+        background-color: #333;
     }
 
     .topnav a {
-      float: left;
-      display: block;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 15px !important;
-      font-family: TurnerBold;
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15px !important;
+        font-family: TurnerBold;
     }
 
     .topnav a:hover {
-      background-color: #0052e7;
-      color: #fff;
+        background-color: #0052e7;
+        color: #fff;
     }
 
     .topnav .icon {
-      display: none;
+        display: none;
     }
-    
-/*BREADCRUMBS*/
-    
-    #breadcrumb { float: left; display: block; }
-    #breadcrumb ul { list-style: none; }
 
-    .crumbs { display: block; margin-left: -27px;}
-    .crumbs li {  display: inline; }
-    .crumbs li.first { padding-left: 8px; }
-    .crumbs li a, .crumbs li a:link, .crumbs li a:visited { color: #666; display: block; float: left; font-size: 12px; margin-left: -13px; padding: 0 17px 11px 20px; position: relative; text-decoration: none; }
+    /*BREADCRUMBS*/
 
-    .crumbs li a { background-image: url('https://s3.amazonaws.com/tpd-files/images/bg-crumbs.png');  background-repeat: no-repeat; background-position: 100% 0; position: relative; }
-    .crumbs li a:hover { color: #333; background-position: 100% -48px; cursor: pointer; }
-    .crumbs li a:active { color: #333; background-position: 100% -96px; }
-    .crumbs li.first a span { height: 29px; width: 3px; border-left: 1px solid #d9d9d9; position: absolute; top: 0px; left: 0px; }
-    
-    .space { display: block; height: 5px; clear: both; }
-    
+    #breadcrumb {
+        float: left;
+        display: block;
+    }
+
+    #breadcrumb ul {
+        list-style: none;
+    }
+
+    .crumbs {
+        display: block;
+        margin-left: -27px;
+    }
+
+    .crumbs li {
+        display: inline;
+    }
+
+    .crumbs li.first {
+        padding-left: 8px;
+    }
+
+    .crumbs li a,
+    .crumbs li a:link,
+    .crumbs li a:visited {
+        color: #666;
+        display: block;
+        float: left;
+        font-size: 12px;
+        margin-left: -13px;
+        padding: 0 17px 11px 20px;
+        position: relative;
+        text-decoration: none;
+    }
+
+    .crumbs li a {
+        background-image: url('https://s3.amazonaws.com/tpd-files/images/bg-crumbs.png');
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+        position: relative;
+    }
+
+    .crumbs li a:hover {
+        color: #333;
+        background-position: 100% -48px;
+        cursor: pointer;
+    }
+
+    .crumbs li a:active {
+        color: #333;
+        background-position: 100% -96px;
+    }
+
+    .crumbs li.first a span {
+        height: 29px;
+        width: 3px;
+        border-left: 1px solid #d9d9d9;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    .space {
+        display: block;
+        height: 5px;
+        clear: both;
+    }
+
     ul.crumbs li:before {
         background-image: none !important;
     }
-    
-/*MEDIA QUERIES*/
+
+    /*MEDIA QUERIES*/
 
     @media screen and (max-width: 1152px) {
-        .topnav a:not(:first-child) {display: none;}
-        .topnav a.icon {float: right; display: block;}
-        .topnav.responsive {position: relative;}
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+        .topnav.responsive {
+            position: relative;
+        }
         .topnav.responsive .icon {
             position: absolute;
             right: 0;
@@ -299,35 +362,44 @@
     }
 
     @media all and (min-width: 30em) {
-        .list-item {width: 50%;}
-        .team-card {flex: 0 1 30%;}
-        .team-card-content p {font-size: .9em;}
-        .team-card-content a {font-size: .9em;}
+        .list-item {
+            width: 50%;
+        }
+        .team-card {
+            flex: 0 1 30%;
+        }
+        .team-card-content p {
+            font-size: .9em;
+        }
+        .team-card-content a {
+            font-size: .9em;
+        }
     }
-    
+
 </style>
 
 <!--TOP NAVIGATION-->
 
 <span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
 <div class="topnav" id="myTopnav">
-  <a href="http://learn.turner.com">Home</a>    
-  <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
-  <a href="/learnnow/org-development">Org. Development</a>
-  <a href="/learnnow/performance">Performance</a>
-  <a href="/learnnow/subscribe">Subscribe</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+    <a href="http://learn.turner.com">Home</a>
+    <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+    <a href="/learnnow/org-development">Org. Development</a>
+    <a href="/learnnow/performance">Performance</a>
+    <a href="/learnnow/subscribe">Subscribe</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
 </div>
 
 <script>
-function shrinkNav() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
+    function shrinkNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
     }
-}
+
 </script>
 
 <!--BREADCRUMBS-->
@@ -352,171 +424,231 @@ function shrinkNav() {
 
 <h5>Page Navigation</h5>
 
-<a href="#logistics" class="nav-button">Schedule &amp; Logistics</a> <a href="#prework" class="nav-button">Prework</a> <a href="#ppt" class="nav-button">PowerPoints &amp; Multimedia</a> <a href="#roster" class="nav-button">Meet the Cohort</a>
+<a href="#materials" class="nav-button">Participant Materials</a> <a href="#recordings" class="nav-button">Recordings</a> <a href="#resources" class="nav-button">Other Resources</a> <a href="#speakers" class="nav-button">Speaker Bios</a> <a href="#books" class="nav-button">Books</a> <a href="#roster" class="nav-button">Cohort Roster</a>
 
 <hr>
 
 <br>
 <br>
 
-<a name="logistics"></a>
+<a name="materials"></a>
 
-<h3 class="sub"><span>Schedule &amp; Logistics</span></h3>
+<h3 class="sub"><span>Participant Materials</span></h3>
 
-<div class="timeline-container">
-    <div class="timeline-item" date-is="12/12/2017">
-        <p>
-            <b>Welcome, Overview, and Prework</b><br>
-            <b>11A - 12:30P ET</b>
-        </p>
-        <ul>
-            <li><b>Atlanta:</b> Techwood &mdash; The Overlook &mdash; First Floor Assembly Room</li>
-            <li><b>New York:</b> Time Warner Center &mdash; 0715A Conference Room</li>
-            <li><b>All Other Locations:</b> See details provided to you.</li>
-        </ul>
-        <br>
-        <a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/TLX-Kickoff_12-12-2017.mp4" target="_blank" class="nav-button">View Recording</a> <a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/TLX-Welcome-and-Prework_12-12-2017-FINAL.pdf" target="_blank" class="nav-button">Prework Assignment</a> <a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/TLX-Welcome-12.12.17-FINAL.pdf" target="_blank" class="nav-button">Kickoff PPT</a>
-    </div>
-    <div class="timeline-item" date-is="2/26/2018">
-        <p>
-            <b>Welcome Reception</b><br>
-            <b>5P - 8P ET</b>
-        </p>
-        <p>Location TBD (near Techwood campus).</p>
-    </div>
-    <div class="timeline-item" date-is="2/27/2018">
-        <p>
-            <b>Day One</b><br>
-            <b>Techwood &mdash; The Overlook &mdash; 1st Floor Assembly Room</b>
-        </p>
-        <ul>
-            <li><b>Breakfast:</b> 7:30A ET</li>
-            <li><b>Program:</b> 8:30A - 5P ET</li>
-        </ul>
-    </div>
-    <div class="timeline-item" date-is="2/28/2018">
-        <p>
-            <b>Day Two</b><br>
-            <b>Techwood &mdash; The Overlook &mdash; 1st Floor Assembly Room</b>
-        </p>
-        <ul>
-            <li><b>Breakfast:</b> 7:30AM ET</li>
-            <li><b>Program:</b> 8:30A - 5P ET</li>
-            <li><b>Happy Hour:</b> 5P - 7P ET</li>
-        </ul>
-    </div>
-    <div class="timeline-item" date-is="3/1/2018">
-        <p>
-            <b>Day Three</b><br>
-            <b>Techwood &mdash; The Overlook &mdash; 1st Floor Assembly Room</b>
-        </p>
-        <ul>
-            <li><b>Breakfast:</b> 7:30A ET</li>
-            <li><b>Program:</b> 8:30A - 5P ET</li>
-            <li><b>Happy Hour:</b> 5P - 7P ET</li>
-        </ul>
-    </div>
-    <div class="timeline-item" date-is="3/2/2018">
-        <p>
-            <b>Day Four</b><br>
-            <b>Techwood &mdash; The Overlook &mdash; 1st Floor Assembly Room</b>
-        </p>
-        <ul>
-            <li><b>Breakfast:</b> 7:30A ET</li>
-            <li><b>Program:</b> 8:30A - 3P ET</li>
-        </ul>
-    </div>
-</div>
-
-<div>&nbsp;</div>
-
-<div style="margin-left: 2em;">
-
-    <h3>Lodging</h3>
-    
-    <div class="list">
-        <div class="list-item">
-            <div class="list-content">
-                <a href="http://www.marriott.com/hotels/travel/atlmn-courtyard-atlanta-midtown-georgia-tech/" target="_blank"><h3>Courtyard Atlanta Midtown/Georgia Tech</h3></a>
-                <p>1132 Techwood Drive NW<br>
-                Atlanta, GA  30318</p>
-                <p>Tel: +1 404-607-1112</p>
-                <p>Within walking distance to Techwood</p>
-            </div>
-        </div>
-        <div class="list-item">
-            <div class="list-content">
-                <a href="http://hiltongardeninn3.hilton.com/en/hotels/georgia/hilton-garden-inn-atlanta-midtown-ATLAMGI/about/index.html" target="_blank"><h3>Hilton Garden Inn Atlanta Midtown</h3></a>
-                <p>97 10th Street NW<br>
-                Atlanta, GA  30309</p>
-                <p>Tel: +1 404-524-4006</p>
-            </div>
-        </div>
-        <div class="list-item">
-            <div class="list-content">
-                <a href="http://atlantamidtown.hyatt.com/en/hotel/home.html" target="_blank"><h3>Hyatt Atlanta Midtown</h3></a>
-                <p>125 10th Street NE<br>
-                Atlanta, GA  30309</p>
-                <p>Tel: +1 404-443-1234</p>
-            </div>
-        </div>
-    </div>
-    
-<div>&nbsp;</div>
-<div>&nbsp;</div>
-
-<a name="prework"></a>
-
-<h3 class="sub"><span>Prework</span></h3>
-    
 <div class="list">
-    <div class="list-item">
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/TLX-Welcome-12.12.17-FINAL.pdf" target="_blank">
         <div class="list-content">
-            <a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/TLX-Welcome-and-Prework_12-12-2017-FINAL.pdf" target="_blank"><h3>Welcome/Kickoff Prework</h3></a>
+            <h3>December 12 Kickoff</h3>
         </div>
-    </div>
-    <div class="list-item">
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Materials/TLX-Day1_Participant_Guide.pdf" target="_blank">
         <div class="list-content">
-            <a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/My-Leadership-Journey-TEMPLATE.pptx" target="_blank">
-            <h3>My Leadership Journey</h3>
-            <p>Due January 26</p>
-            </a>
+            <h3>Day 1 Participant Guide</h3>
         </div>
-    </div>
-    <div class="list-item">
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Materials/TLX-Day2_Participant_Guide.pdf" target="_blank">
         <div class="list-content">
-            <a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/TLX-PREWORK_1-8-18_FINAL.pdf" target="_blank"><h3>2/27 Program Prework</h3></a>
+            <h3>Day 2 Participant Guide</h3>
         </div>
-    </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Materials/TLX-Day3_Participant_Guide.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Day 3 Participant Guide</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Materials/TLX-Day4_Participant_Guide.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Day 4 Participant Guide</h3>
+        </div>
+    </a>
 </div>
-    
-<div>&nbsp;</div>
-<div>&nbsp;</div>
-    
-<a name="ppt"></a>
 
-<h3 class="sub"><span>PowerPoints &amp; Multimedia</span></h3>
-    
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<h3 class="sub"><span>Recordings</span></h3>
+
+<a name="recordings"></a>
+
 <div class="list">
-    <div class="list-item">
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/TLX-Kickoff_12-12-2017.mp4" target="_blank">
         <div class="list-content">
-            <a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/TLX-Kickoff_12-12-2017.mp4" target="_blank"><h3>December 12 Kickoff Recording</h3></a>
+            <h3>December 12 Kickoff</h3>
         </div>
-    </div>
-    <div class="list-item">
-        <div class="list-content">
-            <a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/TLX-Welcome-12.12.17-FINAL.pdf" target="_blank"><h3>December 12 Kickoff PowerPoint</h3></a>
-        </div>
-    </div>
+    </a>
 </div>
-    
+
 <div>&nbsp;</div>
 <div>&nbsp;</div>
+
+<a name="resources"></a>
+
+<h3 class="sub"><span>Other Resources</span></h3>
+
+<div class="list">
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Other-Resources/Ooyala-State-Of-The-Broadcast-Industry-2018.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Ooyala State of the Industry 2018</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Other-Resources/The-five-trademarks-of-agile-organizations.pdf" target="_blank">
+        <div class="list-content">
+            <h3>The Five Trademarks of Agile Organizations</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Other-Resources/How-to-create-an-agile-organization.pdf" target="_blank">
+        <div class="list-content">
+            <h3>How to Create an Agile Organization</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Other-Resources/15-lessons-of-innovation-2018.pdf" target="_blank">
+        <div class="list-content">
+            <h3>15 Lessons of Innovation</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Other-Resources/Candid_Conversations_Worksheet_-_TLX.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Candid Conversations Worksheet</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Other-Resources/Collaboration_FoR_Map_TLX_Cohort_6.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Collaboration Map</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Other-Resources/Organizational_Levers_Impacting_Organizational_Performance_and_Transformations_-REV_.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Organizational Levers Impacting Organizational Performance Whitepaper</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Other-Resources/LAP_Developmental_Guide_Version_--_Customized_with_Turner_IDP.pdf" target="_blank">
+        <div class="list-content">
+            <h3>LAP Development Guide</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Other-Resources/LAP_Interpretation_Worksheet_-_Portrait.pdf" target="_blank">
+        <div class="list-content">
+            <h3>LAP Interpretation Worksheet</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Other-Resources/Turner_IDP_-_FINAL_(1).pdf" target="_blank">
+        <div class="list-content">
+            <h3>Individual Development Plan</h3>
+        </div>
+    </a>
+</div>
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<a name="books"></a>
+
+<h3 class="sub"><span>Books</span></h3>
+
+<div id="books">
+
+<iframe type="text/html" width="212" height="362" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B071CTK28D&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_.0MWAb23ZG83N&hideBuy=true&hideShare=true"></iframe>
+
+<iframe type="text/html" width="212" height="362" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B01N7L44W2&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_q2MWAbX847XX6&hideShare=true"></iframe>
+
+
+<iframe type="text/html" width="212" height="362" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B00FUZQYBO&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_42MWAbG62D35P&hideShare=true"></iframe>
+
+<iframe type="text/html" width="212" height="362" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B01F1Z0QHA&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_T4MWAbXQ2T3H3&hideShare=true"></iframe>
+
+<iframe type="text/html" width="212" height="362" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B009JU6UPG&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_q5MWAbDG2AACX&hideShare=true"></iframe>
+
+<iframe type="text/html" width="212" height="362" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B0030DHPGQ&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_H5MWAbFWD53B6&hideShare=true"></iframe>
+
+<iframe type="text/html" width="212" height="362" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B004P1JDJO&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_Y5MWAb004WB0W&hideShare=true"></iframe>
+
+<iframe type="text/html" width="212" height="362" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B06ZY5STD6&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_k6MWAbYEHSRZP&hideShare=true"></iframe>
+
+<iframe type="text/html" width="212" height="362" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B005N1OUSE&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_Y6MWAb3D14Q77&hideShare=true"></iframe>
     
+</div>
+
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<a name="speakers"></a>
+
+<h3 class="sub"><span>Speaker Bios</span></h3>
+
+<div class="list">
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Speaker-Bios/Jennifer_Dorian_-_BRIGHT_SPOT_SPEAKER.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Jennifer Dorian</h3>
+            <p>EVP, Turner Portfolio 360 Brand Strategy &amp; GM, TCM &amp; FilmStruck</p>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Speaker-Bios/Scott_Doyne_-_BRIGHT_SPOT_SPEAKER.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Scott Doyne</h3>
+            <p>SVP, Product Strategy</p>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Speaker-Bios/Bob_Hesskamp_BRIGHT_SPOT_SPEAKER.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Bob Hesskamp</h3>
+            <p>Head of Turner Engineering</p>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Speaker-Bios/Stephano_Kim_-_Strategy_Formulation_in_a_VUCA_World_SPEAKER.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Stephano Kim</h3>
+            <p>EVP, Digital Strategy + Operations &amp; Chief Data Strategist</p>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Speaker-Bios/Chris_Linn_BIO_-_WELCOME_SPEAKER.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Chris Linn</h3>
+            <p>President, truTV</p>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Speaker-Bios/Tony_Maddox_-_Leadership_Agility_SPEAKER.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Tony Maddox</h3>
+            <p>EVP &amp; Managing Director, CNN International</p>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Speaker-Bios/Valerie_Meraz_-_BRIGHT_SPOT_SPEAKER.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Valerie Meraz</h3>
+            <p>SVP, Content Acquisitions &amp; Strategy, Entertainment</p>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Speaker-Bios/Christina_Miller_-_GLOBAL_MEDIA_LANDSCAPE_SPEAKER.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Christina Miller</h3>
+            <p>President, Cartoon Network, Adult Swim, Boomerang</p>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Speaker-Bios/Pablo_Zuccarino_-_HOW_I_LEVERAGED_MY_360.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Pablo Zuccarino</h3>
+            <p>SVP &amp; GM, Cartoon Network, Boomerang, Tooncast &mdash; LATAM</p>
+        </div>
+    </a>
+
+</div>
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
 <a name="roster"></a>
-    
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
 <h3 class="sub"><span>Meet the Cohort</span></h3>
-    
+
+<a class="nav-button" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/TLX-PARTICIPANT-ROSTER_COHORT-6.pdf" target="_blank">Download the roster</a>
+
+<br>
+<br>
+
 <div style="margin-left: auto; margin-right: auto;">
 
     <div class="team-cards">
@@ -528,7 +660,7 @@ function shrinkNav() {
                 <p>CNN Programming</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Nima+Ahmed.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Valeria+Beola.jpg); background-position: top !important;"></div>
             <div class="team-card-content">
@@ -546,7 +678,7 @@ function shrinkNav() {
                 <p>Legal</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Susan+Block.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Ryan-Bolick.jpg)"></div>
             <div class="team-card-content">
@@ -555,7 +687,7 @@ function shrinkNav() {
                 <p>Business Improvement</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Ryan+Bolick.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Dylan+Bucherle.jpg)"></div>
             <div class="team-card-content">
@@ -564,7 +696,7 @@ function shrinkNav() {
                 <p>Turner Studios</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Dylan+Boucherle.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Johanne+Broadfield.jpg); background-position: top !important;"></div>
             <div class="team-card-content">
@@ -573,7 +705,7 @@ function shrinkNav() {
                 <p>Turner EMEA</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Johanne+Broadfield2.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Morgan+Dewan.jpg)"></div>
             <div class="team-card-content">
@@ -582,7 +714,7 @@ function shrinkNav() {
                 <p>Turner Sports</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Morgan+DEWAN2.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Amy+Dewar.jpg)"></div>
             <div class="team-card-content">
@@ -591,7 +723,7 @@ function shrinkNav() {
                 <p>Turner EMEA</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Amy+Dewar.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Melissa+Diaz.jpg)"></div>
             <div class="team-card-content">
@@ -600,7 +732,7 @@ function shrinkNav() {
                 <p>Turner Content Distribution</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Melissa+Diaz.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Silvia-Elias.jpg)"></div>
             <div class="team-card-content">
@@ -609,7 +741,7 @@ function shrinkNav() {
                 <p>Turner Latin America</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Sylvia+Elias.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Barry-Gardner.jpg)"></div>
             <div class="team-card-content">
@@ -618,7 +750,7 @@ function shrinkNav() {
                 <p>TNT/tbs</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Barry+Gardner.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Amanda+Gentles.jpg)"></div>
             <div class="team-card-content">
@@ -627,7 +759,7 @@ function shrinkNav() {
                 <p>Turner Studios</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Amanda+Gentles.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Sherri-Glass.jpg)"></div>
             <div class="team-card-content">
@@ -636,7 +768,7 @@ function shrinkNav() {
                 <p>CNASB</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Sherri+Glass2.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Craig+Gordon.jpg)"></div>
             <div class="team-card-content">
@@ -645,7 +777,7 @@ function shrinkNav() {
                 <p>Cartoon Network</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Craig+Gordon.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Ryan+Gould.png); background-position: top !important;"></div>
             <div class="team-card-content">
@@ -654,7 +786,7 @@ function shrinkNav() {
                 <p>Ad Sales</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Ryan+Gould.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Matt+Harrigan.jpg)"></div>
             <div class="team-card-content">
@@ -663,7 +795,7 @@ function shrinkNav() {
                 <p>adult swim</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Matt+Harrigan2.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Twyla+Huang-DiSimone.jpg)"></div>
             <div class="team-card-content">
@@ -672,7 +804,7 @@ function shrinkNav() {
                 <p>Ad Sales</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Twyla+Huang-DiSimone.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Okema+Jackson.jpg); background-position: top !important;"></div>
             <div class="team-card-content">
@@ -681,7 +813,7 @@ function shrinkNav() {
                 <p>TNT/tbs</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Okema+Jackson2.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Mitra+Kalita.jpg)"></div>
             <div class="team-card-content">
@@ -690,7 +822,7 @@ function shrinkNav() {
                 <p>CNN Digital</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Mitra+Kalita.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Corinna-Keller.jpg)"></div>
             <div class="team-card-content">
@@ -699,7 +831,7 @@ function shrinkNav() {
                 <p>CNNIC</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Corinna+Keller.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Jules-Kovisars.jpg)"></div>
             <div class="team-card-content">
@@ -708,7 +840,7 @@ function shrinkNav() {
                 <p>truTV</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Jules+Kovisars.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>         
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Lisa-Li-1.jpg)"></div>
             <div class="team-card-content">
@@ -717,7 +849,7 @@ function shrinkNav() {
                 <p>Turner APAC</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Lisa+Li2.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Carlos+Linares.jpg)"></div>
             <div class="team-card-content">
@@ -726,7 +858,7 @@ function shrinkNav() {
                 <p>GTO</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Carlos+Linares.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/David-Liss.jpg)"></div>
             <div class="team-card-content">
@@ -735,7 +867,7 @@ function shrinkNav() {
                 <p>Bleacher Report</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+David+Liss.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>         
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Barry-Loudis.jpg)"></div>
             <div class="team-card-content">
@@ -744,7 +876,7 @@ function shrinkNav() {
                 <p>Turner Content Distribution</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Barry+Loudis.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>         
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Scott-McGee.jpg)"></div>
             <div class="team-card-content">
@@ -753,7 +885,7 @@ function shrinkNav() {
                 <p>TCM</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey-+Scott+McGee.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>         
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Chuck+Moore.jpg);"></div>
             <div class="team-card-content">
@@ -762,7 +894,7 @@ function shrinkNav() {
                 <p>TCM</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Chuck+Moore.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Ebony-Moore.jpg)"></div>
             <div class="team-card-content">
@@ -771,7 +903,7 @@ function shrinkNav() {
                 <p>Ad Sales/Revenue Operations</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Ebony+Moore.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>         
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Rus-Rice.jpg)"></div>
             <div class="team-card-content">
@@ -780,7 +912,7 @@ function shrinkNav() {
                 <p>iStream Planet</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+RUS+RICE.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>         
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Victor-Roldan.png)"></div>
             <div class="team-card-content">
@@ -789,7 +921,7 @@ function shrinkNav() {
                 <p>Legal</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Victor+Roldan2.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>         
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Brian+Ross.jpg)"></div>
             <div class="team-card-content">
@@ -798,7 +930,7 @@ function shrinkNav() {
                 <p>TNT/tbs</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Brian+Ross2.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>         
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Ellen-Russ.jpg)"></div>
             <div class="team-card-content">
@@ -807,7 +939,7 @@ function shrinkNav() {
                 <p>CNN Human Resources</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Ellen+Russ2.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>         
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Jordan-Shorthouse.jpg)"></div>
             <div class="team-card-content">
@@ -816,7 +948,7 @@ function shrinkNav() {
                 <p>Turner Sports</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Jordan+Shorthouse2.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>         
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Dawn-Simonton.jpg); background-position: top !important;"></div>
             <div class="team-card-content">
@@ -825,7 +957,7 @@ function shrinkNav() {
                 <p>GTO</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Dawn+SIMONTON.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>         
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Jermaine+Spradley.png)"></div>
             <div class="team-card-content">
@@ -834,7 +966,7 @@ function shrinkNav() {
                 <p>Bleacher Report</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Jermaine+Spradley.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>         
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Tiffany-Sudderth.JPG)"></div>
             <div class="team-card-content">
@@ -843,7 +975,7 @@ function shrinkNav() {
                 <p>GTO</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Tiffany+Sudderth.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>        
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/RAAS-TANEJA.jpg); background-position: top !important;"></div>
             <div class="team-card-content">
@@ -852,7 +984,7 @@ function shrinkNav() {
                 <p>Finance &mdash; APAC</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+RAAS+TANEJA2.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>         
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Jason-Taylor.jpg)"></div>
             <div class="team-card-content">
@@ -861,7 +993,7 @@ function shrinkNav() {
                 <p>Turner Sports</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Jason+Taylor.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>         
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Inga-Thordar.jpg)"></div>
             <div class="team-card-content">
@@ -870,7 +1002,7 @@ function shrinkNav() {
                 <p>CNN Digital</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Inga+Thordar2.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div>         
+        </div>
         <div class="team-card">
             <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Lashana-Williams1.jpg)"></div>
             <div class="team-card-content">
@@ -879,7 +1011,7 @@ function shrinkNav() {
                 <p>Finance &amp; Accounting</p>
                 <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Lashana+Williams2.pdf" target="_blank">My Leadership Journey</a></p>
             </div>
-        </div> 
+        </div>
     </div>
 
 </div>
