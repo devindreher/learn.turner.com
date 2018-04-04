@@ -1,0 +1,567 @@
+<style>
+    h2 {
+        font-family: TurnerBold;
+        font-size: 3rem;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+    h3.sub {
+        position: relative;
+        text-align: left;
+        font-family: TurnerBold;
+        font-size: 2rem;
+    }
+
+    h3.sub span {
+        background: #fff;
+        padding-left: 0;
+        padding-right: 15px;
+        position: relative;
+        z-index: 1;
+    }
+
+    h3.sub:before {
+        background: #696969;
+        content: "";
+        display: block;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        left: 0;
+    }
+
+    .byline {
+        font-weight: bold;
+        font-size: .9rem !important;
+        margin: 0 0 20px 0;
+    }
+
+    h3.q {
+        font-size: 1.5rem;
+        font-family: TurnerBold;
+        margin-bottom: 20px;
+    }
+
+    hr.panelist {
+        border-top: 1px dotted #8c8b8b;
+        border-bottom: 1px dotted #fff;
+    }
+
+    /*ANSWER STYLING*/
+
+    .answer-row {
+        margin: 0;
+    }
+
+    .answer-row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .answer-name {
+        float: left;
+        width: 100%;
+        padding: 10px 10px 10px 0;
+    }
+
+    .answer-name p {
+        color: #000;
+    }
+
+    .answer {
+        float: left;
+        width: 100%;
+        padding: 10px;
+    }
+
+
+    /*PANELIST STYLING*/
+
+    .panelist-row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .panelist-column-left {
+        float: left;
+        width: auto;
+        padding: 10px;
+        background-color: dimgrey;
+    }
+
+    .panelist-column-right h3 {
+        font-family: TurnerBold;
+        font-size: 1.5rem;
+    }
+
+    .panelist-column-right p {
+        font-size: 1.2rem;
+    }
+
+    .panelist-row-left img {
+        text-align: center;
+        display: block;
+        margin: auto;
+        max-width: 100%;
+    }
+
+    .panelist-column-right {
+        float: left;
+        width: auto;
+        padding-left: 20px;
+    }
+
+    /*NAVIGATION*/
+
+    .nav-button {
+        padding: 2px 5px;
+        border: 1px solid #0052e7;
+        border-radius: 3px;
+
+        text-decoration: none;
+        font-size: .975rem !important;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+    }
+
+    .nav-button:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .learnNow a {
+        font-size: 15px;
+        font-family: TurnerBold;
+        color: #000;
+    }
+
+    .learnNow a:hover {
+        color: #0052e7;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15px !important;
+        font-family: TurnerBold;
+    }
+
+    .topnav a:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .topnav .icon {
+        display: none;
+    }
+
+    /*MEDIA QUERIES*/
+
+    @media screen and (max-width: 1152px) {
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+
+    @media all and (min-width: 640px) {
+        .answer {
+            width: 75%;
+        }
+        .answer-name {
+            width: 25%;
+        }
+
+    }
+
+    @media all and (max-width: 600px) {
+        .panelist-column-left {
+            width: 100%;
+        }
+        .panelist-column-right {
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+
+    }
+
+</style>
+
+<!--TOP NAVIGATION-->
+
+<span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
+<div class="topnav" id="myTopnav">
+    <a href="http://learn.turner.com">Home</a>
+    <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+    <a href="/learnnow/org-development">Org. Development</a>
+    <a href="/learnnow/performance">Performance</a>
+    <a href="/learnnow/subscribe">Subscribe</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+</div>
+
+<script>
+    function shrinkNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+</script>
+
+<h2>Career Advice</h2>
+<p class="byline">First Edition</p>
+
+<br>
+<a href="#ask-us" class="nav-button">Ask us a question for a future edition!</a>
+<br>
+
+<br>
+<br>
+
+<h3 class="sub"><span>Panelists</span></h3>
+
+<div class="panelist-row">
+    <div class="panelist-column-left">
+        <center>
+            <img src="https://s3.amazonaws.com/tpd-files/images/Christine-Gilberto_64x64.png">
+        </center>
+    </div>
+    <div class="panelist-column-right">
+        <h3>Christine Gilberto</h3>
+        <p>Sr. Consultant, Talent Management</p>
+    </div>
+</div>
+
+<hr class="panelist">
+
+<div class="panelist-row">
+    <div class="panelist-column-left">
+        <center>
+            <img src="https://s3.amazonaws.com/tpd-files/images/Darren-McAdams_64x64.png">
+        </center>
+    </div>
+    <div class="panelist-column-right">
+        <h3>Darren McAdams</h3>
+        <p>Director, Organizational Development</p>
+    </div>
+</div>
+
+<hr class="panelist">
+
+<div class="panelist-row">
+    <div class="panelist-column-left">
+        <center>
+            <img src="https://s3.amazonaws.com/tpd-files/images/Kate-Mcleod_64x64.png">
+        </center>
+    </div>
+    <div class="panelist-column-right">
+        <h3>Kate Mcleod</h3>
+        <p>Talent Acquisitions Manager &mdash; EMEA</p>
+    </div>
+</div>
+
+<hr class="panelist">
+
+<div class="panelist-row">
+    <div class="panelist-column-left">
+        <center>
+            <img src="https://s3.amazonaws.com/tpd-files/images/petrie_64x64.jpg">
+        </center>
+    </div>
+    <div class="panelist-column-right">
+        <h3>Lilian Petrie</h3>
+        <p>Talent Acquisitions Manager &mdash; CNN</p>
+    </div>
+</div>
+
+<hr class="panelist">
+
+<div class="panelist-row">
+    <div class="panelist-column-left">
+        <center>
+            <img src="https://s3.amazonaws.com/tpd-files/images/Jennifer-Williams_64x64.png">
+        </center>
+    </div>
+    <div class="panelist-column-right">
+        <h3>Jennifer Williams</h3>
+        <p>Sr. Manager, Diversity &amp; Inclusion</p>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<h3 class="q">In order to grow professionally at Turner, should I focus on networking?</h3>
+
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Christine Gilberto:</b></p>
+    </div>
+    <div class="answer">
+        <p>Everyone should focus on networking both internally and externally &mdash; you never know where your next growth opportunity will come from and getting out there and meeting people is the best way to raise your odds. When networking, be sure to tell people what your goals are &mdash; near and long term. Different contacts can help you in different ways but only if they understand what you're looking for.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Darren McAdams:</b></p>
+    </div>
+    <div class="answer">
+        <p>Absolutely. Networking is a critical step in expressing to others who you are and what you are capable of accomplishing. It is a great way to tell your own brand narrative. But, I do think you need to see networking as more than just collecting a set of names and connections to leverage for some future job. Most networking relationships end up in a realization of shared interests and passions. This nearly always leads you to learning new things that directly impact you, your goals, and hopefully your career. One thing I love about this question, too, is that it's worded about growing professionally and not just growing your career. Professionalism is made of many ingredients, skills, capabilities, style, acumen, and so on. Networking with others gives you opportunities to learn "professionalism" from others and to be able to practice with them as well &mdash; safely.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Kate Mcleod:</b></p>
+    </div>
+    <div class="answer">
+        <p>Absolutely. Networking is a great way to get to know different areas of the business and key hiring managers, however, it's not the only way to grow professionally. Take advantage of the tools available to you such as webinars, training events, and Make You Matter Week. I'd also recommend regular conversations with your manager so they are aware of your desire to progress professionally and can support you with this.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Lilian Petrie:</b></p>
+    </div>
+    <div class="answer">
+        <p>Yes &mdash; this is critical to your professional development. HR and Talent Acquisition are here to help, but ultimately each of us has to own our own career path. Networking with employees in a department or division you are interested in joining, and joining a Business Resource Group are also both great ways to get to know others</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Jennifer Williams:</b></p>
+    </div>
+    <div class="answer">
+        <p>I think networking is an important skill to develop regardless of the organization. Given Turner's relational culture, it's a skill that will serve you well within this company.</p>
+
+        <p>If you don't like networking, I would recommend this quick read: <i>Networking for People Who Hate Networking: A Field Guide for Introverts, the Overwhelmed, and the Unconnected.</i> As an introvert who was previously challenged by professional networking, I swear by it. 😊</p>
+        
+        <p>Here's hoping you find a few tips that work for you, too!</p>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<h3 class="q">Could speaking in a foreign accent limit my possibilities to get the job I wish for vs. a native speaking candidate?</h3>
+
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Darren McAdams:</b></p>
+    </div>
+    <div class="answer">
+        <p>I certainly hope not. Turner is built on the value that we are an inclusive culture. We hire on potential and capability. Your experience, skills, and potential are the key factors in getting the job you wish.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Kate Mcleod:</b></p>
+    </div>
+    <div class="answer">
+        <p>No, speaking in a foreign accent will not limit your possibilities for the role, however, of course your verbal and written communication for the role you are applying to does need to meet the minimum standard for the role.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Lilian Petrie:</b></p>
+    </div>
+    <div class="answer">
+        <p>Having an accent isn't necessarily a measure of an individual's level of communicating and understanding another language. Focus on what you bring to the job and show them why you are a great candidate.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Jennifer Williams:</b></p>
+    </div>
+    <div class="answer">
+        <p>I certainly hope not. If you find that it is happening, you can always discuss it with your manager or HR Business Partner.</p>
+        <p>If you have a fear of public speaking because of your accent, which is an entirely different issue but sometimes feels related, I would recommend one of the local Toastmasters Chapters at Turner to help build your confidence and presentation skills. Then get out there and show 'em what amazing talent comes from your part of the world!</p>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<h3 class="q">What advice can be given if one would like to transfer with the company to a different country but keep the same benefits abroad?</h3>
+
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Kate Mcleod:</b></p>
+    </div>
+    <div class="answer">
+        <p>Benefits and salaries vary depending on the country, so you will not necessarily be able to keep the same benefits abroad. The recruiter for the role or your HR Business Partner can answer any questions you have about benefits.</p>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<h3 class="q">I don't want to skip the "professional ladder," however, I would like to aim it at a different direction. For example, editorial to technical. How should I go about doing that?</h3>
+
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Christine Gilberto:</b></p>
+    </div>
+    <div class="answer">
+        <p>Networking in that functional area is a way to get started. But be realistic about what it will take to change direction in the way of re-training or education. Learn all you can about what it takes to be successful in that function and commit to getting yourself there.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Darren McAdams:</b></p>
+    </div>
+    <div class="answer">
+        <p>These moves are often referred to as lateral moves and, quite frankly, could be a great step in building your skill set to manage teams and business units. It gives you a broader perspective of how a business operates and connects you more closely to the strategic priorities of the organization. The first thing, in my opinion, is to identify the adjacent skills that work in both tracks. Then, get a strong understanding of the new skills you require for that role and assess your gaps against those skills. Use that in building a new personal brand narrative with an action plan for potential hiring managers of how you have that skill or will grow that skill. Here again is where a network will be a valuable tool in making that switch.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Kate Mcleod:</b></p>
+    </div>
+    <div class="answer">
+        <p>Have a conversation with your line manager who can advise you of practical steps to take in order to gain more experience in a different area.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Lilian Petrie:</b></p>
+    </div>
+    <div class="answer">
+        <p>Network with the hiring managers and business line leadership. Sharpen your technical skills by taking classes. Ask if you could shadow an employee who is currently in the role you are interested moving into. Craft your resume for the job you want, not the one you have. In other words, highlight the skills and responsibilities of your current role that might be transferable to the role you want.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Jennifer Williams:</b></p>
+    </div>
+    <div class="answer">
+        <p>These days the buzzword is career "lattice vs. ladder" and it is exactly what you're describing. A <i>career lattice</i> is a diagonal framework that braids lateral experiences, adjacent skill acquisition, and peer networking to move employees to any of a variety of positions for which they have become qualified.</p>
+        <p>I would recommend the <i>GAPS Framework</i> as a starting place. The GAPS Framework helps you identify <i>what</i> you need to learn and what has the greatest value for your professional development:</p>
+        <ul>
+            <li><b>Goals &amp; values</b> &mdash; What matters to you?</li>
+            <li><b>Abilities</b> &mdash; What can you do? What do you love to do?</li>
+            <li><b>Perceptions</b> &mdash; How do others see you?</li>
+            <li><b>Success Factors</b> &mdash; What do others expect from you?</li>
+        </ul>
+        <p>If you have questions on the GAPS Framework, <a href="mailto:learn@turner.com">let us know!</a></p>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<h3 class="q">I always see internal job postings which look like fantastic career moves, however, they are located in other countries in which Turner operates. This isn't a problem as I would personally be happy to relocate, however, I never apply as I generally have the feeling that a non-local wouldn't be considered for the role due to the relocation issue.<br><br>Does Turner offer any kind of assistance and advice for an employee wanting to make an internal international career move?</h3>
+
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Kate Mcleod:</b></p>
+    </div>
+    <div class="answer">
+        <p>This varies depending on the country you are applying to, however, generally speaking if you are applying to work in a different country, you will need to obtain the right to work in that particular country. If you are the selected candidate, Turner will need to sponsor you and will support you through this process. There are some restrictions, however. For example, in the UK, companies can only sponsor candidates applying for roles above a minimum salary level as we are legally obligated to prioritize local talent. If you have any questions about particular countries, please reach out to your HR Business Partner who can provide you with additional information or put you in contact with their counterpart in other countries.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Lilian Petrie:</b></p>
+    </div>
+    <div class="answer">
+        <p>Turner offers various options for relocation depending on the role and the difficulty of finding a qualified candidate locally. Turner relocates employees all the time. Never let that stop you from applying to a new opportunity!</p>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<h3 class="q">We work on so many different projects throughout the year. By the time December rolls around, it can be daunting to remember what we've accomplished over the past 12 months.<br><br>What are some strategies for organizing one's work and accomplishments so we're ready to highlight them in our year-end reviews?</h3>
+
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Christine Gilberto:</b></p>
+    </div>
+    <div class="answer">
+        <p>My role at Turner includes overseeing our approach to performance management company-wide, so I love this question! And I agree &mdash; it can be daunting to try to pull together a year-end summary that is a balanced representation of your accomplishments over the course of a year. I'm constantly evaluating my work objectives for relevancy and my manager and I acknowledge and make space for other work that comes my way for which we had not planned. Segmenting your work into large buckets and finding a system of keeping track of your work in those buckets is really helpful. (I use Evernote to help me with this.) </p>
+        <p>When it comes time to pull together that summary, I've got two pieces of advice: stick to what had the most impact and make it fun! If you're meeting regularly with your manager (and we hope you are because that's a cornerstone of performance management at Turner) she or he already has a good idea of your accomplishments. Focus that year-end review on what improved for the business as a result of your hard work. That will show your value more than an exhaustive list of little things that show little connection to the end result. </p>
+        <p>One of the things I'm most proud of accomplishing in my current role is providing employees with the option to do a "creative" self-recap at the end of the year. Showcasing your accomplishments in a format that also showcases your individuality is a sure-fire way to stand out in your manager's mind. And don't forget that we've got lots of great resources, advice about managing your performance, and furthering your career at Turner here on learn.turner.com.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Darren McAdams:</b></p>
+    </div>
+    <div class="answer">
+        <p>One of your best memory joggers is your Outlook calendar. Take time to review what meetings you went to, who you went with, agenda titles or topics. That will give you a great overview of your work over the last 12 months. You'd be surprised how much you can get from that alone.</p>
+        <p>Another technique, and it does require a little bit of discipline, is to track using a simple spreadsheet. Name of project, description of your role in it, time started, time finished, etc.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Kate Mcleod:</b></p>
+    </div>
+    <div class="answer">
+        <p>I'd recommend keeping a document throughout the year to track any highlights or career accomplishments so you can discuss these with your manager during end of year conversations.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Lilian Petrie:</b></p>
+    </div>
+    <div class="answer">
+        <p>I would create 4 to 5 goals that I want to achieve for the year and create KPIs (key performance indicators). How do I plan on achieving each of these goals? As you achieve each individual KPI, make a note. You can check in on yourself monthly, quarterly, etc. to make sure you are on track. By the end of the year you will have a clear picture of your achievements.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Jennifer Williams:</b></p>
+    </div>
+    <div class="answer">
+        <p>I hear you on the number of projects, my friend! Whew!</p>
+        <p>The easiest way I've found to keep track of everything is to leverage technology. Utilize Outlook's color coding system to assign colors to significant meetings/activities/projects on your calendar. This will provide you a visual map at the end of the year of where you spent the most time.</p>
+        <p>I also recommend an electronic "atta girl or atta boy" folder by project for you to dump all the great feedback emails you receive throughout the course of the year from clients, partners, and key stakeholders.</p>
+        <p>You combine those two things together and you have a ready-made performance review package. Here's to a great performance review!</p>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<a name="ask-us"></a>
+
+<p><b>Do you have a question you'd like us to answer in a future edition? Use the form below to send it to us. While you'll remain anonymous, your question won't, so exercise your discretion on writing style, etc.</b></p>
