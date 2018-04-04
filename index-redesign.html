@@ -1,4 +1,16 @@
 <style>
+    @keyframes pulse {
+        0% {
+            box-shadow: 1px 1px 3px #0052e7, inset 1px 1px 3px #0052e7;
+        }
+        50% {
+            box-shadow: 1px 1px 8px #0052e7, inset 1px 1px 8px #0052e7;
+        }
+        100% {
+            box-shadow: 1px 1px 3px #0052e7, inset 1px 1px 3px #0052e7;
+        }
+    }
+
     h4 {
         font-family: TurnerBold;
         font-size: 1.5rem;
@@ -14,45 +26,45 @@
         box-shadow: 3px 3px 5px #888;
         transition: .3s ease;
     }
-    
+
     .video-container {
         width: 100%;
         border: 1px solid grey;
         box-shadow: 1px 1px 3px #888;
     }
-    
+
     .video-container:hover {
         box-shadow: 3px 3px 5px #888;
         transition: .3s ease;
     }
-    
+
     video {
         width: 100%;
         height: auto;
     }
-    
+
     .video-fallback {
         display: none;
         width: 100%;
     }
-    
+
     .video-fallback img {
         width: auto;
         height: auto;
     }
-    
+
     .hero {
         width: 100%;
         padding: 0;
         margin: 0;
     }
-    
+
     .hero img {
         width: 100%;
         height: auto;
     }
 
-/*FLEX BOXES*/
+    /*FLEX BOXES*/
 
     .learn-cards {
         display: flex;
@@ -65,6 +77,17 @@
         margin: 0 10px 10px 0;
         border: 1px solid grey;
         box-shadow: 1px 1px 3px #888;
+    }
+
+    .learn-card-pulse {
+        flex: 0 1 100%;
+        margin: 0 10px 10px 0;
+        box-shadow: 1px 1px 3px #0052e7, inset 1 1 3px #0052e7;
+        animation: pulse 2s linear 1s infinite;
+    }
+
+    .learn-card-pulse:hover {
+        animation-play-state: paused;
     }
 
     .learn-card:hover {
@@ -94,6 +117,24 @@
         margin: 0;
         padding: 0;
         background-color: #000;
+    }
+
+    .learn-card-header h3 {
+        color: #fff;
+        font-family: TurnerBold;
+        font-size: 3rem;
+        line-height: 120%;
+        padding: 0 20px 5px 20px;
+        margin: 0;
+    }
+
+    .learn-card-header h5 {
+        font-family: TurnerBold;
+        font-size: .875rem;
+        color: #fff;
+        margin: 0;
+        padding: 10px 0 5px 20px;
+        line-height: 120%;
     }
 
     .learn-button {
@@ -242,6 +283,9 @@
         .learn-card {
             flex: 0 1 45%;
         }
+        .learn-card-pulse {
+            flex: 0 1 45%;
+        }
         .learn-card-content p {
             font-size: .9em;
         }
@@ -249,16 +293,15 @@
             font-size: .9em;
         }
     }
-    
-    @media only screen and
-    (min-device-width: 320px)
-    and (max-device-width: 736px)
-    and (-webkit-min-device-pixel-ratio: 2)
-    and (-webkit-min-device-pixel-ratio: 3)
-    and (-webkit-min-device-pixel-ratio: 4)
-    {
-        .video-container, video {display: none;}
-        .video-fallback {display: block;}
+
+    @media only screen and (min-device-width: 320px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 2) and (-webkit-min-device-pixel-ratio: 3) and (-webkit-min-device-pixel-ratio: 4) {
+        .video-container,
+        video {
+            display: none;
+        }
+        .video-fallback {
+            display: block;
+        }
     }
 
 </style>
@@ -309,8 +352,8 @@
 <div>&nbsp;</div>
 
 <div class="hero">
-    <a href="/learnnow/story---Q2-2018-LN">
-        <img src="https://s3.amazonaws.com/tpd-files/images/calendar_web.gif">
+    <a href="/learnnow/story---career-advice_1">
+        <img src="https://s3.amazonaws.com/tpd-files/images/AMA-Answers_16-9.png">
     </a>
 </div>
 
@@ -319,6 +362,22 @@
 <div style="margin: 0 auto;">
 
     <div class="learn-cards">
+        <a class="learn-card" href="/learnnow/story---Q2-2018-LN">
+            <div class="learn-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/images/calendar_web.gif)"></div>
+            <div class="learn-card-content">
+                <h3>Q2 Leadership Development Opportunities</h3>
+                <p>If you haven't had a chance to beef-up your leadership skills in Q1, check out what's in store this quarter.</p>
+            </div>
+        </a>
+        <a class="learn-card" href="/learnnow/quizzes-leadership-style">
+            <div class="learn-card-header">
+                <h5>Quiz</h5>
+                <h3>What Kind of Leader Are You?</h3>
+            </div>
+            <div class="learn-card-content">
+                <h3>Take our latest quiz to find out!</h3>
+            </div>
+        </a>
         <a class="learn-card" href="http://now.turner.com/change">
             <div class="learn-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/images/change-card-img.jpg)"></div>
             <div class="learn-card-content">
@@ -327,9 +386,19 @@
             </div>
         </a>
         <a class="learn-card" href="/learnnow/quizzes-grit">
-            <div class="learn-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/images/quiz-card-img.png)"></div>
+            <div class="learn-card-header">
+                <h5>Quiz</h5>
+                <h3>Find Out How Gritty You Are</h3>
+            </div>
             <div class="learn-card-content">
-                <h3>The Dirty Dozen:<br>Answer These 12 Questions to Find Out How Gritty You Are</h3>
+                <h3>Answer these 12 questions to find out!</h3>
+            </div>
+        </a>
+        <a href="https://now.turner.com/story/register-now-be-part-nextgens-reverse-mentoring-program" class="learn-card" target="_blank">
+            <div class="learn-card-header" style="background-image: url(https://now-prd.cdn.turner.com/styles/img_800/s3/images/2018-03/1920x1080_ReverseMentoring_1Q2018_Thumb.png)"></div>
+            <div class="learn-card-content">
+                <h3>Register now to be a part of NextGen's reverse mentoring program.</h3>
+                <p>After a successful pilot last year, NextGen's reverse mentoring program is back in 2018 as a full-fledged program.</p>
             </div>
         </a>
     </div>
