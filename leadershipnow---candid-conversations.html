@@ -1,54 +1,53 @@
 <style>
-    
-/*Layout and Formatting*/
-    
+    /*Layout and Formatting*/
+
     h2 {
         font-family: TurnerBold;
         font-size: 3rem;
         margin-top: 30px;
     }
-    
+
     h3 {
         font-family: TurnerBold;
         font-size: 1.5rem;
     }
-    
+
     .info-column {
         background: #f1f1f1;
     }
-    
+
     .info-column:after {
         content: "";
         display: table;
         clear: both;
     }
-    
+
     .info-column-content {
         padding: 10px;
         float: left;
         width: 50%;
     }
-    
+
     .info-column-content p {
         color: #000;
         font-size: .975rem;
     }
-    
-/*TOOLS AND RESOURCES GRID*/
-    
+
+    /*TOOLS AND RESOURCES GRID*/
+
     .resource-cards {
         width: 90%;
         max-width: 1240px;
         margin: 0;
-        
+
         display: grid;
-        
+
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-gap: 20px;
-        
+
     }
-    
+
     .card {
         background: white;
         text-decoration: none;
@@ -61,25 +60,25 @@
         top: 0;
         transition: all .1s ease-in;
     }
-    
+
     .card:hover {
         top: -2px;
-        box-shadow: 0 4px 5px rgba(0,0,0,0.2)
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2)
     }
-    
+
     .card .thumbnail {
         margin: 5% 1% 0 5%;
     }
-    
+
     .card article {
         padding: 20px;
         flex: 1;
-        
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-    
+
     .card h1 {
         font-size: 20px;
         font-family: TurnerBold, Arial, Helvetica, sans-serif;
@@ -87,13 +86,13 @@
         color: #333;
         line-height: 120%;
     }
-    
+
     .card p {
         line-height: 1.4;
         flex: 1;
         font-size: 1rem;
     }
-    
+
     .card span {
         font-size: 12px;
         font-weight: bold;
@@ -102,10 +101,11 @@
         letter-spacing: .05em;
         margin: 2em 0 0 0;
     }
-    
-/*Buttons*/
-    
-    a.l-btn, .l-btn {
+
+    /*Buttons*/
+
+    a.l-btn,
+    .l-btn {
         display: inline-block;
         outline: none;
         text-align: center;
@@ -116,7 +116,7 @@
         box-sizing: border-box;
         background: #fff;
     }
-    
+
     .l-btn-large {
         font-family: TurnerBold;
         font-size: 1.0625rem;
@@ -124,119 +124,190 @@
         border-radius: 3px;
         padding: .05625em 1.5em;
     }
-    
+
     .l-btn-blue {
         border: 1px solid #0052e7;
         color: #0052e7;
     }
-    
+
     .l-btn-blue:hover {
         background: #0052e7;
         color: #fff;
         border-color: #0052e7;
     }
-    
-/*Navigation*/
-    
+
+    /*Navigation*/
+
     .learnNow a {
         font-size: 15px;
         font-family: TurnerBold;
         color: #000;
     }
-    
+
     .learnNow a:hover {
         color: #0052e7;
     }
 
     .topnav {
-      overflow: hidden;
-      background-color: #333;
+        overflow: hidden;
+        background-color: #333;
     }
 
     .topnav a {
-      float: left;
-      display: block;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 15px !important;
-      font-family: TurnerBold;
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15px !important;
+        font-family: TurnerBold;
     }
 
     .topnav a:hover {
-      background-color: #0052e7;
-      color: #fff;
+        background-color: #0052e7;
+        color: #fff;
     }
 
     .topnav .icon {
-      display: none;
+        display: none;
     }
-    
-/*BREADCRUMBS*/
-    
-    #breadcrumb { float: left; display: block; }
-    #breadcrumb ul { list-style: none; }
 
-    .crumbs { display: block; margin-left: -27px;}
-    .crumbs li {  display: inline; }
-    .crumbs li.first { padding-left: 8px; }
-    .crumbs li a, .crumbs li a:link, .crumbs li a:visited { color: #666; display: block; float: left; font-size: 12px; margin-left: -13px; padding: 3px 17px 11px 20px; position: relative; text-decoration: none; }
+    /*BREADCRUMBS*/
 
-    .crumbs li a { background-image: url('https://s3.amazonaws.com/tpd-files/images/bg-crumbs.png');  background-repeat: no-repeat; background-position: 100% 0; position: relative; }
-    .crumbs li a:hover { color: #333; background-position: 100% -48px; cursor: pointer; }
-    .crumbs li a:active { color: #333; background-position: 100% -96px; }
-    .crumbs li.first a span { height: 29px; width: 3px; border-left: 1px solid #d9d9d9; position: absolute; top: 0px; left: 0px; }
-    
-    .space { display: block; height: 5px; clear: both; }
-    
+    #breadcrumb {
+        float: left;
+        display: block;
+    }
+
+    #breadcrumb ul {
+        list-style: none;
+    }
+
+    .crumbs {
+        display: block;
+        margin-left: -27px;
+    }
+
+    .crumbs li {
+        display: inline;
+    }
+
+    .crumbs li.first {
+        padding-left: 8px;
+    }
+
+    .crumbs li a,
+    .crumbs li a:link,
+    .crumbs li a:visited {
+        color: #666;
+        display: block;
+        float: left;
+        font-size: 12px;
+        margin-left: -13px;
+        padding: 3px 17px 11px 20px;
+        position: relative;
+        text-decoration: none;
+    }
+
+    .crumbs li a {
+        background-image: url('https://s3.amazonaws.com/tpd-files/images/bg-crumbs.png');
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+        position: relative;
+    }
+
+    .crumbs li a:hover {
+        color: #333;
+        background-position: 100% -48px;
+        cursor: pointer;
+    }
+
+    .crumbs li a:active {
+        color: #333;
+        background-position: 100% -96px;
+    }
+
+    .crumbs li.first a span {
+        height: 29px;
+        width: 3px;
+        border-left: 1px solid #d9d9d9;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    .space {
+        display: block;
+        height: 5px;
+        clear: both;
+    }
+
     ul.crumbs li:before {
         background-image: none !important;
     }
-    
-/*MEDIA QUERIES*/
-    
+
+    /*MEDIA QUERIES*/
+
     @media screen and (max-width: 1152px) {
-        .topnav a:not(:first-child) {display: none;}
-        .topnav a.icon {float: right; display: block;}
-        .topnav.responsive {position: relative;}
-        .topnav.responsive .icon {position: absolute; right: 0; top: 0;}
-        .topnav.responsive a {float: none; display: block; text-align: left;}
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
     }
-    
+
     @media screen and (max-width: 600px) {
-        .info-column-content {width: 100%;}
+        .info-column-content {
+            width: 100%;
+        }
     }
-    
+
     @media only screen and (min-width: 850px) {
         .resource-cards {
             grid-template-columns: 1fr 1fr 1fr;
         }
     }
-    
+
 </style>
 
 <!--NAVIGATION-->
 
 <span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
 <div class="topnav" id="myTopnav">
-  <a href="http://learn.turner.com">Home</a>    
-  <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
-  <a href="/learnnow/org-development">Org. Development</a>
-  <a href="/learnnow/performance">Performance</a>
-  <a href="/learnnow/subscribe">Subscribe</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+    <a href="http://learn.turner.com">Home</a>
+    <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+    <a href="/learnnow/org-development">Org. Development</a>
+    <a href="/learnnow/performance">Performance</a>
+    <a href="/learnnow/subscribe">Subscribe</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
 </div>
 
 <script>
-function shrinkNav() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
+    function shrinkNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
     }
-}
+
 </script>
 
 <!--BREADCRUMBS-->
@@ -258,16 +329,13 @@ function shrinkNav() {
     <div class="info-column-content">
         <p><b>Use When:</b></p>
         <p>
-            You're unsure how to give tough feedback.<br>
-            You're building a culture of candor.<br>
-            You want to have regular check-ins with your team.
+            You're unsure how to give tough feedback.<br> You're building a culture of candor.<br> You want to have regular check-ins with your team.
         </p>
     </div>
     <div class="info-column-content">
         <p><b>Logistics:</b></p>
         <p>
-            &mdash; 2 Hours<br>
-            &mdash; Interactive Webinar
+            &mdash; 2 Hours<br> &mdash; Interactive Webinar
         </p>
     </div>
 </div>
@@ -317,7 +385,7 @@ function shrinkNav() {
                 <span>John Baldoni</span>
             </article>
         </a>
-    </div>    
+    </div>
 </div>
 
 <br>
@@ -338,7 +406,7 @@ function shrinkNav() {
                 <span>Gregory Ciotti</span>
             </article>
         </a>
-    </div>     
+    </div>
     <div class="resource">
         <a href="http://guides.wsj.com/management/building-a-workplace-culture/how-to-create-a-culture-of-candor/" class="card" target="_blank">
             <div class="thumbnail">
@@ -351,7 +419,7 @@ function shrinkNav() {
                 <span>The Wall Street Journal</span>
             </article>
         </a>
-    </div>     
+    </div>
     <div class="resource">
         <a href="https://www.radicalcandor.com/blog/tag/advice/" class="card" target="_blank">
             <div class="thumbnail">
@@ -364,19 +432,35 @@ function shrinkNav() {
                 <span>Radical Candor</span>
             </article>
         </a>
-    </div>     
+    </div>
     <div class="resource">
-        <a href="https://usecandor.com/" class="card" target="_blank">
+        <a href="https://www.amazon.com/Radical-Candor-Kick-Ass-Without-Humanity/dp/1250103509/ref=sr_1_3?ie=UTF8&qid=1523297087&sr=8-3&keywords=radical+candor" target="_blank" class="card">
             <div class="thumbnail">
-                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
             </div>
             <article>
-                <h1>Candor: A Better Way to Brainstorm</h1>
+                <h1>Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity</h1>
                 <br>
-                <p>In this case, Candor is a web tool that helps groups generate ideas and make difficult decisions.</p>
+                <p>
+                    Radical Candor is a simple idea: to be a good boss, you have to care personally at the same time you challenge directly. <i>Radical Candor</i> offers a guide to those bewildered or exhausted by management, written for bosses and those who manage bosses.
+                </p>
+                <span>Kim Scott</span>
             </article>
         </a>
-    </div>    
+    </div>
+    <div class="resource">
+        <a href="https://www.amazon.com/dp/0062664573/ref=cm_sw_su_dp?tag=authorhcweb-20" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            </div>
+            <article>
+                <h1>Wait, What?</h1>
+                <br>
+                <p>Based on the wildly popular commencement address, the art of asking (and answering) good questions by the Dean of Harvard University's Graduate School of Education.</p>
+                <span>James E. Ryan</span>
+            </article>
+        </a>
+    </div>
 </div>
 
 <br>
@@ -418,7 +502,7 @@ function shrinkNav() {
                 <span>Carol Kinsey Goman, PhD</span>
             </article>
         </a>
-    </div>    
+    </div>
     <div class="resource">
         <a href="https://www.mindtools.com/pages/article/Body_Language.htm" class="card" target="_blank">
             <div class="thumbnail">
@@ -429,6 +513,63 @@ function shrinkNav() {
                 <br>
                 <p>Have you ever been in the situation when you really didn't believe what someone was saying?</p>
                 <span>Mind Tools</span>
+            </article>
+        </a>
+    </div>
+    <div class="resource">
+        <a href="http://www.businessballs.com/body-language.htm" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+            </div>
+            <article>
+                <h1>Body Language</h1>
+                <br>
+                <p>How to read body language signs and gestures.</p>
+                <span>Businessballs</span>
+            </article>
+        </a>
+    </div>
+</div>
+
+<br>
+<br>
+
+<p><b>Online Tools</b></p>
+
+<div class="resource-cards">
+    <div class="resource">
+        <a href="https://usecandor.com/" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            </div>
+            <article>
+                <h1>Candor: A Better Way to Brainstorm</h1>
+                <br>
+                <p>In this case, Candor is a web tool that helps groups generate ideas and make difficult decisions.</p>
+            </article>
+        </a>
+    </div>
+    <div class="resource">
+        <a href="http://www.groupmap.com" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            </div>
+            <article>
+                <h1>GroupMap</h1>
+                <br>
+                <p>You’ve probably encountered the usual issues of group decision making… People who dominate the conversation, quiet folks whose ideas never get heard, and of course all those post-it notes you have to write up. GroupMap solves this by capturing individual thinking first, then revealing the group perspective, all in real-time.</p>
+            </article>
+        </a>
+    </div>    
+    <div class="resource">
+        <a href="http://www.knowyourcompany.com" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+            </div>
+            <article>
+                <h1>Know Your Company</h1>
+                <br>
+                <p>Know Your Company is a software tool that helps you uncover insights into how your employees feel about their work, their team's culture, and more.</p>
             </article>
         </a>
     </div>
@@ -452,5 +593,5 @@ function shrinkNav() {
                 <span>James E. Ryan</span>
             </article>
         </a>
-    </div> 
+    </div>
 </div>
