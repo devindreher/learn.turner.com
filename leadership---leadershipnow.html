@@ -1,13 +1,23 @@
 <style type="text/css">
-    
     h2 {
         font-family: TurnerBold;
         font-size: 3rem;
         margin-top: 30px;
     }
-    
-/*FIXED STICKY*/
-    
+
+    h3 {
+        font-family: TurnerBold;
+        font-size: 1.8rem;
+    }
+
+    .interstitial {
+        background-color: #f8f8f8;
+        width: 100%;
+        padding: 10px;
+    }
+
+    /*FIXED STICKY*/
+
     .sticky {
         border: 2px solid black;
         border-radius: 5px;
@@ -17,27 +27,27 @@
         color: #fff;
         overflow: visible;
         box-shadow: 2px 2px 8px #888;
-        
+
         width: 200px;
-        
+
         position: fixed;
         right: 0;
         top: 300px;
-        
+
         z-index: 1;
     }
-    
+
     .sticky p {
         font-family: TurnerBold;
         font-size: 1rem;
         line-height: 115%;
         color: #fff;
     }
-    
+
     #sticky-x {
-        
+
         cursor: pointer;
-        
+
         width: 30px;
         height: 30px;
         border: 1px solid #585858;
@@ -46,10 +56,10 @@
         background: #fff;
         top: -10px;
         right: -10px;
-        
+
         font-family: TurnerBold;
     }
-    
+
     .sticky a {
         padding: 2px 5px;
         border: 2px solid #fff;
@@ -68,9 +78,9 @@
         transition: .2s ease;
     }
 
-    
+
     /*Buttons*/
-    
+
     .learnButton {
         -webkit-border-radius: 9px;
         -moz-border-radius: 9px;
@@ -83,48 +93,91 @@
         text-decoration: none;
         line-height: 100%;
     }
-    
+
     .learnButton:hover {
         background: #3cb0fd;
         text-decoration: none;
     }
-    
+
+    /*FLEXBOXES*/
+
+    .learn-cards {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .learn-card {
+        flex: 0 1 100%;
+        margin: 0 10px 10px 0;
+        text-align: center;
+        background-color: #fff;
+        border: 1px solid grey;
+        box-shadow: 1px 1px 3px #888;
+    }
+
+    .learn-card-content {
+        padding: 10px;
+    }
+
+    .learn-card-content p {
+        line-height: 120%;
+        white-space: nowrap;
+    }
+
+    .learn-card-content h5 {
+        font-family: TurnerBold;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+
+    @media all and (min-width: 80em) {
+        .learn-card {
+            flex: 1 1 30%;
+        }
+        .learn-card-content p {
+            font-size: .9em;
+        }
+    }
+
     /*Class Table*/
-    
+
     table {
-        width: 100%; 
+        width: 100%;
         border-collapse: collapse !important
     }
-    
+
     tr:nth-of-type(odd) {
         background: #eee;
     }
-    
+
     th {
-        background: #333; 
-        color: white; 
+        background: #333;
+        color: white;
         font-family: TurnerBold;
     }
-    
+
     td {
         padding: 6px;
         border: 1px solid #ccc;
-        text-align: left; 
+        text-align: left;
         font-family: TurnerRegular !important;
         color: black !important;
         font-size: 16px !important;
         vertical-align: text-top;
     }
-    
+
     td ul {
         padding: 0 !important;
         margin: 0 !important;
     }
-    
+
     td ul li:before {
         background-image: none !important;
     }
-    
+
     td ul li {
         margin-bottom: 10px;
         list-style-type: none;
@@ -133,11 +186,11 @@
         color: black;
         line-height: 100% !important;
     }
-    
+
     td a {
         font-size: 14px !important;
     }
-    
+
     th {
         padding: 6px;
         border: 1px solid #ccc;
@@ -146,71 +199,77 @@
         color: white !important;
         font-size: 16px !important;
     }
-    
-/*NAVIGATION*/
-    
+
+    /*NAVIGATION*/
+
     .learnNow a {
         font-size: 15px;
         font-family: TurnerBold;
         color: #000;
     }
-    
+
     .learnNow a:hover {
         color: #0052e7;
     }
 
     .topnav {
-      overflow: hidden;
-      background-color: #333;
+        overflow: hidden;
+        background-color: #333;
     }
 
     .topnav a {
-      float: left;
-      display: block;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 15px !important;
-      font-family: TurnerBold;
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15px !important;
+        font-family: TurnerBold;
     }
 
     .topnav a:hover {
-      background-color: #0052e7;
-      color: #fff;
+        background-color: #0052e7;
+        color: #fff;
     }
 
     .topnav .icon {
-      display: none;
+        display: none;
     }
-    
-/*MEDIA QUERIES*/
-    
-    @media only screen and (max-width: 760px), (min-device-width: 763px) and (max-device-width: 1024px) {
-        
-        .classList table, thead, tbody, th, td, tr {
+
+    /*MEDIA QUERIES*/
+
+    @media only screen and (max-width: 760px),
+    (min-device-width: 763px) and (max-device-width: 1024px) {
+
+        .classList table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
             display: block;
             font-family: TurnerRegular !important;
             color: black !important;
         }
-        
+
         .classList thead tr {
             position: absolute;
             top: -9999px;
             left: -9999px;
         }
-        
+
         .classList tr {
             border: 1px solid #ccc;
         }
-        
+
         .classList td {
             border: none;
             border-bottom: 1px solid #eee;
             position: relative;
             padding-left: 50%;
         }
-        
+
         .classList td:before {
             position: absolute;
             top: 6px;
@@ -219,20 +278,35 @@
             padding-right: 10px;
             white-space: nowrap;
         }
-        
-        .classList td:nth-of-type(1):before {content: "Class"; font-weight: bold;}
-        .classList td:nth-of-type(2):before {content: "Description"; font-weight: bold;}
-        .classList td:nth-of-type(3):before {content: ""; font-weight: bold;}
+
+        .classList td:nth-of-type(1):before {
+            content: "Class";
+            font-weight: bold;
+        }
+        .classList td:nth-of-type(2):before {
+            content: "Description";
+            font-weight: bold;
+        }
+        .classList td:nth-of-type(3):before {
+            content: "";
+            font-weight: bold;
+        }
     }
-    
+
     @media screen and (max-width: 1152px) {
-        .topnav a:not(:first-child) {display: none;}
-        .topnav a.icon {float: right; display: block;}
-        .learn-main h3 a {font-size: 2rem;}
-        .learn-card {width: 100%;}
-        .learn-card h5 a {font-size: 2rem;}
-        .learn-card p {font-size: 1.5rem; line-height: inherit;}
-        .topnav.responsive {position: relative;}
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+        .learn-main h3 a {
+            font-size: 2rem;
+        }
+        .topnav.responsive {
+            position: relative;
+        }
         .topnav.responsive .icon {
             position: absolute;
             right: 0;
@@ -244,58 +318,50 @@
             text-align: left;
         }
     }
-    
-    @media screen and (min-width: 40em) {
-        .list-item { width: 50%; }
-    }
-    
-    @media screen and (min-width: 60em) {
-        .list-item { width: 33.33%; }
-    }
-    
+
+
 </style>
 
 <!--NAVIGATION-->
 
 <span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
 <div class="topnav" id="myTopnav">
-  <a href="http://learn.turner.com">Home</a>    
-  <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
-  <a href="/learnnow/org-development">Org. Development</a>
-  <a href="/learnnow/performance">Performance</a>
-  <a href="/learnnow/subscribe">Subscribe</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+    <a href="http://learn.turner.com">Home</a>
+    <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+    <a href="/learnnow/org-development">Org. Development</a>
+    <a href="/learnnow/performance">Performance</a>
+    <a href="/learnnow/subscribe">Subscribe</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
 </div>
 
 <script>
-function shrinkNav() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
+    function shrinkNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
     }
-}
+
 </script>
 
 <script>
-
-window.onload = function(){
-    document.getElementById('sticky-x').onclick = function(){
-        this.parentNode.parentNode.parentNode
-        .removeChild(this.parentNode.parentNode);
-        return false;
+    window.onload = function() {
+        document.getElementById('sticky-x').onclick = function() {
+            this.parentNode.parentNode.parentNode
+                .removeChild(this.parentNode.parentNode);
+            return false;
+        };
     };
-};
-    
+
 </script>
 
 <div>
     <div class="sticky">
         <button id="sticky-x">X</button>
         <p>
-            Psst.<br>
-            Get learning goodies in your inbox!
+            Psst.<br> Get learning goodies in your inbox!
         </p>
         <a href="http://eepurl.com/cWVxXz" target="_blank">Subscribe</a>
     </div>
@@ -309,28 +375,69 @@ window.onload = function(){
 
 <p>The suite encompasses an array of virtual and classroom offerings open to anyone with people leadership responsibilities - either on a org chart or in practice. <a href="/learnnow/leadershipnow---faq">Read our FAQ</a> for more information.</p>
 
+<hr>
+
+<div class="interstitial">
+
+    <h3>Turner Leaders Are...</h3>
+
+    <div class="learn-cards">
+        <div class="learn-card">
+            <div class="learn-card-content">
+                <img src="https://s3.amazonaws.com/tpd-files/images/project-BJGBUKAof.svg">
+                <h5>Accountable</h5>
+                <p>Design strategic and actionable plans.<br>Lead teams that deliver results.<br>Drive performance with actionable feedback.<br>Trust and empower their teams to deliver.</p>
+            </div>
+        </div>
+        <div class="learn-card">
+            <div class="learn-card-content">
+                <img src="https://s3.amazonaws.com/tpd-files/images/timer-Sk6oBKAiz.svg">
+                <h5>Agile</h5>
+                <p>Iterative and flexible.<br>Promote a constant state of reinvention.<br>Build teams that thrive on innovation.<br>Grow and nurture team members.</p>
+            </div>
+        </div>
+        <div class="learn-card">
+            <div class="learn-card-content">
+                <img src="https://s3.amazonaws.com/tpd-files/images/idea-rkR7IFAoG.svg">
+                <h5>Innovative</h5>
+                <p>Takes initiative and embraces risk.<br>Encourages bold decision making and hiring.<br>Creates an environment for creative thinking.<br>Challenges their teams to focus on priorities.<br>Encourages shedding of non-essential work.</p>
+            </div>
+        </div>
+        <div class="learn-card">
+            <div class="learn-card-content">
+                <img src="https://s3.amazonaws.com/tpd-files/images/Talk-rkTkLt0sM.svg">
+                <h5>Collaborative</h5>
+                <p>Breaks down silos and builds partnerships.<br>Seeks diverse perspectives.<br>Thinks and acts globally.<br>Makes proactive communications a priority.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<hr>
+
 <a href="https://s3.amazonaws.com/tpd-files/LeadershipNOW-Overview.pdf" target="_blank">
-<div class="learnButton">Download All Course Descriptions</div>
+    <div class="learnButton">Download All Course Descriptions</div>
 </a>
 
 <p>&nbsp;</p>
 
 <table class="classList">
-	<thead>
-		<tr>
-			<th>Class</th>
-			<th>Description</th>
-			<th>&nbsp;</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><b>[Insert Creative Title]</b></td>
-			<td>You don't have to be a "creative" to embrace &amp; lead in a creative culture.</td>
-			<td>
-			<span style="color: dimgrey;">Check Back Soon</span>
-			</td>
-		</tr>
+    <thead>
+        <tr>
+            <th>Class</th>
+            <th>Description</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><b>[Insert Creative Title]</b></td>
+            <td>You don't have to be a "creative" to embrace &amp; lead in a creative culture.</td>
+            <td>
+                <span style="color: dimgrey;">Check Back Soon</span>
+            </td>
+        </tr>
         <tr>
             <td><b>Bold Hiring</b></td>
             <td>Bold Hiring is the term we've been using to talk about a reinvigorated approach to hiring at Turner &mdash; one that includes a sharper focus on encouraging more diversity (in every sense) at our company.</td>
@@ -340,90 +447,90 @@ window.onload = function(){
                 </a>
             </td>
         </tr>
-		<tr>
-			<td><b>Candid Conversations</b></td>
-			<td>Just say it! (Without being a jerk.)</td>
-			<td>
-			<a href="/learnnow/leadershipnow---candid-conversations">
-                <div class="learnButton">Details</div>    
-            </a>
-			</td>
-		</tr>
-		<tr>
-			<td><b>Coaching Your Kickass Team</b></td>
-			<td>How to have productive &amp; meaningful conversations with your team.</td>
-			<td>
+        <tr>
+            <td><b>Candid Conversations</b></td>
+            <td>Just say it! (Without being a jerk.)</td>
+            <td>
+                <a href="/learnnow/leadershipnow---candid-conversations">
+                    <div class="learnButton">Details</div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Coaching Your Kickass Team</b></td>
+            <td>How to have productive &amp; meaningful conversations with your team.</td>
+            <td>
                 <span style="color: dimgrey;">Check Back Soon</span>
-			</td>
-		</tr>
-		<tr>
-			<td><b>Move Your Team to All In</b></td>
-			<td>Discover what engages you &amp; your team.</td>
-			<td>
-			<a href="/learnnow/leadershipnow---move-your-team-to-all-in">
-                <div class="learnButton">Details</div>    
-            </a>
-			</td>
-		</tr>
-		<tr>
-			<td><b>How to Talk "Good" to Your Team</b></td>
-			<td>Create an environment for open communications.</td>
-			<td>
-            <a href="/learnnow/leadershipnow---how-to-talk-good-to-your-team">
-                <div class="learnButton">Details</div>    
-            </a>
-			</td>
-		</tr>
-		<tr>
-			<td><b>Rock the Change</b></td>
-			<td>Gain confidence influencing up &amp; balance change for your team.</td>
-			<td>
-            <a href="/learnnow/leadershipnow---rock-the-change">
-                <div class="learnButton">Details</div>    
-            </a>
-			</td>
-		</tr>
-		<tr>
-			<td><b>Stop Riding the Fence</b></td>
-			<td>Learn tried &amp; true ways to make strategic decisions.</td>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Move Your Team to All In</b></td>
+            <td>Discover what engages you &amp; your team.</td>
+            <td>
+                <a href="/learnnow/leadershipnow---move-your-team-to-all-in">
+                    <div class="learnButton">Details</div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td><b>How to Talk "Good" to Your Team</b></td>
+            <td>Create an environment for open communications.</td>
+            <td>
+                <a href="/learnnow/leadershipnow---how-to-talk-good-to-your-team">
+                    <div class="learnButton">Details</div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Rock the Change</b></td>
+            <td>Gain confidence influencing up &amp; balance change for your team.</td>
+            <td>
+                <a href="/learnnow/leadershipnow---rock-the-change">
+                    <div class="learnButton">Details</div>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Stop Riding the Fence</b></td>
+            <td>Learn tried &amp; true ways to make strategic decisions.</td>
             <td><span style="color: dimgrey;">Check Back Soon</span></td>
-		</tr>
+        </tr>
         <tr>
             <td><b>Stop. Collaborate &amp; Listen</b></td>
             <td>Learn how to determine the best strategy and skills for nurturing collaborative work with individuals and teams.</td>
             <td>
-            <a href="/learnnow/leadershipnow---collaborate">
-                <div class="learnButton">Details</div>
-            </a>
+                <a href="/learnnow/leadershipnow---collaborate">
+                    <div class="learnButton">Details</div>
+                </a>
             </td>
         </tr>
-		<tr>
-			<td><b>Unleashing Your A-Team</b></td>
-			<td>Maximize individual talents &amp; foster high performance teamwork.</td>
+        <tr>
+            <td><b>Unleashing Your A-Team</b></td>
+            <td>Maximize individual talents &amp; foster high performance teamwork.</td>
             <td><span style="color: dimgrey;">Check Back Soon</span></td>
-		</tr>
-		<tr>
-			<td><b>Who Are You (to Lead)?</b></td>
-			<td>Understand how your beliefs &amp; values impact your behaviors.</td>
+        </tr>
+        <tr>
+            <td><b>Who Are You (to Lead)?</b></td>
+            <td>Understand how your beliefs &amp; values impact your behaviors.</td>
             <td>
-            <a href="/learnnow/leadershipnow---who-are-you-(to-lead)">
-                <div class="learnButton">Details</div>    
-            </a>
+                <a href="/learnnow/leadershipnow---who-are-you-(to-lead)">
+                    <div class="learnButton">Details</div>
+                </a>
             </td>
-		</tr>
-		<tr>
-			<td><b>Work Smarter 101</b></td>
-			<td>Streamline work processes, eliminate low-value work, and inspire continuous improvement.</td>
+        </tr>
+        <tr>
+            <td><b>Work Smarter 101</b></td>
+            <td>Streamline work processes, eliminate low-value work, and inspire continuous improvement.</td>
             <td>
                 <a href="/learnnow/leadershipnow---work-smarter-101">
                     <div class="learnButton">Details</div>
                 </a>
             </td>
-		</tr>
-		<tr>
-			<td><b>Work Smarter 201</b></td>
-			<td>Learn core consulting skills to more effectively identify, scope, and execute high-impact projects within your area.</td>
+        </tr>
+        <tr>
+            <td><b>Work Smarter 201</b></td>
+            <td>Learn core consulting skills to more effectively identify, scope, and execute high-impact projects within your area.</td>
             <td><span style="color: dimgrey;">Check Back Soon.</span></td>
-		</tr>
-	</tbody>
+        </tr>
+    </tbody>
 </table>
