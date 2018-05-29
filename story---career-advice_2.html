@@ -1,0 +1,597 @@
+<style>
+    h2 {
+        font-family: TurnerBold;
+        font-size: 3rem;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+    h3.sub {
+        position: relative;
+        text-align: left;
+        font-family: TurnerBold;
+        font-size: 2rem;
+    }
+
+    h3.sub span {
+        background: #fff;
+        padding-left: 0;
+        padding-right: 15px;
+        position: relative;
+        z-index: 1;
+    }
+
+    h3.sub:before {
+        background: #696969;
+        content: "";
+        display: block;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        left: 0;
+    }
+
+    .byline {
+        font-weight: bold;
+        font-size: .9rem !important;
+        margin: 0 0 20px 0;
+    }
+    
+    .byline a {
+        font-weight: bold;
+        font-size: .9rem !important;
+        margin: 0 0 20px 0;
+    }
+
+    h3.q {
+        font-size: 1.5rem;
+        font-family: TurnerBold;
+        margin-bottom: 20px;
+        line-height: 130%;
+    }
+
+    hr.panelist {
+        border-top: 1px dotted #8c8b8b;
+        border-bottom: 1px dotted #fff;
+    }
+
+    /*ANSWER STYLING*/
+
+    .answer-row {
+        margin: 0;
+    }
+
+    .answer-row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .answer-name {
+        float: left;
+        width: 100%;
+        padding: 10px 10px 10px 0;
+    }
+
+    .answer-name p {
+        color: #000;
+    }
+
+    .answer {
+        float: left;
+        width: 100%;
+        padding: 10px;
+    }
+
+
+    /*PANELIST STYLING*/
+
+    .panelist-row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .panelist-column-left {
+        float: left;
+        width: auto;
+        padding: 10px;
+        background-color: dimgrey;
+    }
+
+    .panelist-column-right h3 {
+        font-family: TurnerBold;
+        font-size: 1.5rem;
+    }
+
+    .panelist-column-right p {
+        font-size: 1.2rem;
+    }
+
+    .panelist-row-left img {
+        text-align: center;
+        display: block;
+        margin: auto;
+        max-width: 100%;
+    }
+
+    .panelist-column-right {
+        float: left;
+        width: auto;
+        padding-left: 20px;
+    }
+
+    /*NAVIGATION*/
+
+    .nav-button {
+        padding: 2px 5px;
+        border: 1px solid #0052e7;
+        border-radius: 3px;
+
+        text-decoration: none;
+        font-size: .975rem !important;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+    }
+
+    .nav-button:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .learnNow a {
+        font-size: 15px;
+        font-family: TurnerBold;
+        color: #000;
+    }
+
+    .learnNow a:hover {
+        color: #0052e7;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15px !important;
+        font-family: TurnerBold;
+    }
+
+    .topnav a:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .topnav .icon {
+        display: none;
+    }
+
+    /*MEDIA QUERIES*/
+
+    @media screen and (max-width: 1152px) {
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+
+    @media all and (min-width: 640px) {
+        .answer {
+            width: 75%;
+        }
+        .answer-name {
+            width: 25%;
+        }
+
+    }
+
+    @media all and (max-width: 600px) {
+        .panelist-column-left {
+            width: 100%;
+        }
+        .panelist-column-right {
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+
+    }
+
+</style>
+
+<!--TOP NAVIGATION-->
+
+<span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
+<div class="topnav" id="myTopnav">
+    <a href="http://learn.turner.com">Home</a>
+    <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+    <a href="/learnnow/org-development">Org. Development</a>
+    <a href="/learnnow/performance">Performance</a>
+    <a href="/learnnow/subscribe">Subscribe</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+</div>
+
+<script>
+    function shrinkNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+</script>
+
+<h2>Career Advice</h2>
+<p class="byline"><a href="/learnnow/story---career-advice_1.html">First Edition</a> | Second Edition</p>
+
+<br>
+<a href="#ask-us" class="nav-button">Ask us a question for a future edition!</a>
+<br>
+
+<br>
+<br>
+
+<h3 class="sub"><span>Panelists</span></h3>
+
+<div class="panelist-row">
+    <div class="panelist-column-left">
+        <center>
+            <img src="https://s3.amazonaws.com/tpd-files/images/Daphne-Calderon_64x64.png">
+        </center>
+    </div>
+    <div class="panelist-column-right">
+        <h3>Daphne Calderon</h3>
+        <p>Sr. HR Business Partner, CNN</p>
+    </div>
+</div>
+
+<hr class="panelist">
+
+<div class="panelist-row">
+    <div class="panelist-column-left">
+        <center>
+            <img src="https://s3.amazonaws.com/tpd-files/images/Christine-Gilberto_64x64.png">
+        </center>
+    </div>
+    <div class="panelist-column-right">
+        <h3>Christine Gilberto</h3>
+        <p>Sr. Consultant, Talent Management</p>
+    </div>
+</div>
+
+<hr class="panelist">
+
+<div class="panelist-row">
+    <div class="panelist-column-left">
+        
+        <center>
+            <img src="https://s3.amazonaws.com/tpd-files/images/Gab-Ferrari_64x64.png">
+        </center>
+
+    </div>
+    <div class="panelist-column-right">
+        <h3>Gabriela Ferrari</h3>
+        <p>Regional HR Director, Latin America</p>
+    </div>
+</div>
+
+<hr class="panelist">
+
+<div class="panelist-row">
+    <div class="panelist-column-left">
+        <center>
+            <img src="https://s3.amazonaws.com/tpd-files/images/snauwaert_64x64.png">
+        </center>
+    </div>
+    <div class="panelist-column-right">
+        <h3>Abby Snauwaert</h3>
+        <p>Manager, Recruiting</p>
+    </div>
+</div>
+
+<hr class="panelist">
+
+<div class="panelist-row">
+    <div class="panelist-column-left">
+        <center>
+            <img src="https://s3.amazonaws.com/tpd-files/images/Jennifer-Williams_64x64.png">
+        </center>
+    </div>
+    <div class="panelist-column-right">
+        <h3>Jennifer Williams</h3>
+        <p>Sr. Manager, Diversity &amp; Inclusion</p>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<h3 class="q">If I don't have a great relationship with my manager, how can I grow within the company that I love by managing the fear of making that current relationship worse? I see other roles come up often, but I don't want to make my relationship worse by telling my manager that I'm unhappy in my current role. I fear that opportunities for career growth are limited to only leaving Turner.</h3>
+
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Daphne Calderon</b></p>
+    </div>
+    <div class="answer">
+        <p>Turner is a great place to work and there are many opportunities for growth within the company! You should feel comfortable searching for an applying for other roles internally. Although we encourage open dialogue between employees and managers regarding career growth and development, if you want to seek other opportunities within the company, you do not need to tell your manager right away. Per our <a href="https://turner.service-now.com/hrsp?id=kb_article&sys_id=80a874e3137cba006b3d30128144b0fb" target="_blank">internal job application process</a>, we expect employees to notify their managers once they are seriously being considered for a position. Generally, when you get to this stage the recruiter will prompt you to speak with your manager if you haven't done so yet. Then, the hiring manager would reach out to your current manager for a reference before offering you the position.</p>
+
+        <p>I would also encourage you to find a way to have a candid conversation with your manager about what would make you happier in your current role and what your career goals and aspirations are. Perhaps she/he can help you get to where you want to be next! If you ever have questions on how to navigate this process, your HR and Recruiting partners are here to help!</p>
+    </div>
+</div>
+
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Christine Gilberto:</b></p>
+    </div>
+    <div class="answer">
+        <p>It sounds like there's a few things going on here. First, explore why you feel like your relationship with your manager isn't a good one. Are both of you not communicating frequently enough? Are you not getting feedback on your work? Are you not meeting his/her expectations for the quality of work? Or is he/she not helping you grow within your current role? Having candid discussions about your concerns is key to a better working relationships (check out a course that we aptly call <a href="https://now.turner.com/learnnow/leadershipnow---candid-conversations" target="_blank"><i>Candid Conversations</i></a> if you need some help with this). And regardless of your career aspirations, improving your relationship with your manager is going to improve your experience in your current role.</p>
+
+        <p>On the issue of being unhappy in your current role, if that's because of your relationship with your manager, then see above. If it's the actual work that's getting you down, recognize that we all have some work in our roles that are a drag on our motivation. But, hopefully that work is outweighed by the fun stuff. If there's other work &mdash; be it more challenging, more creative, more in your sweet spot &mdash; that you want to add to your plate to make the role more exciting for you, it's important to have that discussion with your manager. He or she may not be in a position to give you that work right now, but at least you have made them aware of your desire to branch out so that they can be on the look out for those opportunities.</p>
+
+        <p>And finally, on feeling apprehensive about looking at other roles, it's your manager's job to ensure they are doing what they can to keep you motivated and engaged. If the best job for you is on another team, the mark of a good manager &mdash; someone who is truly helping their team members realize their career aspirations while also leading the work that needs to be done &mdash; is to be supportive of your desire to transfer. That's easier done, however, when you're performing your current role well and with enthusiasm.</p>
+
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Gabriela Ferrari:</b></p>
+    </div>
+    <div class="answer">
+        <p>At Turner, we believe our major asset if our people. That's why we strongly encourage leaders to focus on their team members' development. If this does not happen, I suggest that you work on your relationship because this will be a learning experience that will make your growth as a professional and that you can take with your regardless of the role.</p>
+        <p>Additionally, you might want to consider if this is driving your interest in looking for alternatives or if it's related to the job itself. There are opportunities for all of us at Turner, so your relationship with your manager does not prevent you from checking on other options within the company. You can visit <a href="http://www.turnerjobs.com" target="_blank">turnerjobs.com</a> or <a href="http://www.changingchannelsla.com/" target="_blank">Changing Channels</a> in Turner Argentina. </p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Abby Snauwaert:</b></p>
+    </div>
+    <div class="answer">
+        <p>First, remember that when you apply for a position within the company that your current manager isn't alerted. The recruiting team members are the only ones who have access to see what you're applying for and interested in. That said, if you don't have the best relationship with your current manager, you can use your HR Business Partner to help advise on how to best forge that relationship. While it's not required that you alert your manager immediately when you apply for another position, it's still recommended. </p>
+
+        <p>I also wouldn't advise telling your current manager that you're unhappy, but perhaps trying to explore ways with him/her to expand your current responsibilities or informing them of your desire to learn new skills.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Jennifer Williams:</b></p>
+    </div>
+    <div class="answer">
+        <p>Great question, tough situation. Though you may not like it, you must have a conversation with your boss about growth opportunities. When I say have a conversation, I mean discuss your desire to grow professionally and the types of roles and experiences you feel you need to get you to the next level. Then ask if they would be willing to support you seeking out opportunities to grow in the direction of your dream. If the answer is "yes," I'd start with requesting candid feedback on your performance from your boss, peers, key stakeholders, and direct reports (if applicable). You need to know about any blind spots. You may also discover why you and your manager don't have a great relationship. Armed with that, I'd map out a road map for how to get there and engage your manager in the process.</p>
+
+        <p>If the answer is "no" and they won't support you, then I'd ask if they will actively prevent you from pursuing other opportunities. If they won't, I recommend having this conversation with your HR Business Partner who can help you on your journey. If they intend to prevent you from pursuing other opportunities, I'd still recommend you meeting with your HR Business Partner to share this feedback and discuss the best way to pursue your dreams.</p>
+
+        <p>What you'll notice about all of these options is that you must have a conversation with your manager. Though a great relationship would make this conversation easier, having the conversation is the most important. You have to know where you stand.</p>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<h3 class="q">How do you handle [a situation] when a manger does not give reviews nor encourages conversation about career development? Especially when this behavior is encouraged at the SVP level, so there is no where to turn? Is there any other documentation of an employee's performance that is saved or are we at the will of a manager's lack of acknowledgment?</h3>
+
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Daphne Calderon</b></p>
+    </div>
+    <div class="answer">
+        <p>Turner encourages employees and managers to have ongoing conversations about goals, performance, and career development throughout the year rather than only once a year during performance review season. This should be a shared responsibility between managers and employees. If you are not receiving feedback, be proactive and tell your manager why this is important for you. Be clear on what your goals are and how you think she/he can help you get there; maybe even suggest setting up ongoing check-ins during the year so you can do a "pulse check" on your performance. Another option is to proactively ask for real-time feedback after a specific project/task is completed. These are only a few ideas on how you can drive a conversation about your development.</p>
+
+        <p>Your manager may have notes or emails regarding your performance, but unless your current or former manager have had a formal performance or disciplinary related conversation with you, we likely wouldn't have any documentation on file other than your previous performance reviews. If you are unclear of what your standing within the company is, just ask you manager or HR partner.</p>
+    </div>
+</div>
+
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Christine Gilberto:</b></p>
+    </div>
+    <div class="answer">
+        <p>Turner's senior leaders have voiced their commitment to keeping our employees motivated and engaged. If you're not receiving meaningful feedback on your performance and don't feel comfortable asking for it because of a lack of support at higher levels, try engaging your HR Business Partner for support. Their role is to partner with senior leaders to ensure that company-wide initiatives are happening as intended. Performance management &mdash; through written reviews, frequent check-ins with your manager on your work and its quality, and career development discussions &mdash; is one of those initiatives.</p>
+
+        <p>If you feel like there's a lack of documentation on your work, in addition to bringing that to the attention of your HR Business Partner, you might want to keep track of your accomplishments. In fact, doing so makes it easier to recap your performance when you're asked to do so. (P.S. &mdash; if you don't know who your HR Business Partner is, the <a href="https://myhr.turner.com" target="_blank">myHR Service Center (VPN Required)</a> can help put you in touch with her or him.)</p>
+
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Gabriela Ferrari:</b></p>
+    </div>
+    <div class="answer">
+        <p>Try to remember that career development is not just the responsibility of your leader &mdash; we're all accountable for our development and for building our career and opportunities. That being said, if you feel that your manager isn't supporting you to grow, you need to have a candid conversation and address the topic so that you can work on this together.</p>
+        <p>Also, you can always ask for feedback from your peers and direct reports (if you have them) in order to prepare your <a href="" target="_blank">SWOT</a> and continue the focus on your development. Additionally, all documentation and tracking of performance is available through <a href="http://mycareer.turner.com" target="_blank">myCareer</a>.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Abby Snauwaert:</b></p>
+    </div>
+    <div class="answer">
+        <p>This is another instance where I'd recommend looping in your HR Business Partner. They may have the ability to encourage/influence your manager to have performance and career development conversations more frequently.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Jennifer Williams:</b></p>
+    </div>
+    <div class="answer">
+        <p>If you haven't already, I'd start with your HR Business Partner and share your concerns and ask for their input and/or feedback on how to address this issue. This is a topic where they can be very helpful.</p>
+
+        <p>If you've tried the recommendations from your HR Business Partner and it has born no fruit, then you gotta start your own "atta boy/atta girl" file that keeps track of your accomplishments and share them during your review plus attach them to your goals in <a href="http://mycareer.turner.com" target="_blank">myCareer</a>.</p>
+
+        <p>If they won't do it, then you must. Just that simple.</p>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<h3 class="q">What is your recommendation if you're someone who aspires to be on-air, but now works behind the scenes?</h3>
+
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Daphne Calderon</b></p>
+    </div>
+    <div class="answer">
+        <p>Focus on understanding the skills that are required for these types of roles and find opportunities to practice and learn these skills. Be comfortable speaking in public and improvising. If you're interested in working news, for example, make sure you learn and understand politics. Depending on what type of on-air role you aspire to, try to get as much exposure as possible to this role as you possibly can &mdash; talk to people who do that already or those who work with on-air talent who can give you insights on what it takes to get there! Find ways of learning about their career path and what types of roles and experiences they went through before getting to where they are today.</p>
+    </div>
+</div>
+
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Christine Gilberto:</b></p>
+    </div>
+    <div class="answer">
+        <p>As long as you're performing well in your current role, it's fine to explore what it takes to be successful in other roles, including on-air talent. For that role specifically, you might want to talk to the people whose job it is to find, negotiate with, and hire on-air talent to understand the type of experience that's required for the job. I wouldn't recommend you approach on-air talent to ask them how to break into that role, but it is OK to observe how they work from an unobtrusive distance (as long as that doesn't interfere with your work). But, be realistic in your expectations for becoming on-air talent. Most of Turner's on-air talent has had a lot of experience elsewhere and started at the bottom of their profession just like the rest of us.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Gabriela Ferrari:</b></p>
+    </div>
+    <div class="answer">
+        <p>My recommendation is that you find and connect with people that work with on-air talent so that you can leverage their experience, seek their advice, and look for potential opportunities or special project. Additionally, talk to your manager so that he/she knows your interests and motivations and can sponsor you.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Abby Snauwaert:</b></p>
+    </div>
+    <div class="answer">
+        <p>Keep your reel up to date with your best work and continue to network with the on-air teams. Recruiting for on-air talent doesn't run through our internal recruiting team, but through Talent Development.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Jennifer Williams</b></p>
+    </div>
+    <div class="answer">
+        <p>Well my friend, first you gotta get out from behind the camera, computer, bush, or whatever you've been hiding behind and make your desires known and ask for help. Find three kinds of people to talk to about your aspirations:</p>
+        <ol>
+            <li>Those who grew up through the ranks to achieve an on-air role (they can show you how to navigate and leverage the internal system.</li>
+            <li>Those who made the leap from behind the scenes to an on-air role (like your situation). They can show you how to parlay your current experience into the role you desire.</li>
+            <li>Those who came to the role from outside the company. They can share with you best practices from the industry.</li>
+        </ol>
+        <p>Then get busy with their advice.</p>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<h3 class="q">I often feel underutilized in my position. What are some ways that I can tell my manager/team that I could take on more responsibilities and what are some resources I can use to help me explore other areas at Turner that may better utilize my skills?</h3>
+
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Daphne Calderon</b></p>
+    </div>
+    <div class="answer">
+        <p>If you are successfully meeting expectations of your current role and still feel like you can manage more, be proactive and have a conversation with your manager. Be clear on what else you'd like to get involved in and why you think this will benefit your career goals and business priorities. Our organization likes to see employees that take initiative and provide solutions or come with new ideas, rather than simply ask for more responsibilities.</p>
+
+        <p>There are many resources available to you. The first one that comes to mind is to network and talk to other people in areas where you have interest exploring. Go to coffee or ask for an "informational interview" where you can learn more about what other roles/departments do. You could even shadow a different team to get exposure to the type of work they do to see if your skills would be valuable in that environment. If you are looking to explore a career change, our recruiters can also help provide insights on what type of skills are needed for certain roles.</p>
+
+        <p>Finally, here are a few forums where you can network, meet people from different areas, and also learn more about yourself: <a href="https://timewarner.sharepoint.com/sites/turner_diversityandinclusion/Pages/home.aspx" target="_blank">Business Resource Groups (BRGs)</a>, <a href="https://now.turner.com/corporate-responsibility" target="_blank">volunteer opportunities</a>, <a href="https://now.turner.com/make-you-matter-archive" target="_blank">Make You Matter Week</a>, <a href="https://now.turner.com/learnnow" target="_blank">classes and programs available on our LearnNow site</a>.</p>
+    </div>
+</div>
+
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Christine Gilberto:</b></p>
+    </div>
+    <div class="answer">
+        <p>Just ask! There's always plenty of work to be done around Turner. But, bring suggestions to that discussion with your manager. Explore the duties of the role above yours and ask how to grow your experience in those. Or, spend your downtime devising a way that your team can be more efficient or communicate better with one another.</p>
+        <p>And, there are other ways to contribute to what makes Turner great. You could get involved with one of our <a href="https://timewarner.sharepoint.com/sites/turner_diversityandinclusion/Pages/home.aspx" target="_blank">Business Resource Groups</a>, <a href="https://now.turner.com/corporate-responsibility" target="_blank">Turner Volunteer Day</a>, the <a href="https://now.turner.com/corporate-responsibility" target="_blank">Corporate Responsibility Council</a>, or <a href="https://now.turner.com/make-you-matter-archive" target="_blank"
+        >Make You Matter Week</a>. Those are volunteer opportunities where many different skills are needed and the results make a big impact on the company. There's way too much happening at Turner for anyone to feel bored!</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Gabriela Ferrari:</b></p>
+    </div>
+    <div class="answer">
+        <p>We're focusing a lot on candid conversations at Turner, so if you feel there's an opportunity for you to take on more responsibilities you should talk with your manager. She or he will be able to help you identify some opportunities based on your skills as well as your interests. There are many ways to contribute at Turner and we are all in to make this happen!</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Abby Snauwaert:</b></p>
+    </div>
+    <div class="answer">
+        <p>I recommend having a direct conversation with your manager and letting him/her know that you have more in the tank than your current role requires and asking for additional tasks. Inform them of your desire to take on more. Again, this is an opportunity to make sure your HR Business Partner is also aware of this desire.</p>
+        <p>As far as exploring other areas of the company, I'd suggest networking with folks in other parts of the business. Everyone loves to meet at Starbucks for a chat, right? This is a great way to learn more about what they do and how your skills may lend to those other areas. Once you begin to hone in on which part of the business you're targeting, I'd suggest setting up a conversation with the recruiter who typically handles that skill set and they should be able to provide advice and guidance on what those hiring teams are typically looking for in a qualified candidate.</p>
+    </div>
+</div>
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Jennifer Williams:</b></p>
+    </div>
+    <div class="answer">
+        <p>I'd start with your manager. I don't know a boss alive who would not love to have somebody work on some critical projects that are under resourced.</p>
+        <p>Once you and your manager identify some projects that will grow your skills and could use an extra pair of hands, get busy knocking it out of the park.</p>
+        <p>Or, if your manager doesn't have anything, I'd spend time thinking about what problems you could help the business solve and offer your discretionary time to develop a proposal that offers solutions. If accepted, then you can offer to take the lead on one of the projects and then go from there.</p>
+        <p>As for where you can explore other areas in Turner, that's easy &mdash; <a href="http://www.turnerjobs.com" target="_blank">turnerjobs.com</a>.</p>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<h3 class="q">How long do I have to remain in a position before applying for another?</h3>
+
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Daphne Calderon</b></p>
+    </div>
+    <div class="answer">
+        <p>We used to have a policy where employees had to be in their current position for at least 1 year before moving over to a different role; this has now evolved to just a rule of thumb. While we don't want to encourage "job hopping," we recognize there are unique situations where moving to a different opportunity sooner will benefit the employee and/or the company. We would rather be flexible and retain top talent by allowing employees to take opportunities when/if they arise.</p>
+
+        <p>My advice would be to consider how much you've learned and the value you have added in your current role. With this in mind, you'll hopefully be able to make a better judgment call on when it's OK to take the next step. There's no right or wrong here, but you should consider what is best for your career and also what perception this will create for future potential hiring managers and employers. If you ever have a question about this, feel free to consult with your HR Business Partner.</p>
+    </div>
+</div>
+
+<div class="answer-row">
+    <div class="answer-name">
+        <p><b>Abby Snauwaert:</b></p>
+    </div>
+    <div class="answer">
+        <p>There isn't a hard-and-fast rule on this nor is there a minimum requirement for how long you must be in your role before applying for others, though I'd caution that if you've only been in a role for a month or two and are already exploring new opportunities at the company that it will raise a few red flags. Remember, when a hiring manager offers you a position, they are investing in your and your commitment to that role for a reasonable amount of time.</p>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<a name="ask-us"></a>
+
+<p><b>Do you have a question you'd like us to answer in a future edition? Use the form below to send it to us. While you'll remain anonymous, your question won't, so exercise your discretion on writing style, etc.</b></p>
