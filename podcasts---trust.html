@@ -1,0 +1,430 @@
+<style>
+    h2 {
+        font-family: TurnerBold;
+        font-size: 3rem;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    h3.sub {
+        position: relative;
+        text-align: left;
+        font-family: TurnerBold;
+        font-size: 1.4rem;
+    }
+
+    h3.sub span {
+        background: #fff;
+        padding-left: 0;
+        padding-right: 15px;
+        position: relative;
+        z-index: 1;
+    }
+
+    h3.sub:before {
+        background: #696969;
+        content: "";
+        display: block;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        left: 0;
+    }
+
+    .byline {
+        font-weight: bold;
+        font-size: 1.4rem !important;
+        color: dimgray;
+        margin: 0;
+    }
+
+    .learn-button {
+        padding: 2px 5px;
+        border: 1px solid #0052e7;
+        border-radius: 3px;
+
+        text-decoration: none;
+        font-size: .975rem !important;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+    }
+
+    .learn-button:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .audioplayer {
+        background-color: lightgray;
+        padding: 20px;
+        width: auto;
+        height: auto;
+    }
+    
+    .audioplayer audio {
+        width: 100%;
+    }
+    
+    /*LAYOUT*/
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .col-left {
+        float: left;
+        width: 65%;
+        padding: 10px 20px 0 0;
+    }
+
+    .col-right {
+        float: left;
+        width: 35%;
+        padding: 10px;
+    }
+
+    /*ITEM FLEX BOXES*/
+
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .list-item {
+        display: flex;
+        padding: 0.5em;
+        width: 100%;
+    }
+
+    .list-content {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        width: 100%;
+
+        border: 1px solid grey;
+        border-top: 10px solid #000;
+        box-shadow: 1px 1px 3px #888;
+    }
+
+    .list-content:hover {
+        box-shadow: 3px 3px 5px #888;
+        transition: .3s;
+    }
+
+    .list-content h3 {
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        color: #282828;
+        line-height: 120%;
+    }
+
+    .list-content p {
+        font-family: Turner, Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        line-height: 120%;
+    }
+
+    .list-content p a {
+        font-size: 1rem;
+        line-height: 120%;
+    }
+
+
+    /*NAVIGATION*/
+
+    .nav-button {
+        padding: 2px 5px;
+        border: 1px solid #0052e7;
+        border-radius: 3px;
+
+        text-decoration: none;
+        font-size: .975rem !important;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+    }
+
+    .nav-button:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .learnNow a {
+        font-size: 15px;
+        font-family: TurnerBold;
+        color: #000;
+    }
+
+    .learnNow a:hover {
+        color: #0052e7;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15px !important;
+        font-family: TurnerBold;
+    }
+
+    .topnav a:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .topnav .icon {
+        display: none;
+    }
+
+    /*BREADCRUMBS*/
+
+    #breadcrumb {
+        float: left;
+        display: block;
+    }
+
+    #breadcrumb ul {
+        list-style: none;
+    }
+
+    .crumbs {
+        display: block;
+        margin-left: -27px;
+    }
+
+    .crumbs li {
+        display: inline;
+    }
+
+    .crumbs li.first {
+        padding-left: 8px;
+    }
+
+    .crumbs li a,
+    .crumbs li a:link,
+    .crumbs li a:visited {
+        color: #666;
+        display: block;
+        float: left;
+        font-size: 12px;
+        margin-left: -13px;
+        padding: 0 17px 11px 20px;
+        position: relative;
+        text-decoration: none;
+    }
+
+    .crumbs li a {
+        background-image: url('https://s3.amazonaws.com/tpd-files/images/bg-crumbs.png');
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+        position: relative;
+    }
+
+    .crumbs li a:hover {
+        color: #333;
+        background-position: 100% -48px;
+        cursor: pointer;
+    }
+
+    .crumbs li a:active {
+        color: #333;
+        background-position: 100% -96px;
+    }
+
+    .crumbs li.first a span {
+        height: 29px;
+        width: 3px;
+        border-left: 1px solid #d9d9d9;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    .space {
+        display: block;
+        height: 5px;
+        clear: both;
+    }
+
+    ul.crumbs li:before {
+        background-image: none !important;
+    }
+
+
+    /*MEDIA QUERIES*/
+
+    @media screen and (max-width: 1152px) {
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .col-left {
+            width: 100%;
+        }
+        .col-right {
+            width: 100%;
+        }
+        .list-item {
+            width: 50%;
+        }
+
+</style>
+
+<!--TOP NAVIGATION-->
+
+<span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
+<div class="topnav" id="myTopnav">
+    <a href="http://learn.turner.com">Home</a>
+    <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+    <a href="/learnnow/org-development">Org. Development</a>
+    <a href="/learnnow/performance">Performance</a>
+    <a href="/learnnow/subscribe">Subscribe</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+</div>
+
+<script>
+    function shrinkNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+</script>
+
+<!--BREADCRUMBS-->
+
+<br>
+
+<div id="breadcrumb">
+    <ul class="crumbs">
+        <li class="first"><a href="/learnnow/pep-talks" style="z-index:9;"><span></span>Pep Talks</a></li>
+        <li><a href="#">Episode 02: Trust</a></li>
+    </ul>
+</div>
+
+<div class="space"></div>
+
+<h2 class="byline">Pep Talks</h2>
+<h2>Trust</h2>
+
+<br>
+<br>
+
+<div class="row">
+    <div class="col-left">
+
+        <div class="audioplayer">
+            <audio controls controlsList="nodownload">
+                <source src="https://s3.amazonaws.com/tpd-files/Podcast/Trust/Trust.mp3">
+            Your browser does not support this content. Please use Google Chrome or Mozilla Firefox.
+            </audio>
+        </div>
+
+        <br>
+
+        <h5>Transcript</h5>
+
+        <p>You may have heard that you should never trust someone who says, "Trust me." While we don't know if there's any truth to <i>that</i>, we can give you some other ways you can build trust with coworkers.</p>
+
+        <p>First, let's talk a little about what trust is. Some experts say that there are actually three dimensions of trust:</p>
+
+        <p><i>Ability</i> &mdash; does the person have the right skills and tools to do the job?</p>
+        <p><i>Loyalty</i> &mdash; can the other person confide in you and vice versa?</p>
+        <p><i>Integrity</i> &mdash; does she or he share the same values and expectations as you do?</p>
+
+        <p>Second, know that trust is a process and not something that happens overnight. Trust is a learned emotional skill that involves ongoing relationship building where the actual relationship is more important than any one particular outcome.</p>
+
+        <p>And, you may have heard this one before, to get trust you must give it. Sharing – not hoarding – information gets you communication and respect comes by respecting others.</p>
+
+        <p>So now that we know what trust is, here are our tips for cultivating it amongst your peers:</p>
+
+        <p>Make yourself vulnerable. You can do this by asking for feedback. Demonstrate that you’re willing to open yourself up to criticism. </p>
+
+        <p>Along those same lines, make sure to create psychological safety. What that means is to create an environment where the other person won’t feel like they’ll be punished or humiliated for speaking up, asking questions, or making mistakes. You can do this by acknowledging your own mistakes, encourage suggestions or ideas, or simply by putting the phone down and actively listening.</p>
+
+        <p>Speaking of phones, perpetual electronic communication can make people feel disconnected. A study by Kevin Rockmann of George Mason University and Gregory Northcraft, a professor of executive leadership at the University of Illinois, found that groups that met by video conference did better than those who worked solely via email. So try to show up in person or via webcam for key meetings as much as possible.</p>
+
+        <p>Our next tip is to be realistic. You should manage your expectations and ensure that others have support. Make your implicit expectations explicit and strive for clarity regarding what you expect from others and what they should expect from you. Be sure to define roles and responsibilities so the guesswork is removed out of knowing what individuals and teams do and why they do it. Also, don’t be afraid to say that you don’t know all the answers. But do be thorough and consistent when obtaining them.</p>
+
+        <p>Next, remember to be a vault. When someone confides something in you that doesn’t bring any apparent harm to others, then don’t repeat it to others! Information has a funny way of coming back to the person who leaked it, and this can cause a lot of damage. Resist the urge to spill the beans. However, use your best judgment – if there’s risk to the organization, be mindful of that.</p>
+
+        <p>Also, be consistent. When people are clear about how you are going to approach or respond to a situation, then it’s one less thing they (and you) have to worry about.</p>
+
+        <p>The last thing we’ll leave you with is that there’s a middle ground between becoming besties with your coworkers and being frenemies. It’s OK not to like someone – you’re human. Feeling and acting on feelings are two separate things. Part of having your emotional act together is being able to feel a certain way without needing to act on that feeling.</p>
+
+        <br>
+        <br>
+
+    </div>
+    <div class="col-right">
+        <h3 class="sub"><span>Resources</span></h3>
+        <br>
+        <h5>Articles</h5>
+        <div class="list">
+            <a class="list-item" href="https://www.ccl.org/articles/leading-effectively-articles/build-trust-in-the-workplace/" target="_blank">
+                <div class="list-content">
+                    <h3>2 Ways to Build Trust in the Workplace</h3>
+                </div>
+            </a>
+            <a class="list-item" href="https://www.psychologytoday.com/us/blog/trust-the-new-workplace-currency/201112/7-misunderstood-truths-about-workplace-trust" target="_blank">
+                <div class="list-content">
+                    <h3>7 Misunderstood Truths About Workplace Trust</h3>
+                </div>
+            </a>
+            <a class="list-item" href="https://www.thecut.com/2017/02/an-easy-way-to-get-your-coworkers-to-trust-you-more.html" target="_blank">
+                <div class="list-content">
+                    <h3>An Easy Way to Get Your Coworkers to Trust You More</h3>
+                </div>
+            </a>
+            <a class="list-item" href="https://blog.impraise.com/360-feedback/7-ways-managers-can-build-trust-in-the-workplace-performance-review" target="_blank">
+                <div class="list-content">
+                    <h3>7 Ways Managers Can Build Trust in the Workplace</h3>
+                </div>
+            </a>
+            <a class="list-item" href="https://www.rd.com/advice/work-career/trust-at-work/" target="_blank">
+                <div class="list-content">
+                    <h3>8 Ways to Build Trust with Your Coworkers</h3>
+                </div>
+            </a>
+            <a class="list-item" href="https://www.themuse.com/advice/how-to-deal-with-a-coworker-you-dont-likebut-everyone-else-is-obsessed-with" target="_blank">
+                <div class="list-content">
+                    <h3>How to Deal with a Coworker You Don't Like &mdash; But Everyone Else is Obsessed With</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>

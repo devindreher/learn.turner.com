@@ -1,0 +1,428 @@
+<style>
+    h2 {
+        font-family: TurnerBold;
+        font-size: 3rem;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    h3.sub {
+        position: relative;
+        text-align: left;
+        font-family: TurnerBold;
+        font-size: 1.4rem;
+    }
+
+    h3.sub span {
+        background: #fff;
+        padding-left: 0;
+        padding-right: 15px;
+        position: relative;
+        z-index: 1;
+    }
+
+    h3.sub:before {
+        background: #696969;
+        content: "";
+        display: block;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        left: 0;
+    }
+
+    .byline {
+        font-weight: bold;
+        font-size: 1.4rem !important;
+        color: dimgray;
+        margin: 0;
+    }
+
+    .learn-button {
+        padding: 2px 5px;
+        border: 1px solid #0052e7;
+        border-radius: 3px;
+
+        text-decoration: none;
+        font-size: .975rem !important;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+    }
+
+    .learn-button:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .audioplayer {
+        background-color: lightgray;
+        padding: 20px;
+        width: auto;
+        height: auto;
+    }
+
+    .audioplayer audio {
+        width: 100%;
+    }
+
+    /*LAYOUT*/
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .col-left {
+        float: left;
+        width: 65%;
+        padding: 10px 20px 0 0;
+    }
+
+    .col-right {
+        float: left;
+        width: 35%;
+        padding: 10px;
+    }
+
+    /*ITEM FLEX BOXES*/
+
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .list-item {
+        display: flex;
+        padding: 0.5em;
+        width: 100%;
+    }
+
+    .list-content {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        width: 100%;
+
+        border: 1px solid grey;
+        border-top: 10px solid #000;
+        box-shadow: 1px 1px 3px #888;
+    }
+
+    .list-content:hover {
+        box-shadow: 3px 3px 5px #888;
+        transition: .3s;
+    }
+
+    .list-content h3 {
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        color: #282828;
+        line-height: 120%;
+    }
+
+    .list-content p {
+        font-family: Turner, Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        line-height: 120%;
+    }
+
+    .list-content p a {
+        font-size: 1rem;
+        line-height: 120%;
+    }
+
+
+    /*NAVIGATION*/
+
+    .nav-button {
+        padding: 2px 5px;
+        border: 1px solid #0052e7;
+        border-radius: 3px;
+
+        text-decoration: none;
+        font-size: .975rem !important;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+    }
+
+    .nav-button:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .learnNow a {
+        font-size: 15px;
+        font-family: TurnerBold;
+        color: #000;
+    }
+
+    .learnNow a:hover {
+        color: #0052e7;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15px !important;
+        font-family: TurnerBold;
+    }
+
+    .topnav a:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .topnav .icon {
+        display: none;
+    }
+
+    /*BREADCRUMBS*/
+
+    #breadcrumb {
+        float: left;
+        display: block;
+    }
+
+    #breadcrumb ul {
+        list-style: none;
+    }
+
+    .crumbs {
+        display: block;
+        margin-left: -27px;
+    }
+
+    .crumbs li {
+        display: inline;
+    }
+
+    .crumbs li.first {
+        padding-left: 8px;
+    }
+
+    .crumbs li a,
+    .crumbs li a:link,
+    .crumbs li a:visited {
+        color: #666;
+        display: block;
+        float: left;
+        font-size: 12px;
+        margin-left: -13px;
+        padding: 0 17px 11px 20px;
+        position: relative;
+        text-decoration: none;
+    }
+
+    .crumbs li a {
+        background-image: url('https://s3.amazonaws.com/tpd-files/images/bg-crumbs.png');
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+        position: relative;
+    }
+
+    .crumbs li a:hover {
+        color: #333;
+        background-position: 100% -48px;
+        cursor: pointer;
+    }
+
+    .crumbs li a:active {
+        color: #333;
+        background-position: 100% -96px;
+    }
+
+    .crumbs li.first a span {
+        height: 29px;
+        width: 3px;
+        border-left: 1px solid #d9d9d9;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    .space {
+        display: block;
+        height: 5px;
+        clear: both;
+    }
+
+    ul.crumbs li:before {
+        background-image: none !important;
+    }
+
+
+    /*MEDIA QUERIES*/
+
+    @media screen and (max-width: 1152px) {
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .col-left {
+            width: 100%;
+        }
+        .col-right {
+            width: 100%;
+        }
+        .list-item {
+            width: 50%;
+        }
+
+</style>
+
+<!--TOP NAVIGATION-->
+
+<span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
+<div class="topnav" id="myTopnav">
+    <a href="http://learn.turner.com">Home</a>
+    <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+    <a href="/learnnow/org-development">Org. Development</a>
+    <a href="/learnnow/performance">Performance</a>
+    <a href="/learnnow/subscribe">Subscribe</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+</div>
+
+<script>
+    function shrinkNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+</script>
+
+<!--BREADCRUMBS-->
+
+<br>
+
+<div id="breadcrumb">
+    <ul class="crumbs">
+        <li class="first"><a href="/learnnow/pep-talks" style="z-index:9;"><span></span>Pep Talks</a></li>
+        <li><a href="#">Episode 01: Transitioning to a People Leader</a></li>
+    </ul>
+</div>
+
+<div class="space"></div>
+
+<h2 class="byline">Pep Talks</h2>
+<h2>Transitioning to a People Leader</h2>
+
+<br>
+<br>
+
+<div class="row">
+    <div class="col-left">
+
+        <div class="audioplayer">
+            <audio controls controlsList="nodownload">
+                <source src="https://s3.amazonaws.com/tpd-files/Podcast/Transitioning-to-a-People-Leader/Transitioning-to-a-People-Leader.mp3">
+            Your browser does not support this content. Please use Google Chrome or Mozilla Firefox.
+            </audio>
+        </div>
+
+        <br>
+
+        <h5>Transcript</h5>
+
+        <p>If you've never led a team before, the whole notion of being the big kahuna can seem a bit daunting and overwhelming. Fear not! There are some practical things you can do to ease the transition.</p>
+
+        <p>The first thing to remember is that your purpose has changed. No longer is your job to complete tasks or projects. Your number one job now is to help other people accomplish things in an outstanding way.</p>
+
+        <p>Insisting on still being the "expert" is a no-no. Continuing to hold onto this title may encourage rifts on the team. For example, a manager-as-expert reinforces a more hierarchical environment. Teammates can grow resentful because their ideas and opinions don't count. Personal initiative can fade as team members become used to their manager supplying all the answers.</p>
+
+        <p>If you find yourself falling into this "manager-as-expert" capacity, you must resist the instinct to answer questions. Instead, ask, "What do you think we should do? &mdash; even if the answer is painfully obvious to you.</p>
+
+        <p>As a new leader, you also need to understand how the business operates. You need to know what's happening across Turner and it's progress towards the strategic priorities, as well as understanding our industry so you can make informed decisions while confidently providing dirction. Spend some time with senior leaders and ask questions &mdash; why is our strategy what it is? Why have certain decisions been made? What can your team do to support other parts of the business? What goals should we commit to in order to impact the business?</p>
+
+        <p>Next, become a master of delegation. Now that doesn't mean passing everything off on your team so you can go sip a mojito, but it does mean creating an environment where you can rely on others. This involves creating clear expectations and using positive feedback to reinforce individual and team initiative.</p>
+
+        <p>Speaking of your team, something else that sometimes falls off the radar is prioritizing one-on-one meetings with your direct reports. Time with them is critical and should be used to discuss items that are crucial to their success and overall career development.</p>
+
+        <p>This next tip is a little squishy: remember to be an example. Your team is going to look at you for inspiration for how to act through the thick and thin. Be mnindful of your emotions and how you react in certain situations. You're going to need to slow down, be patient, and develop an informed perspective. Develop your ability to read the social environment and to react professionally &mdash; increase your Emotional Intelligence!</p>
+
+        <p>The last thing we'll leave you with, since we're kind of have a thing for this, is to use this as an opportunity to create an atmosphere of team and individual learning. Encourage individuals to offer and pursue their ideas. And then become a champion for them in realizing those ideas.</p>
+
+        <p>Finally, remember during a transition from being an individual expert to now managing your colleagues, you are not going to be perfect. Stay open to the ambiguities you are going to face and have the courage to ask for help from your boss.</p>
+
+        <br>
+        <br>
+
+    </div>
+    <div class="col-right">
+        <h3 class="sub"><span>Resources</span></h3>
+        <br>
+        <h5>Articles</h5>
+        <div class="list">
+            <a class="list-item" href="https://www.entrepreneur.com/article/247046" target="_blank">
+                <div class="list-content">
+                    <h3>8 Tips to Help First-Time Managers Thrive</h3>
+                </div>
+            </a>
+            <a class="list-item" href="https://www.themuse.com/advice/youre-the-bossnow-what-7-todos-as-a-firsttime-manager" target="_blank">
+                <div class="list-content">
+                    <h3>You're the Boss &mdash; Now What?<br>To-Dos as a First-Time Manager</h3>
+                </div>
+            </a>
+            <a class="list-item" href="https://www.thebalance.com/transitioning-from-solo-expert-to-effective-manager-4116889" target="_blank">
+                <div class="list-content">
+                    <h3>How to Transition From Solo Expert to Effective Manager</h3>
+                </div>
+            </a>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <h5>Classes &amp; More</h5>
+        <div class="list">
+            <a class="list-item" href="/learnnow/management-essentials---transitioning-into-management" target="_blank">
+                <div class="list-content">
+                    <h3>Management Essentials:<br>Transitioning Into Management</h3>
+                </div>
+            </a>
+            <a class="list-item" href="/learnnow/management-essentials---managing-virtual-teams" target="_blank">
+                <div class="list-content">
+                    <h3>Management Essentials:<br>Managing Virtual Teams</h3>
+                </div>
+            </a>
+            <a href="/learnnow/leadership---leadershipnow" class="list-item" target="_blank">
+                <div class="list-content">
+                    <h3>LeadershipNow</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
