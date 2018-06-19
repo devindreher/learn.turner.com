@@ -1,0 +1,501 @@
+<style>
+    h2 {
+        font-family: TurnerBold;
+        font-size: 3rem;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+    h3.sub {
+        position: relative;
+        text-align: left;
+        font-family: TurnerBold;
+        font-size: 2rem;
+    }
+
+    h3.sub span {
+        background: #fff;
+        padding-left: 0;
+        padding-right: 15px;
+        position: relative;
+        z-index: 1;
+    }
+
+    h3.sub:before {
+        background: #696969;
+        content: "";
+        display: block;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        left: 0;
+    }
+
+    .byline {
+        font-weight: bold;
+        font-size: .9rem !important;
+        margin: 0 0 20px 0;
+    }
+
+    h3.q {
+        font-size: 1.5rem;
+        font-family: TurnerBold;
+        margin-bottom: 20px;
+    }
+
+    hr.class {
+        border-top: 3px double #8c8b8b;
+    }
+
+    /*CLASS STYLING*/
+
+    .class-row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .class-column-left {
+        float: left;
+        width: 25%;
+        padding: 10px;
+    }
+
+    .class-column-left p {
+        font-size: .985rem;
+        line-height: 145%;
+    }
+
+    .class-column-right h3 {
+        font-family: TurnerBold;
+        font-size: 1.5rem;
+    }
+
+    .panelist-column-right p {
+        font-size: 1rem;
+    }
+
+    .class-column-right {
+        float: left;
+        width: 75%;
+        padding: 10px;
+    }
+
+    /*NAVIGATION*/
+
+    .nav-button {
+        padding: 2px 5px;
+        border: 1px solid #0052e7;
+        border-radius: 3px;
+
+        text-decoration: none;
+        font-size: .975rem !important;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+    }
+
+    .nav-button:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .learnNow a {
+        font-size: 15px;
+        font-family: TurnerBold;
+        color: #000;
+    }
+
+    .learnNow a:hover {
+        color: #0052e7;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15px !important;
+        font-family: TurnerBold;
+    }
+
+    .topnav a:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .topnav .icon {
+        display: none;
+    }
+
+    /*MEDIA QUERIES*/
+
+    @media screen and (max-width: 1152px) {
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+
+    @media all and (max-width: 600px) {
+        .class-column-left {
+            width: 100%;
+        }
+        .class-column-right {
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+
+    }
+
+</style>
+
+<!--TOP NAVIGATION-->
+
+<span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
+<div class="topnav" id="myTopnav">
+    <a href="http://learn.turner.com">Home</a>
+    <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+    <a href="/learnnow/org-development">Org. Development</a>
+    <a href="/learnnow/performance">Performance</a>
+    <a href="/learnnow/subscribe">Subscribe</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+</div>
+
+<script>
+    function shrinkNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+</script>
+
+<h2>Q3 Leadership Development Opportunities</h2>
+
+<br><br>
+
+<h3 class="sub"><span>July 2018</span></h3>
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>LeadershipNow: Bold Hiring</b></p>
+        <p>July 10<br>9a &mdash; 11a ET<br>Webinar/Global
+        </p>
+        <hr>
+        <p>July 31<br>2p &mdash; 4p ET<br>Webinar/Global</p>
+        <hr>
+        <a href="https://lnboldhiring.eventbrite.com/" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>Bold Hiring is the term we've been using to talk about a reinvigorated approach to hiring at Turner &mdash; one that includes a sharper focus on encouraging more diversity (in every sense) at our company. Learn more during this interactive webinar.</p>
+    </div>
+</div>
+
+<hr class="class">
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>LeadershipNow: Rock the Change</b></p>
+        <p>July 10<br>2p &mdash; 4p ET<br>Webinar/Global
+        </p>
+        <hr>
+        <p>July 31<br>9a &mdash; 11a ET<br>Webinar/Global</p>
+        <a href="https://rockthechange.eventbrite.com" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>We'll explore how to ensure balance and focus during times of change, learn to influence up, and how to provide support to your team. </p>
+    </div>
+</div>
+
+<hr class="class">
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>LeadershipNow: Work Smarter 101</b></p>
+        <p>July 17<br>1p &mdash; 3p ET<br>Atlanta | Techwood</p>
+        <hr>
+        <a href="https://bibootcamp101.eventbrite.com" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>Learn how to streamline work processes, eliminate low value work, and inspire continuous improvement.</p>
+    </div>
+</div>
+
+<hr class="class">
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>LeadershipNow: How to Talk 'Good' to Your Team</b></p>
+        <p>July 24<br> 9a &ndash; 12p ET<br>Atlanta | CNN Center
+        </p>
+        <hr>
+        <a href="https://how2talkgoodtoyourteam.eventbrite.com" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>This session will help you understand different communication styles and preferences so you can communicate more effectively with your team and leadership.</p>
+    </div>
+</div>
+
+<hr class="class">
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>LeadershipNow: Move Your Team to All In</b></p>
+        <p>July 24<br> 1:30p &ndash; 4:30p ET<br>Atlanta | CNN Center
+        </p>
+        <hr>
+        <a href="https://moveyourteamtoallin.eventbrite.com" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>We'll examine the nature of engagement from a number of different angles. We'll also perform some hands-on activities that yield insight into what motivates and inspires us to be high performing.</p>
+    </div>
+</div>
+
+<br><br>
+
+<h3 class="sub"><span>August 2018</span></h3>
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>LeadershipNow: Bold Hiring</b></p>
+        <p>August 9<br>9a &ndash; 11a ET<br>Webinar/Global
+        </p>
+        <hr>
+        <p>August 29<br>2p &mdash; 4p ET<br>Webinar/Global</p>
+        <hr>
+        <a href="https://lnboldhiring.eventbrite.com/" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>Bold Hiring is the term we've been using to talk about a reinvigorated approach to hiring at Turner &mdash; one that includes a sharper focus on encouraging more diversity (in every sense) at our company. Learn more during this interactive webinar.</p>
+    </div>
+</div>
+
+<hr class="class">
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>LeadershipNow: Who Are You (to Lead)?</b></p>
+        <p>August 9<br>2p &ndash; 4p ET<br>Webinar/Global
+        </p>
+        <hr>
+        <p>August 29<br>9a &ndash; 11a ET<br>Webinar/Global</p>
+        <hr>
+        <a href="https://whoareyoutolead.eventbrite.com" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>In this session, you'll take a significant step towards becoming the leader you want to be by investing the time to actively reflect on what type of leader you are, what motivates you, and any areas you want to improve to better understand those you lead.</p>
+    </div>
+</div>
+
+<hr class="class">
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>LeadershipNow: How to Talk "Good" to Your Team</b></p>
+        <p>August 15<br>10a &ndash; 1p ET<br>New York | Time Warner<br>Center
+        </p>
+        <hr>
+        <p>August 23<br>1:30p &ndash; 4:30p ET<br>Atlanta | Techwood</p>
+        <hr>
+        <a href="https://how2talkgoodtoyourteam.eventbrite.com/" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>This session will help you understand different communication styles and preferences so you can communicate more effectively with your team and leadership.</p>
+    </div>
+</div>
+
+<hr class="class">
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>LeadershipNow: Move Your Team to All In</b></p>
+        <p>August 15<br> 1:30p &ndash; 4:30p ET<br>New York | Time Warner Center</p>
+        <hr>
+        <p>August 23<br>9a &mdash; 12p ET<br>Atlanta | Techwood</p>
+        <a href="https://moveyourteamtoallin.eventbrite.com" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>We'll examine the nature of engagement from a number of different angles. We'll also perform some hands-on activities that yield insight into what motivates and inspires us to be high performing.</p>
+    </div>
+</div>
+
+<hr class="class">
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>LeadershipNow: Stop. Collaborate &amp; Listen</b></p>
+        <p>August 16<br>10a &ndash; 1p ET<br>New York | Time Warner Center
+        </p>
+        <hr>
+        <a href="https://stopcollaborateandlisten.eventbrite.com" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>Learn what we mean by "collaboration" and get strategies for working in a collaborative manner with both individuals and teams.</p>
+    </div>
+</div>
+
+<hr class="class">
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>LeadershipNow: Candid Conversations</b></p>
+        <p>August 21<br>9a &ndash; 11a ET<br>Webinar/Global
+        </p>
+        <hr>
+        <a href="https://lncandidconversations.eventbrite.com" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>Learn how to "just say it" without being a jerk. We'll also discuss how you can build a culture of candor through the many ways we interact.</p>
+    </div>
+</div>
+
+<hr class="class">
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>LeadershipNow: Rock the Change</b></p>
+        <p>August 21<br>2p &ndash; 4p ET<br>Webinar/Global
+        </p>
+        <hr>
+        <a href="https://rockthechange.eventbrite.com" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>We'll explore how to ensure balance and focus during times of change, learn to influence up, and how to provide support to your team.</p>
+    </div>
+</div>
+
+<br><br>
+
+<h3 class="sub"><span>September 2018</span></h3>
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>LeadershipNow: Bold Hiring</b></p>
+        <p>September 12<br>9a &ndash; 11a ET<br>Webinar/Global
+        </p>
+        <hr>
+        <p>September 27<br>2p &ndash; 4p ET<br>Webinar/Global</p>
+        <hr>
+        <a href="https://lnboldhiring.eventbrite.com/" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>Bold Hiring is the term we've been using to talk about a reinvigorated approach to hiring at Turner &mdash; one that includes a sharper focus on encouraging more diversity (in every sense) at our company. Learn more during this interactive webinar.</p>
+    </div>
+</div>
+
+<hr class="class">
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>LeadershipNow: Stop. Collaborate &amp; Listen</b></p>
+        <p>September 13<br>9a &ndash; 12p ET<br>Atlanta | Techwood
+        </p>
+        <hr>
+        <p>September 26<br>9a &ndash; 12p ET<br>Atlanta | CNN Center</p>
+        <hr>
+        <a href="https://stopcollaborateandlisten.eventbrite.com" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>Learn what we mean by "collaboration" and get strategies for working in a collaborative manner with both individuals and teams.</p>
+    </div>
+</div>
+
+<hr class="class">
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>LeadershipNow: Move Your Team to All In</b></p>
+        <p>September 13<br>1:30p &ndash; 4:30p ET<br>Atlanta | Techwood
+        </p>
+        <hr>
+        <a href="https://moveyourteamtoallin.eventbrite.com" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>We'll examine the nature of engagement from a number of different angles. We'll also perform some hands-on activities that yield insight into what motivates and inspires us to be high performing.</p>
+    </div>
+</div>
+
+<hr class="class">
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>LeadershipNow: Rock the Change</b></p>
+        <p>September 18<br>9a &ndash; 11a ET<br>Webinar/Global
+        </p>
+        <hr>
+        <a href="https://rockthechange.eventbrite.com" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>We'll explore how to ensure balance and focus during times of change, learn to influence up, and how to provide support to your team.</p>
+    </div>
+</div>
+
+<hr class="class">
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>LeadershipNow: Candid Conversations</b></p>
+        <p>September 18<br>2p &ndash; 4p ET<br>Webinar/Global</p>
+        <hr>
+        <a href="https://lncandidconversations.eventbrite.com" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>Learn how to "just say it" without being a jerk. We'll also discuss how you can build a culture of candor through the many ways we interact.</p>
+    </div>
+</div>
+
+<hr class="class">
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>LeadershipNow: How to Talk "Good" to Your Team</b></p>
+        <p>September 26<br>1:30p &ndash; 4:30p ET<br>Atlanta | CNN Center</p>
+        <hr>
+        <a href="https://how2talkgoodtoyourteam.eventbrite.com/" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>This session will help you understand different communication styles and preferences so you can communicate more effectively with your team and leadership.</p>
+    </div>
+</div>
+
+<hr class="class">
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>LeadershipNow: Work Smarter 101</b></p>
+        <p>September 19<br>1p &ndash; 3p ET<br>Atlanta | CNN Center</p>
+        <hr>
+        <a href="https://bibootcamp101.eventbrite.com" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>Learn how to streamline work processes, eliminate low value work, and inspire continuous improvement.</p>
+    </div>
+</div>
