@@ -1,0 +1,667 @@
+<style>
+    h4 {
+        font-family: TurnerBold;
+        font-size: 1.5em;
+        line-height: 150%;
+    }
+
+    .learnFooter p {
+        font-size: .7em;
+    }
+
+    /*NAVIGATION*/
+
+    .learnNow a {
+        font-size: 15px;
+        font-family: TurnerBold;
+        color: #000;
+    }
+
+    .learnNow a:hover {
+        color: #0052e7;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15px !important;
+        font-family: TurnerBold;
+    }
+
+    .topnav a:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .topnav .icon {
+        display: none;
+    }
+
+    /*QUIZ*/
+
+    .quiz {
+        margin: 30px 0 30px;
+    }
+
+    .quiz .questions {
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        padding: 30px 0 30px;
+    }
+
+    .quiz .questions ol {
+        padding: 0;
+        counter-reset: list;
+        list-style-type: none;
+    }
+
+    .quiz .questions ol li {
+        margin: 0;
+        padding: 34px 0 40px;
+        position: relative;
+    }
+
+    .quiz .questions li:nth-last-of-type(odd) {
+        background-color: #f8f8f8;
+    }
+
+    .quiz .questions ol li:before {
+        color: #111;
+        counter-increment: list;
+        content: counter(list) ".";
+        font-family: TurnerRegular, sans-serif;
+        left: 22px;
+        margin-top: 1px;
+    }
+
+    .quiz .questions li p {
+        font: 600 19px/26px TurnerBold, sans-serif;
+        margin: 0 60px 70px;
+    }
+
+    .quiz .questions li aside {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin: 8px 50px 0;
+    }
+
+    .quiz .questions li aside span {
+        color: #999;
+        font: 14px/16px TurnerRegular, sans-serif;
+        width: 33%;
+    }
+
+    .quiz .questions aside span:nth-of-type(1) {
+        text-align: left;
+    }
+
+    .quiz .questions aside span:nth-of-type(2) {
+        text-align: center;
+    }
+
+    .quiz .questions aside span:nth-of-type(3) {
+        text-align: right;
+    }
+
+    .quizinputs {
+        color: #999;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin: 0 50px;
+        font: 400 26px/32px TurnerRegular, sans-serif;
+    }
+
+    .quizinputs input[type=radio] {
+        display: none;
+    }
+
+    .quizinputs input[type=radio]:checked+label:before {
+        background-color: #0052e7;
+        border-color: #adc7f7;
+    }
+
+    .quizinputs label {
+        cursor: pointer;
+        display: inline-block;
+        margin-right: 17px;
+        padding-left: 7px;
+        position: relative;
+    }
+
+    .quizinputs label::before {
+        background-color: #ccc;
+        border: 3px solid #dadada;
+        border-radius: 50%;
+        bottom: 1px;
+        content: "";
+        display: inline-block;
+        height: 25px;
+        left: 0;
+        position: absolute;
+        width: 26px;
+    }
+
+    .quizinputs label span {
+        color: #111;
+        font-size: 14px;
+        left: 8px;
+        line-height: 16px;
+        position: absolute;
+        text-align: center;
+        top: -50px;
+    }
+
+    .quiz .questions footer {
+        text-align: center;
+    }
+
+    .quiz .questions footer button {
+        background-color: #0052e7;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font: 600 20px/20px TurnerBold, sans-serif;
+        padding: 12px 18px;
+    }
+
+    .quiz .results_div {
+        font-family: TurnerRegular, sans-serif;
+        color: #000;
+        border: 3px solid #000;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .quiz .results_div p {
+        color: #000;
+    }
+    
+    .quiz-submit {
+        font-family: TurnerBold;
+        color: #fff;
+        background-color: #000;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    
+    .quiz-submit:hover {
+        background-color: #0052e7;
+    }
+
+    /*MEDIA QUERIES*/
+
+    @media screen and (max-width: 1152px) {
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 1152px) {
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+
+    
+    @media screen and (max-width: 600px) {
+        .quiz {
+            margin: 30px -20px;
+        }
+        .quiz ol li {
+            padding: 34px 0 40px;
+        }
+
+        .quiz ol li:before {
+            font: 18px/18px TurnerRegular, sans-serif;
+            left: 17px;
+            top: 38px;
+        }
+
+        .quiz li p {
+            margin: 0 40px 70px 50px;
+        }
+
+        .quiz form {
+            margin: 0 10px;
+        }
+
+        .quiz li aside {
+            margin: 5px 10px 0;
+        }
+    }
+
+
+</style>
+
+<!--NAVIGATION-->
+
+<span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
+<div class="topnav" id="myTopnav">
+    <a href="http://learn.turner.com">Home</a>
+    <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+    <a href="/learnnow/org-development">Org. Development</a>
+    <a href="/learnnow/performance">Performance</a>
+    <a href="/learnnow/subscribe">Subscribe</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+</div>
+
+<script>
+    function shrinkNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+</script>
+
+
+<!--CONTENT-->
+
+<div>&nbsp;</div>
+
+<h2>How Well Do You Handle Uncertainty?</h2>
+
+<p>So, there's a lot going on. Our industry is changing, our business is changing, even we could be changing (we heard frosted tips are making a comeback). Each day brings with it some uncertainty and how we react to that ambiguity says a lot about us, according to researchers. Our ability to react to uncertainty has been connected to our openness to other people, ability to think creatively, and make smart decisions under pressure.</p>
+
+<p>The notion above is what researcher <a href="https://terpconnect.umd.edu/~hannahk/" target="_blank">Arie Kruglanski</a> calls "need for cognitive closure." Kruglanski and psychologist Donna Webster developed the "need for closure scale" to measure this. In a nutshell, the thought is that those that need closure prefer black-and-white and feel uncomfortable when left hanging. On the opposite end, those who have lower needs for closure seem to have an easier time seeing "the gray" and can appreciate ambiguity.
+</p>
+
+<p>You can take this brief assessment developed by psychologists Arne Roets and Alain Van Hiel &mdash; they adapted it from Webster and Kruglanski's longer version.</p>
+
+<form name="quizform">
+
+    <div class="quiz">
+        <section class="questions">
+            <ol>                
+                <li>
+                    <p>I don't like situations that are uncertain.</p>
+                    <div class="quizinputs">
+                        <input type="radio" value="1" id="Q1-1" name="Q1"><label for="Q1-1"><span>1</span></label>
+                        <input type="radio" value="2" id="Q1-2" name="Q1"><label for="Q1-2"><span>2</span></label>
+                        <input type="radio" value="3" id="Q1-3" name="Q1"><label for="Q1-3"><span>3</span></label>
+                        <input type="radio" value="4" id="Q1-4" name="Q1"><label for="Q1-4"><span>4</span></label>
+                        <input type="radio" value="5" id="Q1-5" name="Q1"><label for="Q1-5"><span>5</span></label>
+                        <input type="radio" value="6" id="Q1-6" name="Q1"><label for="Q1-6"><span>6</span></label>
+                    </div>
+                    <aside>
+                        <span>Not at all true of me</span>
+                        <span></span>
+                        <span>&nbsp;&nbsp;Very true of me</span>
+                    </aside>
+                </li>
+                <li>
+                    <p>I dislike questions that could be answered in different ways.</p>
+                    <div class="quizinputs">
+                        <input type="radio" value="1" id="Q2-1" name="Q2"><label for="Q2-1"><span>1</span></label>
+                        <input type="radio" value="2" id="Q2-2" name="Q2"><label for="Q2-2"><span>2</span></label>
+                        <input type="radio" value="3" id="Q2-3" name="Q2"><label for="Q2-3"><span>3</span></label>
+                        <input type="radio" value="4" id="Q2-4" name="Q2"><label for="Q2-4"><span>4</span></label>
+                        <input type="radio" value="5" id="Q2-5" name="Q2"><label for="Q2-5"><span>5</span></label>
+                        <input type="radio" value="6" id="Q2-6" name="Q2"><label for="Q2-6"><span>6</span></label>
+                    </div>
+                    <aside>
+                        <span>Not at all true of me</span>
+                        <span></span>
+                        <span>&nbsp;&nbsp;Very true of me</span>
+                    </aside>
+                </li>
+                <li>
+                    <p>I feel uncomfortable when I don't understand the reason why an event occurred in my life.</p>
+                    <div class="quizinputs">
+                        <input type="radio" value="1" id="Q3-1" name="Q3"><label for="Q3-1"><span>1</span></label>
+                        <input type="radio" value="2" id="Q3-2" name="Q3"><label for="Q3-2"><span>2</span></label>
+                        <input type="radio" value="3" id="Q3-3" name="Q3"><label for="Q3-3"><span>3</span></label>
+                        <input type="radio" value="4" id="Q3-4" name="Q3"><label for="Q3-4"><span>4</span></label>
+                        <input type="radio" value="5" id="Q3-5" name="Q3"><label for="Q3-5"><span>5</span></label>
+                        <input type="radio" value="6" id="Q3-6" name="Q3"><label for="Q3-6"><span>6</span></label>
+                    </div>
+                    <aside>
+                        <span>Not at all true of me</span>
+                        <span></span>
+                        <span>&nbsp;&nbsp;Very true of me</span>
+                    </aside>
+                </li>
+                <li>
+                    <p>When I have made a decision, I feel relieved.</p>
+                    <div class="quizinputs">
+                        <input type="radio" value="1" id="Q4-1" name="Q4"><label for="Q4-1"><span>1</span></label>
+                        <input type="radio" value="2" id="Q4-2" name="Q4"><label for="Q4-2"><span>2</span></label>
+                        <input type="radio" value="3" id="Q4-3" name="Q4"><label for="Q4-3"><span>3</span></label>
+                        <input type="radio" value="4" id="Q4-4" name="Q4"><label for="Q4-4"><span>4</span></label>
+                        <input type="radio" value="5" id="Q4-5" name="Q4"><label for="Q4-5"><span>5</span></label>
+                        <input type="radio" value="6" id="Q4-6" name="Q4"><label for="Q4-6"><span>6</span></label>
+                    </div>
+                    <aside>
+                        <span>Not at all true of me</span>
+                        <span></span>
+                        <span>&nbsp;&nbsp;Very true of me</span>
+                    </aside>
+                </li>
+                <li>
+                    <p>I dislike it when a person's statement could mean many different things.</p>
+                    <div class="quizinputs">
+                        <input type="radio" value="1" id="Q5-1" name="Q5"><label for="Q5-1"><span>1</span></label>
+                        <input type="radio" value="2" id="Q5-2" name="Q5"><label for="Q5-2"><span>2</span></label>
+                        <input type="radio" value="3" id="Q5-3" name="Q5"><label for="Q5-3"><span>3</span></label>
+                        <input type="radio" value="4" id="Q5-4" name="Q5"><label for="Q5-4"><span>4</span></label>
+                        <input type="radio" value="5" id="Q5-5" name="Q5"><label for="Q5-5"><span>5</span></label>
+                        <input type="radio" value="6" id="Q5-6" name="Q5"><label for="Q5-6"><span>6</span></label>
+                    </div>
+                    <aside>
+                        <span>Not at all true of me</span>
+                        <span></span>
+                        <span>&nbsp;&nbsp;Very true of me</span>
+                    </aside>
+                </li>
+                <li>
+                    <p>I do not usually consult many different opinions before forming my own views.</p>
+                    <div class="quizinputs">
+                        <input type="radio" value="1" id="Q6-1" name="Q6"><label for="Q6-1"><span>1</span></label>
+                        <input type="radio" value="2" id="Q6-2" name="Q6"><label for="Q6-2"><span>2</span></label>
+                        <input type="radio" value="3" id="Q6-3" name="Q6"><label for="Q6-3"><span>3</span></label>
+                        <input type="radio" value="4" id="Q6-4" name="Q6"><label for="Q6-4"><span>4</span></label>
+                        <input type="radio" value="5" id="Q6-5" name="Q6"><label for="Q6-5"><span>5</span></label>
+                        <input type="radio" value="6" id="Q6-6" name="Q6"><label for="Q6-6"><span>6</span></label>
+                    </div>
+                    <aside>
+                        <span>Not at all true of me</span>
+                        <span></span>
+                        <span>&nbsp;&nbsp;Very true of me</span>
+                    </aside>
+                </li>
+                <li>
+                    <p>I find a well-ordered life with regular hours suits my temperament.</p>
+                    <div class="quizinputs">
+                        <input type="radio" value="1" id="Q7-1" name="Q7"><label for="Q7-1"><span>1</span></label>
+                        <input type="radio" value="2" id="Q7-2" name="Q7"><label for="Q7-2"><span>2</span></label>
+                        <input type="radio" value="3" id="Q7-3" name="Q7"><label for="Q7-3"><span>3</span></label>
+                        <input type="radio" value="4" id="Q7-4" name="Q7"><label for="Q7-4"><span>4</span></label>
+                        <input type="radio" value="5" id="Q7-5" name="Q7"><label for="Q7-5"><span>5</span></label>
+                        <input type="radio" value="6" id="Q7-6" name="Q7"><label for="Q7-6"><span>6</span></label>
+                    </div>
+                    <aside>
+                        <span>Not at all true of me</span>
+                        <span></span>
+                        <span>&nbsp;&nbsp;Very true of me</span>
+                    </aside>
+                </li>
+                <li>
+                    <p>I don't like to go into a situation without knowing what I can expect from it.</p>
+                    <div class="quizinputs">
+                        <input type="radio" value="1" id="Q8-1" name="Q8"><label for="Q8-1"><span>1</span></label>
+                        <input type="radio" value="2" id="Q8-2" name="Q8"><label for="Q8-2"><span>2</span></label>
+                        <input type="radio" value="3" id="Q8-3" name="Q8"><label for="Q8-3"><span>3</span></label>
+                        <input type="radio" value="4" id="Q8-4" name="Q8"><label for="Q8-4"><span>4</span></label>
+                        <input type="radio" value="5" id="Q8-5" name="Q8"><label for="Q8-5"><span>5</span></label>
+                        <input type="radio" value="6" id="Q8-6" name="Q8"><label for="Q8-6"><span>6</span></label>
+                    </div>
+                    <aside>
+                        <span>Not at all true of me</span>
+                        <span></span>
+                        <span>&nbsp;&nbsp;Very true of me</span>
+                    </aside>
+                </li>
+                <li>
+                    <p>I don't like to be with people who are capable of unexpected actions.</p>
+                        <div class="quizinputs">
+                            <input type="radio" value="1" id="Q9-1" name="Q9"><label for="Q9-1"><span>1</span></label>
+                            <input type="radio" value="2" id="Q9-2" name="Q9"><label for="Q9-2"><span>2</span></label>
+                            <input type="radio" value="3" id="Q9-3" name="Q9"><label for="Q9-3"><span>3</span></label>
+                            <input type="radio" value="4" id="Q9-4" name="Q9"><label for="Q9-4"><span>4</span></label>
+                            <input type="radio" value="5" id="Q9-5" name="Q9"><label for="Q9-5"><span>5</span></label>
+                            <input type="radio" value="6" id="Q9-6" name="Q9"><label for="Q9-6"><span>6</span></label>
+                        </div>
+                    <aside>
+                        <span>Not at all true of me</span>
+                        <span></span>
+                        <span>&nbsp;&nbsp;Very true of me</span>
+                    </aside>
+                </li>
+                <li>
+                    <p>I enjoy having a clear and structured mode of life.</p>
+                    <div class="quizinputs">
+                        <input type="radio" value="1" id="Q10-1" name="Q10"><label for="Q10-1"><span>1</span></label>
+                        <input type="radio" value="2" id="Q10-2" name="Q10"><label for="Q10-2"><span>2</span></label>
+                        <input type="radio" value="3" id="Q10-3" name="Q10"><label for="Q10-3"><span>3</span></label>
+                        <input type="radio" value="4" id="Q10-4" name="Q10"><label for="Q10-4"><span>4</span></label>
+                        <input type="radio" value="5" id="Q10-5" name="Q10"><label for="Q10-5"><span>5</span></label>
+                        <input type="radio" value="6" id="Q10-6" name="Q10"><label for="Q10-6"><span>6</span></label>
+                    </div>
+                    <aside>
+                        <span>Not at all true of me</span>
+                        <span></span>
+                        <span>&nbsp;&nbsp;Very true of me</span>
+                    </aside>
+                </li>
+                <li>
+                    <p>I feel irritated when one person disagrees with what everyone else in the group believes.</p>
+                    <div class="quizinputs">
+                        <input type="radio" value="1" id="Q11-1" name="Q11"><label for="Q11-1"><span>1</span></label>
+                        <input type="radio" value="2" id="Q11-2" name="Q11"><label for="Q11-2"><span>2</span></label>
+                        <input type="radio" value="3" id="Q11-3" name="Q11"><label for="Q11-3"><span>3</span></label>
+                        <input type="radio" value="4" id="Q11-4" name="Q11"><label for="Q11-4"><span>4</span></label>
+                        <input type="radio" value="5" id="Q11-5" name="Q11"><label for="Q11-5"><span>5</span></label>
+                        <input type="radio" value="6" id="Q11-6" name="Q11"><label for="Q11-6"><span>6</span></label>
+                    </div>
+                    <aside>
+                        <span>Not at all true of me</span>
+                        <span></span>
+                        <span>&nbsp;&nbsp;Very true of me</span>
+                    </aside>
+                </li>
+                <li>
+                    <p>I would quickly become impatient and irritated if I could not find a solution to a problem immediately.</p>
+                    <div class="quizinputs">
+                        <input type="radio" value="1" id="Q12-1" name="Q12"><label for="Q12-1"><span>1</span></label>
+                        <input type="radio" value="2" id="Q12-2" name="Q12"><label for="Q12-2"><span>2</span></label>
+                        <input type="radio" value="3" id="Q12-3" name="Q12"><label for="Q12-3"><span>3</span></label>
+                        <input type="radio" value="4" id="Q12-4" name="Q12"><label for="Q12-4"><span>4</span></label>
+                        <input type="radio" value="5" id="Q12-5" name="Q12"><label for="Q12-5"><span>5</span></label>
+                        <input type="radio" value="6" id="Q12-6" name="Q12"><label for="Q12-6"><span>6</span></label>
+                    </div>
+                    <aside>
+                        <span>Not at all true of me</span>
+                        <span></span>
+                        <span>&nbsp;&nbsp;Very true of me</span>
+                    </aside>
+                </li>
+                <li>
+                    <p>When I am confronted with a problem, I'm dying to reach a solution very quickly.</p>
+                    <div class="quizinputs">
+                        <input type="radio" value="1" id="Q13-1" name="Q13"><label for="Q13-1"><span>1</span></label>
+                        <input type="radio" value="2" id="Q13-2" name="Q13"><label for="Q13-2"><span>2</span></label>
+                        <input type="radio" value="3" id="Q13-3" name="Q13"><label for="Q13-3"><span>3</span></label>
+                        <input type="radio" value="4" id="Q13-4" name="Q13"><label for="Q13-4"><span>4</span></label>
+                        <input type="radio" value="5" id="Q13-5" name="Q13"><label for="Q13-5"><span>5</span></label>
+                        <input type="radio" value="6" id="Q13-6" name="Q13"><label for="Q13-6"><span>6</span></label>
+                    </div>
+                </li>
+                <li>
+                    <p>I find that establishing a consistent routine enables me to enjoy life more.</p>
+                    <div class="quizinputs">
+                        <input type="radio" value="1" id="Q14-1" name="Q14"><label for="Q14-1"><span>1</span></label>
+                        <input type="radio" value="2" id="Q14-2" name="Q14"><label for="Q14-2"><span>2</span></label>
+                        <input type="radio" value="3" id="Q14-3" name="Q14"><label for="Q14-3"><span>3</span></label>
+                        <input type="radio" value="4" id="Q14-4" name="Q14"><label for="Q14-4"><span>4</span></label>
+                        <input type="radio" value="5" id="Q14-5" name="Q14"><label for="Q14-5"><span>5</span></label>
+                        <input type="radio" value="6" id="Q14-6" name="Q14"><label for="Q14-6"><span>6</span></label>
+                    </div>
+                    <aside>
+                        <span>Not at all true of me</span>
+                        <span></span>
+                        <span>&nbsp;&nbsp;Very true of me</span>
+                    </aside>
+                </li>
+                <li>
+                    <p>I dislike unpredictable situations.</p>
+                    <div class="quizinputs">
+                        <input type="radio" value="1" id="Q15-1" name="Q15"><label for="Q15-1"><span>1</span></label>
+                        <input type="radio" value="2" id="Q15-2" name="Q15"><label for="Q15-2"><span>2</span></label>
+                        <input type="radio" value="3" id="Q15-3" name="Q15"><label for="Q15-3"><span>3</span></label>
+                        <input type="radio" value="4" id="Q15-4" name="Q15"><label for="Q15-4"><span>4</span></label>
+                        <input type="radio" value="5" id="Q15-5" name="Q15"><label for="Q15-5"><span>5</span></label>
+                        <input type="radio" value="6" id="Q15-6" name="Q15"><label for="Q15-6"><span>6</span></label>
+                    </div>
+                    <aside>
+                        <span>Not at all true of me</span>
+                        <span></span>
+                        <span>&nbsp;&nbsp;Very true of me</span>
+                    </aside>
+                </li>
+            </ol>
+        </section>
+    </div>
+
+    <button type="submit" class="quiz-submit">View Results</button>
+
+    <div id="result_div" style="display: none;">
+        <p id="result_text"></p>
+    </div>
+</form>
+
+<script type="text/javascript">
+    (function() {
+
+        var QUIZ_URL = "";
+
+        var RESULTS_FOLDER_URL = "";
+
+        var RESULTS = {};
+
+        RESULTS[0] = {
+            name: "Low",
+            text: "You have a low level of need for closure.",
+            descr: "Read on to find out what that means."
+        };
+
+        RESULTS[49] = {
+            name: "Medium",
+            text: "You have a medium level of need for closure.",
+            descr: "Read on to find out what that means"
+        };
+
+        RESULTS[63] = {
+            name: "High",
+            text: "You have a high level of need for closure.",
+            descr: "Read on to find out what that means."
+        };
+
+        var FORM_NAME = 'quizform';
+
+        var form = document.forms[FORM_NAME];
+        var form_elements = document.forms[FORM_NAME].elements;
+        var form_element;
+        var result_div = document.getElementById("result_div");
+        var result_image = document.getElementById("result_image");
+        var result_text = document.getElementById("result_text");
+        var min_score = 0;
+        var min_scores = {}
+        var error = false;
+
+        // Validate the quiz form to prevent common issues
+        for (var i = 0; i < form_elements.length; i++) {
+            form_element = form_elements[i];
+            if (form_element.type === "radio" || form_element.type === "checkbox") {
+                if (isNaN(form_element.value)) {
+                    alert("You have an answer on your quiz with a non-numerical value (" + form_element.value + ").");
+                } else {
+                    if (form_element.name in min_scores) {
+                        if (form_element.value * 1 < min_scores[form_element.name]) {
+                            min_scores[form_element.name] = form_element.value * 1;
+                        }
+                    } else {
+                        min_scores[form_element.name] = form_element.value * 1;
+                    }
+                }
+            }
+        }
+
+        for (var q in min_scores) {
+            min_score += min_scores[q];
+        }
+
+        error = true;
+        for (var score in RESULTS) {
+            if (score <= min_score) {
+                error = false;
+                break;
+            }
+        }
+        if (error) {
+            alert("The lowest score it is possible to get on your quiz is lower than the minimum score you have defined a result for.");
+        }
+
+        form.onsubmit = function() {
+            var score = 0;
+            var result_scores = [];
+            var result;
+            var form_element;
+            var i;
+
+            for (i = 0; i < form_elements.length; i++) {
+                form_element = form_elements[i];
+                if ((form_element.type === "radio" || form_element.type === "checkbox") && form_element.checked) {
+                    score += form_element.value * 1;
+                }
+            }
+
+            for (var min_score in RESULTS) {
+                result_scores.push(min_score);
+            }
+
+            result_scores.sort();
+
+            for (i = 0; i < result_scores.length; i++) {
+                if (result_scores[i] <= score) {
+                    result = RESULTS[result_scores[i]];
+                }
+            }
+
+            if (result.link) {
+                window.location = result.link;
+                return false;
+            }
+
+            if (result_image) {
+                result_image.src = RESULTS_FOLDER_URL + result.image;
+                result_image.setAttribute('alt', result.name);
+                if (result.text) result_image.title = result.text;
+            }
+            if (result_text && result.text) {
+                result_text.innerHTML = '<b>' + result.text + '</b>' + '<br>' + '<p>' + result.descr + '</p>';
+            }
+            result_div.style.display = 'block';
+            return false;
+        };
+    })();
+
+</script>
