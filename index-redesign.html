@@ -1,133 +1,171 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+</head>
+
 <style>
-    h4 {
-        font-family: TurnerBold;
-        font-size: 1.5rem;
-        margin-top: 0;
+    * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
     }
 
-    .learn-image {
+    /*MAIN GALLERY*/
+
+    .gallery {
+        background: #fff;
+        margin-top 20px;
+    }
+
+    .gallery a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .gallery-cell {
+        width: 240px;
+        min-height: 275px;
+        margin: 10px;
         border: 1px solid grey;
-        box-shadow: 1px 1px 3px #888;
+        border-top: 10px solid #000;
+        counter-increment: gallery-cell;
     }
 
-    .learn-image:hover {
-        box-shadow: 3px 3px 5px #888;
+    .gallery-cell:hover {
+        border-top: 10px solid #0052e7;
+        box-shadow: 3px 3px 5px #dedede;
         transition: .3s ease;
     }
 
-    .video-container {
-        width: 100%;
-        border: 1px solid grey;
-        box-shadow: 1px 1px 3px #888;
-    }
-
-    .video-container:hover {
-        box-shadow: 3px 3px 5px #888;
-        transition: .3s ease;
-    }
-
-    video {
-        width: 100%;
-        height: auto;
-    }
-
-    .video-fallback {
-        display: none;
-        width: 100%;
-    }
-
-    .video-fallback img {
-        width: auto;
-        height: auto;
-    }
-
-    .hero {
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-
-    .hero img {
-        width: 100%;
-        height: auto;
-    }
-
-    /*FLEX BOXES*/
-
-    .learn-cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .learn-card {
-        flex: 0 1 100%;
-        margin: 0 10px 10px 0;
-        border: 1px solid grey;
-        box-shadow: 1px 1px 3px #888;
-    }
-
-
-    .learn-card:hover {
-        box-shadow: 3px 3px 5px #888;
-        transition: .3s ease;
-    }
-
-    .learn-card-content {
-        padding: 10px;
-    }
-
-    .learn-card-content p {
-        line-height: 120%;
-    }
-
-    .learn-card-content h3 {
-        font-family: TurnerBold;
-    }
-
-    .learn-card-header {
+    .gallery-cell-header {
         position: relative;
-        height: 200px;
+        height: 150px;
         overflow: hidden;
         background-repeat: no-repeat;
         background-size: cover !important;
         background-position: center;
-        margin: 0;
+        margin-top: 0;
         padding: 0;
         background-color: #000;
     }
 
-    .learn-card-header h3 {
-        color: #fff;
-        font-family: TurnerBold;
-        font-size: 3rem;
-        line-height: 120%;
-        padding: 0 20px 5px 20px;
-        margin: 0;
+    .gallery-cell-content {
+        padding: 10px;
     }
 
-    .learn-card-header h5 {
+    .gallery-cell-content h3 {
         font-family: TurnerBold;
-        font-size: .875rem;
+        font-size: 1.5rem;
+        color: #000;
+        line-height: 120%;
+        margin-top: 10px;
+    }
+
+    .flickity-button {
+        background: #333;
+    }
+
+    .flickity-button:hover {
+        background: #0052e7;
+    }
+
+    .flickity-prev-next-button {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+    }
+
+    .flickity-button-icon {
+        fill: white;
+    }
+
+    /*QUIZ GALLERY*/
+
+    .quiz-cell {
+        width: 240px;
+        min-height: 300px;
+        margin: 10px;
+        border: 1px solid grey;
+        display: flex;
+        flex-direction: column;
+        counter-increment: gallery-cell;
+    }
+
+    .quiz-cell:hover {
+        box-shadow: 3px 3px 5px #dedede;
+        transition: .3s ease;
+    }
+
+    .quiz-cell:hover .quiz-cell-header {
+        background-color: #0052e7;
+        transition: .3s ease;
+    }
+
+    .quiz-cell-header {
+        background-color: #000;
         color: #fff;
-        margin: 0;
-        padding: 10px 0 5px 20px;
+        text-align: left;
+        font-size: 15px;
+        font-weight: bold;
+        border-bottom: 1px solid #dedede;
+        padding: 5px 10px;
+    }
+
+    .quiz-cell-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 16px 10px;
+    }
+
+    .quiz-cell-main h3 {
+        font-family: TurnerBold;
+        font-size: 1.5rem;
         line-height: 120%;
     }
 
-    .learn-button {
-        padding: 2px 5px;
-        border: 1px solid #0052e7;
-        border-radius: 3px;
+    .quiz-cell-main p {
+        font-size: 14px;
+        line-height: 145%;
+    }
 
+    /*NAVIGATION*/
+
+    .learnNow a {
+        font-size: 15px;
+        font-family: TurnerBold;
+        color: #000;
+    }
+
+    .learnNow a:hover {
+        color: #0052e7;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
         text-decoration: none;
-        font-size: .975rem !important;
-        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+        font-size: 15px !important;
+        font-family: TurnerBold;
     }
 
-    .learn-button:hover {
+    .topnav a:hover {
         background-color: #0052e7;
         color: #fff;
+    }
+
+    .topnav .icon {
+        display: none;
     }
 
     /*FIXED STICKY*/
@@ -192,43 +230,6 @@
         transition: .2s ease;
     }
 
-    /*NAVIGATION*/
-
-    .learnNow a {
-        font-size: 15px;
-        font-family: TurnerBold;
-        color: #000;
-    }
-
-    .learnNow a:hover {
-        color: #0052e7;
-    }
-
-    .topnav {
-        overflow: hidden;
-        background-color: #333;
-    }
-
-    .topnav a {
-        float: left;
-        display: block;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 15px !important;
-        font-family: TurnerBold;
-    }
-
-    .topnav a:hover {
-        background-color: #0052e7;
-        color: #fff;
-    }
-
-    .topnav .icon {
-        display: none;
-    }
-
     /*MEDIA QUERIES*/
 
     @media screen and (max-width: 1152px) {
@@ -254,31 +255,6 @@
             float: none;
             display: block;
             text-align: left;
-        }
-    }
-
-    @media all and (min-width: 50em) {
-        .learn-card {
-            flex: 0 1 45%;
-        }
-        .learn-card-pulse {
-            flex: 0 1 45%;
-        }
-        .learn-card-content p {
-            font-size: .9em;
-        }
-        .learn-card-content a {
-            font-size: .9em;
-        }
-    }
-
-    @media only screen and (min-device-width: 320px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 2) and (-webkit-min-device-pixel-ratio: 3) and (-webkit-min-device-pixel-ratio: 4) {
-        .video-container,
-        video {
-            display: none;
-        }
-        .video-fallback {
-            display: block;
         }
     }
 
@@ -328,68 +304,210 @@
 </div>
 
 <div>&nbsp;</div>
+<div>&nbsp;</div>
 
-<div class="hero">
-    <a href="http://now.turner.com/change" target="_blank">
-        <img src="https://s3.amazonaws.com/tpd-files/images/change-hero+copy.png">
+<h1>I want to learn about...</h1>
+
+<div>&nbsp;</div>
+
+<div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+    <a class="gallery-cell" href="http://now.turner.com/learnnow/diversity-and-inclusion">
+        <div class="gallery-cell-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/images/27409_001_0033_CC.jpg)"></div>
+        <div class="gallery-cell-content">
+            <h3>Diversity &amp; Inclusion</h3>
+        </div>
+    </a>
+    <a class="gallery-cell" href="http://now.turner.com/change" target="_blank">
+        <div class="gallery-cell-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/images/change-hero.png)"></div>
+        <div class="gallery-cell-content">
+            <h3>Navigating Change</h3>
+        </div>
+    </a>
+    <a class="gallery-cell" href="http://now.turner.com/recruitingturnercom/">
+        <div class="gallery-cell-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/images/recruiting-hero-1.jpg)"></div>
+        <div class="gallery-cell-content">
+            <h3>Recruiting</h3>
+        </div>
+    </a>
+    <a class="gallery-cell" href="/learnnow/classes-and-programs#leadershipnow">
+        <div class="gallery-cell-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/images/Teen_Titans_Go_Episode_154_Still_09.jpg)"></div>
+        <div class="gallery-cell-content">
+            <h3>Being a Leader</h3>
+        </div>
+    </a>
+    <a class="gallery-cell" href="/learnnow/performance">
+        <div class="gallery-cell-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/images/27014_009_0670_R.jpg)"></div>
+        <div class="gallery-cell-content">
+            <h3>Reviews &amp; Conversations</h3>
+        </div>
     </a>
 </div>
 
-<hr> &nbsp; &nbsp;
+<div style="clear:both; display: table; content: '';"></div>
+<br>
+<br>
+<hr>
 
-<div style="margin: 0 auto;">
+<h3>Quizzes &amp; Assessments</h3>
 
-    <div class="learn-cards">
-        
-        <a class="learn-card" href="/learnnow/diversity-and-inclusion">
-            <div class="learn-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/images/27409_001_0033_CC.jpg)"></div>
-            <div class="learn-card-content">
-                <h3>Diversity &amp; Inclusion</h3>
-                <p>Learn more about Turner's diversity &amp; inclusion efforts and what you can do to support them!</p>
-            </div>
-        </a>
+<div>&nbsp;</div>
 
-        <a class="learn-card" href="/learnnow/story---q3-2018-LN">
-            <div class="learn-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/images/Teen_Titans_Go_S3_0054.jpg)"></div>
-            <div class="learn-card-content">
-                <h3>Gain New Superpowers</h3>
-                <p>The Q3 leadership development calendar is here.</p>
-            </div>
-        </a>
+<div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+    <a class="quiz-cell" href="https://now.turner.com/learnnow/assessments---strengthsfinders-2.0">
+        <div class="quiz-cell-header">
+            Personality &amp; Perception
+        </div>
+        <div class="quiz-cell-main">
+            <h3>StrengthsFinders 2.0</h3>
+            <p>This assessment is used to identify and give a name to your natural talents and strengths.</p>
+        </div>
+    </a>
+    <a class="quiz-cell" href="https://now.turner.com/learnnow/quizzes-grit">
+        <div class="quiz-cell-header">
+            Resilience
+        </div>
+        <div class="quiz-cell-main">
+            <h3>The Grit Scale</h3>
+            <p>Grit is about having what some call "an ultimate concern" &mdash; a goal you care about &mdash; and how well you hold steadfast to that goal. Find out how gritty you are here.</p>
+        </div>
+    </a>
+    <a class="quiz-cell" href="https://now.turner.com/learnnow/quizzes-leadership-style">
+        <div class="quiz-cell-header">
+            Leadership
+        </div>
+        <div class="quiz-cell-main">
+            <h3>What Kind of Leader Are You?</h3>
+            <p>Just a non-scientific quiz to get you thinking about your leadership style.</p>
+        </div>
+    </a>
+    <a class="quiz-cell" href="https://now.turner.com/learnnow/assessments---standout">
+        <div class="quiz-cell-header">
+            Personality &amp; Perception
+        </div>
+        <div class="quiz-cell-main">
+            <h3>StandOut</h3>
+            <p>This assessment reveals your personal edge — your strengths — that will help you win at work. You'll be measured on 9 strength roles.</p>
+        </div>
+    </a>
+    <a class="quiz-cell" href="https://now.turner.com/learnnow/assessments---disc">
+        <div class="quiz-cell-header">
+            Personality &amp; Perception
+        </div>
+        <div class="quiz-cell-main">
+            <h3>DiSC</h3>
+            <p>Increase your awareness and understanding of your communication style and preferences and also potential blind spots.</p>
+        </div>
+    </a>
+</div>
 
+<div style="clear:both; display: table; content: '';"></div>
+<br>
+<br>
+<hr>
 
-        <a class="learn-card" href="/learnnow/pep-talks">
-            <div class="learn-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/images/TPD-PepTalks-01.png)"></div>
-            <div class="learn-card-content">
-                <h3>5 Minute Pep Talks</h3>
-                <p>We know you're busy, so we've created a series that gets you downloaded on your most requested topics in 5 minutes or less.</p>
-            </div>
-        </a>
-        <a class="learn-card" href="/learnnow/story---career-advice-2">
-            <div class="learn-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/images/AMA2_no-text.png)"></div>
-            <div class="learn-card-content">
-                <h3>Career Advice</h3>
-                <p>Ask us your career advice &mdash; we're slightly better than a magic 8-ball. Send us your questions around career development and we'll post your answers here.</p>
-            </div>
-        </a>
-        <a class="learn-card" href="/learnnow/quizzes-leadership-style">
-            <div class="learn-card-header">
-                <h5>Quiz</h5>
-                <h3>What Kind of Leader Are You?</h3>
-            </div>
-            <div class="learn-card-content">
-                <h3>Take our latest quiz to find out!</h3>
-            </div>
-        </a>
-        <a class="learn-card" href="/learnnow/quizzes-grit">
-            <div class="learn-card-header">
-                <h5>Quiz</h5>
-                <h3>Find Out How Gritty You Are</h3>
-            </div>
-            <div class="learn-card-content">
-                <h3>Answer these 12 questions!</h3>
-            </div>
-        </a>
-    </div>
+<h3>5 Minute Pep Talks</h3>
 
+<div class="gallery js-flickity" data-flickity-options='{ "wraparound": true }'>
+    <a class="quiz-cell" href="/learnnow/pep-talk---transitioning-to-people-leader">
+        <div class="quiz-cell-header">
+            Episode 01
+        </div>
+        <div class="quiz-cell-main">
+            <h3>Transitioning to a People Leader</h3>
+            <p>So you just gained direct reports. Now what? Don't worry, we have you covered.</p>
+        </div>
+    </a>
+    <a class="quiz-cell" href="/learnnow/pep-talk---trust">
+        <div class="quiz-cell-header">
+            Episode 02
+        </div>
+        <div class="quiz-cell-main">
+            <h3>Trust</h3>
+            <p>How do you gain trust with coworkers?</p>
+        </div>
+    </a>
+</div>
+
+<div style="clear: both; display: table; content: '';"></div>
+<br>
+<br>
+<hr>
+
+<h3>Grab &amp; Go</h3>
+
+<div>&nbsp;</div>
+
+<div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+    <a class="quiz-cell" href="https://s3.amazonaws.com/tpd-files/Team+Effectiveness/Brainstorming.pdf">
+        <div class="quiz-cell-header">
+            Innovation
+        </div>
+        <div class="quiz-cell-main">
+            <h3>Brainstorming Toolkit</h3>
+            <p>This document guides you through holding a brainstorming session where you need to get an abundance of ideas in a short amount of time.</p>
+        </div>
+    </a>    
+    <a class="quiz-cell" href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Team+Effectiveness/Team-Charter.pdf">
+        <div class="quiz-cell-header">
+            Teams
+        </div>
+        <div class="quiz-cell-main">
+            <h3>Creating a Team Charter</h3>
+            <p>This will help when you have to establish team norms and values that guide behaviors and instill accountability within your group.</p>
+        </div>
+    </a>    
+    <a class="quiz-cell" href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Team+Effectiveness/Team-Dynamics.pdf">
+        <div class="quiz-cell-header">
+            Teams
+        </div>
+        <div class="quiz-cell-main">
+            <h3>The Stages of Team Development</h3>
+            <p>This handout guides you through the Tuckman Model — forming, storming, norming, and performing — and what actions you can take to drive a team forward.</p>
+        </div>
+    </a>    
+    <a class="quiz-cell" href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Prioritization_2x2+matrix.pdf">
+        <div class="quiz-cell-header">
+            Prioritization
+        </div>
+        <div class="quiz-cell-main">
+            <h3>2x2 Prioritization Matrix</h3>
+            <p>This is a simple and versatile tool to help a group sort multiple options by using criteria of their choice. It can be the first step in planning project timelines or building team engagement.</p>
+        </div>
+    </a>    
+    <a class="quiz-cell" href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Team+Effectiveness/Bullseye-Diagram.pdf">
+        <div class="quiz-cell-header">
+            Prioritization
+        </div>
+        <div class="quiz-cell-main">
+            <h3>Bullseye Diagram</h3>
+            <p>Use this approach as a visual prioritization exercise. It can be used to prioritize multiple projects based on a single strategy or crtieria. Or, use it to prioritize actions and tasks for a single project.</p>
+        </div>
+    </a>    
+    <a class="quiz-cell" href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Team+Effectiveness/GE-Work-Out.pdf">
+        <div class="quiz-cell-header">
+            Prioritization
+        </div>
+        <div class="quiz-cell-main">
+            <h3>WorkOut</h3>
+            <p>A simple, structured methodology for cutting bureaucracy and solving organizational problems quickly.</p>
+        </div>
+    </a>    
+    <a class="quiz-cell" href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Team+Effectiveness/Using-Imrpov.pdf">
+        <div class="quiz-cell-header">
+            Agility
+        </div>
+        <div class="quiz-cell-main">
+            <h3>Improv</h3>
+            <p>This guide walks you through holding a session with your team to improve your improvisational skills thus strengthening individuals' ability to act and react in the moment.</p>
+        </div>
+    </a>    
+    <a class="quiz-cell" href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Team+Effectiveness/After-Action-Review.pdf">
+        <div class="quiz-cell-header">
+            Agility
+        </div>
+        <div class="quiz-cell-main">
+            <h3>After Action Reviews</h3>
+            <p>When a project has just ended, use this 4-step framework to assess how succesful (or unsuccessful) the event was from a variety of perspectives.</p>
+        </div>
+    </a>
 </div>
