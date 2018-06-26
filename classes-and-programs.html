@@ -1,27 +1,71 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--SMOOTH AND SNAP SCROLLING-->
+
+    <script>
+        $(document).ready(function() {
+            $("button.button").on("click", function(event) {
+                var hash = $(this).data("hash");
+                if (hash) {
+                    $("html, body").animate({
+                        scrollTop: $(document.getElementById(hash)).offset().top
+                    }, 800, function() {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+
+    </script>
+</head>
+
+
 <style>
-    
     h2 {
         font-family: TurnerBold;
         font-size: 3rem;
         margin-top: 30px;
     }
-    
-    .theme-content ul li:before {
-        background-image: none !important;
+
+
+    h5 {
+        margin-bottom: 0;
     }
-    
-    ul, li {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
+
+    .button.small {
+        line-height: 130% !important;
+        font-size: 14px !important;
     }
-    
-    img {
+
+    .small-text {
+        font-size: .85rem !important;
+        font-weight: bold;
+        line-height: 140% !important;
+    }
+
+    .small-spacer {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    /*SUB NAVIGATION*/
+
+    .button-bar {
         width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: flex-start;
+        flex-flow: row wrap;
     }
-    
-/*FLOATING STICKY*/
-    
+
+    .button.flex {
+        margin-bottom: 10px;
+        flex: 0 0 auto;
+    }
+
+    /*FLOATING STICKY*/
+
     .sticky {
         border: 2px solid black;
         border-radius: 5px;
@@ -31,27 +75,27 @@
         color: #fff;
         overflow: visible;
         box-shadow: 2px 2px 8px #888;
-        
+
         width: 200px;
-        
+
         position: fixed;
         right: 0;
         top: 300px;
-        
+
         z-index: 1;
     }
-    
+
     .sticky p {
         font-family: TurnerBold;
         font-size: 1rem;
         line-height: 115%;
         color: #fff;
     }
-    
+
     #sticky-x {
-        
+
         cursor: pointer;
-        
+
         width: 30px;
         height: 30px;
         border: 1px solid #585858;
@@ -60,10 +104,10 @@
         background: #fff;
         top: -10px;
         right: -10px;
-        
+
         font-family: TurnerBold;
     }
-    
+
     .sticky a {
         padding: 2px 5px;
         border: 2px solid #fff;
@@ -80,123 +124,105 @@
         background-color: #0052e7;
         color: #fff;
         transition: .2s ease;
-    }    
-    
-/*FLEX BOXES*/
-    
-    .list {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: -40px;
-        padding: 0;
-    }
-    
-    ul.list li:before {
-        background-image: none !important;
-    }
-    
-    .list-item {
-        display: flex;
-        padding: 0.5em;
-        width: 100%;
-    }
-    
-    .list-content {
-        background-color: #fff;
-        display: flex;
-        flex-direction: column;
-        padding: 1em;
-        width: 100%;
-        border: 1px solid grey;
-        border-top: 10px solid #000;
-        box-shadow: 1px 1px 3px #888;
-    }
-    
-    .list-content:hover {
-        box-shadow: 3px 3px 5px #888;
-        transition: .3s;
-    }
-    
-    .list-content h2 {
-        font-family: TurnerBold, Arial, Helvetica, sans-serif;
-        font-size: 1.2rem;
-        color: #282828;
-        margin: 0;
-        line-height: 120%;
-    }
-    
-    .list-content p {
-        flex: 1 0 auto;
-        font-family: TurnerRegular, Arial, Helvetica, sans-serif;
-        font-size: 1.1rem;
-        margin: .5rem 0 0 0;
-        padding: 0;
-        line-height: 150%;
-    }
-    
-    .list-content p a {
-        padding: 2px 5px;
-        border: 1px solid #0052e7;
-        border-radius: 3px;
-        
-        text-decoration: none;
-        font-size: 1rem;
-        font-family: TurnerBold, Arial, Helvetica, sans-serif;
-    }
-    
-    .list-content p a:hover {
-        background-color: #0052e7;
-        color: #fff;
     }
 
-
-/*NAVIGATION*/
+    /*NAVIGATION*/
 
     .learnNow a {
         font-size: 15px;
         font-family: TurnerBold;
         color: #000;
     }
-    
+
     .learnNow a:hover {
         color: #0052e7;
     }
 
     .topnav {
-      overflow: hidden;
-      background-color: #333;
+        overflow: hidden;
+        background-color: #333;
     }
 
     .topnav a {
-      float: left;
-      display: block;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 15px !important;
-      font-family: TurnerBold;
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15px !important;
+        font-family: TurnerBold;
     }
 
     .topnav a:hover {
-      background-color: #0052e7;
-      color: #fff;
+        background-color: #0052e7;
+        color: #fff;
     }
 
     .topnav .icon {
-      display: none;
+        display: none;
     }
-    
-/*MEDIA QUERIES*/
+
+    /*FLEXBOXES*/
+
+    .card-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .card {
+        flex: 0 1 100%;
+        margin: 0 10px 10px 0;
+        border: 1px solid grey;
+        border-top: 10px solid black;
+        box-shadow: 1px 1px 3px #888;
+    }
+
+    .card:hover {
+        box-shadow: 3px 3px 5px #888;
+        transition: .3s;
+    }
+
+    .card-content {
+        padding: 10px;
+    }
+
+    .card-content h2 {
+        font-family: TurnerBold;
+        font-size: 24px;
+        line-height: 120% !important;
+        margin-top: 0;
+    }
+
+    .card-content p {
+        font-size: 14px !important;
+        line-height: 140%;
+    }
+
+    /*MEDIA QUERIES*/
+
+    @media all and (min-width: 30em) {
+        .card {
+            flex: 0 1 30%
+        }
+        ;
+        .card-content p {
+            font-size: .9em;
+        }
+    }
 
     @media screen and (max-width: 1152px) {
-        .topnav a:not(:first-child) {display: none;}
-        .topnav a.icon {float: right; display: block;}
-        .learn-main h3 a {font-size: 2rem;}
-        .learn-card {width: 100%;}
-        .learn-card h5 a {font-size: 2rem;}
-        .learn-card p {font-size: 1.5rem; line-height: inherit;}
-        .topnav.responsive {position: relative;}
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+        .topnav.responsive {
+            position: relative;
+        }
         .topnav.responsive .icon {
             position: absolute;
             right: 0;
@@ -208,58 +234,49 @@
             text-align: left;
         }
     }
-    
-    @media screen and (min-width: 40em) {
-        .list-item { width: 50%; }
-    }
-    
-    @media screen and (min-width: 60em) {
-        .list-item { width: 33.33%; }
-    }
-    
+
 </style>
 
 <!--TOP NAVIGATION-->
 
 <span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
 <div class="topnav" id="myTopnav">
-  <a href="http://learn.turner.com">Home</a>    
-  <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
-  <a href="/learnnow/org-development">Org. Development</a>
-  <a href="/learnnow/performance">Performance</a>
-  <a href="/learnnow/subscribe">Subscribe</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+    <a href="http://learn.turner.com">Home</a>
+    <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+    <a href="/learnnow/org-development">Org. Development</a>
+    <a href="/learnnow/performance">Performance</a>
+    <a href="/learnnow/subscribe">Subscribe</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
 </div>
 
 <script>
-function shrinkNav() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
+    function shrinkNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
     }
-}
+
 </script>
 
 <script>
-
-window.onload = function(){
-    document.getElementById('sticky-x').onclick = function(){
-        this.parentNode.parentNode.parentNode
-        .removeChild(this.parentNode.parentNode);
-        return false;
+    window.onload = function() {
+        document.getElementById('sticky-x').onclick = function() {
+            this.parentNode.parentNode.parentNode
+                .removeChild(this.parentNode.parentNode);
+            return false;
+        };
     };
-};
-    
+
 </script>
 
 <div>
     <div class="sticky">
         <button id="sticky-x">X</button>
         <p>
-            Psst.<br>
-            Get learning goodies in your inbox!
+            Psst.<br> Get learning goodies in your inbox!
         </p>
         <a href="http://eepurl.com/cWVxXz" target="_blank">Subscribe</a>
     </div>
@@ -269,55 +286,279 @@ window.onload = function(){
 
 <h2>Classes &amp; Programs</h2>
 
-<ul class="list">
-    <li class="list-item">
-        <div class="list-content">
-            <h2>Management Essentials</h2>
-            <p>The basics every manager should know.</p>
-            <p>Topics include onboarding, transitioning into management, performance management, and more.</p>
-            <p><a href="/learnnow/leadership---management-essentials">Go</a></p>
+<br>
+<br>
+<h5>Page Navigation:</h5>
+<div class="button-bar">
+    <button data-hash="management-essentials" class="button flex" type="button">Management Essentials</button>&nbsp;
+    <button data-hash="leadershipnow" type="button" class="button flex">LeadershipNow</button>&nbsp;
+    <button data-hash="tlx" type="button" class="button flex">Turner Leadership Experience</button>&nbsp;
+    <button data-hash="self-directed" type="button" class="button flex">Self-Directed Options</button>&nbsp;
+    <button data-hash="external" type="button" class="button flex">External Programs</button>&nbsp;
+    <button data-hash="conferences" type="button" class="button flex">Conferences</button>&nbsp;
+    <button data-hash="make-you-matter" type="button" class="button flex">Make You Matter Week</button>&nbsp;
+</div>
+
+<br>
+<hr>
+<br>
+
+<div class="small-spacer"></div>
+<a name="management-essentials"></a>
+<h5>Management Essentials</h5>
+<h3>The basics every manager should know.</h3>
+
+<div class="card-wrapper">
+    <a href="/learnnow/management-essentials---hiring" class="card">
+        <div class="card-content">
+            <h2>Hiring</h2>
+            <p>Tools &amp; resources to get you thinking differently about your next hire.</p>
         </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
-            <h2>Leadership<i>Now</i></h2>
-            <p>LeadershipNow is a suite of virtual &amp; classroom offerings open to anyone with people leader responsibilities &mdash; either on an org chart or in pactice.</p>
-            <p><a href="/learnnow/leadership---leadershipnow">Go</a></p>
+    </a>
+    <a href="/learnnow/management-essentials---onboarding" class="card">
+        <div class="card-content">
+            <h2>Onboarding</h2>
+            <p>Onboarding at Turner is a process that happens over an extended period of time. It lays the groundwork for new employees to become productive and successful.</p>
         </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
-            <h2>Turner Leadership Experience (TLX)</h2>
-            <p>TLX is designed to build a cadre of senior leaders with the knowledge, capabilities, and confidence to re-imagine TV and drive a culture of more fun, less fear, and all-in.</p>
-            <p><a href="/learnnow/leadership---tlx">Go</a></p>
+    </a>
+    <a href="/learnnow/management-essentials---transitioning-into-management" class="card">
+        <div class="card-content">
+            <h2>Transitioning Into Management</h2>
+            <p>Are you (or someone you know) a first-time manager? This section has all you need to step into the wonderful world of management.</p>
         </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
-            <h2>Self-Directed</h2>
-            <p>Learn on your own time, at your own pace. Here's our collection of resources that range from free to paid.</p>
-            <p><a href="/learnnow/learning---self-directed">Go</a></p>
+    </a>
+    <a href="/learnnow/management-essentials---performance-management" class="card">
+        <div class="card-content">
+            <h2>Performance Management</h2>
+            <p>Performance management is an approach for architecting success through people. Learn more here.</p>
         </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
-            <h2>External Programs</h2>
-            <p>There's a great big world out there. Here's our recommendations for programs outside of Turner.</p>
-            <p><a href="learning---external">Go</a></p>
+    </a>
+    <a href="/learnnow/management-essentials---managing-virtual-teams" class="card">
+        <div class="card-content">
+            <h2>Managing Virtual Teams</h2>
+            <p>Managing a team that's spread out geographically can be challenging. We got you.</p>
         </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
-            <h2>Conferences</h2>
-            <p>Our picks for some of the industry's top gatherings.</p>
-            <p><a href="/learnnow/learning---conferences">Go</a></p>
+    </a>
+</div>
+
+<br>
+
+<hr>
+
+<br>
+<a name="leadershipnow"></a>
+<h5>LeadershipNow</h5>
+<h3>A suite of virtual and classroom offerings open to anyone with people leader responsibilities &mdash; either on an org chart or in practice.</h3>
+
+<div class="card-wrapper">
+    <a href="/learnnow/leadershipnow---bold-hiring" class="card">
+        <div class="card-content">
+            <h2>Bold Hiring</h2>
+            <p>Bold Hiring is the term we've been using to talk about a reinvigorated approach to hiring at Turner — one that includes a sharper focus on encouraging more diversity (in every sense) at our company.</p>
         </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
-            <h2>Make You Matter Week</h2>
-            <p>A week of global inspiration with classes, workshops, speakers, and events. Take a stroll down memory lane to view all of your favorite MYM moments.</p>
-            <p><a href="/make-you-matter-archive">Go</a></p>
+    </a>
+    <a href="/learnnow/leadershipnow---candid-conversations" class="card">
+        <div class="card-content">
+            <h2>Candid Conversations</h2>
+            <p>Just say it! (Without being a jerk.)</p>
         </div>
-    </li>
-</ul>
+    </a>
+    <a href="/learnnow/leadershipnow---move-your-team-to-all-in" class="card">
+        <div class="card-content">
+            <h2>Move Your Team to All In</h2>
+            <p>Discover what engages you &amp; your team.</p>
+        </div>
+    </a>
+    <a href="/learnnow/leadershipnow---how-to-talk-good-to-your-team" class="card">
+        <div class="card-content">
+            <h2>How to Talk "Good" to Your Team</h2>
+            <p>Create an environment for open communications.</p>
+        </div>
+    </a>
+    <a href="/learnnow/leadershipnow---rock-the-change" class="card">
+        <div class="card-content">
+            <h2>Rock the Change</h2>
+            <p>Gain confidence influencing up &amp; balance change for your team.</p>
+        </div>
+    </a>
+    <a href="/learnnow/leadershipnow---collaborate" class="card">
+        <div class="card-content">
+            <h2>Stop, Collaborate &amp; Listen</h2>
+            <p>Learn how to determine the best strategy and skills for nurturing collaborative work with individuals and teams.</p>
+        </div>
+    </a>
+    <a href="/learnnow/leadershipnow---who-are-you-(to-lead)" class="card">
+        <div class="card-content">
+            <h2>Who Are You...<br>(to Lead)?</h2>
+            <p>Understand how your beliefs &amp; values impact your behaviors.</p>
+        </div>
+    </a>
+    <a href="/learnnow/leadershipnow---work-smarter-101" class="card">
+        <div class="card-content">
+            <h2>Work Smarter 101</h2>
+            <p>Streamline work processes, eliminate low-value work, and inspire continuous improvement.</p>
+        </div>
+    </a>
+</div>
+
+<br>
+
+<hr>
+
+<br>
+<a name="tlx"></a>
+<h5>The Turner Leadership Experience</h5>
+<h3>TLX is designed to build a cadre of senior leaders with the knowledge, capabilities, and confidence to re-imagine TV and drive a culture of more fun, less fear, and all-in.</h3>
+<br>
+<a href="/learnnow/leadership---tlx" class="button small">More Information</a>
+
+<br>
+<br>
+
+<hr>
+
+<br>
+
+<h5>Self-Directed Options</h5>
+<h3>Learn on your own time, at your own pace. Here's our collection of resources that range from free to paid.</h3>
+<p class="small-text">Our recommendations are not an endorsement of a specific resource. We highly recommend you research individual courses to ensure the quality and content are aligned with your individual development needs. There may be an associated cost for enrolling.</p>
+
+<div class="card-wrapper">
+    <a href="http://www.udemy.com/" class="card" target="_blank">
+        <div class="card-content">
+            <h2>Udemy</h2>
+            <p>Udemy is a global marketplace for learning and teaching online where students master new skills and achieve their goals from a library of over 45,000 courses taught by expert instructors.</p>
+        </div>
+    </a>
+    <a href="http://www.lynda.com/" class="card" target="_blank">
+        <div class="card-content">
+            <h2>Lynda</h2>
+            <p>Lynda.com is a leading online learning platform that helps anyone learn business, software, technology, and creative skills to achieve personal and professional goals.</p>
+        </div>
+    </a>
+    <a href="http://www.coursera.org/" class="card" target="_blank">
+        <div class="card-content">
+            <h2>Coursera</h2>
+            <p>Coursera provides universal access to the world's best education, partnering with top universities and organizations to offer courses online.</p>
+        </div>
+    </a>
+    <a href="http://www.degreed.com/" class="card" target="_blank">
+        <div class="card-content">
+            <h2>Degreed</h2>
+            <p>Degreed connects you to the world's largest collection of professional learning content with over 250,000 courses and more than 3 million articles and videos from 1,300 sources.</p>
+        </div>
+    </a>
+</div>
+
+<br>
+
+<hr>
+
+<br>
+<a name="external"></a>
+<h5>External Programs</h5>
+<h3>There's a great big world out there. Here's our recommendations for programs outside of Turner.</h3>
+<p class="small-text">Note: these courses have various audience criteria and may have costs associated with them. Visit each course info page for more details.</p>
+
+<div class="card-wrapper">
+    <a href="/learnnow/pathbuilders-achieva" class="card">
+        <div class="card-content">
+            <h2>Pathbuilders Achieva</h2>
+            <p>Get insights to navigate organizational politics, build executive presence, and move initiatives forward.</p>
+        </div>
+    </a>
+    <a href="/learnnow/pathbuilders-percepta" class="card">
+        <div class="card-content">
+            <h2>Pathbuilders Percepta</h2>
+            <p>Strengthen your ability to think broadly, manage others, and make conscious decisions.</p>
+        </div>
+    </a>
+    <a href="/learnnow/promaxbda-thrive" class="card">
+        <div class="card-content">
+            <h2>PromaxBDA Thrive</h2>
+            <p>PromaxBDA Thrive accelerates the development of leaders emerging from the industry's creative workforce.</p>
+        </div>
+    </a>
+    <a href="/learnnow/wict-executive-development-series" class="card">
+        <div class="card-content">
+            <h2>WICT Executive Development Series</h2>
+            <p>Learn the knowledge, competencies, and diverse perspectives necessary for maximum performance and career enrichment.</p>
+        </div>
+    </a>
+    <a href="/learnnow/ctam-cable-executive-management-program" class="card">
+        <div class="card-content">
+            <h2>CTAM Cable Management Executive Program</h2>
+            <p>Learn strategy, marketing, and management principles led by Harvard Business School professors.</p>
+        </div>
+    </a>
+    <a href="/learnnow/namic-leadership-seminar" class="card">
+        <div class="card-content">
+            <h2>NAMIC Leadership Seminar</h2>
+            <p>Obtain the knowledge, competencies, and diverse perspectives necessary for maximum performance and career enhancement.</p>
+        </div>
+    </a>
+    <a href="/learnnow/namic-executive-leadership-development" class="card">
+        <div class="card-content">
+            <h2>NAMIC Executive Leadership Development Program</h2>
+            <p>Deepen your understanding of the changing media landscape, strategy execution, and more.</p>
+        </div>
+    </a>
+    <a href="/learnnow/wict-rising-leaders" class="card">
+        <div class="card-content">
+            <h2>WICT Rising Leaders</h2>
+            <p>Gain insight on how to build high performing teams and assess diverse leadership styles.</p>
+        </div>
+    </a>
+    <a href="/learnnow/wict-betsy-magness-leadership-institute" class="card">
+        <div class="card-content">
+            <h2>WICT Betsy Magness Leadership Institute</h2>
+            <p>Develop your core leadership competencies, including communication, influence, driving engagement, and more.</p>
+        </div>
+    </a>
+</div>
+
+<br>
+
+<hr>
+
+<br>
+<a name="conferences"></a>
+<h5>Conferences</h5>
+<h3>Our picks for some of the industry's top gatherings.</h3>
+<p class="small-text">Note: these courses have various audience criteria and may have costs associated with them. Visit each course info page for more details.</p>
+
+<div class="card-wrapper">
+    <a href="/learnnow/promaxbda-the-conference" class="card">
+        <div class="card-content">
+            <h2>PromaxBDA: The Conference</h2>
+            <p>A gathering of the most innovative creatives, marketers, strategists, and designers.</p>
+        </div>
+    </a>
+    <a href="/learnnow/namic-leadership-conference" class="card">
+        <div class="card-content">
+            <h2>NAMIC Leadership Conference</h2>
+            <p>The industry's premier conference focusing on diversity.</p>
+        </div>
+    </a>
+    <a href="/learnnow/wict-leadership-conference" class="card">
+        <div class="card-content">
+            <h2>WICT Leadership Conference</h2>
+            <p>The renowned leadership development event for the cable industry.</p>
+        </div>
+    </a>
+</div>
+
+<br>
+
+<hr>
+
+<br>
+<a name="make-you-matter"></a>
+<h5>Make You Matter Week</h5>
+<h3>A week of global inspiration with classes, workshops, speakers, and events. Take a stroll down memory lane to view all of your favorite MYM moments.</h3>
+
+<a href="/make-you-matter-archive" class="button small">View the Archives</a>
+
+<br>
+<br>
+<br>
