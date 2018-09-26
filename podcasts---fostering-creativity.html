@@ -1,0 +1,406 @@
+<style>
+    h2 {
+        font-family: TurnerBold;
+        font-size: 3rem;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    h3.sub {
+        position: relative;
+        text-align: left;
+        font-family: TurnerBold;
+        font-size: 1.4rem;
+    }
+
+    h3.sub span {
+        background: #fff;
+        padding-left: 0;
+        padding-right: 15px;
+        position: relative;
+        z-index: 1;
+    }
+
+    h3.sub:before {
+        background: #696969;
+        content: "";
+        display: block;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        left: 0;
+    }
+
+    .byline {
+        font-weight: bold;
+        font-size: 1.4rem !important;
+        color: dimgray;
+        margin: 0;
+    }
+
+    .learn-button {
+        padding: 2px 5px;
+        border: 1px solid #0052e7;
+        border-radius: 3px;
+
+        text-decoration: none;
+        font-size: .975rem !important;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+    }
+
+    .learn-button:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .audioplayer {
+        background-color: lightgray;
+        padding: 20px;
+        width: auto;
+        height: auto;
+    }
+    
+    .audioplayer audio {
+        width: 100%;
+    }
+    
+    /*LAYOUT*/
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .col-left {
+        float: left;
+        width: 65%;
+        padding: 10px 20px 0 0;
+    }
+
+    .col-right {
+        float: left;
+        width: 35%;
+        padding: 10px;
+    }
+
+    /*ITEM FLEX BOXES*/
+
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .list-item {
+        display: flex;
+        padding: 0.5em;
+        width: 100%;
+    }
+
+    .list-content {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        width: 100%;
+
+        border: 1px solid grey;
+        border-top: 10px solid #000;
+        box-shadow: 1px 1px 3px #888;
+    }
+
+    .list-content:hover {
+        box-shadow: 3px 3px 5px #888;
+        transition: .3s;
+    }
+
+    .list-content h3 {
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        color: #282828;
+        line-height: 120%;
+    }
+
+    .list-content p {
+        font-family: Turner, Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        line-height: 120%;
+    }
+
+    .list-content p a {
+        font-size: 1rem;
+        line-height: 120%;
+    }
+
+
+    /*NAVIGATION*/
+
+    .nav-button {
+        padding: 2px 5px;
+        border: 1px solid #0052e7;
+        border-radius: 3px;
+
+        text-decoration: none;
+        font-size: .975rem !important;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+    }
+
+    .nav-button:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .learnNow a {
+        font-size: 15px;
+        font-family: TurnerBold;
+        color: #000;
+    }
+
+    .learnNow a:hover {
+        color: #0052e7;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15px !important;
+        font-family: TurnerBold;
+    }
+
+    .topnav a:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .topnav .icon {
+        display: none;
+    }
+
+    /*BREADCRUMBS*/
+
+    #breadcrumb {
+        float: left;
+        display: block;
+    }
+
+    #breadcrumb ul {
+        list-style: none;
+    }
+
+    .crumbs {
+        display: block;
+        margin-left: -27px;
+    }
+
+    .crumbs li {
+        display: inline;
+    }
+
+    .crumbs li.first {
+        padding-left: 8px;
+    }
+
+    .crumbs li a,
+    .crumbs li a:link,
+    .crumbs li a:visited {
+        color: #666;
+        display: block;
+        float: left;
+        font-size: 12px;
+        margin-left: -13px;
+        padding: 0 17px 11px 20px;
+        position: relative;
+        text-decoration: none;
+    }
+
+    .crumbs li a {
+        background-image: url('https://s3.amazonaws.com/tpd-files/images/bg-crumbs.png');
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+        position: relative;
+    }
+
+    .crumbs li a:hover {
+        color: #333;
+        background-position: 100% -48px;
+        cursor: pointer;
+    }
+
+    .crumbs li a:active {
+        color: #333;
+        background-position: 100% -96px;
+    }
+
+    .crumbs li.first a span {
+        height: 29px;
+        width: 3px;
+        border-left: 1px solid #d9d9d9;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    .space {
+        display: block;
+        height: 5px;
+        clear: both;
+    }
+
+    ul.crumbs li:before {
+        background-image: none !important;
+    }
+
+
+    /*MEDIA QUERIES*/
+
+    @media screen and (max-width: 1152px) {
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .col-left {
+            width: 100%;
+        }
+        .col-right {
+            width: 100%;
+        }
+        .list-item {
+            width: 50%;
+        }
+
+</style>
+
+<!--TOP NAVIGATION-->
+
+<span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
+<div class="topnav" id="myTopnav">
+    <a href="http://learn.turner.com">Home</a>
+    <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+    <a href="/learnnow/org-development">Org. Development</a>
+    <a href="/learnnow/performance">Performance</a>
+    <a href="/learnnow/subscribe">Subscribe</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+</div>
+
+<script>
+    function shrinkNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+</script>
+
+<!--BREADCRUMBS-->
+
+<br>
+
+<div id="breadcrumb">
+    <ul class="crumbs">
+        <li class="first"><a href="/learnnow/pep-talks" style="z-index:9;"><span></span>Pep Talks</a></li>
+        <li><a href="#">Episode 03: How to Foster Innovation</a></li>
+    </ul>
+</div>
+
+<div class="space"></div>
+
+<h2 class="byline">Pep Talks</h2>
+<h2>How to Foster Innovation</h2>
+
+<br>
+<br>
+
+<div class="row">
+    <div class="col-left">
+
+        <div class="audioplayer">
+            <audio controls controlsList="nodownload">
+                <source src="https://s3.amazonaws.com/tpd-files/Podcast/Fostering-Creativity/Fostering+Creativity_FINAL.mp3">
+            Your browser does not support this content. Please use Google Chrome or Mozilla Firefox.
+            </audio>
+        </div>
+
+        <br>
+
+        <h5>Transcript</h5>
+
+        <p>You've heard over and over again that we need to be innovative in order for our business to continue thriving. But in order to keep new ideas coming, we need to make sure that we're creating an environment that allows for it to happen. Here are a few ways that you can foster creativity within your team.</p>
+        
+        <p>First off, be supportive. People need psychological safety to take risks and know that they won't be penalized for thinking outside the box or trying new things. You can create psychological safety by making sure everyone understands their roles and responsibilities and how they contribute to the team's purpose. If you're a team leader, help set the tone by being curious, asking questions, and exhibiting tolerance for mistakes. Also, make sure to give direction &mdash; creativity and innovation need a balanced, hands-off approach, but also need some scaffolding. Do this by giving basic parameters and a goal.</p>
+        
+        <p>Next, make sure to avoid sameness. If everyone has the same backgrounds, qualifications, or experiences it creates a uniform and agreeable crowd. Now that sounds like something you'd want, but studies show that more diverse teams can solve problems better and perform better.</p>
+        
+        <p>Okay, now let's get a little crazy. To give your team an innovative environment, move towards chaos. That may sound scary, but what we mean is this: picture a spectrum with chaos on one end and control on the other. You want your team to be on the cusp of chaos as this generates an atmosphere where all ideas are considered out of necessity. If this cusp sounds too scary, try to at least move slightly beyond comfort.</p>
+        
+        <p>On a similar notion, don't worry about "how." Once we hear an idea we often jump right in to how we'd implement it. Stop! This is the fastest way to kill the creative process. This can also happen if you focus too much on measurement from the get-go. Instead, employ an ideas first, measurement second approach. Of course we need data and numbers to drive direction, but sometimes the most creative ideas can come when measurement isn't an initial thought.</p>
+        
+        <p>Don't forget about self-care, either. Make sure things like your diet and sleep schedule are optimal in order to set up for productivity. You may want to try things like meditation to help clear the mind. Turner actually has some ways to get started &mdash; visit TurnerNow or contact your local HR business partner.</p>
+        
+        <p>Oh &mdash; and one more thing: despite the widely held belief that some people just aren't creative, there really isn't any evidence that one person is inherently more creative than another. Make creativity a habit!</p>
+        
+        <br>
+        <br>
+
+    </div>
+    <div class="col-right">
+        <h3 class="sub"><span>Resources</span></h3>
+        <br>
+        <h5>Articles</h5>
+        <div class="list">
+            <a class="list-item" href="http://www.apa.org/gradpsych/2009/01/creativity.aspx" target="_blank">
+                <div class="list-content">
+                    <h3>The Science of Creativity</h3>
+                </div>
+            </a>
+            <a class="list-item" href="https://www.inc.com/adam-fridman/3-ways-to-foster-creativity-in-your-team.html" target="_blank">
+                <div class="list-content">
+                    <h3>3 Ways to Foster Creativity in Your Team</h3>
+                </div>
+            </a>
+            <a class="list-item" href="https://www.forbes.com/sites/forbescoachescouncil/2017/12/21/15-ways-leaders-can-promote-creativity-in-the-workplace/#62269bd158ef" target="_blank">
+                <div class="list-content">
+                    <h3>15 Ways Leaders Can Promote Creativity in the Workplace</h3>
+                </div>
+            </a>
+            <a class="list-item" href="http://fortune.com/2017/06/07/encourage-creativity-work-farmers-insurance/" target="_blank">
+                <div class="list-content">
+                    <h3>Why You Can't Force Creativity at Work</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
