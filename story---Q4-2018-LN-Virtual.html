@@ -1,0 +1,298 @@
+<style>
+    h2 {
+        font-family: TurnerBold;
+        font-size: 3rem;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+    h3.sub {
+        position: relative;
+        text-align: left;
+        font-family: TurnerBold;
+        font-size: 2rem;
+    }
+
+    h3.sub span {
+        background: #fff;
+        padding-left: 0;
+        padding-right: 15px;
+        position: relative;
+        z-index: 1;
+    }
+
+    h3.sub:before {
+        background: #696969;
+        content: "";
+        display: block;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        left: 0;
+    }
+
+    .byline {
+        font-weight: bold;
+        font-size: .9rem !important;
+        margin: 0 0 20px 0;
+    }
+
+    h3.q {
+        font-size: 1.5rem;
+        font-family: TurnerBold;
+        margin-bottom: 20px;
+    }
+
+    hr.class {
+        border-top: 3px double #8c8b8b;
+    }
+
+    /*CLASS STYLING*/
+
+    .class-row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .class-column-left {
+        float: left;
+        width: 25%;
+        padding: 10px;
+    }
+
+    .class-column-left p {
+        font-size: .985rem;
+        line-height: 145%;
+    }
+
+    .class-column-right h3 {
+        font-family: TurnerBold;
+        font-size: 1.5rem;
+    }
+
+    .panelist-column-right p {
+        font-size: 1rem;
+    }
+
+    .class-column-right {
+        float: left;
+        width: 75%;
+        padding: 10px;
+    }
+
+    /*NAVIGATION*/
+
+    .nav-button {
+        padding: 2px 5px;
+        border: 1px solid #0052e7;
+        border-radius: 3px;
+
+        text-decoration: none;
+        font-size: .975rem !important;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+    }
+
+    .nav-button:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .learnNow a {
+        font-size: 15px;
+        font-family: TurnerBold;
+        color: #000;
+    }
+
+    .learnNow a:hover {
+        color: #0052e7;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15px !important;
+        font-family: TurnerBold;
+    }
+
+    .topnav a:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .topnav .icon {
+        display: none;
+    }
+
+    /*MEDIA QUERIES*/
+
+    @media screen and (max-width: 1152px) {
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+
+    @media all and (max-width: 600px) {
+        .class-column-left {
+            width: 100%;
+        }
+        .class-column-right {
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+
+    }
+
+</style>
+
+<!--TOP NAVIGATION-->
+
+<span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
+<div class="topnav" id="myTopnav">
+    <a href="http://learn.turner.com">Home</a>
+    <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+    <a href="/learnnow/org-development">Org. Development</a>
+    <a href="/learnnow/performance">Performance</a>
+    <a href="/learnnow/subscribe">Subscribe</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+</div>
+
+<script>
+    function shrinkNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+</script>
+
+<h2>Q4 LeadershipNow Schedule</h2>
+
+<br><br>
+
+<b>Jump to month:</b> <a class="nav-button" href="#Oct">October</a> <a class="nav-button" href="#Nov">November</a> <a class="nav-button" href="#Dec">December</a>
+
+<br><br><br>
+
+<a name="Oct"></a>
+<h3 class="sub"><span>October 2018</span></h3>
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>Candid Conversations</b></p>
+        <p>October 18<br>9a &ndash; 11a ET<br>Webinar/Global</p>
+        <hr>
+        <p>October 30<br>2p &ndash; 4p<br>Webinar/Global</p>
+        <hr>
+        <a href="https://lncandidconversations.eventbrite.com/" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p><i>Just say it!</i></p>
+        <p>Learn how to put this idea skillfully into practice for the benefit of others &mdash; without being a jerk.</p>
+    </div>
+</div>
+
+<hr class="class">
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>Who Are You... (to Lead)?</b></p>
+        <p>October 18<br>2p &ndash; 4p ET<br>Webinar/Global
+        </p>
+        <hr>
+        <a href="https://whoareyoutolead.eventbrite.com/" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>Take a significant step towards becoming the leader you want to be by investing the time to actively reflect on what type of leader you are, what motivates you, and any areas you want to improve to better understand those you lead.</p>
+    </div>
+</div>
+
+<hr class="class">
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>Bold Hiring</b></p>
+        <p>October 30<br>9a &ndash; 11a ET<br>Webinar/Global</p>
+        <hr>
+        <a href="https://lnboldhiring.eventbrite.com/" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>Bold Hiring is a reinvigorated approach to hiring we're taking at Turner. One that includes a sharper focus on bringing new ideas, perspectives, and experiences, to teams across the company.</p>
+        <p>This session will help you think about hiring in a new way and give you the tools and tips you need to make more of an impact with every opening you have.</p>
+    </div>
+</div>
+
+
+<br><br>
+
+<a name="Nov"></a>
+<h3 class="sub"><span>November 2018</span></h3>
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>Bold Hiring</b></p>
+        <p>November 12<br>2p &ndash; 4p ET<br>Webinar/Global
+        </p>
+        <hr>
+        <p>November 29<br>9a &mdash; 11a ET<br>Webinar/Global</p>
+        <hr>
+        <a href="https://lnboldhiring.eventbrite.com/" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>Bold Hiring is a reinvigorated approach to hiring we're taking at Turner. One that includes a sharper focus on bringing new ideas, perspectives, and experiences, to teams across the company.</p>
+        <p>This session will help you think about hiring in a new way and give you the tools and tips you need to make more of an impact with every opening you have.</p>
+    </div>
+</div>
+
+<br><br>
+
+<a name="Dec"></a>
+<h3 class="sub"><span>December 2018</span></h3>
+
+<div class="class-row">
+    <div class="class-column-left">
+        <p><b>Bold Hiring</b></p>
+        <p>December 6<br>2p &ndash; 4p ET<br>Webinar/Global
+        </p>
+        <hr>
+        <a href="https://lnboldhiring.eventbrite.com/" target="_blank" class="nav-button">Register</a>
+    </div>
+    <div class="class-column-right">
+        <p>Bold Hiring is a reinvigorated approach to hiring we're taking at Turner. One that includes a sharper focus on bringing new ideas, perspectives, and experiences, to teams across the company.</p>
+        <p>This session will help you think about hiring in a new way and give you the tools and tips you need to make more of an impact with every opening you have.</p>
+    </div>
+</div>
+
+<br><br>
