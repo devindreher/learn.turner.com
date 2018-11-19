@@ -1,13 +1,12 @@
 <style>
-    
     h2 {
         font-family: TurnerBold;
         font-size: 3rem;
         margin-top: 30px;
     }
-    
-/*FIXED STICKY*/
-    
+
+    /*FIXED STICKY*/
+
     .sticky {
         border: 2px solid black;
         border-radius: 5px;
@@ -17,27 +16,27 @@
         color: #fff;
         overflow: visible;
         box-shadow: 2px 2px 8px #888;
-        
+
         width: 200px;
-        
+
         position: fixed;
         right: 0;
         top: 300px;
-        
+
         z-index: 1;
     }
-    
+
     .sticky p {
         font-family: TurnerBold;
         font-size: 1rem;
         line-height: 115%;
         color: #fff;
     }
-    
+
     #sticky-x {
-        
+
         cursor: pointer;
-        
+
         width: 30px;
         height: 30px;
         border: 1px solid #585858;
@@ -46,10 +45,10 @@
         background: #fff;
         top: -10px;
         right: -10px;
-        
+
         font-family: TurnerBold;
     }
-    
+
     .sticky a {
         padding: 2px 5px;
         border: 2px solid #fff;
@@ -69,123 +68,139 @@
     }
 
 
-    
-/*FLEX BOXES*/
-    
-    .list {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: -40px;
-        padding: 0;
-    }
-    
-    ul.list li:before {
-        background-image: none !important;
-    }
-    
-    .list-item {
-        display: flex;
-        padding: 0.5em;
+    /*FLEX BOXES*/
+
+    .resource-cards {
         width: 100%;
+        max-width: 1024px;
+        margin: 0;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
     }
-    
-    .list-content {
-        background-color: #fff;
+
+    @media only screen and (min-width: 850px) {
+        .resource-cards {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    .card {
+        background: white;
+        text-decoration: none;
+        color: #444;
+        border-top: 10px solid #000;
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+        border-left: 1px solid #000;
+
         display: flex;
         flex-direction: column;
-        padding: 1em;
-        width: 100%;
-        border: 1px solid grey;
-        border-top: 10px solid #000;
-        box-shadow: 1px 1px 3px #888;
+        min-height: 100%;
+        position: relative;
+        top: 0;
+        transition: all .1s ease-in;
     }
     
-    .list-content:hover {
-        box-shadow: 3px 3px 5px #888;
-        transition: .3s;
+    .card:hover {
+        top: -2px;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     }
-    
-    .list-content h2 {
-        font-family: TurnerBold, Arial, Helvetica, sans-serif;
-        font-size: 1.2rem;
-        color: #282828;
-        margin-top: -40px;
-        margin-left: 55px;
+
+    .card .thumbnail {
+        margin: 5% 1% 0 5%;
+    }
+
+    .card article {
+        padding: 20px;
+
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card h1 {
+        font-size: 20px;
+        font-family: TurnerBold;
+        margin: 0;
+        color: #333;
         line-height: 120%;
     }
-    
-    .list-content img {
-        max-width: 50px;
-        height: auto;
+
+    .card p {
+        line-height: 1.4;
+        flex: 1;
+        font-size: 1.2rem;
     }
-    
-    .list-content p {
-        flex: 1 0 auto;
-        font-family: TurnerRegular, Arial, Helvetica, sans-serif;
-        font-size: 1.1rem;
-        margin: .5rem 0 0 0;
-        padding: 0;
-        line-height: 150%;
-    }
-    
-    .list-content p a {
+
+    .card p a {
         padding: 2px 5px;
         border: 1px solid #0052e7;
         border-radius: 3px;
-        
+
         text-decoration: none;
         font-size: 1rem;
         font-family: TurnerBold, Arial, Helvetica, sans-serif;
     }
-    
-    .list-content p a:hover {
+
+    .card p a:hover {
         background-color: #0052e7;
         color: #fff;
     }
-    
-/*NAVIGATION*/
+
+    /*NAVIGATION*/
 
     .learnNow a {
         font-size: 15px;
         font-family: TurnerBold;
         color: #000;
     }
-    
+
     .learnNow a:hover {
         color: #0052e7;
     }
 
     .topnav {
-      overflow: hidden;
-      background-color: #333;
+        overflow: hidden;
+        background-color: #333;
     }
 
     .topnav a {
-      float: left;
-      display: block;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 15px !important;
-      font-family: TurnerBold;
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15px !important;
+        font-family: TurnerBold;
     }
 
     .topnav a:hover {
-      background-color: #0052e7;
-      color: #fff;
+        background-color: #0052e7;
+        color: #fff;
     }
 
     .topnav .icon {
-      display: none;
+        display: none;
     }
-    
-/*MEDIA QUERIES*/
+
+    /*MEDIA QUERIES*/
 
     @media screen and (max-width: 1152px) {
-        .topnav a:not(:first-child) {display: none;}
-        .topnav a.icon {float: right; display: block;}
-        .topnav.responsive {position: relative;}
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+        .topnav.responsive {
+            position: relative;
+        }
         .topnav.responsive .icon {
             position: absolute;
             right: 0;
@@ -197,96 +212,107 @@
             text-align: left;
         }
     }
-    
-    @media screen and (min-width: 40em) {
-        .list-item { width: 50%; }
-    }
-    
-    @media screen and (min-width: 60em) {
-        .list-item { width: 33.33%; }
-    }
-    
+
 </style>
 
 <!--TOP NAVIGATION-->
 
 <span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
 <div class="topnav" id="myTopnav">
-  <a href="http://learn.turner.com">Home</a>    
-  <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
-  <a href="/learnnow/org-development">Org. Development</a>
-  <a href="/learnnow/performance">Performance</a>
-  <a href="/learnnow/subscribe">Subscribe</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+    <a href="http://learn.turner.com">Home</a>
+    <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+    <a href="/learnnow/org-development">Org. Development</a>
+    <a href="/learnnow/performance">Performance</a>
+    <a href="/learnnow/subscribe">Subscribe</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
 </div>
 
 <script>
-function shrinkNav() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
+    function shrinkNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
     }
-}
+
 </script>
 
 <script>
-
-window.onload = function(){
-    document.getElementById('sticky-x').onclick = function(){
-        this.parentNode.parentNode.parentNode
-        .removeChild(this.parentNode.parentNode);
-        return false;
+    window.onload = function() {
+        document.getElementById('sticky-x').onclick = function() {
+            this.parentNode.parentNode.parentNode
+                .removeChild(this.parentNode.parentNode);
+            return false;
+        };
     };
-};
-    
+
 </script>
 
 <div>
     <div class="sticky">
         <button id="sticky-x">X</button>
         <p>
-            Psst.<br>
-            Get learning goodies in your inbox!
+            Psst.<br> Get learning goodies in your inbox!
         </p>
         <a href="http://eepurl.com/cWVxXz" target="_blank">Subscribe</a>
     </div>
 </div>
-    
-<h2>Goals</h2></div>
 
-<ul class="list">
-    <li class="list-item">
-        <div class="list-content">
-            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-            <h2>Creating Individual Goals</h2>
-            <p>If all you can think of are vuvuzelas when creating goals, look no further. We have some things for you to think about.</p>
-            <p><a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/Guide+to+Creating+Individual+Performance+Goals.pdf" target="_blank">Go</a></p>
-        </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
-            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-            <h2>Entering Your Goals Into MyCareer</h2>
-            <p>Every now and then we ask you to document something &mdash; this includes your goals.</p>
-            <p><a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/NEW+INTERFACE+-+Setting+Editing+%26+Approving+Goals+Quick+Sheet.pdf" target="_blank">Go</a></p>
-        </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
-            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
-            <h2>Development Plan Toolkit</h2>
-            <p>Let us help you get started if you need some structure around how you're going to make now happen.</p>
-            <p><a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/IDP+Tool+new+skin.pdf" target="_blank">Go</a></p>
-        </div>
-    </li>
-        <li class="list-item">
-        <div class="list-content">
-            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
-            <h2>Thinking Strategically About Your Career Development</h2>
-            <p>Dorie Clark, <i>HBR</i> contributor, shares 4 ways to be strategic about career development.</p>
-            <p><a href="https://hbr.org/2016/12/think-strategically-about-your-career-development" target="_blank">Go</a></p>
-        </div>
-    </li>
-</ul>
+<h2>Goals</h2>
+
+<div class="resource-cards">
+    <div class="resource">
+        <a class="card" href="https://s3.amazonaws.com/tpd-files/Performance/2018/Guide_to_Creating_Individual_Performance_Goals.pdf" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <h1>Creating Individual Goals</h1>
+            </div>
+            <article>
+                <p>
+                    If all you can think of are vuvuzelas when creating goals, look no further. We have some things for you to think about.
+                </p>
+            </article>
+        </a>
+    </div>
+    <div class="resource">
+        <a class="card" href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/NEW+INTERFACE+-+Setting+Editing+%26+Approving+Goals+Quick+Sheet.pdf" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <h1>Entering &amp; Approving Goals</h1>
+            </div>
+            <article>
+                <p>
+                    Every now and then we ask you to document something &mdash; this includes your goals. Learn how to enter them in MyCareer and, for managers, how to approve your team's goals.
+                </p>
+            </article>
+        </a>
+    </div>
+    <div class="resource">
+        <a class="card" href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/IDP+Tool+new+skin.pdf" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <h1>Development Plan Toolkit</h1>
+            </div>
+            <article>
+                <p>
+                    Let us help you get started with figuring out how to grow at Turner.
+                </p>
+            </article>
+        </a>
+    </div>
+    <div class="resource">
+        <a class="card" href="https://hbr.org/2016/12/think-strategically-about-your-career-development" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+                <h1>Thinking Strategically About Your Career Development</h1>
+            </div>
+            <article>
+                <p>
+                    Dorie Clark, <em>HBR</em> contributor, shares four ways to be strategic about career development.
+                </p>
+            </article>
+        </a>
+    </div>
+</div>

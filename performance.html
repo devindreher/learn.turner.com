@@ -1,139 +1,148 @@
 <style>
-    
     h2 {
         font-family: TurnerBold;
         font-size: 3rem;
         margin-top: 30px;
     }
-    
+
     .theme-content ul li:before {
         background-image: none !important;
     }
-    
-    ul, li {
+
+    ul,
+    li {
         margin: 0;
         padding: 0;
         list-style-type: none;
     }
-    
+
     img {
         width: 100%;
     }
-    
-/*FLEX BOXES*/
-    
-    .list {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: -40px;
-        padding: 0;
-    }
-    
-    ul.list li:before {
-        background-image: none !important;
-    }
-    
-    .list-item {
-        display: flex;
-        padding: 0.5em;
+
+    /*FLEX BOXES*/
+
+    .resource-cards {
         width: 100%;
+        max-width: 1240px;
+        margin: 0;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
     }
-    
-    .list-content {
-        background-color: #fff;
+
+    @media only screen and (min-width: 850px) {
+        .resource-cards {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    .card {
+        background: white;
+        text-decoration: none;
+        color: #444;
+        border-top: 10px solid #000;
+        border-left: 1px solid dimgrey;
+        border-right: 1px solid dimgrey;
+        border-bottom: 1px solid dimgrey;
         display: flex;
         flex-direction: column;
-        padding: 1em;
-        width: 100%;
-        border: 1px solid grey;
-        border-top: 10px solid #000;
-        box-shadow: 1px 1px 3px #888;
+        min-height: 100%;
+        position: relative;
+        top: 0;
+        transition: all .1s ease-in;
     }
-    
-    .list-content:hover {
-        box-shadow: 3px 3px 5px #888;
-        transition: .3s;
+
+    .card:hover {
+        top: -2px;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     }
-    
-    .list-content h2 {
-        font-family: TurnerBold, Arial, Helvetica, sans-serif;
-        font-size: 1.2rem;
-        color: #282828;
+
+    .card article {
+        padding: 20px;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card h1 {
+        font-size: 20px;
+        font-family: TurnerBold;
         margin: 0;
+        color: #333;
+        line-height: 120%;
     }
-    
-    .list-content p {
-        flex: 1 0 auto;
-        font-family: TurnerRegular, Arial, Helvetica, sans-serif;
-        font-size: 1.1rem;
-        margin: .5rem 0 0 0;
-        padding: 0;
-        line-height: 150%;
+
+    .card p {
+        line-height: 1.4;
+        flex: 1;
+        font-size: 1.2rem;
     }
-    
-    .list-content p a {
-        padding: 2px 5px;
-        border: 1px solid #0052e7;
-        border-radius: 3px;
-        
-        text-decoration: none;
-        font-size: 1rem;
-        font-family: TurnerBold, Arial, Helvetica, sans-serif;
-    }
-    
-    .list-content p a:hover {
-        background-color: #0052e7;
-        color: #fff;
+
+    .card span {
+        font-size: 12px;
+        font-weight: bold;
+        color: #999;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        margin: 2em 0 0 0;
+        line-height: 130%;
     }
 
 
-/*NAVIGATION*/
+    /*NAVIGATION*/
 
     .learnNow a {
         font-size: 15px;
         font-family: TurnerBold;
         color: #000;
     }
-    
+
     .learnNow a:hover {
         color: #0052e7;
     }
 
     .topnav {
-      overflow: hidden;
-      background-color: #333;
+        overflow: hidden;
+        background-color: #333;
     }
 
     .topnav a {
-      float: left;
-      display: block;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 15px !important;
-      font-family: TurnerBold;
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15px !important;
+        font-family: TurnerBold;
     }
 
     .topnav a:hover {
-      background-color: #0052e7;
-      color: #fff;
+        background-color: #0052e7;
+        color: #fff;
     }
 
     .topnav .icon {
-      display: none;
+        display: none;
     }
-    
-/*MEDIA QUERIES*/
+
+    /*MEDIA QUERIES*/
 
     @media screen and (max-width: 1152px) {
-        .topnav a:not(:first-child) {display: none;}
-        .topnav a.icon {float: right; display: block;}
-        .learn-main h3 a {font-size: 2rem;}
-        .learn-card {width: 100%;}
-        .learn-card h5 a {font-size: 2rem;}
-        .learn-card p {font-size: 1.5rem; line-height: inherit;}
-        .topnav.responsive {position: relative;}
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+        .topnav.responsive {
+            position: relative;
+        }
         .topnav.responsive .icon {
             position: absolute;
             right: 0;
@@ -145,65 +154,66 @@
             text-align: left;
         }
     }
-    
-    @media screen and (min-width: 40em) {
-        .list-item { width: 50%; }
-    }
-    
-    @media screen and (min-width: 60em) {
-        .list-item { width: 33.33%; }
-    }
-    
+
 </style>
 
 <!--TOP NAVIGATION-->
 
 <span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
 <div class="topnav" id="myTopnav">
-  <a href="http://learn.turner.com">Home</a>    
-  <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
-  <a href="/learnnow/org-development">Org. Development</a>
-  <a href="/learnnow/performance">Performance</a>
-  <a href="/learnnow/subscribe">Subscribe</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+    <a href="http://learn.turner.com">Home</a>
+    <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+    <a href="/learnnow/org-development">Org. Development</a>
+    <a href="/learnnow/performance">Performance</a>
+    <a href="/learnnow/subscribe">Subscribe</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
 </div>
 
 <script>
-function shrinkNav() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
+    function shrinkNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
     }
-}
+
 </script>
 
 <!--BODY-->
 
 <h2>Performance</h2>
 
-<ul class="list">
-    <li class="list-item">
-        <div class="list-content">
-            <h2>Turner's Approach</h2>
-            <p>Performance is about the conversation. Learn what exactly that means and get answers to frequently asked questions.
-            <p><a href="/learnnow/performance---approach">Go</a></p>
-        </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
-            <h2>Goals</h2>
-            <p>GOOOOAAAAAAAAALLLL!</p>
-            <p>Tools and more about setting up your goals.</p>
-            <p><a href="/learnnow/performance---goals">Go</a></p>
-        </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
-            <h2>Reviews &amp; Conversations</h2>
-            <p>Everything you need for your favorite time of year and best practices for having ongoing performance conversations.</p>
-            <p><a href="/learnnow/performance---reviews-and-conversations">Go</a></p>
-        </div>
-    </li>
-</ul>
+<br>
+
+<div class="resource-cards">
+    <div class="resource">
+        <a href="/learnnow/performance---approach" class="card">
+            <article>
+                <h1>Turner's Approach</h1>
+                <br>
+                <p>Performance is about the conversation. Learn what exactly that means and get answers to frequently asked questions.</p>
+            </article>
+        </a>
+    </div>
+    <div class="resource">
+        <a href="/learnnow/performance---goals" class="card">
+            <article>
+                <h1>Goals</h1>
+                <br>
+                <p>GOOOOAAAAAAAAALLLL!
+                    <br> Tools and more about setting up your goals.</p>
+            </article>
+        </a>
+    </div>
+    <div class="resource">
+        <a href="/learnnow/performance---reviews-and-conversations" class="card">
+            <article>
+                <h1>Reviews &amp; Conversations</h1>
+                <br>
+                <p>Everything you need for your favorite time of year and best practices for having ongoing performance conversations.</p>
+            </article>
+        </a>
+    </div>
+</div>

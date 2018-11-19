@@ -1,13 +1,12 @@
 <style>
-    
     h2 {
         font-family: TurnerBold;
         font-size: 3rem;
         margin-top: 30px;
     }
-    
-/*FIXED STICKY*/
-    
+
+    /*FIXED STICKY*/
+
     .sticky {
         border: 2px solid black;
         border-radius: 5px;
@@ -17,27 +16,27 @@
         color: #fff;
         overflow: visible;
         box-shadow: 2px 2px 8px #888;
-        
+
         width: 200px;
-        
+
         position: fixed;
         right: 0;
         top: 300px;
-        
+
         z-index: 1;
     }
-    
+
     .sticky p {
         font-family: TurnerBold;
         font-size: 1rem;
         line-height: 115%;
         color: #fff;
     }
-    
+
     #sticky-x {
-        
+
         cursor: pointer;
-        
+
         width: 30px;
         height: 30px;
         border: 1px solid #585858;
@@ -46,10 +45,10 @@
         background: #fff;
         top: -10px;
         right: -10px;
-        
+
         font-family: TurnerBold;
     }
-    
+
     .sticky a {
         padding: 2px 5px;
         border: 2px solid #fff;
@@ -68,123 +67,140 @@
         transition: .2s ease;
     }
 
-    
-/*FLEX BOXES*/
-    
-    .list {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: -40px;
-        padding: 0;
-    }
-    
-    ul.list li:before {
-        background-image: none !important;
-    }
-    
-    .list-item {
-        display: flex;
-        padding: 0.5em;
+
+    /*FLEX BOXES*/
+
+    .resource-cards {
         width: 100%;
+        max-width: 1024px;
+        margin: 0;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
     }
-    
-    .list-content {
-        background-color: #fff;
+
+    @media only screen and (min-width: 850px) {
+        .resource-cards {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    .card {
+        background: white;
+        text-decoration: none;
+        color: #444;
+        border-top: 10px solid #000;
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+        border-left: 1px solid #000;
+
         display: flex;
         flex-direction: column;
-        padding: 1em;
-        width: 100%;
-        border: 1px solid grey;
-        border-top: 10px solid #000;
-        box-shadow: 1px 1px 3px #888;
+        min-height: 100%;
+        position: relative;
+        top: 0;
+        transition: all .1s ease-in;
     }
-    
-    .list-content:hover {
-        box-shadow: 3px 3px 5px #888;
-        transition: .3s;
+
+    .card:hover {
+        top: -2px;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     }
-    
-    .list-content h2 {
-        font-family: TurnerBold, Arial, Helvetica, sans-serif;
-        font-size: 1.2rem;
-        color: #282828;
-        margin-top: -40px;
-        margin-left: 55px;
+
+    .card .thumbnail {
+        margin: 5% 1% 0 5%;
+    }
+
+    .card article {
+        padding: 20px;
+
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card h1 {
+        font-size: 20px;
+        font-family: TurnerBold;
+        margin: 0;
+        color: #333;
         line-height: 120%;
     }
-    
-    .list-content img {
-        max-width: 50px;
-        height: auto;
+
+    .card p {
+        line-height: 1.4;
+        flex: 1;
+        font-size: 1.2rem;
     }
-    
-    .list-content p {
-        flex: 1 0 auto;
-        font-family: TurnerRegular, Arial, Helvetica, sans-serif;
-        font-size: 1.1rem;
-        margin: .5rem 0 0 0;
-        padding: 0;
-        line-height: 150%;
-    }
-    
-    .list-content p a {
+
+    .card p a {
         padding: 2px 5px;
         border: 1px solid #0052e7;
         border-radius: 3px;
-        
+
         text-decoration: none;
         font-size: 1rem;
         font-family: TurnerBold, Arial, Helvetica, sans-serif;
     }
-    
-    .list-content p a:hover {
+
+    .card p a:hover {
         background-color: #0052e7;
         color: #fff;
     }
 
-/*NAVIGATION*/
+    /*NAVIGATION*/
 
     .learnNow a {
         font-size: 15px;
         font-family: TurnerBold;
         color: #000;
     }
-    
+
     .learnNow a:hover {
         color: #0052e7;
     }
 
     .topnav {
-      overflow: hidden;
-      background-color: #333;
+        overflow: hidden;
+        background-color: #333;
     }
 
     .topnav a {
-      float: left;
-      display: block;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 15px !important;
-      font-family: TurnerBold;
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15px !important;
+        font-family: TurnerBold;
     }
 
     .topnav a:hover {
-      background-color: #0052e7;
-      color: #fff;
+        background-color: #0052e7;
+        color: #fff;
     }
 
     .topnav .icon {
-      display: none;
+        display: none;
     }
-    
-/*MEDIA QUERIES*/
+
+    /*MEDIA QUERIES*/
 
     @media screen and (max-width: 1152px) {
-        .topnav a:not(:first-child) {display: none;}
-        .topnav a.icon {float: right; display: block;}
-        .topnav.responsive {position: relative;}
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+        .topnav.responsive {
+            position: relative;
+        }
         .topnav.responsive .icon {
             position: absolute;
             right: 0;
@@ -196,58 +212,49 @@
             text-align: left;
         }
     }
-    
-    @media screen and (min-width: 40em) {
-        .list-item { width: 50%; }
-    }
-    
-    @media screen and (min-width: 60em) {
-        .list-item { width: 33.33%; }
-    }
-    
+
 </style>
 
 <!--TOP NAVIGATION-->
 
 <span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
 <div class="topnav" id="myTopnav">
-  <a href="http://learn.turner.com">Home</a>    
-  <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
-  <a href="/learnnow/org-development">Org. Development</a>
-  <a href="/learnnow/performance">Performance</a>
-  <a href="/learnnow/subscribe">Subscribe</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+    <a href="http://learn.turner.com">Home</a>
+    <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+    <a href="/learnnow/org-development">Org. Development</a>
+    <a href="/learnnow/performance">Performance</a>
+    <a href="/learnnow/subscribe">Subscribe</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
 </div>
 
 <script>
-function shrinkNav() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
+    function shrinkNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
     }
-}
+
 </script>
 
 <script>
-
-window.onload = function(){
-    document.getElementById('sticky-x').onclick = function(){
-        this.parentNode.parentNode.parentNode
-        .removeChild(this.parentNode.parentNode);
-        return false;
+    window.onload = function() {
+        document.getElementById('sticky-x').onclick = function() {
+            this.parentNode.parentNode.parentNode
+                .removeChild(this.parentNode.parentNode);
+            return false;
+        };
     };
-};
-    
+
 </script>
 
 <div>
     <div class="sticky">
         <button id="sticky-x">X</button>
         <p>
-            Psst.<br>
-            Get learning goodies in your inbox!
+            Psst.<br> Get learning goodies in your inbox!
         </p>
         <a href="http://eepurl.com/cWVxXz" target="_blank">Subscribe</a>
     </div>
@@ -257,139 +264,196 @@ window.onload = function(){
 
 <p><b>Resources for Employees:</b></p>
 
-<ul class="list">
-    <li class="list-item">
-        <div class="list-content">
-            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-            <h2>Preparing Your Self-Recaps &amp; Setting Goals</h2>
-            <p>&nbsp;</p>
-            <p>
-                <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/2017_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals.pdf" target="_blank">English</a>
-                <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/Chinese__2017_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals.pdf" target="_blank">Chinese</a>
-                <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/Korean__2017_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals.pdf" target="_blank">Korean</a>
-                <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/Japanese__2017_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals.pdf" target="_blank">Japanese</a>
-                <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/Portuguese__2017_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals.pdf" target="_blank">Portuguese</a>
-                <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/Spanish__2017_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals.pdf" target="_blank">Spanish</a>
-            </p>
+<div class="resource-cards">
+    <div class="resource">
+        <div class="card">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <h1>Preparing Your Self-Recaps &amp; Setting Goals</h1>
+            </div>
+            <article>
+                <p>
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2018/2018_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals.pdf" target="_blank">English</a>&nbsp;
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2018/Chinese_-_2018_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals_.pdf" target="_blank">Chinese</a>&nbsp;
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2018/Korean_-_2018_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals.pdf" target="_blank">Korean</a>&nbsp;
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2018/Japanese_-_2018_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals.pdf" target="_blank">Japanese</a>&nbsp;
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2018/Portuguese_-_2018_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals.pdf" target="_blank">Portuguese</a>&nbsp;
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2018/Spanish_-_2018_Employee_Guide_for_Preparing_a_Self_Recap_%26_Setting_Goals.pdf">Spanish</a>
+                </p>
+            </article>
         </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
-            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-            <h2>Having a Successful Recap Conversation With Your Manager</h2>
-            <p>&nbsp;</p>
-            <p><a href="https://s3.amazonaws.com/tpd-files/Performance/2017/2017_Employee_Guide_to_Successful_Performance_Recap_Conversations.pdf" target="_blank">English</a>
-            </p>
+    </div>
+    <div class="resource">
+        <div class="card">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <h1>Having a Successful Recap Conversation with Your Manager</h1>
+            </div>
+            <article>
+                <p>
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/2017_Employee_Guide_to_Successful_Performance_Recap_Conversations.pdf" target="_blank">English</a>
+                </p>
+            </article>
         </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
-            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
-            <h2>Guide to Ongoing Performance Check-Ins</h2>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p><a href="https://s3.amazonaws.com/tpd-files/Performance/2018/Guide-to-Performance-Check-Ins_2018.pdf" target="_blank">English</a></p>
+    </div>
+    <div class="resource">
+        <div class="card">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+                <h1>Guide to Ongoing Performance Check-Ins</h1>
+            </div>
+            <article>
+                <p>
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2018/Guide-to-Performance-Check-Ins_2018.pdf" target="_blank">English</a>
+                </p>
+            </article>
         </div>
-    </li>
-</ul>
+    </div>
+</div>
 
+<br>
 <p><b>Resources for Managers</b></p>
 
-<ul class="list">
-    <li class="list-item">
-        <div class="list-content">
-            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-            <h2>Preparing a Manager Recap</h2>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>
-                <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/2017_Manager_Guide_for_Preparing_a_Performance_Recap.pdf" target="_blank">English</a>
-                <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/Chinese__2017_Manager_Guide_for_Preparing_a_Performance_Recap.pdf" target="_blank">Chinese</a>
-                <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/Korean__2017_Manager_Guide_for_Preparing_a_Performance_Recap.pdf" target="_blank">Korean</a>
-                <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/Japanese__2017_Manager_Guide_for_Preparing_a_Performance_Recap.pdf" target="_blank">Japanese</a>
-                <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/Portuguese__2017_Manager_Guide_for_Preparing_a_Performance_Recap.pdf" target="_blank">Portuguese</a>
-                <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/Spanish__2017_Manager_Guide_for_Preparing_a_Performance_Recap.pdf" target="_blank">Spanish</a>
-            </p>
+<div class="resource-cards">
+    <div class="resource">
+        <div class="card">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <h1>Preparing a Manager Recap</h1>
+            </div>
+            <article>
+                <p>
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2018/2018_Manager_Guide_for_Preparing_a_Performance_Recap.pdf" target="_blank">English</a>&nbsp;
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2018/Chinese_-_2018_Manager_Guide_for_Preparing_a_Performance_Recap.pdf" target="_blank">Chinese</a>&nbsp;
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2018/Korean_-_2018_Manager_Guide_for_Preparing_a_Performance_Recap.pdf" target="_blank">Korean</a>&nbsp;
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2018/Japanese_-_2018_Manager_Guide_for_Preparing_a_Performance_Recap.pdf" target="_blank">Japanese</a>&nbsp;
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2018/Portuguese_-_2018_Manager_Guide_for_Preparing_a_Performance_Recap.pdf" target="_blank">Portuguese</a>&nbsp;
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2018/Spanish_-_2018_Manager_Guide_for_Preparing_a_Performance_Recap.pdf" target="_blank">Spanish</a>
+                </p>
+            </article>
         </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
-            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-            <h2>Having a Successful Recap Conversation With Your Employee</h2>
-            <p>&nbsp;</p>
-            <p>
-                <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/2017_Manager_Guide_to_Successful_Performance_Recap_Conversations.pdf" target="_blank">English</a>
-                <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/Chinese__2017_Manager_Guide_to_Successful_Performance_Recap_Conversations.pdf" target="_blank">Chinese</a>
-                <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/Korean__2017_Manager_Guide_to_Successful_Performance_Recap_Conversations.pdf" target="_blank">Korean</a>
-                <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/Japanese__2017_Manager_Guide_to_Successful_Performance_Recap_Conversations.pdf" target="_blank">Japanese</a>
-                <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/Portuguese__2017_Manager_Guide_to_Successful_Performance_Recap_Conversations.pdf" target="_blank">Portuguese</a>
-                <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/Spanish__2017_Manager_Guide_to_Successful_Performance_Recap_Conversations.pdf" target="_blank">Spanish</a>
-            </p>
+    </div>
+    <div class="resource">
+        <div class="card">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <h1>Having a Successful Recap Conversation with Your Employee</h1>
+            </div>
+            <article>
+                <p>
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/2017_Manager_Guide_to_Successful_Performance_Recap_Conversations.pdf" target="_blank">English</a>&nbsp;
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/Chinese__2017_Manager_Guide_to_Successful_Performance_Recap_Conversations.pdf" target="_blank">Chinese</a>&nbsp;
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/Korean__2017_Manager_Guide_to_Successful_Performance_Recap_Conversations.pdf" target="_blank">Korean</a>&nbsp;
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/Japanese__2017_Manager_Guide_to_Successful_Performance_Recap_Conversations.pdf" target="_blank">Japanese</a>&nbsp;
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/Portuguese__2017_Manager_Guide_to_Successful_Performance_Recap_Conversations.pdf" target="_blank">Portuguese</a>&nbsp;
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/Spanish__2017_Manager_Guide_to_Successful_Performance_Recap_Conversations.pdf" target="_blank">Spanish</a>
+                </p>
+            </article>
         </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
-            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-            <h2>How to Talk About Total Rewards</h2>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p><a href="https://s3.amazonaws.com/tpd-files/Performance/2017/2017_Manager_Guide_for_Discussing_Total_Rewards.pdf" target="_blank">English</a></p>
+    </div>
+    <div class="resource">
+        <div class="card">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <h1>How to Talk About Total Rewards</h1>
+            </div>
+            <article>
+                <p>
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/2017_Manager_Guide_for_Discussing_Total_Rewards.pdf" target="_blank">English</a>
+                </p>
+            </article>
         </div>
-    </li>
-</ul>
+    </div>
+</div>
+
+<br>
 
 <p><b>Resources for Executives</b></p>
 
-<ul class="list">
-    <li class="list-item">
-        <div class="list-content">
-            <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
-            <h2>Completing the TIP Leader Assessment</h2>
-            <p>
-                <a href="https://s3.amazonaws.com/tpd-files/Performance/2017/2017_TIP_Leadership_Assessments_in_My_Career.pdf" target="_blank">English</a>
-            </p>
+<div class="resource-cards">
+    <div class="resource">
+        <div class="card">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <h1>Completing the TIP Leader Assessment</h1>
+            </div>
+            <article>
+                <p>
+                    <a href="https://s3.amazonaws.com/tpd-files/Performance/2018/2018_TIP_Leadership_Assessments_in_My_Career.pdf" target="_blank">English</a>
+                </p>
+            </article>
         </div>
-    </li>
-</ul>
+    </div>
+</div>
+
+<br>
 
 <p><b>Articles &amp; Inspiration</b></p>
 
-<ul class="list">
-    <li class="list-item">
-        <div class="list-content">
-            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
-            <h2>10 Keys to Delivering Performance Reviews</h2>
-            <p>The Corporate Executive Board gives us some more tips.</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p><a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/CEB_Manager_Guide_10_Keys_to_Improve_Employee_Performance_through_Formal_Performance_Reviews.pdf" target="_blank">Go</a></p>
-        </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
-            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
-            <h2>Your Complete Guide to Acing This Year's Performance Review</h2>
-            <p>Why is it so hard to have useful year-end reviews? <i>Quartz</i> gives us some tips for getting better feedback.</p>
-            <p>&nbsp;</p>
-            <p><a href="http://qz.com/562880/your-complete-guide-to-acing-this-years-performance-review/?utm_source=facebook&utm_campaign=HBR&utm_medium=social" target="_blank">Go</a></p>
-        </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
-            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
-            <h2>The Fatal Career Mistake You Won't Realize You're Making</h2>
-            <p>"The worst thing you can do with respect to your job is to believe that if you get up and go to work every day, somehow you're also managing your career." Liz Ryan, CEO of Human Workplace, tells us more.</p>
-            <p><a href="https://www.linkedin.com/pulse/fatal-career-mistake-you-wont-realize-youre-making-liz-ryan" target="_blank">Go</a></p>
-        </div>
-    </li>
-    <li class="list-item">
-        <div class="list-content">
-            <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
-            <h2>The Key to Performance Reviews is Preparation</h2>
-            <p>Ben Dattner, <i>HBR</i> contributor, gives us his 5 questions he asks while giving feedback.</p>
-            <p>&nbsp;</p>
-            <p><a href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/HBR+-+The+Key+to+Performance+Reviews+is+Preparation.PDF" target="_blank">Go</a></p>
-        </div>
-    </li>
-</ul>
+<div class="resource-cards">
+    <div class="resource">
+        <a class="card" href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/CEB_Manager_Guide_10_Keys_to_Improve_Employee_Performance_through_Formal_Performance_Reviews.pdf" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+                <h1>10 Keys to Delivering Performance Reviews</h1>
+            </div>
+            <article>
+                <p>
+                    The Corporate Executive Board gives us some more tips.
+                </p>
+            </article>
+        </a>
+    </div>
+    <div class="resource">
+        <a class="card" href="http://qz.com/562880/your-complete-guide-to-acing-this-years-performance-review/" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+                <h1>Your Complete Guide to Acing This Year's Performance Review</h1>
+            </div>
+            <article>
+                <p>
+                    Why is it so hard to have useful year-end reviews? <i>Quartz</i> gives us some tips for getting better feedback.
+                </p>
+            </article>
+        </a>
+    </div>
+    <div class="resource">
+        <a class="card" href="https://www.linkedin.com/pulse/fatal-career-mistake-you-wont-realize-youre-making-liz-ryan" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+                <h1>The Fatal Career Mistake You Won't Realize You're Making</h1>
+            </div>
+            <article>
+                <p>
+                    "The worst thing you can do with respect to your job is to believe that if you get up and go to work every day, somehow you're also managing your career." Liz Ryan, CEO of Human Workplace, tells us more.
+                </p>
+            </article>
+        </a>
+    </div>
+    <div class="resource">
+        <a class="card" href="https://mss-turnernowdoc-prd.s3.amazonaws.com/learnnow/tpd-files/Performance/2016/HBR+-+The+Key+to+Performance+Reviews+is+Preparation.PDF" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+                <h1>The Key to Performance Reviews is Preparation</h1>
+            </div>
+            <article>
+                <p>
+                    Ben Dattner, <i>HBR</i> contributor, gives us his 5 questions he asks while giving feedback.
+                </p>
+            </article>
+        </a>
+    </div>
+    <div class="resource">
+        <a class="card" href="https://s3.amazonaws.com/tpd-files/Performance/2018/3-Biases-that-Hijack-Performance-Reviews-%26-How-to-Address-Them.PDF" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/book-ico.png">
+                <h1>3 Biases That Hijack Performance Reviews and How to Address Them</h1>
+            </div>
+            <article>
+                <p>
+                    Research has found that several biases come up again and again when managers evaluate performance. This article lists three of them, what they're about, and how to address each one.
+                </p>
+            </article>
+        </a>
+    </div>
+</div>
