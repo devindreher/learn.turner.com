@@ -1,0 +1,1231 @@
+<style>
+    p {
+        line-height: 135% !important;
+    }
+
+    .three-col {
+        float: left;
+        width: 33.33%;
+        padding: 10px;
+        border-right: 1px solid #777;
+    }
+
+    .three-col:last-of-type {
+        border-right: none;
+    }
+
+    .three-col p {
+        line-height: 130%;
+    }
+
+    .three-col p strong {
+        font-size: 14px;
+    }
+    
+    .three-col p a {
+        font-size: 14px !important;
+        line-height: 130% !important;
+        font-family: TurnerBold !important;
+    }
+    
+    .three-col-row {
+        padding: 0;
+        margin: 0;
+    }
+
+    .three-col-row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    @media only screen and (max-width: 850px) {
+        .three-col {
+            width: 100%;
+            border-right: none;
+            border-bottom: 1px solid #dedede;
+        }
+    }
+
+    .two-col {
+        float: left;
+        width: 50%;
+        padding-right: 25px;
+        box-sizing: border-box;
+    }
+
+    .two-col p {
+        font-size: 14px !important;
+        line-height: 130%;
+    }
+
+    .two-col p strong {
+        font-size: 14px !important;
+    }
+
+    .two-col-row {
+        margin: 0;
+        padding: 0;
+    }
+
+    .two-col-row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    @media screen and (max-width: 600px) {
+        .two-col {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    h2 {
+        font-family: TurnerBold;
+        font-size: 3rem;
+        margin-top: 30px;
+    }
+
+    h3 {
+        font-family: TurnerBold;
+    }
+
+    h3.sub {
+        position: relative;
+        text-align: left;
+        font-family: TurnerBold;
+        font-size: 2rem;
+    }
+
+    h3.sub span {
+        background: #fff;
+        padding-left: 0;
+        padding-right: 15px;
+        position: relative;
+        z-index: 1;
+    }
+
+    h3.sub:before {
+        background: #696969;
+        content: "";
+        display: block;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        left: 0;
+    }
+
+    h4 {
+        font-family: TurnerBold;
+        font-size: .975rem;
+    }
+
+    .nav-button {
+        padding: 2px 5px;
+        border: 1px solid #0052e7;
+        border-radius: 3px;
+
+        text-decoration: none;
+        font-size: .975rem !important;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+    }
+
+    .nav-button.on:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .nav-button.off {
+        border: 1px solid #dedede;
+        color: #444;
+        cursor: not-allowed;
+    }
+
+    .navbutton.off:hover {
+        background-color: #fff;
+        color: #444;
+    }
+
+    ul li:before {
+        filter: grayscale(100%) !important;
+    }
+
+    ul {
+        margin: 0 0 0 15px !important;
+        padding: 0 !important;
+    }
+
+    ul li {
+        font-size: 1rem !important;
+    }
+
+    .attention {
+        background: #f8f8f8;
+        padding: 10px;
+        width: 85%;
+        margin-bottom: 20px;
+    }
+
+    .attention p {
+        font-size: .9em;
+        color: #888;
+        font-family: TurnerBold;
+        line-height: 120%;
+    }
+
+    p {
+        font-size: 1rem !important;
+    }
+
+    #books iframe {
+        margin: 10px;
+    }
+
+    /*ROSTER FLEX BOXES*/
+
+    .team-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .team-card {
+        flex: 0 1 100%;
+        margin: 0 10px 10px 0;
+        border: 1px solid grey;
+        box-shadow: 1px 1px 3px #888;
+    }
+
+    .team-card-content {
+        padding: 10px;
+    }
+
+    .team-card-content p {
+        line-height: 120%;
+    }
+
+    .team-card-header {
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover !important;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    /*ITEM FLEX BOXES*/
+
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .list-item {
+        display: flex;
+        padding: 0.5em;
+        width: 100%;
+    }
+
+    .list-content {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        width: 100%;
+
+        border: 1px solid grey;
+        border-top: 10px solid #000;
+        box-shadow: 1px 1px 3px #888;
+    }
+
+    .list-content:hover {
+        box-shadow: 3px 3px 5px #888;
+        transition: .3s;
+    }
+
+    .list-content h3 {
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        color: #282828;
+        line-height: 120%;
+    }
+
+    .list-content h5 {
+        font-family: TurnerBold;
+        font-size: .985rem;
+        color: dimgray;
+        line-height: 120%;
+        margin: 0;
+        padding: 0;
+        text-transform: none;
+    }
+
+    .list-content p {
+        font-family: Turner, Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        line-height: 120%;
+    }
+
+    .list-content p a {
+        font-size: 1rem;
+        line-height: 120%;
+    }
+
+    /*TIMELINE*/
+
+    .timeline-container {
+        max-width: 1024px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .timeline-item {
+        padding: 3em 2em 2em;
+        position: relative;
+        color: rgba(0, 0, 0, 0.7);
+        border-left: 2px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .timeline-item p {
+        font-size: 1rem;
+        color: #000;
+    }
+
+    .timeline-item ul li {
+        margin-bottom: 0;
+        color: #000;
+    }
+
+    .timeline-item::before {
+        content: attr(date-is);
+        position: absolute;
+        left: 1.5em;
+        top: .5em;
+        display: block;
+        font-family: TurnerBold;
+        font-size: 1.6rem;
+    }
+
+    .timeline-item::after {
+        width: 10px;
+        height: 10px;
+        display: block;
+        top: 1em;
+        position: absolute;
+        left: -7px;
+        border-radius: 10px;
+        content: '';
+        border: 2px solid rgba(0, 0, 0, 0.3);
+        background: white;
+    }
+
+    .timeline-item:last-child {
+        -o-border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+        border-image: -webkit-linear-gradient(top rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+        border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, transparent) 1 100%;
+    }
+
+    /*NAVIGATION*/
+
+    .learnNow a {
+        font-size: 15px;
+        font-family: TurnerBold;
+        color: #000;
+    }
+
+    .learnNow a:hover {
+        color: #0052e7;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15px !important;
+        font-family: TurnerBold;
+    }
+
+    .topnav a:hover {
+        background-color: #0052e7;
+        color: #fff;
+    }
+
+    .topnav .icon {
+        display: none;
+    }
+
+    /*BREADCRUMBS*/
+
+    #breadcrumb {
+        float: left;
+        display: block;
+    }
+
+    #breadcrumb ul {
+        list-style: none;
+    }
+
+    .crumbs {
+        display: block;
+        margin-left: -27px;
+    }
+
+    .crumbs li {
+        display: inline;
+    }
+
+    .crumbs li.first {
+        padding-left: 8px;
+    }
+
+    .crumbs li a,
+    .crumbs li a:link,
+    .crumbs li a:visited {
+        color: #666;
+        display: block;
+        float: left;
+        font-size: 12px;
+        margin-left: -13px;
+        padding: 0 17px 11px 20px;
+        position: relative;
+        text-decoration: none;
+    }
+
+    .crumbs li a {
+        background-image: url('https://s3.amazonaws.com/tpd-files/images/bg-crumbs.png');
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+        position: relative;
+    }
+
+    .crumbs li a:hover {
+        color: #333;
+        background-position: 100% -48px;
+        cursor: pointer;
+    }
+
+    .crumbs li a:active {
+        color: #333;
+        background-position: 100% -96px;
+    }
+
+    .crumbs li.first a span {
+        height: 29px;
+        width: 3px;
+        border-left: 1px solid #d9d9d9;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    .space {
+        display: block;
+        height: 5px;
+        clear: both;
+    }
+
+    ul.crumbs li:before {
+        background-image: none !important;
+    }
+
+    /*MEDIA QUERIES*/
+
+    @media screen and (max-width: 1152px) {
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+
+        .topnav.responsive {
+            position: relative;
+        }
+
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+
+    @media all and (min-width: 30em) {
+        .list-item {
+            width: 50%;
+        }
+
+        .team-card {
+            flex: 0 1 30%;
+        }
+
+        .team-card-content p {
+            font-size: .9em;
+        }
+
+        .team-card-content a {
+            font-size: .9em;
+        }
+    }
+
+</style>
+
+<!--TOP NAVIGATION-->
+
+<span class="learnNow"><a href="http://learn.turner.com">Learn<i>Now</i></a></span>
+<div class="topnav" id="myTopnav">
+    <a href="http://learn.turner.com">Home</a>
+    <a href="/learnnow/classes-and-programs">Classes &amp; Programs</a>
+    <a href="/learnnow/org-development">Org. Development</a>
+    <a href="/learnnow/performance">Performance</a>
+    <a href="/learnnow/subscribe">Subscribe</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="shrinkNav()">&#9776;</a>
+</div>
+
+<script>
+    function shrinkNav() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+</script>
+
+<!--BREADCRUMBS-->
+
+<br>
+
+<div id="breadcrumb">
+    <ul class="crumbs">
+        <li class="first"><a href="/learnnow/classes-and-programs" style="z-index:9;"><span></span>Classes and Programs</a></li>
+        <li><a href="/learnnow/leadership---tlx" style="z-index:8;">Turner Leadership Experience</a></li>
+        <li><a href="#">TLX Cohort 7</a></li>
+    </ul>
+</div>
+
+<div class="space"></div>
+
+<!--BODY-->
+
+<h2>TLX Cohort 7</h2>
+
+<br>
+
+<h5>Page Navigation</h5>
+
+<a href="#travel" class="nav-button on">Travel &amp; Logistics</a>
+<a href="#materials" class="nav-button off">Participant Materials</a> <a class="nav-button off">Recordings</a> <a class="nav-button off">Other Resources</a> <a class="nav-button off">Speaker Bios</a> <a class="nav-button off">Books</a> <a class="nav-button off">Cohort Roster</a>
+
+<hr>
+
+<br>
+<br>
+
+<a name="travel"></a>
+
+<h3 class="sub"><span>Travel &amp; Logistics</span></h3>
+
+<h5>Air Travel</h5>
+<p>Allow 45 minutes to travel to/from the Techwood campus to/from the airport. Atlanta Hartsfield-Jackson International Airport recommends the below guidance. Please check with your airline for specific guidance.</p>
+
+<div class="two-col-row">
+    <div class="two-col">
+        <p><strong>Domestic Travel</strong></p>
+        <p>It's recommended that you arrive at the airport 75 minutes before departure. You must be checked in at least 30 minutes before your scheduled departure time.</p>
+        <p>Additionally, you're required to be at your departure gate and ready to board at least 15 minutes before your schedule departure time.</p>
+    </div>
+    <div class="two-col">
+        <p><strong>International Travel</strong></p>
+        <p>The recommended arrival time at the airport is 3 hours prior to departure. When traveling to/from a destination within the United States, you must be checked in at least 1 hour before your scheduled departure time.</p>
+        <p>Additionally, originating passengers are required to be at the gate and ready to board 45 minutes before your scheduled departure time. The minimum applies to all passengers checking in with or without baggage.</p>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<h5>Accommodations</h5>
+<p>There are many hotel options in Midtown Atlanta. Here are a few in proximity to the Techwood campus:</p>
+
+<div class="three-col-row">
+    <div class="three-col">
+        <p><a href="http://www.marriott.com/hotels/travel/atlmn-courtyard-atlanta-midtown-georgia-tech/" target="_blank">Courtyard Atlanta Midtown / Georgia Tech</a></p>
+        <p>1132 Techwood Dr. NW<br />
+        Atlanta, GA  30318</p>
+        <p>Tel: +1 404-607-1112</p>
+        <p>Within walking distance to the Techwood campus.</p>
+    </div>
+    <div class="three-col">
+        <p><a href="http://hiltongardeninn3.hilton.com/en/hotels/georgia/hilton-garden-inn-atlanta-midtown-ATLAMGI/about/index.html" target="_blank">Hilton Garden Inn &ndash; Atlanta Midtown</a></p>
+        <p>97 10<sup>th</sup> St. NW<br />
+        Atlanta, GA  30309</p>
+        <p>Tel: +1 404-524-4006</p>
+    </div>
+    <div class="three-col">
+        <p><a href="http://atlantamidtown.hyatt.com/en/hotel/home.html" target="_blank">Hyatt Atlanta Midtown</a></p>
+        <p>125 10<sup>th</sup> St. NE<br />
+        Atlanta, GA  30309</p>
+        <p>Tel: +1 404-443-1234</p>
+    </div>
+</div>
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<!--
+
+<a name="materials"></a>
+
+<h3 class="sub"><span>Participant Materials</span></h3>
+
+<div class="list">
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/TLX-Welcome-12.12.17-FINAL.pdf" target="_blank">
+        <div class="list-content">
+            <h3>December 12 Kickoff</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Materials/TLX-Day1_Participant_Guide.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Day 1 Participant Guide</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Materials/TLX-Day2_Participant_Guide.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Day 2 Participant Guide</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Materials/TLX-Day3_Participant_Guide.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Day 3 Participant Guide</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Materials/TLX-Day4_Participant_Guide.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Day 4 Participant Guide</h3>
+        </div>
+    </a>
+</div>
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<h3 class="sub"><span>Recordings</span></h3>
+
+<a name="recordings"></a>
+
+<div class="list">
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/TLX-Kickoff_12-12-2017.mp4" target="_blank">
+        <div class="list-content">
+            <h3>December 12 Kickoff</h3>
+        </div>
+    </a>
+</div>
+<div class="list">
+    <a class="list-item" href="https://app.frame.io/f/bb199b26-ffc7-4bcd-916f-e5b0d86d2790" target="_blank">
+        <div class="list-content">
+            <h3>Day One</h3>
+            <p>Opening/Chris Linn (2:12 to 21:50)</p>
+            <p>It's a VUCA World Out There (1:05:00 to 1:20:53)</p>
+            <p>The World: Global Media Landscape / Christina Miller (1:31:59 to 2:31:14)</p>
+            <p>My VUCA World: Trends &amp; Disruptions (2:31:40 to 2:45:20)</p>
+            <p>Anticipate Change: Leading in a VUCA World (2:45:32 to 3:47:18)</p>
+            <p>Strategy Formulation in a VUCA World / Stephano Kim (4:32:18 to 5:19:17)</p>
+            <p>Generating Confidence: Strategy Alignment (5:43:19 to 5:53:00)</p>
+            <p>3 Conditions for Strategy Alignment: 1) Sharing the What (5:53:00 to 7:41:00)</p>
+        </div>
+    </a>
+    <a class="list-item" href="https://app.frame.io/f/3247a62e-8cda-4e99-9aa4-7d6ce3141fc2" target="_blank">
+        <div class="list-content">
+            <h3>Day 2</h3>
+            <p>3 Conditions for Strategy Alignment: 2) Creating Meaning (34:11 to 1:58:31)</p>
+            <p>3 Conditions for Strategy Alignment: 3) Creating Connections (2:18:32 to 2:59:00)</p>
+            <p>The Case for Leadership Agility / Tony Maddox (3:01:32 to 3:45:19)</p>
+            <p>LAP: Making Sense of Your Feedback (4:42:25 to 6:31:00)</p>
+            <p>Personal Reflections and Peer Coaching (6:31:00 to 8:00:31)</p>
+            <p>Applying My LAP 360 / Pablo Zuccarino (8:00:41 to 8:29:36)</p>
+        </div>
+    </a>
+    <a class="list-item" href="https://app.frame.io/f/c6f6d520-e451-4e70-9e38-1480735de234" target="_blank">
+        <div class="list-content">
+            <h3>Day 3</h3>
+            <p>Strategy Execution Through Engagement (28:30 to 34:58)</p>
+            <p>Initiate Action: Collaboration (1:48:00 to 2:33:39)</p>
+            <p>Liberate Thinking: Idea Diversity (2:34:34 to 3:15:39)</p>
+            <p>Evaluate Results: Real Time Feedback (3:16:34 to 3:42:50)</p>
+            <p>Bright Spots: Becoming an Agile Leader (4:30:35 to 5:21:55)</p>
+            <p>Bright Spot / Scott Doyne (5:27:15 to 5:21:55)</p>
+            <p>Bright Spots &mdash; Small Group Breakouts (6:58:24 to 7:26:51)</p>
+            <p>Bright Spot Debrief (7:26:51 to 7:40:17)</p>
+        </div>
+    </a>
+    <a class="list-item" href="https://app.frame.io/f/f2a345d3-cabd-4631-b6c1-546d99211cdb" target="_blank">
+        <div class="list-content">
+            <h3>Day 4</h3>
+            <p>Agile/Fragile Assignment Prep (5:15 to 10:52)</p>
+            <p>Agile/Fragile Presentations (5:39 to 1:32:00)</p>
+            <p>Lessons for Turner (1:35:10 to 2:06:48)</p>
+            <p>Building an Agile Organization (2:06:48 to 2:15:55)</p>
+        </div>
+    </a>
+</div>
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<a name="resources"></a>
+
+<h3 class="sub"><span>Other Resources</span></h3>
+
+<div class="list">
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Other-Resources/Ooyala-State-Of-The-Broadcast-Industry-2018.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Ooyala State of the Industry 2018</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Other-Resources/The-five-trademarks-of-agile-organizations.pdf" target="_blank">
+        <div class="list-content">
+            <h3>The Five Trademarks of Agile Organizations</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Other-Resources/How-to-create-an-agile-organization.pdf" target="_blank">
+        <div class="list-content">
+            <h3>How to Create an Agile Organization</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Other-Resources/15-lessons-of-innovation-2018.pdf" target="_blank">
+        <div class="list-content">
+            <h3>15 Lessons of Innovation</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Other-Resources/Candid_Conversations_Worksheet_-_TLX.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Candid Conversations Worksheet</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Other-Resources/Collaboration_FoR_Map_TLX_Cohort_6.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Collaboration Map</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Other-Resources/Organizational_Levers_Impacting_Organizational_Performance_and_Transformations_-REV_.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Organizational Levers Impacting Organizational Performance Whitepaper</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Other-Resources/LAP_Developmental_Guide_Version_--_Customized_with_Turner_IDP.pdf" target="_blank">
+        <div class="list-content">
+            <h3>LAP Development Guide</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Other-Resources/LAP_Interpretation_Worksheet_-_Portrait.pdf" target="_blank">
+        <div class="list-content">
+            <h3>LAP Interpretation Worksheet</h3>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Other-Resources/Turner_IDP_-_FINAL_(1).pdf" target="_blank">
+        <div class="list-content">
+            <h3>Individual Development Plan</h3>
+        </div>
+    </a>
+</div>
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<a name="books"></a>
+
+<h3 class="sub"><span>Books</span></h3>
+
+<div id="books">
+
+<iframe type="text/html" width="212" height="362" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B071CTK28D&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_3UKZAbJGQSVF7&hideShare=true" ></iframe>
+
+<iframe type="text/html" width="212" height="362" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B01N7L44W2&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_q2MWAbX847XX6&hideShare=true"></iframe>
+
+
+<iframe type="text/html" width="212" height="362" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B00FUZQYBO&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_42MWAbG62D35P&hideShare=true"></iframe>
+
+<iframe type="text/html" width="212" height="362" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B01F1Z0QHA&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_T4MWAbXQ2T3H3&hideShare=true"></iframe>
+
+<iframe type="text/html" width="212" height="362" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B009JU6UPG&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_q5MWAbDG2AACX&hideShare=true"></iframe>
+
+<iframe type="text/html" width="212" height="362" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B0030DHPGQ&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_H5MWAbFWD53B6&hideShare=true"></iframe>
+
+<iframe type="text/html" width="212" height="362" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B004P1JDJO&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_Y5MWAb004WB0W&hideShare=true"></iframe>
+
+<iframe type="text/html" width="212" height="362" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B06ZY5STD6&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_k6MWAbYEHSRZP&hideShare=true"></iframe>
+
+<iframe type="text/html" width="212" height="362" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B005N1OUSE&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_Y6MWAb3D14Q77&hideShare=true"></iframe>
+    
+</div>
+
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<a name="speakers"></a>
+
+<h3 class="sub"><span>Speaker Bios</span></h3>
+
+<div class="list">
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Speaker-Bios/Jennifer_Dorian_-_BRIGHT_SPOT_SPEAKER.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Jennifer Dorian</h3>
+            <p>EVP, Turner Portfolio 360 Brand Strategy &amp; GM, TCM &amp; FilmStruck</p>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Speaker-Bios/Scott_Doyne_-_BRIGHT_SPOT_SPEAKER.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Scott Doyne</h3>
+            <p>SVP, Product Strategy</p>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Speaker-Bios/Bob_Hesskamp_BRIGHT_SPOT_SPEAKER.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Bob Hesskamp</h3>
+            <p>Head of Turner Engineering</p>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Speaker-Bios/Stephano_Kim_-_Strategy_Formulation_in_a_VUCA_World_SPEAKER.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Stephano Kim</h3>
+            <p>EVP, Digital Strategy + Operations &amp; Chief Data Strategist</p>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Speaker-Bios/Chris_Linn_BIO_-_WELCOME_SPEAKER.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Chris Linn</h3>
+            <p>President, truTV</p>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Speaker-Bios/Tony_Maddox_-_Leadership_Agility_SPEAKER.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Tony Maddox</h3>
+            <p>EVP &amp; Managing Director, CNN International</p>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Speaker-Bios/Valerie_Meraz_-_BRIGHT_SPOT_SPEAKER.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Valerie Meraz</h3>
+            <p>SVP, Content Acquisitions &amp; Strategy, Entertainment</p>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Speaker-Bios/Christina_Miller_-_GLOBAL_MEDIA_LANDSCAPE_SPEAKER.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Christina Miller</h3>
+            <p>President, Cartoon Network, Adult Swim, Boomerang</p>
+        </div>
+    </a>
+    <a class="list-item" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Speaker-Bios/Pablo_Zuccarino_-_HOW_I_LEVERAGED_MY_360.pdf" target="_blank">
+        <div class="list-content">
+            <h3>Pablo Zuccarino</h3>
+            <p>SVP &amp; GM, Cartoon Network, Boomerang, Tooncast &mdash; LATAM</p>
+        </div>
+    </a>
+
+</div>
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<a name="roster"></a>
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<h3 class="sub"><span>Meet the Cohort</span></h3>
+
+<a class="nav-button" href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/TLX-PARTICIPANT-ROSTER_COHORT-6.pdf" target="_blank">Download the roster</a>
+
+<br>
+<br>
+
+<div style="margin-left: auto; margin-right: auto;">
+
+    <div class="team-cards">
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Nina+Ahmed+2.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Nima Ahmed</h3>
+                <p>Director, Programming</p>
+                <p>CNN Programming</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Nima+Ahmed.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Valeria+Beola.jpg); background-position: top !important;"></div>
+            <div class="team-card-content">
+                <h3>Valeria Beola</h3>
+                <p>Sr. Director, Client Strategy &amp; Development</p>
+                <p>Turner Latin America</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+VALERIA+BEOLA.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Susan+Block.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Susan Block</h3>
+                <p>Assistant General Counsel</p>
+                <p>Legal</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Susan+Block.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Ryan-Bolick.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Ryan Bolick</h3>
+                <p>VP, Business Improvement</p>
+                <p>Business Improvement</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Ryan+Bolick.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Dylan+Bucherle.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Dylan Boucherle</h3>
+                <p>Director, Emerging Media Production</p>
+                <p>Turner Studios</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Dylan+Boucherle.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Johanne+Broadfield.jpg); background-position: top !important;"></div>
+            <div class="team-card-content">
+                <h3>Johanne Broadfield</h3>
+                <p>VP, Licensing &amp; Merchandising</p>
+                <p>Turner EMEA</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Johanne+Broadfield2.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Morgan+Dewan.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Morgan Dewan</h3>
+                <p>VP, Social Media</p>
+                <p>Turner Sports</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Morgan+DEWAN2.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Amy+Dewar.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Amy Dewar</h3>
+                <p>Director, Rewards &amp; Talent Operations</p>
+                <p>Turner EMEA</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Amy+Dewar.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Melissa+Diaz.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Melissa Diaz</h3>
+                <p>VP, Network Sales FC &amp; Planning</p>
+                <p>Turner Content Distribution</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Melissa+Diaz.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Silvia-Elias.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Silvia Elias</h3>
+                <p>Sr. Content Director, Original Productions (In-House)</p>
+                <p>Turner Latin America</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Sylvia+Elias.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Barry-Gardner.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Barry Gardner</h3>
+                <p>Sr. Director, Post Production</p>
+                <p>TNT/tbs</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Barry+Gardner.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Amanda+Gentles.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Amanda Gentles</h3>
+                <p>VP, Operations</p>
+                <p>Turner Studios</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Amanda+Gentles.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Sherri-Glass.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Sherri Glass</h3>
+                <p>VP, Digital Production</p>
+                <p>CNASB</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Sherri+Glass2.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Craig+Gordon.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Craig Gordon</h3>
+                <p>Creative Director</p>
+                <p>Cartoon Network</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Craig+Gordon.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Ryan+Gould.png); background-position: top !important;"></div>
+            <div class="team-card-content">
+                <h3>Ryan Gould</h3>
+                <p>VP, Ad Sales</p>
+                <p>Ad Sales</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Ryan+Gould.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Matt+Harrigan.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Matt Harrigan</h3>
+                <p>VP, Digital Content</p>
+                <p>adult swim</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Matt+Harrigan2.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Twyla+Huang-DiSimone.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Twyla Huang-DiSimone</h3>
+                <p>VP, Content Partnership</p>
+                <p>Ad Sales</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Twyla+Huang-DiSimone.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Okema+Jackson.jpg); background-position: top !important;"></div>
+            <div class="team-card-content">
+                <h3>Okema Jackson</h3>
+                <p>Sr. Director, On-Air Operations</p>
+                <p>TNT/tbs</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Okema+Jackson2.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Mitra+Kalita.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Mitra Kalita</h3>
+                <p>VP, Digital Programming</p>
+                <p>CNN Digital</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Mitra+Kalita.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Corinna-Keller.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Corinna Keller</h3>
+                <p>VP, Ad Sales (Americas)</p>
+                <p>CNNIC</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Corinna+Keller.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Jules-Kovisars.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Jules Kovisars</h3>
+                <p>Director, Production</p>
+                <p>truTV</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Jules+Kovisars.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Lisa-Li-1.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Lisa Li</h3>
+                <p>Director, Consumer Product &amp; Content Distribution</p>
+                <p>Turner APAC</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Lisa+Li2.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Carlos+Linares.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Carlos Linares</h3>
+                <p>Director, BIT</p>
+                <p>GTO</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Carlos+Linares.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/David-Liss.jpg)"></div>
+            <div class="team-card-content">
+                <h3>David Liss</h3>
+                <p>VP, Analysis &amp; Strategy</p>
+                <p>Bleacher Report</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+David+Liss.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Barry-Loudis.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Barry Loudis</h3>
+                <p>Sr. Director, Business &amp; Digital Distribution</p>
+                <p>Turner Content Distribution</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Barry+Loudis.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Scott-McGee.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Scott McGee</h3>
+                <p>Director, Program Production</p>
+                <p>TCM</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey-+Scott+McGee.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Chuck+Moore.jpg);"></div>
+            <div class="team-card-content">
+                <h3>Chuck Moore</h3>
+                <p>Sr. Creative Director</p>
+                <p>TCM</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Chuck+Moore.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Ebony-Moore.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Ebony Moore</h3>
+                <p>VP, Account Services</p>
+                <p>Ad Sales/Revenue Operations</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Ebony+Moore.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Rus-Rice.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Rus Rice</h3>
+                <p>Sr. Director, Engineering</p>
+                <p>iStream Planet</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+RUS+RICE.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Victor-Roldan.png)"></div>
+            <div class="team-card-content">
+                <h3>Victor Roldan</h3>
+                <p>VP &amp; Regional General Counsel</p>
+                <p>Legal</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Victor+Roldan2.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Brian+Ross.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Brian Ross</h3>
+                <p>VP, Marketing &amp; Brand Strategy</p>
+                <p>TNT/tbs</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Brian+Ross2.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Ellen-Russ.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Ellen Russ</h3>
+                <p>VP, Human Resources</p>
+                <p>CNN Human Resources</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Ellen+Russ2.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Jordan-Shorthouse.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Jordan Shorthouse</h3>
+                <p>Creative Director</p>
+                <p>Turner Sports</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Jordan+Shorthouse2.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Dawn-Simonton.jpg); background-position: top !important;"></div>
+            <div class="team-card-content">
+                <h3>Dawn Simonton</h3>
+                <p>VP, Network Partnerships</p>
+                <p>GTO</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Dawn+SIMONTON.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Jermaine+Spradley.png)"></div>
+            <div class="team-card-content">
+                <h3>Jermaine Spradley</h3>
+                <p>Sr. Director, Social Moments</p>
+                <p>Bleacher Report</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Jermaine+Spradley.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Tiffany-Sudderth.JPG)"></div>
+            <div class="team-card-content">
+                <h3>Tiffany Sudderth</h3>
+                <p>Director, Business Continuity</p>
+                <p>GTO</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Tiffany+Sudderth.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/RAAS-TANEJA.jpg); background-position: top !important;"></div>
+            <div class="team-card-content">
+                <h3>Raas Taneja</h3>
+                <p>Sr. Director, Finance</p>
+                <p>Finance &mdash; APAC</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+RAAS+TANEJA2.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Jason-Taylor.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Jason Taylor</h3>
+                <p>VP, Operations &amp; Technology</p>
+                <p>Turner Sports</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Jason+Taylor.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Inga-Thordar.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Inga Thordar</h3>
+                <p>Editor &amp; Programming Director</p>
+                <p>CNN Digital</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Inga+Thordar2.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+        <div class="team-card">
+            <div class="team-card-header" style="background-image: url(https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Selfies/Lashana-Williams1.jpg)"></div>
+            <div class="team-card-content">
+                <h3>Lashana Williams</h3>
+                <p>Sr. Dirctor, Financial Analysis</p>
+                <p>Finance &amp; Accounting</p>
+                <p><a href="https://s3.amazonaws.com/tpd-files/TLX/Cohort-6/Leadership-Journeys/My+Leadership+Journey+-+Lashana+Williams2.pdf" target="_blank">My Leadership Journey</a></p>
+            </div>
+        </div>
+    </div>
+
+</div>
+-->
